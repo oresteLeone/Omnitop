@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="backGround">#121212</color>
+    <color name="fabPadre">#CC7256</color>
+    <color name="fabFiglio">#F0D198</color>
 </resources>
