@@ -8,7 +8,9 @@ import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.Toast
 import com.annoyingturtle.omnitop.R
+import kotlinx.android.synthetic.main.activity_abs_fab.*
 import kotlin.Lazy
+//import kotlinx.android.synthetic.main.activity_main.*
 
 class AbsFab : AppCompatActivity() {
 
@@ -19,11 +21,19 @@ class AbsFab : AppCompatActivity() {
 
     private var clicked = false
 
-    private val addBtn = findViewById<Button>(R.id.addBtn) as Button
+    /*private val addBtn = findViewById<Button>(R.id.addBtn) as Button
     private val diceBtn = findViewById<Button>(R.id.diceBtn) as Button
     private val cardBtn = findViewById<Button>(R.id.cardBtn) as Button
     private val gridBtn = findViewById<Button>(R.id.gridBtn) as Button
     private val noteBtn = findViewById<Button>(R.id.noteBtn) as Button
+
+    private val addBtn: Button = findViewById<Button>(R.id.addBtn)
+    private val diceBtn: Button = findViewById<Button>(R.id.diceBtn)
+    private val cardBtn: Button = findViewById<Button>(R.id.cardBtn)
+    private val noteBtn: Button = findViewById<Button>(R.id.noteBtn)
+    private val gridBtn: Button = findViewById<Button>(R.id.gridBtn)*/
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -98,17 +108,17 @@ class AbsFab : AppCompatActivity() {
     private fun setClickable(clicked: Boolean){
         if(!clicked)
         {
-            diceBtn.isClickable=true
-            cardBtn.isClickable=true
-            gridBtn.isClickable=true
-            diceBtn.isClickable=true
-        }
-        else
-        {
             diceBtn.isClickable=false
             cardBtn.isClickable=false
             gridBtn.isClickable=false
             diceBtn.isClickable=false
+        }
+        else
+        {
+            diceBtn.isClickable=true
+            cardBtn.isClickable=true
+            gridBtn.isClickable=true
+            diceBtn.isClickable=true
         }
     }
 }
