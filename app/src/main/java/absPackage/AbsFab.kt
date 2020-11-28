@@ -1,5 +1,6 @@
 package absPackage
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,9 +9,8 @@ import android.view.animation.AnimationUtils
 import android.widget.Toast
 import com.annoyingturtle.omnitop.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlinx.android.synthetic.main.activity_abs_fab.*
 
-open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton, gridBtn1: FloatingActionButton, noteBtn1: FloatingActionButton, diceBtn1: FloatingActionButton) : AppCompatActivity() {
+open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton, gridBtn1: FloatingActionButton, noteBtn1: FloatingActionButton, diceBtn1: FloatingActionButton, contesto : Context) {
     //class AbsFab constructor(addBtn1 : FloatingActionButton, cardBtn1 : FloatingActionButton, gridBtn1 : FloatingActionButton, noteBtn1 : FloatingActionButton, diceBtn1 : FloatingActionButton){
 
     var addBtn: FloatingActionButton = addBtn1
@@ -29,15 +29,16 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
         }*/
     //   }
 
-    private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.rotate_open_anim) }
-    private val rotateClose: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.rotate_close_anim) }
-    private val fromBottom: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.from_bottom_anim) }
-    private val toBottom: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.to_bottom_anim) }
+    private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(contesto, R.anim.rotate_open_anim) }
+    private val rotateClose: Animation by lazy { AnimationUtils.loadAnimation(contesto, R.anim.rotate_close_anim) }
+    private val fromBottom: Animation by lazy { AnimationUtils.loadAnimation(contesto, R.anim.from_bottom_anim) }
+    private val toBottom: Animation by lazy { AnimationUtils.loadAnimation(contesto, R.anim.to_bottom_anim) }
 
     private var clicked = false
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-      super.onCreate(savedInstanceState)
+    fun startListener (contesto: Context){
+    //override fun onCreate(savedInstanceState: Bundle?) {
+      //super.onCreate(savedInstanceState)
     //setContentView(R.layout.activity_abs_fab)
 
 
@@ -47,19 +48,19 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
         }
 
         cardBtn.setOnClickListener {
-            Toast.makeText(this, "Pulsante Carte", Toast.LENGTH_SHORT).show()
+            Toast.makeText(contesto, "Pulsante Carte", Toast.LENGTH_SHORT).show()
         }
 
         gridBtn.setOnClickListener {
-            Toast.makeText(this, "Pulsante Griglia", Toast.LENGTH_SHORT).show()
+            Toast.makeText(contesto, "Pulsante Griglia", Toast.LENGTH_SHORT).show()
         }
 
         noteBtn.setOnClickListener {
-            Toast.makeText(this, "Pulsante Note", Toast.LENGTH_SHORT).show()
+            Toast.makeText(contesto, "Pulsante Note", Toast.LENGTH_SHORT).show()
         }
 
         diceBtn.setOnClickListener {
-            Toast.makeText(this, "Pulsante Dado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(contesto, "Pulsante Dado", Toast.LENGTH_SHORT).show()
         }
 
     }

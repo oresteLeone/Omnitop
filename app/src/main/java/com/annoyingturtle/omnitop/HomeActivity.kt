@@ -15,7 +15,7 @@ class HomeActivity : AppCompatActivity() {
 
 
 
-        val fab = AbsFab (addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1)
-        
+        val fab = AbsFab (addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this)
+        fab.startListener(this)
     }
 }
