@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Omnitop">
         <activity android:name=".dndHome"></activity>
-        <activity android:name=".HomeActivity" /> <!-- <activity android:name="absPackage.AbsFab" /> -->
+        <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

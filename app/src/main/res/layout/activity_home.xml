@@ -81,4 +81,76 @@
         app:layout_constraintBottom_toTopOf="@+id/gridBtn1"
         app:layout_constraintEnd_toEndOf="@+id/gridBtn1"
         app:srcCompat="@drawable/notes_icon__1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/mask"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <ImageView
+        android:id="@+id/pathfinder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/banner_pathfinder"
+        app:layout_constraintTop_toBottomOf="@+id/dnd"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/dnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/bannerdnd"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/menubtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:src="@drawable/_leading_icon_l_use_high_emphasis"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/titolo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:text="OmniTop"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintStart_toEndOf="@+id/menubtn"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:focusable="true"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/trailing_icon_3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
