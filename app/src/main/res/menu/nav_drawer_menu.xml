@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/idImpostazioni"
+        android:title="Impostazioni"
+        android:icon="@drawable/ic_opzioni"
+        ></item>
+
+    <item
+        android:id="@+id/idGuida"
+        android:title="Guida"
+        android:icon="@drawable/ic_guida"
+        ></item>
+
+    <item
+        android:id="@+id/idChiSiamo"
+        android:title="Chi siamo?"
+        android:icon="@drawable/ic_opzioni"
+        ></item>
+
+    <item
+        android:id="@+id/idInformazioniLegali"
+        android:title="Informazioni legali"
+        android:icon="@drawable/ic_informazioni_legali"
+        ></item>
+
+</menu>
