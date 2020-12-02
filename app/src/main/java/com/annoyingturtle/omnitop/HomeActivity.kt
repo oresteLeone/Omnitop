@@ -3,7 +3,10 @@ package com.annoyingturtle.omnitop
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import absPackage.AbsFab
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import kotlinx.android.synthetic.main.activity_home.*
@@ -24,13 +27,13 @@ class HomeActivity : AppCompatActivity() {
         toggle.syncState()
 
 
-        /************ questo funziona solo con l'action bar standard android *******/
+        /************ Hamburger *******/
 
-        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        menubtn.setOnClickListener{ /*************** Finire di implementare la funzione ***********/
+        /******* Nome Sull'actionBar *******/
 
-        }
+        supportActionBar?.title = "OmniTop"
 
         navView.setNavigationItemSelectedListener {
             when(it.itemId)
@@ -57,4 +60,31 @@ class HomeActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        var  inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.actionbar_menu, menu)
+
+        /*menu?.findItem(R.id.idRicerca)?.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
+            override fun onMenuItemActionExpand(item: MenuItem?): Boolean {
+
+
+
+                var searchView  = menu?.findItem(R.id.idRicerca)
+                val searchItem = menu.findItem(R.id.idRicerca)
+                //searchView = searchItem.setActionView(this : View!) as SearchView
+                searchView.setQueryHint("Search View Hint")                         /************ Capire come si mettono gli Hint******/
+
+
+                return true
+            }*/
+
+        //fun MenuItem.OnActionExpandListener(menu: MenuItem){
+
+       // }
+
+        return true
+    }
+
 }

@@ -10,4 +10,5 @@
     <color name="backGround">#121212</color>
     <color name="fabPadre">#CC7256</color>
     <color name="fabFiglio">#F0D198</color>
+    <color name="sideDrawerBg">#2F2F2F</color>
 </resources>

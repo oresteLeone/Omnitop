@@ -6,24 +6,32 @@
         android:id="@+id/idImpostazioni"
         android:title="Impostazioni"
         android:icon="@drawable/ic_opzioni"
+        android:iconTint="@color/white"
         ></item>
 
     <item
         android:id="@+id/idGuida"
         android:title="Guida"
         android:icon="@drawable/ic_guida"
+        android:iconTint="@color/white"
+
         ></item>
 
     <item
         android:id="@+id/idChiSiamo"
         android:title="Chi siamo?"
         android:icon="@drawable/ic_opzioni"
+        android:iconTint="@color/white"
+
         ></item>
 
     <item
         android:id="@+id/idInformazioniLegali"
         android:title="Informazioni legali"
         android:icon="@drawable/ic_informazioni_legali"
+        android:iconTint="@color/white"
+
         ></item>
+
 
 </menu>
