@@ -3,12 +3,14 @@ package com.annoyingturtle.omnitop
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import absPackage.AbsFab
+import absPackage.AdapterRecyclerListaGiochi
+import absPackage.ItemListaGiochi
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_home.*
 
 
@@ -52,6 +54,18 @@ class HomeActivity : AppCompatActivity() {
         /********** FAB ***********/
         val fab = AbsFab (addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this)
         fab.startListener(this)
+
+
+
+
+
+        /******Lista di giochi *****/
+        val lista  = generaLista(2)
+
+
+        idListaGiochi.adapter = AdapterRecyclerListaGiochi(lista)
+        idListaGiochi.layoutManager = LinearLayoutManager(this)     //Errore su questa linea, il layout utilizzato è un drawerlayout, ma non trovo la funzione giusta da usare
+        idListaGiochi.setHasFixedSize(true)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {       //Funzione per il menu a scorrimento
@@ -85,6 +99,25 @@ class HomeActivity : AppCompatActivity() {
        // }
 
         return true
+    }
+
+    /****** Metodo per generare la lista di oggetti da mostrare a schermo *****/
+
+    private fun generaLista(size: Int): List<ItemListaGiochi>{
+        val list = ArrayList<ItemListaGiochi>()
+
+        for (i in 0 until size){
+            val drawable = when (i % 2){
+                0 -> R.drawable.bannerdnd
+                else -> R.drawable.banner_pathfinder
+
+            }
+
+            val item = ItemListaGiochi(drawable)
+            list += item
+        }
+
+        return list
     }
 
 }

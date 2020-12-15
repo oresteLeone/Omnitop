@@ -2,4 +2,9 @@
     <string name="app_name">Omnitop</string>
     <string name="openDrawer">Open</string>
     <string name="closeDrawer">Close</string>
+
+    <string-array name="listaGiochi">
+        <item>Dungeons and Dragons</item>
+        <item>Pathfinder</item>
+    </string-array>
 </resources>
