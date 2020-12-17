@@ -8,7 +8,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.annoyingturtle.omnitop.R
 import kotlinx.android.synthetic.main.activity_main.view.*
 
-class AdapterRecyclerListaGiochi (private val Lista : List<ItemListaGiochi>) : RecyclerView.Adapter<AdapterRecyclerListaGiochi.ListaGiochiViewHolder>() {
+class ListaGiochiViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+
+    val imageView : ImageView // = itemView.imageView.findViewById(R.id.IdImageView)
+
+    init {
+        imageView = itemView.findViewById(R.id.IdImageView)
+    }
+}
+
+class AdapterRecyclerListaGiochi (val Lista : List<ItemListaGiochi>) : RecyclerView.Adapter<ListaGiochiViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListaGiochiViewHolder {
@@ -26,8 +35,6 @@ class AdapterRecyclerListaGiochi (private val Lista : List<ItemListaGiochi>) : R
 
     override fun getItemCount() = Lista.size
 
-    class ListaGiochiViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
-        val imageView : ImageView = itemView.imageView.findViewById(R.id.IdImageView)
-    }
 }
+

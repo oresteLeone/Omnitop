@@ -11,6 +11,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_home.*
 
 
@@ -38,10 +39,9 @@ class HomeActivity : AppCompatActivity() {
         supportActionBar?.title = "OmniTop"
 
         navView.setNavigationItemSelectedListener {
-            when(it.itemId)
-            {
+            when (it.itemId) {
                 R.id.idImpostazioni -> Toast.makeText(applicationContext, "Pulsante impostazioni", Toast.LENGTH_SHORT).show()
-                R.id.idChiSiamo-> Toast.makeText(applicationContext, "Pulsante Chi Siamo", Toast.LENGTH_SHORT).show()
+                R.id.idChiSiamo -> Toast.makeText(applicationContext, "Pulsante Chi Siamo", Toast.LENGTH_SHORT).show()
                 R.id.idGuida -> Toast.makeText(applicationContext, "Pulsante guida", Toast.LENGTH_SHORT).show()
                 R.id.idInformazioniLegali -> Toast.makeText(applicationContext, "Pulsante Informazioni legali", Toast.LENGTH_SHORT).show()
             }
@@ -49,18 +49,13 @@ class HomeActivity : AppCompatActivity() {
         }
 
 
-
-
         /********** FAB ***********/
-        val fab = AbsFab (addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this)
+        val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this)
         fab.startListener(this)
 
 
-
-
-
         /******Lista di giochi *****/
-        val lista  = generaLista(2)
+        val lista = generaLista()
 
 
         idListaGiochi.adapter = AdapterRecyclerListaGiochi(lista)
@@ -69,7 +64,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {       //Funzione per il menu a scorrimento
-        if (toggle.onOptionsItemSelected(item)){
+        if (toggle.onOptionsItemSelected(item)) {
             return true
         }
         return super.onOptionsItemSelected(item)
@@ -77,7 +72,7 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
-        var  inflater: MenuInflater = menuInflater
+        var inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.actionbar_menu, menu)
 
         /*menu?.findItem(R.id.idRicerca)?.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
@@ -96,28 +91,21 @@ class HomeActivity : AppCompatActivity() {
 
         //fun MenuItem.OnActionExpandListener(menu: MenuItem){
 
-       // }
+        // }
 
         return true
     }
 
     /****** Metodo per generare la lista di oggetti da mostrare a schermo *****/
 
-    private fun generaLista(size: Int): List<ItemListaGiochi>{
-        val list = ArrayList<ItemListaGiochi>()
+    private fun generaLista(): List<ItemListaGiochi> {
+        return listOf(
+                ItemListaGiochi(
+                        imageResources = R.drawable.bannerdnd),
+                ItemListaGiochi(
+                        imageResources = R.drawable.banner_pathfinder
+                )
+        )
 
-        for (i in 0 until size){
-            val drawable = when (i % 2){
-                0 -> R.drawable.bannerdnd
-                else -> R.drawable.banner_pathfinder
-
-            }
-
-            val item = ItemListaGiochi(drawable)
-            list += item
-        }
-
-        return list
-    }
-
+}
 }
