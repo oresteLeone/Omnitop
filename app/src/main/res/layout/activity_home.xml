@@ -118,8 +118,8 @@
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
                 android:padding="4dp"
-                tools:listitem="@layout/lista_giochi_layout">
-
+                tools:listitem="@layout/lista_giochi_layout"
+                 >
 
             </androidx.recyclerview.widget.RecyclerView>
     </androidx.constraintlayout.widget.ConstraintLayout>
