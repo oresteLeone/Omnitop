@@ -14,17 +14,20 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addBtn1"
-            android:backgroundTint="@color/fabPadre"
-            android:focusable="true"
-            app:maxImageSize="48dp"
-            android:contextClickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/fabPadre"
             android:clickable="true"
+            android:contextClickable="true"
+            android:focusable="true"
+            android:visibility="visible"
+            app:backgroundTint="#00FFFFFF"
+            app:fabSize="normal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:maxImageSize="48dp"
             app:srcCompat="@drawable/add_icon" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -122,6 +125,7 @@
                  >
 
             </androidx.recyclerview.widget.RecyclerView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
