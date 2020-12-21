@@ -7,8 +7,11 @@ import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.annoyingturtle.omnitop.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import androidx.fragment.app.FragmentTransaction
 
 open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton, gridBtn1: FloatingActionButton, noteBtn1: FloatingActionButton, diceBtn1: FloatingActionButton, contesto : Context) {
     //class AbsFab constructor(addBtn1 : FloatingActionButton, cardBtn1 : FloatingActionButton, gridBtn1 : FloatingActionButton, noteBtn1 : FloatingActionButton, diceBtn1 : FloatingActionButton){
@@ -19,15 +22,9 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
     var noteBtn: FloatingActionButton = noteBtn1
     var diceBtn: FloatingActionButton = diceBtn1
 
+    /****** Variabili per la bottomSheet *******/
+    val dadiBottomsheet = LancioDadiFragment()
 
-    /*init {
-            this.addBtn = addBtn1
-            this.cardBtn = cardBtn1
-            this.gridBtn = gridBtn1
-            this.noteBtn = noteBtn1
-            this.diceBtn = diceBtn1
-        }*/
-    //   }
 
     private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(contesto, R.anim.rotate_open_anim) }
     private val rotateClose: Animation by lazy { AnimationUtils.loadAnimation(contesto, R.anim.rotate_close_anim) }
@@ -37,9 +34,6 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
     private var clicked = false
 
     fun startListener (contesto: Context){
-    //override fun onCreate(savedInstanceState: Bundle?) {
-      //super.onCreate(savedInstanceState)
-    //setContentView(R.layout.activity_abs_fab)
 
 
 
@@ -61,6 +55,7 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
 
         diceBtn.setOnClickListener {
             Toast.makeText(contesto, "Pulsante Dado", Toast.LENGTH_SHORT).show()
+            //dadiBottomsheet.show()
         }
 
     }
