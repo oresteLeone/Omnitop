@@ -5,11 +5,13 @@ import android.os.Bundle
 import absPackage.AbsFab
 import absPackage.AdapterRecyclerListaGiochi
 import absPackage.ItemListaGiochi
+import absPackage.LancioDadiFragment
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_home.*
@@ -50,7 +52,7 @@ class HomeActivity : AppCompatActivity() {
 
 
         /********** FAB ***********/
-        val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this)
+        val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this, supportFragmentManager)
         fab.startListener(this)
 
 

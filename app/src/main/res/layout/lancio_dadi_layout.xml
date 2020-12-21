@@ -8,6 +8,9 @@
     android:background="@color/backGround"
     android:elevation="16dp">
 
+    <!--app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="true"-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"

@@ -8,12 +8,13 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import com.annoyingturtle.omnitop.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import androidx.fragment.app.FragmentTransaction
 
-open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton, gridBtn1: FloatingActionButton, noteBtn1: FloatingActionButton, diceBtn1: FloatingActionButton, contesto : Context) {
+open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton, gridBtn1: FloatingActionButton, noteBtn1: FloatingActionButton, diceBtn1: FloatingActionButton, contesto : Context, fragmentManager: FragmentManager) {
     //class AbsFab constructor(addBtn1 : FloatingActionButton, cardBtn1 : FloatingActionButton, gridBtn1 : FloatingActionButton, noteBtn1 : FloatingActionButton, diceBtn1 : FloatingActionButton){
 
     var addBtn: FloatingActionButton = addBtn1
@@ -21,6 +22,7 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
     var gridBtn: FloatingActionButton = gridBtn1
     var noteBtn: FloatingActionButton = noteBtn1
     var diceBtn: FloatingActionButton = diceBtn1
+    var fragment : FragmentManager = fragmentManager
 
     /****** Variabili per la bottomSheet *******/
     val dadiBottomsheet = LancioDadiFragment()
@@ -54,8 +56,10 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
         }
 
         diceBtn.setOnClickListener {
-            Toast.makeText(contesto, "Pulsante Dado", Toast.LENGTH_SHORT).show()
-            //dadiBottomsheet.show()
+            //Toast.makeText(contesto, "Pulsante Dado", Toast.LENGTH_SHORT).show()
+            dadiBottomsheet.show(fragment, "LancioDadi")
+
+
         }
 
     }
