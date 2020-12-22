@@ -17,15 +17,20 @@ import androidx.fragment.app.FragmentTransaction
 open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton, gridBtn1: FloatingActionButton, noteBtn1: FloatingActionButton, diceBtn1: FloatingActionButton, contesto : Context, fragmentManager: FragmentManager) {
     //class AbsFab constructor(addBtn1 : FloatingActionButton, cardBtn1 : FloatingActionButton, gridBtn1 : FloatingActionButton, noteBtn1 : FloatingActionButton, diceBtn1 : FloatingActionButton){
 
+    /****** Variabili pulsanti FAB*****/
     var addBtn: FloatingActionButton = addBtn1
     var cardBtn: FloatingActionButton = cardBtn1
     var gridBtn: FloatingActionButton = gridBtn1
     var noteBtn: FloatingActionButton = noteBtn1
     var diceBtn: FloatingActionButton = diceBtn1
-    var fragment : FragmentManager = fragmentManager
+
 
     /****** Variabili per la bottomSheet *******/
+    var fragment : FragmentManager = fragmentManager
     val dadiBottomsheet = LancioDadiFragment()
+    val noteBottomsheet = NoteFabFragment()
+    val estrazioneCarteBottomsheet = EstrazioneCarteFragment()
+
 
 
     private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(contesto, R.anim.rotate_open_anim) }
@@ -44,7 +49,8 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
         }
 
         cardBtn.setOnClickListener {
-            Toast.makeText(contesto, "Pulsante Carte", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(contesto, "Pulsante Carte", Toast.LENGTH_SHORT).show()
+            estrazioneCarteBottomsheet.show(fragment, "Estrazione Carte")
         }
 
         gridBtn.setOnClickListener {
@@ -52,7 +58,8 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
         }
 
         noteBtn.setOnClickListener {
-            Toast.makeText(contesto, "Pulsante Note", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(contesto, "Pulsante Note", Toast.LENGTH_SHORT).show()
+            noteBottomsheet.show(fragment, "Note")
         }
 
         diceBtn.setOnClickListener {
