@@ -30,7 +30,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:useDefaultMargins="true">
 
             <Button
                 android:id="@+id/butt7"
@@ -156,6 +157,21 @@
                 app:strokeColor="@color/strokebuttn1" />
 
         </GridLayout>
+
+        <Button
+            android:id="@+id/buttEqual"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="148dp"
+            android:backgroundTint="#0DFFFFFF"
+            android:elevation="1dp"
+            android:text="@string/btnEqual"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/strokebuttn1"
+            tools:layout_editor_absoluteY="149dp" />
 
         <ImageView
             android:id="@+id/btn_d2"

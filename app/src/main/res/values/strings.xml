@@ -17,9 +17,6 @@
     <string name="num7">7</string>
     <string name="num8">8</string>
     <string name="num9">9</string>
-
-    <string name="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">10</string>
-
-
+    <string name="btnEqual">=</string>
 
 </resources>
