@@ -18,5 +18,12 @@
     <string name="num8">8</string>
     <string name="num9">9</string>
     <string name="btnEqual">=</string>
-
+    <string name="num0">0</string>
+    <string name="btnLeftParentesis">(</string>
+    <string name="btnRightParentesis">)</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="multiply">×</string>
+    <string name="divide">÷</string>
+    <string name="backspace">⌫</string>
 </resources>
