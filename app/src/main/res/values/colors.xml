@@ -13,4 +13,9 @@
     <color name="sideDrawerBg">#FF2F2F2F</color>
     <color name="PrimaryLight65op">#A6F0D198</color>
     <color name="secondaryLight65op">#A6DD6D4A</color>
+    <color name="Primary">#FFBCA069</color>
+    <color name="PrimaryLight">#FFF0D198</color>
+    <color name="Secondary">#FFA63F20</color>
+    <color name="secondaryLight">#FFDD6D4A</color>
+
 </resources>

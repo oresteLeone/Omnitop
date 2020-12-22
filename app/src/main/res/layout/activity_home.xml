@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addBtn1"
             android:layout_width="wrap_content"
@@ -90,47 +91,18 @@
             app:layout_constraintEnd_toEndOf="@+id/gridBtn1"
             app:srcCompat="@drawable/notes_icon__1" />
 
-        <!-- <ImageView
-             android:id="@+id/pathfinder"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_marginTop="8dp"
-             android:clickable="true"
-             android:focusable="true"
-             android:src="@drawable/banner_pathfinder"
-             app:layout_constraintTop_toBottomOf="@+id/dnd"
-             tools:layout_editor_absoluteX="-60dp" />-->
-
-        <!--<ImageView
-            android:id="@+id/dnd"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idListaGiochi"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:clickable="true"
-            android:focusable="true"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/lista_giochi_layout">
 
-            android:src="@drawable/bannerdnd"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp" /> -->
-
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/idListaGiochi"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:clipToPadding="false"
-                    android:padding="4dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:listitem="@layout/lista_giochi_layout">
-
-                </androidx.recyclerview.widget.RecyclerView>
+        </androidx.recyclerview.widget.RecyclerView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
     <com.google.android.material.navigation.NavigationView
