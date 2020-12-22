@@ -37,7 +37,7 @@
                 android:id="@+id/butt7"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="48dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:backgroundTint="#0DFFFFFF"
                 android:elevation="1dp"
                 android:text="@string/num7"

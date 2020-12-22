@@ -8,9 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="backGround">#121212</color>
-    <color name="fabPadre">#CC7256</color>
-    <color name="fabFiglio">#F0D198</color>
-    <color name="sideDrawerBg">#2F2F2F</color>
-    <color name="strokebuttn1">#A6F0D198</color>
-    <color name="secondaryLight">#FFFFFFFF</color>
+    <color name="fabPadre">#FFDD6D4A</color>
+    <color name="fabFiglio">#FFF0D198</color>
+    <color name="sideDrawerBg">#FF2F2F2F</color>
+    <color name="PrimaryLight65op">#A6F0D198</color>
+    <color name="secondaryLight65op">#A6DD6D4A</color>
 </resources>
