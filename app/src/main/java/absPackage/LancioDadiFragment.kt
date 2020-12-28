@@ -20,6 +20,6 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.lancio_dadi_layout, container, false)
+        return inflater.inflate(R.layout.lancio_dadi_layout2, container, false)
     }
 }
