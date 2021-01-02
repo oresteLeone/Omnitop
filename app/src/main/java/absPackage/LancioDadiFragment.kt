@@ -21,14 +21,14 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
         super.onCreate(savedInstanceState)
 
         /****** LISTNER PER I PULSANTI *******/
-        
-        //Numeri
 
-        popolaListner()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
+
+        popolaListner()
+
         return inflater.inflate(R.layout.lancio_dadi_layout2, container, false)
     }
 
@@ -46,31 +46,48 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
 
     fun popolaListner(){
         /****** LISTNER PER I PULSANTI *******/
+        var btn0 : Button = butt0
+        var btn1 : Button = butt1
+        var btn2 : Button = butt2
+        var btn3 : Button = butt3
+        var btn4 : Button = butt4
+        var btn5 : Button = butt5
+        var btn6 : Button = butt6
+        var btn7 : Button = butt7
+        var btn8 : Button = butt8
+        var btn9 : Button = butt9
 
+        var btnplus : Button = plus
+        var btnminus : Button = minus
+        var btnmultiply : Button = multiply
+        var btndivide : Button = divide
+        var btnopenParentesis : Button = openParentesis
+        var btncloseParentesis : Button = closeParentesis
+        var btnbackspace : Button = backspace
         //Numeri
 
-        butt0.setOnClickListener(){appendOnExpression("0")}
-        butt1.setOnClickListener(){appendOnExpression("1")}
-        butt2.setOnClickListener(){appendOnExpression("2")}
-        butt3.setOnClickListener(){appendOnExpression("3")}
-        butt4.setOnClickListener(){appendOnExpression("4")}
-        butt5.setOnClickListener(){appendOnExpression("5")}
-        butt6.setOnClickListener(){appendOnExpression("6")}
-        butt7.setOnClickListener(){appendOnExpression("7")}
-        butt8.setOnClickListener(){appendOnExpression("8")}
-        butt9.setOnClickListener(){appendOnExpression("9")}
+        btn0.setOnClickListener(){appendOnExpression("0")}
+        btn1.setOnClickListener(){appendOnExpression("1")}
+        btn2.setOnClickListener(){appendOnExpression("2")}
+        btn3.setOnClickListener(){appendOnExpression("3")}
+        btn4.setOnClickListener(){appendOnExpression("4")}
+        btn5.setOnClickListener(){appendOnExpression("5")}
+        btn6.setOnClickListener(){appendOnExpression("6")}
+        btn7.setOnClickListener(){appendOnExpression("7")}
+        btn8.setOnClickListener(){appendOnExpression("8")}
+        btn9.setOnClickListener(){appendOnExpression("9")}
 
         //Operatori
 
-        plus.setOnClickListener(){appendOnExpression("+")}
-        minus.setOnClickListener(){appendOnExpression("-")}
-        multiply.setOnClickListener(){appendOnExpression("×")}
-        divide.setOnClickListener(){appendOnExpression("÷")}
-        openParentesis.setOnClickListener(){appendOnExpression("(")}
-        closeParentesis.setOnClickListener(){appendOnExpression(")")}
+        btnplus.setOnClickListener(){appendOnExpression("+")}
+        btnminus.setOnClickListener(){appendOnExpression("-")}
+        btnmultiply.setOnClickListener(){appendOnExpression("×")}
+        btndivide.setOnClickListener(){appendOnExpression("÷")}
+        btnopenParentesis.setOnClickListener(){appendOnExpression("(")}
+        btncloseParentesis.setOnClickListener(){appendOnExpression(")")}
 
 
-        backspace.setOnClickListener(){
+        btnbackspace.setOnClickListener(){
             val string = displayCalcolatrice.text.toString()
             if(string.isNotEmpty()){
                 displayCalcolatrice.text = string.substring(0, string.length-1)
