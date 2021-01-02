@@ -17,5 +17,6 @@
     <color name="PrimaryLight">#FFF0D198</color>
     <color name="Secondary">#FFA63F20</color>
     <color name="secondaryLight">#FFDD6D4A</color>
+    <color name="testoCalcolatrice">#6B6B6B</color>
 
 </resources>

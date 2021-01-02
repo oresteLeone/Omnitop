@@ -26,4 +26,6 @@
     <string name="multiply">×</string>
     <string name="divide">÷</string>
     <string name="backspace">⌫</string>
+
+    <string name="displayCalcolatrice">Inserisci il tiro di dadi che vuoi effettuare...</string>
 </resources>
