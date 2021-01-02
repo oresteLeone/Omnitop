@@ -24,38 +24,7 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
         
         //Numeri
 
-        butt0.setOnClickListener(){appendOnExpression("0", true)}
-        butt1.setOnClickListener(){appendOnExpression("1", true)}
-        butt2.setOnClickListener(){appendOnExpression("2", true)}
-        butt3.setOnClickListener(){appendOnExpression("3", true)}
-        butt4.setOnClickListener(){appendOnExpression("4", true)}
-        butt5.setOnClickListener(){appendOnExpression("5", true)}
-        butt6.setOnClickListener(){appendOnExpression("6", true)}
-        butt7.setOnClickListener(){appendOnExpression("7", true)}
-        butt8.setOnClickListener(){appendOnExpression("8", true)}
-        butt9.setOnClickListener(){appendOnExpression("9", true)}
-
-        //Operatori
-
-        plus.setOnClickListener(){appendOnExpression("+", false)}
-        minus.setOnClickListener(){appendOnExpression("-", false)}
-        multiply.setOnClickListener(){appendOnExpression("×", false)}
-        divide.setOnClickListener(){appendOnExpression("÷", false)}
-        openParentesis.setOnClickListener(){appendOnExpression("(", false)}
-        closeParentesis.setOnClickListener(){appendOnExpression(")", false)}
-
-
-        backspace.setOnClickListener(){
-            val string = displayCalcolatrice.text.toString()
-            if(string.isNotEmpty()){
-                displayCalcolatrice.text = string.substring(0, string.length-1)
-                risultatoTextView.text = ""
-
-
-
-            }
-
-        }
+        popolaListner()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -67,20 +36,11 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
 
 
 
-    fun appendOnExpression (string: String, canClear : Boolean) {
+    fun appendOnExpression (string: String) {
 
-        if(canClear)
-        {
+
             risultatoTextView.text =""
             displayCalcolatrice.append(string)
-        }
-        else
-        {
-            displayCalcolatrice.append(risultatoTextView.text)
-            displayCalcolatrice.append(string)
-            risultatoTextView.text =""
-
-        }
 
     }
 
@@ -89,25 +49,25 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
 
         //Numeri
 
-        butt0.setOnClickListener(){appendOnExpression("0", true)}
-        butt1.setOnClickListener(){appendOnExpression("1", true)}
-        butt2.setOnClickListener(){appendOnExpression("2", true)}
-        butt3.setOnClickListener(){appendOnExpression("3", true)}
-        butt4.setOnClickListener(){appendOnExpression("4", true)}
-        butt5.setOnClickListener(){appendOnExpression("5", true)}
-        butt6.setOnClickListener(){appendOnExpression("6", true)}
-        butt7.setOnClickListener(){appendOnExpression("7", true)}
-        butt8.setOnClickListener(){appendOnExpression("8", true)}
-        butt9.setOnClickListener(){appendOnExpression("9", true)}
+        butt0.setOnClickListener(){appendOnExpression("0")}
+        butt1.setOnClickListener(){appendOnExpression("1")}
+        butt2.setOnClickListener(){appendOnExpression("2")}
+        butt3.setOnClickListener(){appendOnExpression("3")}
+        butt4.setOnClickListener(){appendOnExpression("4")}
+        butt5.setOnClickListener(){appendOnExpression("5")}
+        butt6.setOnClickListener(){appendOnExpression("6")}
+        butt7.setOnClickListener(){appendOnExpression("7")}
+        butt8.setOnClickListener(){appendOnExpression("8")}
+        butt9.setOnClickListener(){appendOnExpression("9")}
 
         //Operatori
 
-        plus.setOnClickListener(){appendOnExpression("+", false)}
-        minus.setOnClickListener(){appendOnExpression("-", false)}
-        multiply.setOnClickListener(){appendOnExpression("×", false)}
-        divide.setOnClickListener(){appendOnExpression("÷", false)}
-        openParentesis.setOnClickListener(){appendOnExpression("(", false)}
-        closeParentesis.setOnClickListener(){appendOnExpression(")", false)}
+        plus.setOnClickListener(){appendOnExpression("+")}
+        minus.setOnClickListener(){appendOnExpression("-")}
+        multiply.setOnClickListener(){appendOnExpression("×")}
+        divide.setOnClickListener(){appendOnExpression("÷")}
+        openParentesis.setOnClickListener(){appendOnExpression("(")}
+        closeParentesis.setOnClickListener(){appendOnExpression(")")}
 
 
         backspace.setOnClickListener(){
@@ -122,6 +82,5 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
 
         }
     }
-
 
 }
