@@ -65,8 +65,6 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
         diceBtn.setOnClickListener {
             //Toast.makeText(contesto, "Pulsante Dado", Toast.LENGTH_SHORT).show()
             dadiBottomsheet.show(fragment, "LancioDadi")
-
-
         }
 
     }
