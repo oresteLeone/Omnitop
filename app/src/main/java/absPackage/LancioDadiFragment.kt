@@ -77,6 +77,16 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
         openParentesis.setOnClickListener { appendOnExpression("(") }
         closeParentesis.setOnClickListener { appendOnExpression(")") }
 
+        //dadi
+        d20.setOnClickListener{appendOnExpression("d20")}
+        d2.setOnClickListener{appendOnExpression("d2")}
+        d4.setOnClickListener{appendOnExpression("d4")}
+        d6.setOnClickListener{appendOnExpression("d6")}
+        d8.setOnClickListener{appendOnExpression("d8")}
+        d10.setOnClickListener{appendOnExpression("d10")}
+        d12.setOnClickListener{appendOnExpression("d12")}
+        d100.setOnClickListener{appendOnExpression("d100")}
+
         //Pulsante Roll
 
         buttRoll.setOnClickListener(){
