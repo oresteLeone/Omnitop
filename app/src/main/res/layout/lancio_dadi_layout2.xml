@@ -395,7 +395,7 @@
             app:strokeColor="@color/PrimaryLight65op" />
 
         <Button
-            android:id="@+id/buttEqual"
+            android:id="@+id/buttRoll"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
