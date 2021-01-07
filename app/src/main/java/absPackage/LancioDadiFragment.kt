@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.annoyingturtle.omnitop.R
@@ -86,19 +87,22 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
         d10.setOnClickListener{appendOnExpression("d10")}
         d12.setOnClickListener{appendOnExpression("d12")}
         d100.setOnClickListener{appendOnExpression("d100")}
+        dx.setOnClickListener{appendOnExpression("d")}
 
         //Pulsante Roll
 
         buttRoll.setOnClickListener(){
+
+
+
             try{
 
-                var espressione = ExpressionBuilder(displayCalcolatrice.text.toString()).build()
+                var espressione  = ExpressionBuilder(sostituisciD(displayCalcolatrice.text.toString())).build()
                 var result = espressione.evaluate()
                 var longResult = result.toLong()
-                if(result == longResult.toDouble()) risultatoTextView.text = longResult.toString()
+                if (result == longResult.toDouble()) risultatoTextView.text = longResult.toString()
                     else
                     risultatoTextView.text = result.toString()
-
             }catch (e : Exception){
                 Log.d("Eccezione Calcolatrice", "message:" + e.message)
             }
@@ -117,4 +121,61 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
         }
     }
 
+
+    fun sostituisciD (string : String) : String
+    {
+        var i = 0
+        var nDadi : Int
+        var tDadi : Int
+
+        var rDadi = 0
+
+        var temp = ""
+        var res = ""
+        var operatori : CharArray = CharArray(4)
+
+        operatori.set(0, '+')
+        operatori.set(1, '-')
+        operatori.set(2, '*')
+        operatori.set(3, '/')
+
+        while (string.isNotEmpty())
+        {
+            if(string.contains('+') || string.contains('-') || string.contains('*') || string.contains('/')) {
+                i = string.indexOfAny(operatori)
+
+                temp = string.subSequence(0, i + 1).toString()
+
+                if (temp.contains("d")) {
+
+                    nDadi = temp.subSequence(0, temp.indexOf('d')).toString().toInt()
+                    tDadi = temp.subSequence(temp.indexOf('d') + 1, temp.lastIndex).toString().toInt()
+
+                    for (y in 0..nDadi) {
+                        rDadi += (1..tDadi).random()
+                    }
+
+                }
+                res += temp
+                string.drop(i)
+            }
+            else
+            {
+                if (string.contains("d")) {
+
+                    nDadi = string.subSequence(0, string.indexOf('d')).toString().toInt()
+                    tDadi = string.subSequence(string.indexOf('d') + 1, string.lastIndex).toString().toInt()
+
+                    for (y in 0..nDadi) {
+                        rDadi += (1..tDadi).random()
+                    }
+
+                }
+                res += string
+                string.drop(string.length)
+            }
+        }
+
+        return res
+    }
 }

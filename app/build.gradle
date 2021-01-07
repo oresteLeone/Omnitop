@@ -59,5 +59,4 @@ dependencies {
     //libreria per la MaTeMaTiCa
     implementation 'net.objecthunter:exp4j:0.4.8'
 
-
 }
