@@ -61,7 +61,7 @@ class HomeActivity : AppCompatActivity() {
 
 
         idListaGiochi.adapter = AdapterRecyclerListaGiochi(lista)
-        idListaGiochi.layoutManager = LinearLayoutManager(this)     //Errore su questa linea, il layout utilizzato è un drawerlayout, ma non trovo la funzione giusta da usare
+        idListaGiochi.layoutManager = LinearLayoutManager(this)
         idListaGiochi.setHasFixedSize(true)
     }
 
@@ -77,23 +77,6 @@ class HomeActivity : AppCompatActivity() {
         var inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.actionbar_menu, menu)
 
-        /*menu?.findItem(R.id.idRicerca)?.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
-            override fun onMenuItemActionExpand(item: MenuItem?): Boolean {
-
-
-
-                var searchView  = menu?.findItem(R.id.idRicerca)
-                val searchItem = menu.findItem(R.id.idRicerca)
-                //searchView = searchItem.setActionView(this : View!) as SearchView
-                searchView.setQueryHint("Search View Hint")                         /************ Capire come si mettono gli Hint******/
-
-
-                return true
-            }*/
-
-        //fun MenuItem.OnActionExpandListener(menu: MenuItem){
-
-        // }
 
         return true
     }

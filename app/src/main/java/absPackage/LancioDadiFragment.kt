@@ -122,12 +122,12 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
     }
 
 
-    fun sostituisciD (string : String) : String
+    fun sostituisciD (str : String) : String
     {
         var i = 0
         var nDadi : Int
         var tDadi : Int
-
+        var string = str
         var rDadi = 0
 
         var temp = ""
@@ -154,10 +154,12 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
                     for (y in 0..nDadi) {
                         rDadi += (1..tDadi).random()
                     }
-
+                    var op = temp[temp.lastIndex]
+                    temp=rDadi.toString()
+                    temp+=op
                 }
                 res += temp
-                string.drop(i)
+                string=string.drop(i+1)
             }
             else
             {
@@ -169,13 +171,13 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
                     for (y in 0..nDadi) {
                         rDadi += (1..tDadi).random()
                     }
-
+                temp=rDadi.toString()
                 }
                 res += string
-                string.drop(string.length)
+                string=string.drop(string.length)
             }
         }
-
+        println(res)
         return res
     }
 }
