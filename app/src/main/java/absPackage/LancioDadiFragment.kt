@@ -149,9 +149,11 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
                 if (temp.contains("d")) {
 
                     nDadi = temp.subSequence(0, temp.indexOf('d')).toString().toInt()
-                    tDadi = temp.subSequence(temp.indexOf('d') + 1, temp.lastIndex).toString().toInt()
+                    var indice1 =temp.indexOf('d') + 1
+                    var indice2 = temp.lastIndex
+                    tDadi = temp.subSequence(indice1, indice2).toString().toInt()
 
-                    for (y in 0..nDadi) {
+                    for (y in 1..nDadi) {
                         rDadi += (1..tDadi).random()
                     }
                     var op = temp[temp.lastIndex]
@@ -166,12 +168,15 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
                 if (string.contains("d")) {
 
                     nDadi = string.subSequence(0, string.indexOf('d')).toString().toInt()
-                    tDadi = string.subSequence(string.indexOf('d') + 1, string.lastIndex).toString().toInt()
+                    var indice1 =string.indexOf('d') + 1
+                    var indice2 = string.lastIndex+1
+                    tDadi = string.subSequence(indice1, indice2).toString().toInt()
 
-                    for (y in 0..nDadi) {
+                    for (y in 1..nDadi) {
                         rDadi += (1..tDadi).random()
                     }
                 temp=rDadi.toString()
+                    string=temp
                 }
                 res += string
                 string=string.drop(string.length)
