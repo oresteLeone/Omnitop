@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.view.*
 
 class ListaGiochiViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
-    val imageView : ImageView // = itemView.imageView.findViewById(R.id.IdImageView)
+    val imageView : ImageView // = itemView.imageView.findViewById(R.id.IdImageView)////////
 
     init {
         imageView = itemView.findViewById(R.id.IdImageView)
