@@ -7,5 +7,47 @@
     android:layout_height="match_parent"
     android:background="@color/backGround"
     android:elevation="16dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+
+        <ImageView
+            android:id="@+id/card1"
+            android:layout_width="160dp"
+            android:layout_height="240dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/cardshape"
+            app:layout_constraintBottom_toTopOf="@+id/btn_change"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></ImageView>
+
+
+        <Button
+            android:id="@+id/btn_change"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="Cambia Mazzo"
+            android:textColor="@color/Primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btn_estrai" />
+
+        <Button
+            android:id="@+id/btn_estrai"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/Primary"
+            android:text="ESTRAI"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
