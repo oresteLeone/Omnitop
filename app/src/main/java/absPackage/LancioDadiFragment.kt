@@ -164,10 +164,11 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
 
                 if (temp.contains("d")) {
 
-                    if(temp.indexOf('d') == 0)
+                    if(temp.indexOf('d') == 0){
                         nDadi=1
-                    else
+                    }else {
                         nDadi = temp.subSequence(0, temp.indexOf('d')).toString().toInt()
+                    }
                     var indice1 =temp.indexOf('d') + 1
                     var indice2 = temp.lastIndex
                     tDadi = temp.subSequence(indice1, indice2).toString().toInt()
@@ -185,27 +186,33 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
                 }
                 res += temp
                 string=string.drop(i+1)
+                rDadi=0
             }
             else
             {
                 if (string.contains("d")) {
 
-                    if(string.indexOf('d')==0)
-                        nDadi=1
-                    else
+                    if(string.indexOf('d')==0) {
+                        nDadi = 1
+                    }else {
                         nDadi = string.subSequence(0, string.indexOf('d')).toString().toInt()
+                    }
                     var indice1 =string.indexOf('d') + 1
                     var indice2 = string.lastIndex+1
                     tDadi = string.subSequence(indice1, indice2).toString().toInt()
 
                     for (y in 1..nDadi) {
-                        rDadi += (1..tDadi).random()
+                        tiro =(1..tDadi).random()
+                        if (tiro != 1) tuttiUno = false
+                        if (tiro != tDadi) tuttiMax = false
+                        rDadi += tiro //(1..tDadi).random()
                     }
                 temp=rDadi.toString()
                     string=temp
                 }
                 res += string
                 string=string.drop(string.length)
+                rDadi=0
             }
         }
         println(res)

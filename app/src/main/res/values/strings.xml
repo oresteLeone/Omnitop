@@ -28,4 +28,6 @@
     <string name="backspace">⌫</string>
 
     <string name="displayCalcolatrice">Inserisci il tiro di dadi che vuoi effettuare...</string>
+    <string name="cambiomazzobtn">CAMBIA MAZZO</string>
+    <string name="estraicarta">ESTRAI</string>
 </resources>

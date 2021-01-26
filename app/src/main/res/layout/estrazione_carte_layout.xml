@@ -11,6 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/backGround"
+            app:layout_constraintBottom_toTopOf="@+id/card1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="24dp"/>
 
         <ImageView
             android:id="@+id/card1"
@@ -20,7 +27,8 @@
             android:src="@drawable/cardshape"
             app:layout_constraintBottom_toTopOf="@+id/btn_change"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"></ImageView>
+            app:layout_constraintStart_toStartOf="parent"
+             />
 
 
         <Button
@@ -30,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:layout_marginEnd="24dp"
-            android:text="Cambia Mazzo"
+            android:text="@string/cambiomazzobtn"
             android:textColor="@color/Primary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/btn_estrai" />
@@ -43,7 +51,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="24dp"
             android:backgroundTint="@color/Primary"
-            android:text="ESTRAI"
+            android:text="@string/estraicarta"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
