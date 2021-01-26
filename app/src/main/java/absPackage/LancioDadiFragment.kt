@@ -23,14 +23,11 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-
         return inflater.inflate(R.layout.lancio_dadi_layout2, container, false)
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onStart() {
@@ -39,25 +36,19 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
     }
 
     /******* METODI PER LE TEXT VIEW ED I PULSANTI ********/
-
-
     private fun appendOnExpression(string: String) {
 
         if(risultatoTextView.text.isNotEmpty())  {
             displayCalcolatrice.text = risultatoTextView.text
             risultatoTextView.text = ""
         }
-
-
         risultatoTextView.text = ""
         displayCalcolatrice.append(string)
-
     }
 
     fun popolaListner() {
         /****** LISTNER PER I PULSANTI *******/
         //Numeri
-
         butt0.setOnClickListener { appendOnExpression("0") }
         butt1.setOnClickListener { appendOnExpression("1") }
         butt2.setOnClickListener { appendOnExpression("2") }
@@ -93,8 +84,6 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
 
         buttRoll.setOnClickListener(){
 
-
-
             try{
 
                 var espressione  = ExpressionBuilder(sostituisciD(displayCalcolatrice.text.toString())).build()
@@ -114,13 +103,9 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
             if (string.isNotEmpty()) {
                 displayCalcolatrice.text = string.substring(0, string.length - 1)
                 risultatoTextView.text = ""
-
-
             }
-
         }
     }
-
 
     fun sostituisciD (str : String) : String
     {
