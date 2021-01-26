@@ -77,6 +77,8 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
         return super.onOptionsItemSelected(item)
     }
 
+    /***** Pulsante Ricerca *****/
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
         var inflater: MenuInflater = menuInflater
@@ -103,6 +105,7 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
 
 }
 
+    /***** Metodo per gestire la transizione fra due attività***/
     override fun onItemClick(position: Int) {
         if(position == 0)
         {

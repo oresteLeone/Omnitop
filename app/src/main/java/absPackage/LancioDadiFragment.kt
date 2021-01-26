@@ -1,6 +1,7 @@
 package absPackage
 
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.util.AttributeSet
 import android.util.Log
@@ -20,6 +21,10 @@ import net.objecthunter.exp4j.ExpressionBuilder
 import java.lang.Exception
 
 class LancioDadiFragment : BottomSheetDialogFragment() {
+
+    var tuttiUno :Boolean = true
+    var tuttiMax: Boolean = true
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -85,11 +90,31 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
         buttRoll.setOnClickListener(){
 
             try{
+                risultatoTextView.setTextColor(Color.parseColor("#ffffff"))
 
+                tuttiMax= true
+                tuttiUno= true
                 var espressione  = ExpressionBuilder(sostituisciD(displayCalcolatrice.text.toString())).build()
                 var result = espressione.evaluate()
                 var longResult = result.toLong()
-                if (result == longResult.toDouble()) risultatoTextView.text = longResult.toString()
+
+                if (tuttiUno != tuttiMax)
+                {
+                    if (tuttiUno) {
+
+                        risultatoTextView.setTextColor(Color.parseColor("#ff0000"))
+                    }
+                    else {
+                        risultatoTextView.setTextColor(Color.parseColor("#008000"))
+
+                    }
+                }
+
+                if (result == longResult.toDouble())
+                {
+
+                    risultatoTextView.text = longResult.toString()
+                }
                     else
                     risultatoTextView.text = result.toString()
             }catch (e : Exception){
@@ -107,8 +132,14 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
         }
     }
 
+
+    /*** metodo per sostituire le scritte dei dadi con il valore randomico del tiro ***/
+
     fun sostituisciD (str : String) : String
     {
+
+        var tiro : Int =0
+
         var i = 0
         var nDadi : Int
         var tDadi : Int
@@ -142,8 +173,12 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
                     tDadi = temp.subSequence(indice1, indice2).toString().toInt()
 
                     for (y in 1..nDadi) {
-                        rDadi += (1..tDadi).random()
+                        tiro =(1..tDadi).random()
+                        if (tiro != 1) tuttiUno = false
+                        if (tiro != tDadi) tuttiMax = false
+                        rDadi += tiro //(1..tDadi).random()
                     }
+
                     var op = temp[temp.lastIndex]
                     temp=rDadi.toString()
                     temp+=op
