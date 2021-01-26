@@ -6,18 +6,22 @@ import absPackage.AbsFab
 import absPackage.AdapterRecyclerListaGiochi
 import absPackage.ItemListaGiochi
 import absPackage.LancioDadiFragment
+import android.content.Context
+import android.content.Intent
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClickListnerInteface {
 
     lateinit var toggle: ActionBarDrawerToggle
 
@@ -60,9 +64,10 @@ class HomeActivity : AppCompatActivity() {
         val lista = generaLista()
 
 
-        idListaGiochi.adapter = AdapterRecyclerListaGiochi(lista)
+        idListaGiochi.adapter = AdapterRecyclerListaGiochi(lista, this)
         idListaGiochi.layoutManager = LinearLayoutManager(this)
         idListaGiochi.setHasFixedSize(true)
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {       //Funzione per il menu a scorrimento
@@ -78,12 +83,16 @@ class HomeActivity : AppCompatActivity() {
         inflater.inflate(R.menu.actionbar_menu, menu)
 
 
+
         return true
     }
+
+
 
     /****** Metodo per generare la lista di oggetti da mostrare a schermo *****/
 
     private fun generaLista(): List<ItemListaGiochi> {
+
         return listOf(
                 ItemListaGiochi(
                         imageResources = R.drawable.bannerdnd),
@@ -93,4 +102,14 @@ class HomeActivity : AppCompatActivity() {
         )
 
 }
+
+    override fun onItemClick(position: Int) {
+        if(position == 0)
+        {
+            //val welcome = Intent(this@MainActivity, HomeActivity::class.java)
+            startActivity(Intent(this, dndHome::class.java) )
+        }
+        else
+        Toast.makeText(this, "Hai premuto l'oggetto ${position}", Toast.LENGTH_SHORT).show()
+    }
 }
