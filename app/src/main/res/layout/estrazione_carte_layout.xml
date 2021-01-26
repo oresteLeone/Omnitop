@@ -15,9 +15,22 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/backGround"
-            app:layout_constraintBottom_toTopOf="@+id/card1"
+            app:layout_constraintBottom_toTopOf="@+id/testoEstrattore"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:id="@+id/testoEstrattore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Nome del Mazzo/Carta Estratta"
+            app:layout_constraintBottom_toTopOf="@id/card1"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="20sp"
+            />
+
 
         <ImageView
             android:id="@+id/card1"
