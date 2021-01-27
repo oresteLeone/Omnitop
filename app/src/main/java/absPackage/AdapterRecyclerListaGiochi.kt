@@ -1,19 +1,11 @@
 package absPackage
 
-import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.annoyingturtle.omnitop.HomeActivity
 import com.annoyingturtle.omnitop.R
-import com.annoyingturtle.omnitop.dndHome
-import kotlinx.android.synthetic.main.activity_main.view.*
-import java.security.AccessController.getContext
 
 class AdapterRecyclerListaGiochi (val Lista : List<ItemListaGiochi>, private val listner :OnItemClickListnerInteface ) : RecyclerView.Adapter<AdapterRecyclerListaGiochi.ListaGiochiViewHolder>() {
 

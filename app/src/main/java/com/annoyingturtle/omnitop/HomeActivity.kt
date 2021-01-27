@@ -5,20 +5,14 @@ import android.os.Bundle
 import absPackage.AbsFab
 import absPackage.AdapterRecyclerListaGiochi
 import absPackage.ItemListaGiochi
-import absPackage.LancioDadiFragment
-import android.content.Context
 import android.content.Intent
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.core.content.ContextCompat
-import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.activity_main.view.*
 
 
 class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClickListnerInteface {
@@ -110,7 +104,7 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
         if(position == 0)
         {
             //val welcome = Intent(this@MainActivity, HomeActivity::class.java)
-            startActivity(Intent(this, dndHome::class.java) )
+            startActivity(Intent(this, DndHome::class.java) )
         }
         else
         Toast.makeText(this, "Hai premuto l'oggetto ${position}", Toast.LENGTH_SHORT).show()

@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import kotlinx.android.synthetic.main.activity_home.*
 
-class dndHome : AppCompatActivity() {
+class DndHome : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

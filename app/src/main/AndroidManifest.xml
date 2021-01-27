@@ -19,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Omnitop">
-        <activity android:name=".dndHome"></activity>
+        <activity android:name=".DndHome"></activity>
         <activity android:name=".HomeActivity"/>
         <activity android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">

@@ -35,4 +35,145 @@
     <string name="CarteTarocchi">Tarocchi</string>
     <string name="CarteNapoletane">Napoletane</string>
 
+    <!-- CARTE NAPOLETANE -->
+
+    <string name="AssoBastoni">Asso di Bastoni</string>
+    <string name="DueBastoni">2 di Bastoni</string>
+    <string name="TreBastoni">3 di Bastoni</string>
+    <string name="QuattroBastoni">4 di Bastoni</string>
+    <string name="CinqueBastoni">5 di Bastoni</string>
+    <string name="SeiBastoni">6 di Bastoni</string>
+    <string name="SetteBastoni">7 di Bastoni</string>
+    <string name="OttoBastoni">8 di Bastoni</string>
+    <string name="NoveBastoni">9 di Bastoni</string>
+    <string name="DieciBastoni">10 di Bastoni</string>
+
+    <string name="AssoSpade">Asso di Spade</string>
+    <string name="DueSpade">2 di Spade</string>
+    <string name="TreSpade">3 di Spade</string>
+    <string name="QuattroSpade">4 di Spade</string>
+    <string name="CinqueSpade">5 di Spade</string>
+    <string name="SeiSpade">6 di Spade</string>
+    <string name="SetteSpade">7 di Spade</string>
+    <string name="OttoSpade">8 di Spade</string>
+    <string name="NoveSpade">9 di Spade</string>
+    <string name="DieciSpade">10 di Spade</string>
+
+    <string name="AssoDenari">Asso di Denari</string>
+    <string name="DueDenari">2 di Denari</string>
+    <string name="TreDenari">3 di Denari</string>
+    <string name="QuattroDenari">4 di Denari</string>
+    <string name="CinqueDenari">5 di Denari</string>
+    <string name="SeiDenari">6 di Denari</string>
+    <string name="SetteDenari">7 di Denari</string>
+    <string name="OttoDenari">8 di Denari</string>
+    <string name="NoveDenari">9 di Denari</string>
+    <string name="DieciDenari">10 di Denari</string>
+
+    <string name="AssoCoppe">Asso di Coppe</string>
+    <string name="DueCoppe">2 di Coppe</string>
+    <string name="TreCoppe">3 di Coppe</string>
+    <string name="QuattroCoppe">4 di Coppe</string>
+    <string name="CinqueCoppe">5 di Coppe</string>
+    <string name="SeiCoppe">6 di Coppe</string>
+    <string name="SetteCoppe">7 di Coppe</string>
+    <string name="OttoCoppe">8 di Coppe</string>
+    <string name="NoveCoppe">9 di Coppe</string>
+    <string name="DieciCoppe">10 di Coppe</string>
+
+    <!-- Carte Francesi -->
+    <string name="AssoPicche">Asso di Picche</string>
+    <string name="DuePicche">2 di Picche</string>
+    <string name="TrePicche">3 di Picche</string>
+    <string name="QuattroPicche">4 di Picche</string>
+    <string name="CinquePicche">5 di Picche</string>
+    <string name="SeiPicche">6 di Picche</string>
+    <string name="SettePicche">7 di Picche</string>
+    <string name="OttoPicche">8 di Picche</string>
+    <string name="NovePicche">9 di Picche</string>
+    <string name="DieciPicche">10 di Picche</string>
+    <string name="FantePicche">Fante di Picche</string>
+    <string name="ReginaPicche">Regina di Picche</string>
+    <string name="RePicche">Re di Picche</string>
+
+    <string name="AssoFiori">Asso di Fiori</string>
+    <string name="DueFiori">2 di Fiori</string>
+    <string name="TreFiori">3 di Fiori</string>
+    <string name="QuattroFiori">4 di Fiori</string>
+    <string name="CinqueFiori">5 di Fiori</string>
+    <string name="SeiFiori">6 di Fiori</string>
+    <string name="SetteFiori">7 di Fiori</string>
+    <string name="OttoFiori">8 di Fiori</string>
+    <string name="NoveFiori">9 di Fiori</string>
+    <string name="DieciFiori">10 di Fiori</string>
+    <string name="FanteFiori">Fante di Fiori</string>
+    <string name="ReginaFiori">Regina di Fiori</string>
+    <string name="ReFiori">Re di Fiori</string>
+
+    <string name="AssoQuadri">Asso di Quadri</string>
+    <string name="DueQuadri">2 di Quadri</string>
+    <string name="TreQuadri">3 di Quadri</string>
+    <string name="QuattroQuadri">4 di Quadri</string>
+    <string name="CinqueQuadri">5 di Quadri</string>
+    <string name="SeiQuadri">6 di Quadri</string>
+    <string name="SetteQuadri">7 di Quadri</string>
+    <string name="OttoQuadri">8 di Quadri</string>
+    <string name="NoveQuadri">9 di Quadri</string>
+    <string name="DieciQuadri">10 di Quadri</string>
+    <string name="FanteQuadri">Fante di Quadri</string>
+    <string name="ReginaQuadri">Regina di Quadri</string>
+    <string name="ReQuadri">Re di Quadri</string>
+
+    <string name="AssoCuori">Asso di Cuori</string>
+    <string name="DueCuori">2 di Cuori</string>
+    <string name="TreCuori">3 di Cuori</string>
+    <string name="QuattroCuori">4 di Cuori</string>
+    <string name="CinqueCuori">5 di Cuori</string>
+    <string name="SeiCuori">6 di Cuori</string>
+    <string name="SetteCuori">7 di Cuori</string>
+    <string name="OttoCuori">8 di Cuori</string>
+    <string name="NoveCuori">9 di Cuori</string>
+    <string name="DieciCuori">10 di Cuori</string>
+    <string name="FanteCuori">Fante di Cuori</string>
+    <string name="ReginaCuori">Regina di Cuori</string>
+    <string name="ReCuori">Re di Cuori</string>
+
+    <string name="MattoRosso">Matto Rosso</string>
+    <string name="MattoNero">Matto Nero</string>
+
+    <!-- TAROCCHI "OI JOJO"-->
+    <string name="Mago">1: Il Mago</string>
+    <string name="Papessa">2: La Papessa</string>
+    <string name="Imperatrice">3: L\'Imperatrice</string>
+    <string name="Imperatore">4: L\'Imperatore</string>
+    <string name="Papa">5: Il Papa</string>
+    <string name="Amanti">6: Gli Amanti</string>
+    <string name="Carro">7: Il Carro</string>
+    <string name="Forza">8: La Forza</string>
+    <string name="Eremita">9: L\'Eremita</string>
+    <string name="Ruota">10: La Ruota</string>
+    <string name="Giustizia">11: La Giustizia</string>
+    <string name="Appeso">12: L\'Appeso</string>
+    <string name="Morte">13: La Morte</string>
+    <string name="Temperanza">14: La Temperanza</string>
+    <string name="Diavolo">15: Il Diavolo</string>
+    <string name="Torre">16: La Torre</string>
+    <string name="Stella">17: La Stella</string>
+    <string name="Luna">18: La Luna</string>
+    <string name="Sole">19: Il Sole</string>
+    <string name="Giudizio">20: Il Giudizio</string>
+    <string name="ZAWARUDO">21: Il Mondo</string>
+    <string name="Matto">22: Il Matto</string>
+
+
+
+
+
+
+
+
+
+
+
+
 </resources>
