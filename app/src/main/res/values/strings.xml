@@ -30,7 +30,7 @@
     <string name="displayCalcolatrice">Inserisci il tiro di dadi che vuoi effettuare...</string>
     <string name="cambiomazzobtn">CAMBIA MAZZO</string>
     <string name="estraicarta">ESTRAI</string>
-    <string name="mischiaMazzo">MISCHIA</string> name=""
+    <string name="mischiaMazzo">RIMESCOLA</string>
 
     <string name="CarteFrancesi">Francesi</string>
     <string name="CarteTarocchi">Tarocchi</string>
