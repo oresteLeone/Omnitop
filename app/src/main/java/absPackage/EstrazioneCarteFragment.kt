@@ -84,17 +84,18 @@ class EstrazioneCarteFragment() : BottomSheetDialogFragment() {
 
 
             while (!trovato) {
-                carta = (1..mazzo.size).random()
+                carta = (mazzo.indices).random()
                 if (mazzo[carta] == 0)
                     trovato = true
                 else {
-                    count = 0
-                    for (i in 0..mazzo.size) {
-                        if (mazzo[i] == 1)
+                    count = 1
+                    for (element in mazzo) {
+                        if (element == 1)
                             count++
                     }
-                    if (count == mazzo.size) {  // il mazzo viene mischiato in questo modo in quanto non è possibile riassegnare il valore mazzo e quindi invocare la funzione mischia
+                    if (count == mazzo.size) {
                         mazzo = mischia(mazzo)
+                        count = 0
                     }
                 }
             }
@@ -113,7 +114,7 @@ class EstrazioneCarteFragment() : BottomSheetDialogFragment() {
 
     private fun mischia(maz : IntArray): IntArray {
         var mazzo = maz
-        for(i in 0..mazzo.size)
+        for(i in mazzo.indices)
             mazzo[0] = 0
 
         Toast.makeText(activity, "Il mazzo è stato mischiato", Toast.LENGTH_SHORT).show()
