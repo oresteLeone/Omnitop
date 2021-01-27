@@ -88,7 +88,7 @@ class EstrazioneCarteFragment() : BottomSheetDialogFragment() {
                 if (mazzo[carta] == 0)
                     trovato = true
                 else {
-                    count = 1
+                    count = 0
                     for (element in mazzo) {
                         if (element == 1)
                             count++
@@ -115,7 +115,7 @@ class EstrazioneCarteFragment() : BottomSheetDialogFragment() {
     private fun mischia(maz : IntArray): IntArray {
         var mazzo = maz
         for(i in mazzo.indices)
-            mazzo[0] = 0
+            mazzo[i] = 0
 
         Toast.makeText(activity, "Il mazzo è stato mischiato", Toast.LENGTH_SHORT).show()
         return mazzo
