@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.annoyingturtle.omnitop.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.estrazione_carte_layout.*
+import java.lang.Exception
 
 class EstrazioneCarteFragment() : BottomSheetDialogFragment() {
 
@@ -78,26 +79,30 @@ class EstrazioneCarteFragment() : BottomSheetDialogFragment() {
         var trovato = false
         var carta = 0
         var count = 0
+        try {
 
-        while (!trovato) {
-            carta = (1..mazzo.size).random()
-            if(mazzo[carta] == 0)
-                trovato = true
-            else
-            {
-                count = 0
-                for (i in 0..mazzo.size)
-                {
-                    if (mazzo[i] == 1)
-                        count++
-                }
-                if (count == mazzo.size) {  // il mazzo viene mischiato in questo modo in quanto non è possibile riassegnare il valore mazzo e quindi invocare la funzione mischia
-                    for (i in 0..mazzo.size)
-                        mazzo[0] = 0
 
-                    Toast.makeText(activity, "Il mazzo è stato mischiato", Toast.LENGTH_SHORT).show()
+            while (!trovato) {
+                carta = (1..mazzo.size).random()
+                if (mazzo[carta] == 0)
+                    trovato = true
+                else {
+                    count = 0
+                    for (i in 0..mazzo.size) {
+                        if (mazzo[i] == 1)
+                            count++
+                    }
+                    if (count == mazzo.size) {  // il mazzo viene mischiato in questo modo in quanto non è possibile riassegnare il valore mazzo e quindi invocare la funzione mischia
+                        for (i in 0..mazzo.size)
+                            mazzo[0] = 0
+
+                        Toast.makeText(activity, "Il mazzo è stato mischiato", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
+        }catch (e : Exception)
+        {
+
         }
 
         mazzo[carta]=1
