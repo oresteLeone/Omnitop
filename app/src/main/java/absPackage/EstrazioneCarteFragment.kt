@@ -75,7 +75,8 @@ class EstrazioneCarteFragment() : BottomSheetDialogFragment() {
 
     /**** Funzioni per estrarre le carte dai mazzi ****/
 
-    private fun pesca(mazzo: IntArray) : IntArray {
+    private fun pesca(maz: IntArray) : IntArray {
+        var mazzo = maz
         var trovato = false
         var carta = 0
         var count = 0
@@ -93,10 +94,7 @@ class EstrazioneCarteFragment() : BottomSheetDialogFragment() {
                             count++
                     }
                     if (count == mazzo.size) {  // il mazzo viene mischiato in questo modo in quanto non è possibile riassegnare il valore mazzo e quindi invocare la funzione mischia
-                        for (i in 0..mazzo.size)
-                            mazzo[0] = 0
-
-                        Toast.makeText(activity, "Il mazzo è stato mischiato", Toast.LENGTH_SHORT).show()
+                        mazzo = mischia(mazzo)
                     }
                 }
             }
@@ -113,7 +111,8 @@ class EstrazioneCarteFragment() : BottomSheetDialogFragment() {
 
     /**** Funzione per mischiare il mazzo ****/
 
-    private fun mischia(mazzo : IntArray): IntArray {
+    private fun mischia(maz : IntArray): IntArray {
+        var mazzo = maz
         for(i in 0..mazzo.size)
             mazzo[0] = 0
 
