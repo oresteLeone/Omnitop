@@ -51,20 +51,27 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
         cardBtn.setOnClickListener {
             //Toast.makeText(contesto, "Pulsante Carte", Toast.LENGTH_SHORT).show()
             estrazioneCarteBottomsheet.show(fragment, "Estrazione Carte")
+            onAddButtonClicked()
         }
 
         gridBtn.setOnClickListener {
             Toast.makeText(contesto, "Pulsante Griglia", Toast.LENGTH_SHORT).show()
+            onAddButtonClicked()
+
         }
 
         noteBtn.setOnClickListener {
             //Toast.makeText(contesto, "Pulsante Note", Toast.LENGTH_SHORT).show()
             noteBottomsheet.show(fragment, "Note")
+            onAddButtonClicked()
+
         }
 
         diceBtn.setOnClickListener {
             //Toast.makeText(contesto, "Pulsante Dado", Toast.LENGTH_SHORT).show()
             dadiBottomsheet.show(fragment, "LancioDadi")
+            onAddButtonClicked()
+
         }
 
     }
