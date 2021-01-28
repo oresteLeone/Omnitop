@@ -1,12 +1,10 @@
 package com.annoyingturtle.omnitop
 
-import absPackage.AbsFab
+import utilPackage.AbsFab
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
-import android.widget.Toast
-import androidx.appcompat.app.ActionBarDrawerToggle
 import kotlinx.android.synthetic.main.activity_home.*
 
 class DndHome : AppCompatActivity() {

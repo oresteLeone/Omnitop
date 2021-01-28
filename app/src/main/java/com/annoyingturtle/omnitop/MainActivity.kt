@@ -1,6 +1,5 @@
 package com.annoyingturtle.omnitop
 
-import absPackage.AbsFab
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
