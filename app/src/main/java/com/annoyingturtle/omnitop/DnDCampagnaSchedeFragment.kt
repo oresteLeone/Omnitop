@@ -14,7 +14,7 @@ class DnDCampagnaSchedeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dn_d_campagna_schede, container, false)
+        return inflater.inflate(R.layout.fragment_dnd_campagna_schede, container, false)
     }
 
 

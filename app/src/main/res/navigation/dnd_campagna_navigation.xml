@@ -9,7 +9,7 @@
         android:id="@+id/dnDCampagnaSchedeFragment"
         android:name="com.annoyingturtle.omnitop.DnDCampagnaSchedeFragment"
         android:label="fragment_dn_d_campagna_schede"
-        tools:layout="@layout/fragment_dn_d_campagna_schede" >
+        tools:layout="@layout/fragment_dnd_campagna_schede" >
         <action
             android:id="@+id/action_dnDCampagnaSchedeFragment_to_dndCamapagnaNoteFragment"
             app:destination="@id/dndCamapagnaNoteFragment" />

@@ -107,6 +107,7 @@
             tools:listitem="@layout/lista_giochi_layout">
 
         </androidx.recyclerview.widget.RecyclerView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

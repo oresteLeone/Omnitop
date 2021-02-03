@@ -24,6 +24,7 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+
         /************ Menu a scorrimento *********/
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.openDrawer, R.string.closeDrawer)
         drawerLayout.addDrawerListener(toggle)
