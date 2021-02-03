@@ -15,7 +15,9 @@
     <string name="gm">DUNGEON MASTER</string>
     <string name="pg">AVVENTURIERO</string>
     <string name="lib">LIBRERIA</string>
-
+    <string name="schede">SCHEDE</string>
+    <string name="note">NOTE</string>
+    <string name="cmp">COMPENDIUM</string>
 
 
     <string name="num1">1</string>
