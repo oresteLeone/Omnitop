@@ -3,9 +3,11 @@
     <string name="openDrawer">Open</string>
     <string name="closeDrawer">Close</string>
 
+    <string name="dnd">Dungeons and Dragons</string>
+    <string name="pathf">Pathfinder</string>
     <string-array name="listaGiochi">
-        <item>Dungeons and Dragons</item>
-        <item>Pathfinder</item>
+        <item>@string/dnd</item>
+        <item>@string/pathf</item>
     </string-array>
 
     <string name="num1">1</string>

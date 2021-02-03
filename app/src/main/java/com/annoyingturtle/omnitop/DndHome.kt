@@ -19,11 +19,6 @@ class DndHome : AppCompatActivity() {
         fab.startListener(this)
 
 
-
-        /******* Nome Sull'actionBar *******/
-
-        supportActionBar?.title = "OmniTop"
-
     }
 
     /***** Pulsante Ricerca *****/

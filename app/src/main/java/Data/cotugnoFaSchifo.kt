@@ -1,4 +1,0 @@
-package Data
-
-class cotugnoFaSchifo {
-}

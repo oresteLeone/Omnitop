@@ -19,16 +19,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Omnitop">
-        <activity android:name=".DndHome"></activity>
-        <activity android:name=".HomeActivity"/>
+
+
+
         <activity android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".HomeActivity"/>
+
+        <activity android:name=".DndHome"
+            android:label="@string/dnd"
+            android:parentActivityName=".HomeActivity"/>
+
     </application>
 
 </manifest>

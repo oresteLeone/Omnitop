@@ -18,5 +18,7 @@
     <color name="Secondary">#FFA63F20</color>
     <color name="secondaryLight">#FFDD6D4A</color>
     <color name="testoCalcolatrice">#6B6B6B</color>
+    <color name="actionBarandBottomNav">#FF1A1A1A</color>
+
 
 </resources>

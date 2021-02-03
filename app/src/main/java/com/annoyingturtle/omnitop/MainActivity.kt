@@ -3,6 +3,7 @@ package com.annoyingturtle.omnitop
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         Handler().postDelayed({
             val welcome = Intent(this@MainActivity, HomeActivity::class.java)
             startActivity(welcome)
-            overridePendingTransition(R.anim.fade_in_anim, R.anim.fade_out_anim)
+            //overridePendingTransition(R.anim.fade_in_anim, R.anim.fade_out_anim)
             finish()
         }, 2000)
     }
