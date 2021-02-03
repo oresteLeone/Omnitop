@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DndCampagnaHome"
+    android:background="@color/backGround"
+    >
+
+
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/addBtn1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="24dp"
+      android:layout_marginBottom="24dp"
+      android:clickable="true"
+      android:contentDescription="@string/TODO"
+      android:contextClickable="true"
+      android:focusable="true"
+      android:visibility="visible"
+      app:backgroundTint="@color/fabPadre"
+      app:fabSize="normal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:maxImageSize="48dp"
+      app:srcCompat="@drawable/ic_more" />
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/diceBtn1"
+      android:focusable="true"
+      android:backgroundTint="@color/fabFiglio"
+      android:contextClickable="true"
+      app:maxImageSize="48dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="invisible"
+      android:layout_marginBottom="16dp"
+      android:clickable="true"
+      app:layout_constraintBottom_toTopOf="@+id/addBtn1"
+      app:layout_constraintEnd_toEndOf="@+id/addBtn1"
+      app:srcCompat="@drawable/dicebicon_1"
+      android:contentDescription="@string/TODO"/>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/cardBtn1"
+      app:maxImageSize="48dp"
+      android:contextClickable="true"
+      android:backgroundTint="@color/fabFiglio"
+      android:visibility="invisible"
+      android:layout_width="wrap_content"
+      android:focusable="true"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      android:clickable="true"
+      app:layout_constraintBottom_toTopOf="@+id/diceBtn1"
+      app:layout_constraintEnd_toEndOf="@+id/diceBtn1"
+      app:srcCompat="@drawable/cards_icon_bonw_1"
+      android:contentDescription="@string/TODO"/>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/gridBtn1"
+      app:maxImageSize="48dp"
+      android:visibility="invisible"
+      android:contextClickable="true"
+      android:backgroundTint="@color/fabFiglio"
+      android:layout_width="wrap_content"
+      android:focusable="true"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      android:clickable="true"
+      app:layout_constraintBottom_toTopOf="@+id/cardBtn1"
+      app:layout_constraintEnd_toEndOf="@+id/cardBtn1"
+      app:srcCompat="@drawable/battlegrid_icon__1"
+      android:contentDescription="@string/TODO"/>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/noteBtn1"
+      android:contextClickable="true"
+      android:visibility="invisible"
+      android:backgroundTint="@color/fabFiglio"
+      app:maxImageSize="48dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      android:focusable="true"
+      android:clickable="true"
+      app:layout_constraintBottom_toTopOf="@+id/gridBtn1"
+      app:layout_constraintEnd_toEndOf="@+id/gridBtn1"
+      app:srcCompat="@drawable/notes_icon__1"
+      android:contentDescription="@string/TODO"/>
+
+  <com.google.android.material.bottomnavigation.BottomNavigationView
+      android:id="@+id/bottom_navigation"
+      style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toTopOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:menu="@menu/dnd_campagna_navigation_menu">
+
+  </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+  <fragment
+      android:id="@+id/campagnafragment"
+      android:name="androidx.navigation.fragment.NavHostFragment"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:defaultNavHost="true"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:navGraph="@navigation/dnd_campagna_navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

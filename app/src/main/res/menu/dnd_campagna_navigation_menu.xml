@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/dndCampagnaSchede"
+    android:enabled="true"
+    android:title="@string/schede" />
+<item
+    android:id="@+id/dndCampagnaNote"
+    android:enabled="true"
+    android:title="@string/note"/>
+<item
+    android:id="@+id/dndCampagnaCompendium"
+    android:enabled="true"
+    android:title="@string/cmp"/>
+</menu>
