@@ -15,8 +15,7 @@ import dndData.RuoloGiocatore
     )
 )
 data class Notes(
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "scheda_id") var id: Int,
+    @PrimaryKey(autoGenerate = true) var id: Int,
     @ColumnInfo(name = "campagna_id") var Campagnaid: Int,
 
     var nome: String,

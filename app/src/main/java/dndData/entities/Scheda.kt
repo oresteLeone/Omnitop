@@ -26,8 +26,7 @@ data class Scheda(
     var tipoScheda: TipoScheda,
     @Embedded
     var statistiche: Statistiche,
-    @Embedded
-    var equipaggiamento: Equipaggiamento,
+
     @Embedded
     var incantesimi: Incantesimi,
     @Embedded

@@ -3,6 +3,11 @@ package dndData.utilData
 import android.util.Size
 import androidx.room.ColumnInfo
 import androidx.room.Embedded
+import androidx.room.Relation
+import dndData.LvlCompetenza
+import dndData.entities.Notes
+import dndData.entities.Oggetti
+import dndData.entities.Scheda
 
 data class Statistiche(
         var razza: String?,
@@ -29,28 +34,48 @@ data class Statistiche(
         var tiroSalvezzaWIS: Boolean?,
         var tiroSalvezzaCHA: Boolean?,
 
-        /*@Embedded    var abAcrobazia: Ability, @Embedded    var abAddestrare: Ability,
-        @Embedded    var abArcano: Ability, @Embedded    var abAtletica: Ability,
-        @Embedded    var abFurtivita: Ability, @Embedded    var abIndagare: Ability,
-        @Embedded    var abInganno: Ability, @Embedded    var abIntimidire: Ability,
-        @Embedded    var abIntrattenere: Ability, @Embedded    var abIntuizione: Ability,
-        @Embedded    var abMedicina: Ability, @Embedded    var abNatura: Ability,
-        @Embedded    var abPersuasione: Ability, @Embedded    var abRapiditMano: Ability,
-        @Embedded    var abReligione: Ability, @Embedded    var abSoprav: Ability,
-        @Embedded    var abStoria: Ability,*/
-
-
-
-
-
+        var abAcrobazia: LvlCompetenza,
+        var abAddestrare:LvlCompetenza,
+        var abArcano:LvlCompetenza,
+        var abAtletica:LvlCompetenza,
+        var abFurtivita:LvlCompetenza,
+        var abIndagare:LvlCompetenza,
+        var abInganno:LvlCompetenza,
+        var abIntimidire:LvlCompetenza,
+        var abIntrattenere:LvlCompetenza,
+        var abIntuizione:LvlCompetenza,
+        var abMedicina:LvlCompetenza,
+        var abNatura:LvlCompetenza,
+        var abPersuasione:LvlCompetenza,
+        var abRapiditMano:LvlCompetenza,
+        var abReligione:LvlCompetenza,
+        var abSoprav:LvlCompetenza,
+        var abStoria:LvlCompetenza,
 
 
         )
 
-data class Equipaggiamento(
-    var cosaacaso: String?
 
+data class Equipaggiamento(
+    @Embedded   var moneteTotali: Money,
+    @Embedded   var scheda: Scheda,
+    @Relation(
+                parentColumn = "id",
+                entityColumn = "scheda_id",
+                entity = Scheda::class
+    )
+    var oggetti: List<Oggetti>
 )
+data class Money(
+        var moneteR:Int?,
+        var moneteA:Int?,
+        var moneteE:Int?,
+        var moneteO:Int?,
+        var moneteP:Int?,
+)
+
+
+
 
 data class Incantesimi(
     var incantatore: String?,
@@ -67,11 +92,4 @@ data class Dettagli(
     var puntiIspirazione: Int?,
     var descrizioni: String?
 
-)
-
-data class Ability(
-        var nome: String,
-        var add: Boolean,
-        var ex: Boolean,
-        var modifier: Int
 )

@@ -15,7 +15,8 @@ import dndData.entities.*
     Pedina::class,
     Mappa::class
     ),
-    version = 1
+    version = 1,
+        exportSchema = false
 )
 @TypeConverters(CustomConverters::class)
 abstract class DNDdatabase: RoomDatabase() {

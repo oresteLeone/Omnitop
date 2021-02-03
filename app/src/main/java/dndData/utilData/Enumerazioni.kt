@@ -7,7 +7,7 @@ enum class TipoScheda {
 enum class RuoloGiocatore {
     GM,PG
 }
-/*
-enum class Caratteristiche{
-    STR,DEX,CON,INT,WIS,CHA
-}*/
+
+enum class LvlCompetenza{
+    NONADD,ADD,EX
+}
