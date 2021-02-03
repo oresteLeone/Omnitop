@@ -10,6 +10,14 @@
         <item>@string/pathf</item>
     </string-array>
 
+    <string name="TODO">TODO</string>
+    <string name="recenti">RECENTI</string>
+    <string name="gm">DUNGEON MASTER</string>
+    <string name="pg">AVVENTURIERO</string>
+    <string name="lib">LIBRERIA</string>
+
+
+
     <string name="num1">1</string>
     <string name="num2">2</string>
     <string name="num3">3</string>
@@ -29,7 +37,7 @@
     <string name="divide">÷</string>
     <string name="backspace">⌫</string>
 
-    <string name="displayCalcolatrice">Inserisci il tiro di dadi che vuoi effettuare...</string>
+    <string name="displayCalcolatrice">Inserisci il tiro di dadi che vuoi effettuare</string>
     <string name="cambiomazzobtn">CAMBIA MAZZO</string>
     <string name="estraicarta">ESTRAI</string>
     <string name="mischiaMazzo">RIMESCOLA</string>
@@ -167,16 +175,6 @@
     <string name="Giudizio">20: Il Giudizio</string>
     <string name="ZAWARUDO">21: Il Mondo</string>
     <string name="Matto">22: Il Matto</string>
-
-
-
-
-
-
-
-
-
-
 
 
 </resources>

@@ -1,6 +1,7 @@
 package utilPackage
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -77,6 +78,12 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
 
     private fun onAddButtonClicked() {
         setVisibility(clicked)
+        if (!clicked){
+        addBtn.setImageResource(R.drawable.add_icon)
+        }
+        else{
+            addBtn.setImageResource(R.drawable.ic_more)
+        }
         setAnimation(clicked)
         setClickable(clicked)
         clicked = !clicked
