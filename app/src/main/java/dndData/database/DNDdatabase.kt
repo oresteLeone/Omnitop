@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import dndData.dao.CampagnaDAO
 import dndData.entities.*
 
@@ -16,6 +17,7 @@ import dndData.entities.*
     ),
     version = 1
 )
+@TypeConverters(CustomConverters::class)
 abstract class DNDdatabase: RoomDatabase() {
 
     //CampagnaDAO

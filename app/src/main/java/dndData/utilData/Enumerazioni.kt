@@ -1,9 +1,13 @@
 package dndData
 
 enum class TipoScheda {
-    PG, PNG
+    PNG, PG
 }
 
 enum class RuoloGiocatore {
     GM,PG
 }
+/*
+enum class Caratteristiche{
+    STR,DEX,CON,INT,WIS,CHA
+}*/

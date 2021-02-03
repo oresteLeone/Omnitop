@@ -1,9 +1,6 @@
 package dndData.entities
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.PrimaryKey
+import androidx.room.*
 import dndData.TipoScheda
 import dndData.utilData.Dettagli
 import dndData.utilData.Equipaggiamento
@@ -26,11 +23,15 @@ data class Scheda(
     @ColumnInfo(name = "campagna_id") var Campagnaid: Int,
     var nomePG: String,
     var nomeGiocatore: String?,
-    //var tipoScheda: TipoScheda,
-    //var statistiche: Statistiche,
-    //var equipaggiamento: Equipaggiamento,
-    //var incantesimi: Incantesimi,
-    //var dettagli: Dettagli
+    var tipoScheda: TipoScheda,
+    @Embedded
+    var statistiche: Statistiche,
+    @Embedded
+    var equipaggiamento: Equipaggiamento,
+    @Embedded
+    var incantesimi: Incantesimi,
+    @Embedded
+    var dettagli: Dettagli
 )
 
 

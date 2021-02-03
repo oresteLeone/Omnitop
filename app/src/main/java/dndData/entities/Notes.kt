@@ -22,7 +22,7 @@ data class Notes(
     var nome: String,
     var corpo: String?,
     @ColumnInfo(defaultValue = "false" ) var preferito: Boolean,
-    //var ruolo: RuoloGiocatore,
+    var ruolo: RuoloGiocatore,
     //var copertina: blob?
 )
 

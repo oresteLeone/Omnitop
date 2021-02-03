@@ -8,7 +8,7 @@ import dndData.RuoloGiocatore
 data class Campagna(
         @PrimaryKey(autoGenerate = true) val id: Int,
         var nome: String,
-       // var ruolo: RuoloGiocatore,
+        var ruolo: RuoloGiocatore,
         var descrizione: String?,
         //var copertina: Blob?,
 
