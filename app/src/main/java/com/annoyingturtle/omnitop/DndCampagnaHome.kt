@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
+import android.view.Window
+import android.view.WindowManager
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -23,12 +25,12 @@ class DndCampagnaHome : AppCompatActivity() {
         setContentView(R.layout.activity_dnd_campagna_home)
 
         /**Action Bar */
+        //supportActionBar?.hide()
+        setSupportActionBar(myToolbar)
 
-        //actionBar.setBackgroundDrawable() quando aggiungeremo le immagini
 
+        /** Navigare fra le schede */
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-
-        /** Schermate */
 
         val navController = findNavController(R.id.campagnafragment)
 

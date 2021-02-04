@@ -7,7 +7,13 @@ import android.view.MenuInflater
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.activity_dnd_campagna_home.*
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_home.addBtn1
+import kotlinx.android.synthetic.main.activity_home.cardBtn1
+import kotlinx.android.synthetic.main.activity_home.diceBtn1
+import kotlinx.android.synthetic.main.activity_home.gridBtn1
+import kotlinx.android.synthetic.main.activity_home.noteBtn1
 import utilPackage.AbsFab
 
 class DndSchedaActivity : AppCompatActivity() {
@@ -18,7 +24,7 @@ class DndSchedaActivity : AppCompatActivity() {
 
         /**Action Bar */
 
-        //actionBar.setBackgroundDrawable() quando aggiungeremo le immagini
+        setSupportActionBar(myToolbar)
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
