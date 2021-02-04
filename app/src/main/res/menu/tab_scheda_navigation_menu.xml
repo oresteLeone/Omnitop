@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/personaggioDndFragment"
+        android:enabled="true"
+        android:title="@string/prsg">
+
+    </item>
+
+    <item
+        android:id="@+id/equipaggiamentoDnDFragment"
+        android:enabled="true"
+        android:title="@string/eqip">
+
+    </item>
+    <item
+
+        android:id="@+id/dndIncantesimiFragment"
+        android:enabled="true"
+        android:title="@string/incantesimi">
+
+    </item>
+    <item
+
+        android:id="@+id/dndDettagliFragment"
+        android:enabled="true"
+        android:title="@string/dettagli">
+
+    </item>
+
+</menu>

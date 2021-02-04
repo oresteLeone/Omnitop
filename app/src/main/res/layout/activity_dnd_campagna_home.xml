@@ -9,6 +9,31 @@
     android:background="@color/backGround"
     >
 
+  <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/toolBar"
+      android:layout_width="match_parent"
+      android:layout_height="128dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed"
+        app:expandedTitleMarginBottom="28dp"
+        app:expandedTitleMarginStart="72dp"
+        app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded">
+
+      <com.google.android.material.appbar.MaterialToolbar
+
+          android:layout_width="match_parent"
+          android:layout_height="128dp"
+          android:elevation="0dp" />
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+  </com.google.android.material.appbar.AppBarLayout>
+
 
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -93,18 +118,18 @@
       app:srcCompat="@drawable/notes_icon__1"
       android:contentDescription="@string/TODO"/>
 
+
   <com.google.android.material.bottomnavigation.BottomNavigationView
       android:id="@+id/bottom_navigation"
       style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      app:layout_constraintBottom_toTopOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/toolBar"
       app:menu="@menu/dnd_campagna_navigation_menu">
 
   </com.google.android.material.bottomnavigation.BottomNavigationView>
-
 
   <fragment
       android:id="@+id/campagnafragment"
@@ -114,8 +139,10 @@
       app:defaultNavHost="true"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="1.0"
       app:navGraph="@navigation/dnd_campagna_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

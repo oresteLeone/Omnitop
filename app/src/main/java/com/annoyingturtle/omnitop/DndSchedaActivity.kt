@@ -7,20 +7,14 @@ import android.view.MenuInflater
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_dnd_campagna_home.*
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.activity_home.addBtn1
-import kotlinx.android.synthetic.main.activity_home.cardBtn1
-import kotlinx.android.synthetic.main.activity_home.diceBtn1
-import kotlinx.android.synthetic.main.activity_home.gridBtn1
-import kotlinx.android.synthetic.main.activity_home.noteBtn1
 import utilPackage.AbsFab
 
-class DndCampagnaHome : AppCompatActivity() {
-
+class DndSchedaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dnd_campagna_home)
+        setContentView(R.layout.activity_dnd_scheda)
+
 
         /**Action Bar */
 
@@ -30,7 +24,7 @@ class DndCampagnaHome : AppCompatActivity() {
 
         /** Schermate */
 
-        val navController = findNavController(R.id.campagnafragment)
+        val navController = findNavController(R.id.schedafragment)
 
         bottomNavigationView.setupWithNavController(navController)
         /********** FAB ***********/
