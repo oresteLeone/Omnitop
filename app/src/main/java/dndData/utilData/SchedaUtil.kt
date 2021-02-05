@@ -52,9 +52,9 @@ data class Statistiche(
         var abSoprav:LvlCompetenza,
         var abStoria:LvlCompetenza,
 
-
         )
 
+//-------------------------------------------------------------
 
 data class Equipaggiamento(
     @Embedded   var moneteTotali: Money,
@@ -74,16 +74,36 @@ data class Money(
         var moneteP:Int?,
 )
 
+//-------------------------------------------------------------
 
 
-
-data class Incantesimi(
-    var incantatore: String?,
-    var caratteristica: String?,
+data class Incantatore(
+    var incantatoreClasse: String?,
+    var carIncantatore: String?,
     var cd: String?,
-    var bonus: Int?
+    var bonus: Int?,
+    var slotLVL1MAX: Int?,
+    var slotLVL1: Int?,
+    var slotLVL2MAX: Int?,
+    var slotLVL2: Int?,
+    var slotLVL3MAX: Int?,
+    var slotLVL3: Int?,
+    var slotLVL4MAX: Int?,
+    var slotLVL4: Int?,
+    var slotLVL5MAX: Int?,
+    var slotLVL5: Int?,
+    var slotLVL6MAX: Int?,
+    var slotLVL6: Int?,
+    var slotLVL7MAX: Int?,
+    var slotLVL7: Int?,
+    var slotLVL8MAX: Int?,
+    var slotLVL8: Int?,
+    var slotLVL9MAX: Int?,
+    var slotLVL9: Int?
 
 )
+
+//-------------------------------------------------------------
 
 data class Dettagli(
     var background: String?,

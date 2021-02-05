@@ -18,10 +18,10 @@ data class Notes(
     @PrimaryKey(autoGenerate = true) var id: Int,
     @ColumnInfo(name = "campagna_id") var Campagnaid: Int,
 
-    var nome: String,
-    var corpo: String?,
+    var titoloNota: String,
+    var corpoNota: String?,
     @ColumnInfo(defaultValue = "false" ) var preferito: Boolean,
-    var ruolo: RuoloGiocatore,
+    var ruoloNota: RuoloGiocatore,
     //var copertina: blob?
 )
 

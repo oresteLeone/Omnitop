@@ -12,8 +12,8 @@ data class OggettiScheda (
         var scheda: Scheda,
         @Relation(
                 parentColumn = "id",
-                entityColumn = "campagna_id",
-                entity = Notes::class
+                entityColumn = "scheda_id",
+                entity = Oggetti::class
         )
         var oggetti: List<Oggetti>
 )

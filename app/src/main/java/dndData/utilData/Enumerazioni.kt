@@ -11,3 +11,7 @@ enum class RuoloGiocatore {
 enum class LvlCompetenza{
     NONADD,ADD,EX
 }
+
+enum class TipoOggetto{
+    EQUIP,ALTRO
+}

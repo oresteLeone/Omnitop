@@ -3,6 +3,7 @@ package dndData.database
 import androidx.room.TypeConverter
 import dndData.LvlCompetenza
 import dndData.RuoloGiocatore
+import dndData.TipoOggetto
 import dndData.TipoScheda
 
 class CustomConverters {
@@ -24,5 +25,11 @@ class CustomConverters {
 
     @TypeConverter
     fun fromLvlCompetenza(value: LvlCompetenza) = value.name
+
+    @TypeConverter
+    fun toTipoOggetto(value: String) = enumValueOf<TipoOggetto>(value)
+
+    @TypeConverter
+    fun fromTipoOggetto(value: TipoOggetto) = value.name
 
 }
