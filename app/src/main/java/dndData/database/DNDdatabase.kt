@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import dndData.dao.CampagnaDAO
+import dndData.dao.NotesDAO
 import dndData.entities.*
 
 @Database(entities = arrayOf(
@@ -25,6 +26,7 @@ abstract class DNDdatabase: RoomDatabase() {
 
     //CampagnaDAO
     abstract fun getCampagnaDAO(): CampagnaDAO
+    abstract fun getNotesDAO(): NotesDAO
 
     companion object{
         @Volatile
