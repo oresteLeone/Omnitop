@@ -1,4 +1,4 @@
-package utilPackage
+package fabPackage
 
 import android.graphics.Color
 import android.os.Bundle
@@ -140,16 +140,18 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
 
         var temp = ""
         var res = ""
-        var operatori : CharArray = CharArray(4)
+        var operatori : CharArray = CharArray(6)
 
         operatori.set(0, '+')
         operatori.set(1, '-')
         operatori.set(2, '*')
         operatori.set(3, '/')
+        operatori.set(4, '(')
+        operatori.set(5, ')')
 
         while (string.isNotEmpty())
         {
-            if(string.contains('+') || string.contains('-') || string.contains('*') || string.contains('/')) {
+            if(string.contains('+') || string.contains('-') || string.contains('*') || string.contains('/') || string.contains('(') || string.contains(')')) {
                 i = string.indexOfAny(operatori)
 
                 temp = string.subSequence(0, i + 1).toString()
