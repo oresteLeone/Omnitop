@@ -6,8 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "pedina_table")
 data class Pedina(
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "pedina_id") val id: Int,
+    @PrimaryKey(autoGenerate = true) val id: Int,
     var nome: String,
     //var token: blob
 )
