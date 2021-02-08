@@ -4,19 +4,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
-import android.view.Window
-import android.view.WindowManager
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_dnd_campagna_home.*
-import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_home.addBtn1
 import kotlinx.android.synthetic.main.activity_home.cardBtn1
 import kotlinx.android.synthetic.main.activity_home.diceBtn1
 import kotlinx.android.synthetic.main.activity_home.gridBtn1
 import kotlinx.android.synthetic.main.activity_home.noteBtn1
-import utilPackage.AbsFab
+import fabPackage.AbsFab
 
 class DndCampagnaHome : AppCompatActivity() {
 

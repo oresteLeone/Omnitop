@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/dndRecenti"
-        android:name="com.annoyingturtle.omnitop.DndRecenti"
+        android:name="com.annoyingturtle.omnitop.fragment.DndRecentiFragment"
         android:label="fragment_dnd_recenti"
         tools:layout="@layout/fragment_dnd_recenti" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/dndGm"
-        android:name="com.annoyingturtle.omnitop.dndGm"
+        android:name="com.annoyingturtle.omnitop.fragment.DndGmFragment"
         android:label="fragment_dnd_gm"
         tools:layout="@layout/fragment_dnd_gm" >
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/dndPg"
-        android:name="com.annoyingturtle.omnitop.dndPg"
+        android:name="com.annoyingturtle.omnitop.fragment.DndPgFragment"
         android:label="fragment_dnd_pg"
         tools:layout="@layout/fragment_dnd_pg" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/dndLibrary"
-        android:name="com.annoyingturtle.omnitop.dndLibrary"
+        android:name="com.annoyingturtle.omnitop.fragment.DndLibraryFragment"
         android:label="fragment_dnd_library"
         tools:layout="@layout/fragment_dnd_library" >
         <action

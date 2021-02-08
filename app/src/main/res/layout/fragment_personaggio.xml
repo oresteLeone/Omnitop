@@ -1,24 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentCampagnaDnDschede"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/backGround"
-    android:id="@+id/fragmentDNDPg"
+    android:background="@color/black"
     tools:context=".DndHome">
 
-    <TextView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/prsg"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="16dp">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backGround"
+            app:columnCount="7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.416"
+            app:rowCount="1">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/pfAttuali"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="0"
+                android:textColor="@color/testoCalcolatrice"
+                android:textSize="24sp"
+
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <TextView
+                android:id="@+id/slash"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="   /   "
+                android:textColor="@color/testoCalcolatrice"
+                android:textSize="24sp"
+
+                app:layout_column="1"
+                app:layout_row="0" />
+
+            <EditText
+                android:id="@+id/pfTotali"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="0"
+                android:textColor="@color/secondaryLight"
+                android:textSize="38sp"
+
+                app:layout_column="2"
+                app:layout_row="0" />
+
+            <TextView
+                android:id="@+id/pf"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/pf"
+                android:textColor="@color/testoCalcolatrice"
+                android:textSize="24sp"
+
+                app:layout_column="3"
+                app:layout_row="0" />
+
+            <ImageButton
+                android:id="@+id/aumentaPf"
+                android:layout_width="40dp"
+
+                android:layout_height="40dp"
+                android:background="@color/backGround"
+                android:padding="8dp"
+                app:layout_column="4"
+                app:layout_gravity="fill"
+                app:layout_row="0"
+                app:srcCompat="@drawable/ic_baseline_arrow_upward_24">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/diminuisciPF"
+                android:layout_width="40dp"
+
+                android:layout_height="40dp"
+                android:background="@color/backGround"
+                android:padding="8dp"
+                app:layout_column="5"
+                app:layout_gravity="fill"
+                app:layout_row="0"
+                app:srcCompat="@drawable/ic_baseline_arrow_downward_24">
+
+            </ImageButton>
+
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backGround"
+            app:columnCount="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+            app:rowCount="4"
+            tools:layout_editor_absoluteX="80dp">
+
+            <EditText
+                android:id="@+id/classeArmatura"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="48dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <EditText
+                android:id="@+id/iniziativa"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="48dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+
+                app:layout_column="1"
+                app:layout_row="0" />
+
+            <EditText
+                android:id="@+id/velocità"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="48dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+
+                app:layout_column="2"
+                app:layout_row="0" />
+
+            <TextView
+                android:id="@+id/CA"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="@string/ca"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+                app:layout_column="0"
+                app:layout_row="1" />
+
+            <TextView
+                android:id="@+id/init"
+                android:layout_width="wrap_content"
+
+                android:paddingHorizontal="28dp"
+                android:layout_height="wrap_content"
+                android:text="@string/iniziativa"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+                app:layout_column="1"
+                app:layout_row="1" />
+
+            <TextView
+                android:id="@+id/vel"
+                android:layout_width="wrap_content"
+
+                android:paddingHorizontal="24dp"
+                android:layout_height="wrap_content"
+                android:text="@string/velocità"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+                app:layout_column="2"
+                app:layout_row="1" />
+
+
+            <TextView
+                android:id="@+id/percezionePassiva"
+                android:layout_width="wrap_content"
+
+                android:paddingTop="16dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="48dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+
+                app:layout_column="0"
+                app:layout_row="2" />
+
+            <EditText
+                android:id="@+id/profBonus"
+                android:layout_width="wrap_content"
+
+                android:paddingTop="16dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="48dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+
+                app:layout_column="1"
+                app:layout_row="2" />
+
+            <EditText
+                android:id="@+id/dadiVita"
+                android:layout_width="wrap_content"
+
+                android:paddingTop="16dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="48dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+
+                app:layout_column="2"
+                app:layout_row="2" />
+
+            <TextView
+                android:id="@+id/pp"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="@string/passiveP"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+                app:layout_column="0"
+                app:layout_row="3" />
+
+            <TextView
+                android:id="@+id/pb"
+                android:layout_width="wrap_content"
+
+                android:paddingHorizontal="6dp"
+                android:layout_height="wrap_content"
+                android:text="@string/prof"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+                app:layout_column="1"
+                app:layout_row="3" />
+
+            <TextView
+                android:id="@+id/dv"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="24sp"
+                android:text="@string/dv"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+                app:layout_column="2"
+                app:layout_row="3" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
+
+
+
+
+
+
