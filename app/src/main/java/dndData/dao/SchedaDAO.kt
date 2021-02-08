@@ -10,7 +10,7 @@ interface SchedaDAO {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addScheda(Scheda: Scheda)
 
-    @Query("SELECT * FROM note_table ORDER BY id DESC")
+    @Query("SELECT * FROM scheda_table ORDER BY id DESC")
     fun readAllData(): LiveData<List<Scheda>>
 
     @Update
