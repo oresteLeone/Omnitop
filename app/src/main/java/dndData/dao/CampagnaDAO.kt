@@ -1,10 +1,7 @@
 package dndData.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import dndData.entities.Campagna
 
 @Dao
@@ -15,4 +12,10 @@ interface CampagnaDAO {
 
     @Query("SELECT * FROM Campagna_table ORDER BY id DESC")
     fun readAllData(): LiveData<List<Campagna>>
+
+    @Query("SELECT * FROM Campagna_table WHERE ruoloCampagna = 'GM' ORDER BY id DESC ")
+    fun readGMData(): LiveData<List<Campagna>>
+
+
+
 }

@@ -12,13 +12,15 @@ import kotlinx.coroutines.launch
 
 class CampagnaViewModel(application: Application): AndroidViewModel(application) {
 
-    private val readAllData: LiveData<List<Campagna>>
+    val readAllData: LiveData<List<Campagna>>
+    val readGMData: LiveData<List<Campagna>>
     private val repository: CampagnaRepository
 
     init {
         val CampagnaDAO = DNDdatabase.getDatabase(application).getCampagnaDAO()
         repository = CampagnaRepository(CampagnaDAO)
         readAllData = repository.readAllData
+        readGMData = repository.readGMData
     }
 
     fun addCampagna(Campagna: Campagna){
