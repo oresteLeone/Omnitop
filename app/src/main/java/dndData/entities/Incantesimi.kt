@@ -14,9 +14,8 @@ import androidx.room.PrimaryKey
 )
 data class Incantesimi(
 
-        @PrimaryKey(autoGenerate = true)
-        var id: Int,
-        var scheda_id: Int,
+        @PrimaryKey(autoGenerate = true) val id: Int,
+        val scheda_id: Int,
         var nomeIncantesimo: String,
         var descrizioneIncantesimo: String?,
         var lvlIncantesimo: Int?

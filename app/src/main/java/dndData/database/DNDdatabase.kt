@@ -9,11 +9,13 @@ import dndData.dao.CampagnaDAO
 import dndData.entities.*
 
 @Database(entities = arrayOf(
-    Campagna::class,
-    Scheda::class,
-    Notes::class,
-    Pedina::class,
-    Mappa::class
+        Campagna::class,
+        Scheda::class,
+        Notes::class,
+        Pedina::class,
+        Mappa::class,
+        Incantesimi::class,
+        Oggetti::class
     ),
     version = 1,
         exportSchema = false

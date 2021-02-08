@@ -16,8 +16,8 @@ foreignKeys = arrayOf(
 )
 data class Scheda(
         @PrimaryKey(autoGenerate = true)
-        @ColumnInfo(name = "id") var id: Int,
-        @ColumnInfo(name = "campagna_id") var Campagnaid: Int,
+        @ColumnInfo(name = "id") val id: Int,
+        @ColumnInfo(name = "campagna_id") val Campagnaid: Int,
         var nomePG: String,
         var nomeGiocatore: String?,
         var tipoScheda: TipoScheda,

@@ -14,9 +14,8 @@ import dndData.TipoOggetto
         )
 )
 data class Oggetti(
-        @PrimaryKey(autoGenerate = true)
-        var id: Int,
-        var scheda_id: Int,
+        @PrimaryKey(autoGenerate = true) val id: Int,
+        val scheda_id: Int,
         var nomeOggetto: String,
         var descrizioneOggetto: String?,
         var tipoOggetto: TipoOggetto
