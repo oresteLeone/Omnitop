@@ -36,7 +36,7 @@ class DndCampagnaHome : AppCompatActivity() {
         val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this, supportFragmentManager)
         fab.startListener(this)
     }
-    /***** Pulsante Ricerca *****/
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
         var inflater: MenuInflater = menuInflater

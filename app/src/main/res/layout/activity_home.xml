@@ -26,7 +26,10 @@
                 android:background="?attr/colorPrimary"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
-                tools:layout_editor_absoluteY="30dp" />
+                tools:layout_editor_absoluteY="30dp"
+                app:titleTextColor="@color/white"
+                app:title="@string/app_name"/>
+
         </com.google.android.material.appbar.AppBarLayout>
 
 
