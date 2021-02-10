@@ -5,7 +5,7 @@ enum class TipoScheda {
 }
 
 enum class RuoloGiocatore {
-    GM,PG
+    DM,PG
 }
 
 enum class LvlCompetenza{

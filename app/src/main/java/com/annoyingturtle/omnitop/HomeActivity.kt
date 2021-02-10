@@ -13,6 +13,12 @@ import kotlinx.android.synthetic.main.activity_home.*
 import fabPackage.AbsFab
 import fabPackage.AdapterRecyclerListaGiochi
 import fabPackage.ItemListaGiochi
+import kotlinx.android.synthetic.main.activity_dnd_home.*
+import kotlinx.android.synthetic.main.activity_home.addBtn1
+import kotlinx.android.synthetic.main.activity_home.cardBtn1
+import kotlinx.android.synthetic.main.activity_home.diceBtn1
+import kotlinx.android.synthetic.main.activity_home.gridBtn1
+import kotlinx.android.synthetic.main.activity_home.noteBtn1
 
 
 class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClickListnerInteface {
@@ -25,7 +31,6 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
         setContentView(R.layout.activity_home)
 
         setSupportActionBar(myToolbarHome)
-
 
         /************ Menu a scorrimento *********/
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.openDrawer, R.string.closeDrawer)
@@ -74,7 +79,7 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
         return super.onOptionsItemSelected(item)
     }
 
-    /***** Pulsante Ricerca *****/
+/*
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
@@ -85,6 +90,7 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
 
         return true
     }
+*/
 
 
 

@@ -3,8 +3,11 @@ package com.annoyingturtle.omnitop
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_dnd_home.*
@@ -22,18 +25,26 @@ class DndHome : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dnd_home)
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        val navController = findNavController(R.id.hostfragment)
+        bottomNavigationView.setupWithNavController(navController)
+
 
         /** Action Bar */
         setSupportActionBar(myToolbarHomeDnd)
 
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
+        addCampagnaIcon.setOnClickListener {
+            findNavController(R.id.hostfragment).navigate(R.id.dndAddCampagna)
+
+        }
 
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        val navController = findNavController(R.id.hostfragment)
-        bottomNavigationView.setupWithNavController(navController)
+
+
 
         /********** FAB ***********/
         val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this, supportFragmentManager)
@@ -42,20 +53,30 @@ class DndHome : AppCompatActivity() {
 
     }
 
-    /***** Pulsante Ricerca *****/
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.hostfragment)
+
+        return navController.navigateUp() || super.onSupportNavigateUp()
+
+    }
+
+   /* **** Pulsante Ricerca ****
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
-        var inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.actionbar_menu, menu)
+        var menuinflater: MenuInflater = menuInflater
+        menuinflater.inflate(R.menu.actionbar_menu, menu)
+        var addCampagnaItem: MenuItem? = menu?.findItem(R.id.idAddCampagna)
+        addCampagnaItem?.setOnMenuItemClickListener{
+            findNavController(view).navigate(R.id.action_dndRecenti_to_dndAddCampagna)
+        }
 
-        return true
-    }
-    /** Pulsante indietro */
+        }
+*/
 
-    /*override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
-    }*/
+
+
+
+
 
 
 }

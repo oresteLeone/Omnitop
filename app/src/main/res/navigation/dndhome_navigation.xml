@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/dndRecenti"
         android:name="com.annoyingturtle.omnitop.fragment.DndRecentiFragment"
-        android:label="fragment_dnd_recenti"
+        android:label="Campagne DnD"
         tools:layout="@layout/fragment_dnd_recenti" >
         <action
             android:id="@+id/action_dndRecenti_to_dndLibrary"
@@ -19,11 +19,14 @@
         <action
             android:id="@+id/action_dndRecenti_to_dndPg"
             app:destination="@id/dndPg" />
+        <action
+            android:id="@+id/action_dndRecenti_to_dndAddCampagna"
+            app:destination="@id/dndAddCampagna" />
     </fragment>
     <fragment
         android:id="@+id/dndGm"
         android:name="com.annoyingturtle.omnitop.fragment.DndGmFragment"
-        android:label="fragment_dnd_gm"
+        android:label="Campagne DnD Master"
         tools:layout="@layout/fragment_dnd_gm" >
         <action
             android:id="@+id/action_dndGm_to_dndRecenti"
@@ -34,11 +37,14 @@
         <action
             android:id="@+id/action_dndGm_to_dndPg"
             app:destination="@id/dndPg" />
+        <action
+            android:id="@+id/action_dndGm_to_dndAddCampagna"
+            app:destination="@id/dndAddCampagna" />
     </fragment>
     <fragment
         android:id="@+id/dndPg"
         android:name="com.annoyingturtle.omnitop.fragment.DndPgFragment"
-        android:label="fragment_dnd_pg"
+        android:label="Campagne DnD Personaggio"
         tools:layout="@layout/fragment_dnd_pg" >
         <action
             android:id="@+id/action_dndPg_to_dndRecenti"
@@ -49,11 +55,14 @@
         <action
             android:id="@+id/action_dndPg_to_dndGm"
             app:destination="@id/dndGm" />
+        <action
+            android:id="@+id/action_dndPg_to_dndAddCampagna"
+            app:destination="@id/dndAddCampagna" />
     </fragment>
     <fragment
         android:id="@+id/dndLibrary"
         android:name="com.annoyingturtle.omnitop.fragment.DndLibraryFragment"
-        android:label="fragment_dnd_library"
+        android:label="Libreria DnD"
         tools:layout="@layout/fragment_dnd_library" >
         <action
             android:id="@+id/action_dndLibrary_to_dndRecenti"
@@ -63,6 +72,27 @@
             app:destination="@id/dndGm" />
         <action
             android:id="@+id/action_dndLibrary_to_dndPg"
+            app:destination="@id/dndPg" />
+        <action
+            android:id="@+id/action_dndLibrary_to_dndAddCampagna"
+            app:destination="@id/dndAddCampagna" />
+    </fragment>
+    <fragment
+        android:id="@+id/dndAddCampagna"
+        android:name="com.annoyingturtle.omnitop.fragment.DndAddCampagnaFragment"
+        android:label="Aggiungi Campagna"
+        tools:layout="@layout/fragment_dnd_add_campagna" >
+        <action
+            android:id="@+id/action_dndAddCampagna_to_dndRecenti"
+            app:destination="@id/dndRecenti" />
+        <action
+            android:id="@+id/action_dndAddCampagna_to_dndLibrary"
+            app:destination="@id/dndLibrary" />
+        <action
+            android:id="@+id/action_dndAddCampagna_to_dndGm"
+            app:destination="@id/dndGm" />
+        <action
+            android:id="@+id/action_dndAddCampagna_to_dndPg"
             app:destination="@id/dndPg" />
     </fragment>
 </navigation>

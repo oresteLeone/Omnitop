@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dndAddCampagna"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backGround"
+    android:padding="24dp"
+    tools:context=".fragment.DndAddCampagnaFragment">
+
+    <TextView
+        android:id="@+id/TitoloframeAddCampagna"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nuova Campagna"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titoloCam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColorHint="@color/PrimaryLight65op"
+        app:boxStrokeColor="@color/PrimaryLight"
+        app:hintTextColor="@color/Primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TitoloframeAddCampagna">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titoloCam_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Titolo Campagna"
+            android:textColorHint="@color/PrimaryLight" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ruoloCam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColorHint="@color/PrimaryLight65op"
+        app:boxStrokeColor="@color/PrimaryLight"
+        app:helperText="DM / PG"
+        app:hintTextColor="@color/Primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titoloCam">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ruoloCam_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ruolo Rivestito" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/DescrizioneCam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="24dp"
+        android:textColorHint="@color/PrimaryLight65op"
+        app:boxStrokeColor="@color/PrimaryLight"
+        app:helperText="opzionale"
+        app:hintTextColor="@color/Primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ruoloCam">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/descrizioneCam_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descrizione" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/ButtonInsertDataAddCampagna"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/Primary"
+        android:text="AGGIUNGI"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DescrizioneCam" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
