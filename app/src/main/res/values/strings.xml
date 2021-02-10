@@ -22,6 +22,9 @@
     <string name="eqip">EQUIPAGGIAMENTO</string>
     <string name="incantesimi">INCANTESIMI</string>
     <string name="dettagli">DETTAGLI</string>
+
+    <!-- INFO SCHEDA -->
+
     <string name="pf">PF</string>
     <string name="ca">CLASSE ARMATURA</string>
     <string name="iniziativa">INIZIATIVA</string>
@@ -29,6 +32,37 @@
     <string name="passiveP">PERCEZIONE PASSIVA</string>
     <string name="prof">BONUS COMPETENZA</string>
     <string name="dv">DADI VITA</string>
+    <string name="caratteristiche">CARATTERISTICHE</string>
+    <string name="str">STR</string>
+    <string name="dex">DEX</string>
+    <string name="con">CON</string>
+    <string name="intel">INT</string>
+    <string name="wis">WIS</string>
+    <string name="cha">CHA</string>
+    <string name="ts">TIRI SALVEZZA</string>
+    <string name="privilegi">PRIVILEGI E TRATTI</string>
+
+    <!-- ABILITA' D&D -->
+
+    <string name="abilità">ABILITÀ</string>
+    <string name="acrobazia">Acrobazia</string>
+    <string name="intuizione">Intuizione</string>
+    <string name="addestrare">Addestr. Animali</string>
+    <string name="medicina">Medicina</string>
+    <string name="arcano">Arcano</string>
+    <string name="natura">Natura</string>
+    <string name="atletica">Atletica</string>
+    <string name="percezione">Percezione</string>
+    <string name="indagare">Indagare</string>
+    <string name="rapDiMa">Rapid. di Mano</string>
+    <string name="inganno">Inganno</string>
+    <string name="religione">Religione</string>
+    <string name="intimidire">Intimidire</string>
+    <string name="sopravvivenza">Sopravvivenza</string>
+    <string name="intrattenere">Intrattenere</string>
+    <string name="storia">Storia</string>
+    <string name="furtività">Furtività</string>
+    <string name="persuasione">Persuasione</string>
 
 
     <string name="num1">1</string>
