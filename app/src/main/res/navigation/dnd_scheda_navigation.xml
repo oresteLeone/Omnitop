@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/personaggioDndFragment"
-        android:name="com.annoyingturtle.omnitop.fragment.PersonaggioFragment"
+        android:name="com.annoyingturtle.omnitop.fragment.PersonaggioDndFragment"
         android:label="fragment_personaggio"
         tools:layout="@layout/fragment_personaggio">
         <action

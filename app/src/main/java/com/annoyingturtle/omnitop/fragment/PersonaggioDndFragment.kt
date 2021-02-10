@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.annoyingturtle.omnitop.R
 
 
-class PersonaggioFragment : Fragment() {
+class PersonaggioDndFragment : Fragment() {
 
 
     override fun onCreateView(
