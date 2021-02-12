@@ -16,7 +16,7 @@ import dndData.RuoloGiocatore
 )
 data class Notes(
     @PrimaryKey(autoGenerate = true) val id: Int,
-    @ColumnInfo(name = "campagna_id") val Campagnaid: Int,
+    @ColumnInfo(name = "campagna_id") val Campagnaid: Int?,
 
     var titoloNota: String,
     var corpoNota: String?,

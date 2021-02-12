@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/nuovaNotaFragment"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/backGround"
+tools:context=".fragment.noteActivity.NuovaNota">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/myToolbarCreaNota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:title="@string/creaNote"
+                app:titleTextColor="@color/white"
+                tools:layout_editor_absoluteY="30dp" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titoloCam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:textColorHint="@color/PrimaryLight65op"
+        app:boxStrokeColor="@color/PrimaryLight"
+        app:hintTextColor="@color/Primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titoloNota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Titolo Nota"
+            android:padding="24dp"
+            android:textColorHint="@color/PrimaryLight" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/DescrizioneCam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="24dp"
+        android:textColorHint="@color/PrimaryLight65op"
+        app:boxStrokeColor="@color/PrimaryLight"
+        app:hintTextColor="@color/Primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titoloCam">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/testoNota"
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:layout_gravity="top"
+            android:hint="Testo Nota"
+            android:padding="24dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+<Button
+    android:id="@+id/ButtonInsertDataAddNote"
+    style="@style/Widget.MaterialComponents.Button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:backgroundTint="@color/Primary"
+    android:text="AGGIUNGI"
+    android:textColor="@color/black"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/DescrizioneCam" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPreferito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Preferita"
+        app:layout_constraintBottom_toTopOf="@+id/DescrizioneCam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titoloCam" />
+
+    <CheckBox
+        android:id="@+id/checkBoxGM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Dungeon Master"
+        app:layout_constraintBottom_toTopOf="@+id/DescrizioneCam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titoloCam" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

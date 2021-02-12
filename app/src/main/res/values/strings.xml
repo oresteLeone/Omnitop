@@ -225,5 +225,12 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- NOTE -->
+
+    <string name="nuovaNota">+ NUOVA NOTA</string>
+    <string name="allNote">TUTTE LE NOTE</string>
+    <string name="favorite">NOTE PREFERITE</string>
+    <string name="creaNote">Nuova Nota</string>
+
 
 </resources>

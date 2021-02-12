@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="16dp"
+    android:background="@color/backGround"
+    >
+
+
+    <ImageView
+        android:id="@+id/cardNota"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="@drawable/card_template"
+        android:elevation="@dimen/cardview_default_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/cardNotatextbg"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/card_template"
+        android:elevation="@dimen/cardview_default_elevation"
+        app:layout_constraintBottom_toBottomOf="@id/cardNota"
+        app:layout_constraintEnd_toEndOf="@id/cardNota"
+        app:layout_constraintStart_toStartOf="@id/cardNota" />
+
+    <TextView
+        android:id="@+id/nomeNotaCardText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Nome Nota"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardNotatextbg"
+        app:layout_constraintStart_toStartOf="@+id/cardNotatextbg"
+        app:layout_constraintTop_toTopOf="@id/cardNotatextbg"/>
+
+
+    <ImageView
+        android:id="@+id/ruoloGiocatoreNotaDM"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_dm"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/cardNotatextbg"
+        app:layout_constraintStart_toStartOf="@+id/cardNota"
+        app:layout_constraintTop_toTopOf="@+id/cardNota" />
+
+    <ImageView
+        android:id="@+id/ruoloGiocatoreNotaPG"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_giocatore"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/cardNotatextbg"
+        app:layout_constraintStart_toStartOf="@+id/cardNota"
+        app:layout_constraintTop_toTopOf="@+id/cardNota" />
+
+    <ImageView
+        android:id="@+id/notaPreferia"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/ic_baseline_star_24"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/cardNotatextbg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardNota" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,12 +13,15 @@ import kotlinx.coroutines.launch
 class NotesViewModel(application: Application): AndroidViewModel(application) {
 
     val readAllData: LiveData<List<Notes>>
+    val readFavoriteData: LiveData<List<Notes>>
+
     private val repository: NotesRepository
 
     init {
         val NotesDAO = DNDdatabase.getDatabase(application).getNotesDAO()
         repository = NotesRepository(NotesDAO)
         readAllData = repository.readAllData
+        readFavoriteData = repository.readFavoriteData
 
     }
 
