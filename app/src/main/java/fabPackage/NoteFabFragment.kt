@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.annoyingturtle.omnitop.HomeActivity
 import com.annoyingturtle.omnitop.R
+import com.annoyingturtle.omnitop.fragment.noteActivity.ModificaNota
 import com.annoyingturtle.omnitop.fragment.noteActivity.NoteAdapter
 import com.annoyingturtle.omnitop.fragment.noteActivity.NuovaNota
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -20,7 +21,7 @@ import kotlinx.android.synthetic.main.note_fab_layout.*
 import kotlinx.android.synthetic.main.note_fab_layout.view.*
 
 
-class NoteFabFragment() : BottomSheetDialogFragment() {
+class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickListner {
 
     var preferite = true
     private lateinit var mNotaViewModel : NotesViewModel
@@ -37,7 +38,7 @@ class NoteFabFragment() : BottomSheetDialogFragment() {
         val view =inflater.inflate(R.layout.note_fab_layout, container, false)
 
 
-        val adapter = NoteAdapter()
+        val adapter = NoteAdapter(this)
         val recyclerView = view.favNoteRecyclerView
 
         recyclerView.adapter = adapter
@@ -70,7 +71,7 @@ class NoteFabFragment() : BottomSheetDialogFragment() {
                 textView8.text = getString(R.string.allNote)
                 preferite = false
 
-                val adapter = NoteAdapter()
+                val adapter = NoteAdapter(this)
                 val recyclerView = view?.favNoteRecyclerView
 
                 recyclerView?.adapter = adapter
@@ -85,7 +86,7 @@ class NoteFabFragment() : BottomSheetDialogFragment() {
                 allNotesBtn.text = getText(R.string.allNote)
                 textView8.text = getString(R.string.favorite)
 
-                val adapter = NoteAdapter()
+                val adapter = NoteAdapter(this)
                 val recyclerView = view?.favNoteRecyclerView
 
                 recyclerView?.adapter = adapter
@@ -100,5 +101,11 @@ class NoteFabFragment() : BottomSheetDialogFragment() {
 
     }
 
+    override fun onItemClick(position: Int) {
 
+        var bundle = Bundle()
+        bundle.putString("goto", this::class.java.simpleName.toString())
+        startActivity(Intent(context, ModificaNota()::class.java).putExtras(bundle))
+
+    }
 }

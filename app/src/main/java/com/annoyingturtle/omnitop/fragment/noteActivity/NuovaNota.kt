@@ -67,6 +67,8 @@ class NuovaNota() : AppCompatActivity() {
         return !(TextUtils.isEmpty(titoloNota) && TextUtils.isEmpty(testoNota))
     }
 
+    /** Funzioni per la navigazione all'attività precedente*/
+
     override fun getSupportParentActivityIntent(): Intent? {
         super.getSupportParentActivityIntent()
         return parentMetod()

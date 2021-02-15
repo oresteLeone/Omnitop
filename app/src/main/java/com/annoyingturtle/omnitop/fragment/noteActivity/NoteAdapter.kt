@@ -8,12 +8,24 @@ import com.annoyingturtle.omnitop.R
 import dndData.entities.Notes
 import kotlinx.android.synthetic.main.lista_note_layout.view.*
 
-class NoteAdapter: RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
+class NoteAdapter(private val listener : OnItemClickListner) : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
     private var NotaList = emptyList<Notes>()
 
-    class NoteViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
+    inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        /** gestione click*/
+
+        override fun onClick(v: View?) {
+            val pos = adapterPosition
+
+            if(pos != RecyclerView.NO_POSITION)
+                listener.onItemClick(pos)
+        }
     }
 
     override fun getItemCount() = NotaList.size
@@ -26,16 +38,21 @@ class NoteAdapter: RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
         val currentItem = NotaList[position]
         holder.itemView.nomeNotaCardText.text = currentItem.titoloNota
 
-        if(currentItem.ruoloNota.toString() == "DM")
+        if (currentItem.ruoloNota.toString() == "DM")
             holder.itemView.ruoloGiocatoreNotaDM.visibility = View.VISIBLE
         else
             holder.itemView.ruoloGiocatoreNotaPG.visibility = View.VISIBLE
 
-        if(currentItem.preferito) holder.itemView.notaPreferia.visibility = View.VISIBLE
+        if (currentItem.preferito) holder.itemView.notaPreferia.visibility = View.VISIBLE
     }
 
-    fun setDataNota(nota : List<Notes>){
+    fun setDataNota(nota: List<Notes>) {
         this.NotaList = nota
         notifyDataSetChanged()
+    }
+
+    /** Interfaccia per il listener */
+    interface OnItemClickListner{
+        fun onItemClick(position: Int)
     }
 }
