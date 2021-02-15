@@ -82,32 +82,35 @@ class NuovaNota() : AppCompatActivity() {
         var extras = intent.extras
         var goToIntent = extras?.getString("goto")
 
-        if(goToIntent.equals("HomeActivity")){
-            intento = Intent(this, HomeActivity::class.java)
+        when {
+            goToIntent.equals("HomeActivity") -> {
+                intento = Intent(this, HomeActivity::class.java)
 
-            intento.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-            intento.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+                intento.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                intento.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
 
-        }
-        else if(goToIntent.equals("DndSchedaActivity")){
-            intento = Intent(this, DndSchedaActivity::class.java)
+            }
+            goToIntent.equals("DndSchedaActivity") -> {
+                intento = Intent(this, DndSchedaActivity::class.java)
 
-            intento.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-            intento.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+                intento.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                intento.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
 
-        }
-        else if(goToIntent.equals("DndHome")){
-            intento = Intent(this, DndHome::class.java)
+            }
+            goToIntent.equals("DndHome") -> {
+                intento = Intent(this, DndHome::class.java)
 
-            intento.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-            intento.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+                intento.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                intento.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
 
-        }else if(goToIntent.equals("DndCampagnaHome")){
-            intento = Intent(this, DndCampagnaHome::class.java)
+            }
+            goToIntent.equals("DndCampagnaHome") -> {
+                intento = Intent(this, DndCampagnaHome::class.java)
 
-            intento.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-            intento.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+                intento.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                intento.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
 
+            }
         }
 
         return intento
