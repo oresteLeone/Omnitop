@@ -231,6 +231,8 @@
     <string name="allNote">TUTTE LE NOTE</string>
     <string name="favorite">NOTE PREFERITE</string>
     <string name="creaNote">Nuova Nota</string>
+    <string name="modificaNota">Modifica Nota</string>
+    <string name="modifica">MODIFICA</string>
 
 
 </resources>

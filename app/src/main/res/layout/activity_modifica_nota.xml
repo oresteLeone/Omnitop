@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backGround"
-    tools:context=".fragment.noteActivity.NuovaNota">
+    tools:context=".fragment.noteActivity.ModificaNota">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -18,15 +18,33 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/myToolbarCreaNota"
+            android:id="@+id/myToolbarModificaNota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
-            app:title="@string/creaNote"
+            app:title="@string/modificaNota"
             app:titleTextColor="@color/white"
-            tools:layout_editor_absoluteY="30dp" />
+            tools:layout_editor_absoluteY="30dp">
+
+            <ImageView
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:src="@drawable/ic_baseline_delete_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.appcompat.widget.Toolbar>
+
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -83,13 +101,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/ButtonInsertDataAddNote"
+        android:id="@+id/ButtonInsertDataUpdateNota"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:backgroundTint="@color/Primary"
-        android:text="AGGIUNGI"
+        android:text="@string/modifica"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
