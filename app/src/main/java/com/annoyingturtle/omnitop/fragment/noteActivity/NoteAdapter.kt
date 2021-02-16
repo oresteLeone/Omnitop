@@ -3,6 +3,7 @@ package com.annoyingturtle.omnitop.fragment.noteActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.ListFragment
 import androidx.recyclerview.widget.RecyclerView
 import com.annoyingturtle.omnitop.R
 import dndData.entities.Notes
@@ -44,6 +45,7 @@ class NoteAdapter(private val listener : OnItemClickListner) : RecyclerView.Adap
             holder.itemView.ruoloGiocatoreNotaPG.visibility = View.VISIBLE
 
         if (currentItem.preferito) holder.itemView.notaPreferia.visibility = View.VISIBLE
+
     }
 
     fun setDataNota(nota: List<Notes>) {

@@ -9,6 +9,11 @@ import dndData.viewModel.NotesViewModel
 import kotlinx.android.synthetic.main.activity_modifica_nota.*
 
 class ModificaNota() : AppCompatActivity() {
+
+
+    var intento = Intent()
+    var posizioneElemento : Int = intento.getIntExtra("posizione", 0)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modifica_nota)
@@ -36,7 +41,6 @@ class ModificaNota() : AppCompatActivity() {
     }
 
     private fun parentMetod(): Intent {
-        var intento = Intent()
         var extras = intent.extras
         var goToIntent = extras?.getString("goto")
 

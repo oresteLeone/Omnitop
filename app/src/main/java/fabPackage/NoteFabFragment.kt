@@ -16,6 +16,7 @@ import com.annoyingturtle.omnitop.fragment.noteActivity.ModificaNota
 import com.annoyingturtle.omnitop.fragment.noteActivity.NoteAdapter
 import com.annoyingturtle.omnitop.fragment.noteActivity.NuovaNota
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import dndData.entities.Notes
 import dndData.viewModel.NotesViewModel
 import kotlinx.android.synthetic.main.note_fab_layout.*
 import kotlinx.android.synthetic.main.note_fab_layout.view.*
@@ -23,8 +24,9 @@ import kotlinx.android.synthetic.main.note_fab_layout.view.*
 
 class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickListner {
 
-    var preferite = true
+    private var preferite = true
     private lateinit var mNotaViewModel : NotesViewModel
+    private val adapter = NoteAdapter(this)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +40,6 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
         val view =inflater.inflate(R.layout.note_fab_layout, container, false)
 
 
-        val adapter = NoteAdapter(this)
         val recyclerView = view.favNoteRecyclerView
 
         recyclerView.adapter = adapter
@@ -46,7 +47,6 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
 
         mNotaViewModel = ViewModelProvider(this).get(NotesViewModel::class.java)
         mNotaViewModel.readFavoriteData.observe(viewLifecycleOwner, Observer { nota -> adapter.setDataNota(nota)})
-
         return view
 
     }
@@ -105,7 +105,7 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
 
         var bundle = Bundle()
         bundle.putString("goto", this::class.java.simpleName.toString())
-        startActivity(Intent(context, ModificaNota()::class.java).putExtras(bundle))
+        startActivity(Intent(context, ModificaNota()::class.java).putExtras(bundle).putExtra("posizione", position))
 
     }
 }

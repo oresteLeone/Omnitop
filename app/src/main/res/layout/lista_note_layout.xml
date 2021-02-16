@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:paddingVertical="16dp"
     android:background="@color/backGround"
-    >
+    android:id="@+id/notaItem">
 
 
     <ImageView
