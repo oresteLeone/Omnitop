@@ -57,4 +57,6 @@ class NoteAdapter(private val listener : OnItemClickListner) : RecyclerView.Adap
     interface OnItemClickListner{
         fun onItemClick(position: Int)
     }
+
+
 }
