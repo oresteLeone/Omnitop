@@ -1,8 +1,14 @@
 package com.annoyingturtle.omnitop.fragment.noteActivity
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.util.AttributeSet
+import android.view.View
+import android.widget.EditText
+import androidx.lifecycle.ViewModelProvider
 import com.annoyingturtle.omnitop.*
 import dndData.entities.Notes
 import dndData.viewModel.NotesViewModel
@@ -10,9 +16,10 @@ import kotlinx.android.synthetic.main.activity_modifica_nota.*
 
 class ModificaNota() : AppCompatActivity() {
 
+    private lateinit var mNotaViewModel : NotesViewModel
 
     var intento = Intent()
-    var posizioneElemento : Int = intento.getIntExtra("posizione", 0)
+    var idNota : Int = intento.getIntExtra("idItem", -1)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +28,14 @@ class ModificaNota() : AppCompatActivity() {
         setSupportActionBar(myToolbarModificaNota)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
+
+        mNotaViewModel = ViewModelProvider(this).get(NotesViewModel::class.java)
+        mNotaViewModel.notaFromID=idNota
+
+        mNotaViewModel.notaFound
+
+        titoloNota.text = mNotaViewModel.notaFound?.titoloNota as Editable
+        testoNota.text = mNotaViewModel.notaFound?.corpoNota as Editable
 
     }
 
@@ -77,4 +92,6 @@ class ModificaNota() : AppCompatActivity() {
 
         return intento
     }
+
+
 }

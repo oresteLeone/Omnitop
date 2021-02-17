@@ -58,5 +58,8 @@ class NoteAdapter(private val listener : OnItemClickListner) : RecyclerView.Adap
         fun onItemClick(position: Int)
     }
 
+    fun getItemID(position: Int): Int{
+        return NotaList[position].id
+    }
 
 }

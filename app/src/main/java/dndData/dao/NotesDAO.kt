@@ -16,11 +16,8 @@ interface NotesDAO {
     @Query("SELECT * FROM note_table WHERE preferito ORDER BY id DESC")
     fun readFavoriteData(): LiveData<List<Notes>>
 
-    /*
-    @Query("SELECT * FROM note_table WHERE campagna_id= :Campagna_id ORDER BY id DESC")
-    fun getNotesFromCampagna(Campagna_id: Int): LiveData<List<Notes>>
-    forse non si può fare qui
-    */
+    @Query("SELECT * FROM note_table WHERE id= :id ORDER BY id DESC")
+    fun getNotesFromID(id: Int?): Notes?
 
     @Update
     suspend fun updateNota(Nota: Notes)

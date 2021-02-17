@@ -14,6 +14,12 @@ class NotesViewModel(application: Application): AndroidViewModel(application) {
 
     val readAllData: LiveData<List<Notes>>
     val readFavoriteData: LiveData<List<Notes>>
+    var notaFound: Notes? = null
+    var notaFromID: Int? = null
+        set(value) {
+            field = value
+            notaFound=repository.getNotesFromID(field)
+        }
 
     private val repository: NotesRepository
 
@@ -42,6 +48,7 @@ class NotesViewModel(application: Application): AndroidViewModel(application) {
             repository.deleteNota(Nota)
         }
     }
+
 
 
 }
