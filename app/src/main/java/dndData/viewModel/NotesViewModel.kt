@@ -17,7 +17,9 @@ class NotesViewModel(application: Application): AndroidViewModel(application) {
     val readAllData: LiveData<List<Notes>>
     val readFavoriteData: LiveData<List<Notes>>
 
-    lateinit var singleLiveData: MutableLiveData<Notes>
+    var singleLiveData: MutableLiveData<Notes> = lazy {
+        MutableLiveData<Notes>()
+    }.value
 
     private val repository: NotesRepository
 
@@ -48,22 +50,32 @@ class NotesViewModel(application: Application): AndroidViewModel(application) {
     }
 
 
-    fun getSingleLiveData(): LiveData<Notes>{
+    fun getSingleLiveData(): LiveData<Notes> = singleLiveData
+    /*{
         if(!::singleLiveData.isInitialized){
             singleLiveData = MutableLiveData<Notes>()
         }
         return singleLiveData
-    }
+    }*/
+/*
 
     fun getNotesFromID(id: Int){
         viewModelScope.launch(Dispatchers.IO){
             val item = findByIdInternal(id)
             singleLiveData.postValue(item)
+
         }
     }
 
     private suspend  fun findByIdInternal(id: Int) = viewModelScope.async {
         repository.getNotesFromID(id)
     }.await()
+*/
 
+    fun getNotesFromID(id:Int){
+        viewModelScope.launch(Dispatchers.IO){
+            val item = repository.getNotesFromID(id)
+            singleLiveData.postValue(item)
+        }
+    }
 }

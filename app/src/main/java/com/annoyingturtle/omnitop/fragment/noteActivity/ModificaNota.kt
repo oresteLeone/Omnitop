@@ -36,7 +36,7 @@ class ModificaNota() : AppCompatActivity() {
 
         mNotaViewModel = ViewModelProvider(this).get(NotesViewModel::class.java)
 
-        mNotaViewModel.getSingleLiveData()
+        //mNotaViewModel.getSingleLiveData()
         if (idNota != null) {
             mNotaViewModel.getNotesFromID(idNota)
         }
@@ -44,8 +44,9 @@ class ModificaNota() : AppCompatActivity() {
         //idNota?.let { mNotaViewModel.getNotesFromID(it) }
 
 
-        titoloNota.setText(mNotaViewModel.singleLiveData.value?.titoloNota)
-        testoNota.setText(mNotaViewModel.singleLiveData.value?.corpoNota)
+
+        titoloNota.setText(mNotaViewModel.getSingleLiveData().value?.titoloNota)
+        testoNota.setText(mNotaViewModel.getSingleLiveData().value?.corpoNota)
 
 
 
