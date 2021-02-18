@@ -19,7 +19,6 @@ class ModificaNota() : AppCompatActivity() {
     private lateinit var mNotaViewModel : NotesViewModel
 
     var intento = Intent()
-    var idNota : Int = intento.getIntExtra("idItem", -1)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,10 +28,20 @@ class ModificaNota() : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
+        /**Visualizzazione a schermo dati attuali*/
+
+        var extras = intent.extras
+        var idNota : Int? = extras?.getInt("idItem")
+        println(idNota)
+
         mNotaViewModel = ViewModelProvider(this).get(NotesViewModel::class.java)
 
         mNotaViewModel.getSingleLiveData()
-        mNotaViewModel.getNotesFromID(idNota)
+        if (idNota != null) {
+            mNotaViewModel.getNotesFromID(idNota)
+        }
+
+        //idNota?.let { mNotaViewModel.getNotesFromID(it) }
 
 
         titoloNota.setText(mNotaViewModel.singleLiveData.value?.titoloNota)
