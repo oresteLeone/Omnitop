@@ -30,12 +30,15 @@ class ModificaNota() : AppCompatActivity() {
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
         mNotaViewModel = ViewModelProvider(this).get(NotesViewModel::class.java)
-        mNotaViewModel.notaFromID=idNota
 
-        mNotaViewModel.notaFound
+        mNotaViewModel.getSingleLiveData()
+        mNotaViewModel.getNotesFromID(idNota)
 
-        titoloNota.text = mNotaViewModel.notaFound?.titoloNota as Editable
-        testoNota.text = mNotaViewModel.notaFound?.corpoNota as Editable
+
+        titoloNota.setText(mNotaViewModel.singleLiveData.value?.titoloNota)
+        testoNota.setText(mNotaViewModel.singleLiveData.value?.corpoNota)
+
+
 
     }
 

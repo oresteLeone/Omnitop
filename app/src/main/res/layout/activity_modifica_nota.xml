@@ -35,7 +35,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="16dp"
                 android:backgroundTint="?attr/colorPrimary"
                 android:src="@drawable/ic_baseline_delete_24"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -50,7 +50,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/titoloCam"
+        android:id="@+id/titoloNotaHold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -76,7 +76,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/DescrizioneCam"
+        android:id="@+id/DescrizioneHolder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -89,7 +89,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titoloCam">
+        app:layout_constraintTop_toBottomOf="@+id/titoloNotaHold">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/testoNota"
@@ -112,7 +112,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DescrizioneCam" />
+        app:layout_constraintTop_toBottomOf="@+id/DescrizioneHolder" />
 
     <CheckBox
         android:id="@+id/checkBoxPreferito"
@@ -120,9 +120,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:text="Preferita"
-        app:layout_constraintBottom_toTopOf="@+id/DescrizioneCam"
+        app:layout_constraintBottom_toTopOf="@+id/DescrizioneHolder"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titoloCam" />
+        app:layout_constraintTop_toBottomOf="@+id/titoloNotaHold" />
 
     <CheckBox
         android:id="@+id/checkBoxGM"
@@ -130,8 +130,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:text="Dungeon Master"
-        app:layout_constraintBottom_toTopOf="@+id/DescrizioneCam"
+        app:layout_constraintBottom_toTopOf="@+id/DescrizioneHolder"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titoloCam" />
+        app:layout_constraintTop_toBottomOf="@+id/titoloNotaHold" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

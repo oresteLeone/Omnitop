@@ -4,12 +4,14 @@ import androidx.lifecycle.LiveData
 import dndData.dao.NotesDAO
 import dndData.entities.Notes
 
-class NotesRepository(private val NotesDAO: NotesDAO, id: Int? = null){
+class NotesRepository(private val NotesDAO: NotesDAO){
 
     val readAllData: LiveData<List<Notes>> = NotesDAO.readAllData()
     val readFavoriteData: LiveData<List<Notes>> = NotesDAO.readFavoriteData()
 
-    fun getNotesFromID(id: Int?): Notes? = NotesDAO.getNotesFromID(id = null)
+    suspend fun getNotesFromID(id: Int): Notes {
+     return NotesDAO.getNotesFromID(id)
+    }
 
     suspend fun addNota(Nota: Notes){
         NotesDAO.addNota(Nota)

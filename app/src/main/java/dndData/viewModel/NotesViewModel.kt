@@ -3,29 +3,27 @@ package dndData.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import dndData.database.DNDdatabase
 import dndData.entities.Notes
 import dndData.repository.NotesRepository
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class NotesViewModel(application: Application): AndroidViewModel(application) {
 
     val readAllData: LiveData<List<Notes>>
     val readFavoriteData: LiveData<List<Notes>>
-    var notaFound: Notes? = null
-    var notaFromID: Int? = null
-        set(value) {
-            field = value
-            notaFound=repository.getNotesFromID(field)
-        }
+
+    lateinit var singleLiveData: MutableLiveData<Notes>
 
     private val repository: NotesRepository
 
     init {
-        val NotesDAO = DNDdatabase.getDatabase(application).getNotesDAO()
-        repository = NotesRepository(NotesDAO)
+        val notesDAO = DNDdatabase.getDatabase(application).getNotesDAO()
+        repository = NotesRepository(notesDAO)
         readAllData = repository.readAllData
         readFavoriteData = repository.readFavoriteData
 
@@ -50,5 +48,22 @@ class NotesViewModel(application: Application): AndroidViewModel(application) {
     }
 
 
+    fun getSingleLiveData(): LiveData<Notes>{
+        if(!::singleLiveData.isInitialized){
+            singleLiveData = MutableLiveData<Notes>()
+        }
+        return singleLiveData
+    }
+
+    fun getNotesFromID(id: Int){
+        viewModelScope.launch(Dispatchers.IO){
+            val item = findByIdInternal(id)
+            singleLiveData.postValue(item)
+        }
+    }
+
+    private suspend  fun findByIdInternal(id: Int) = viewModelScope.async {
+        repository.getNotesFromID(id)
+    }.await()
 
 }
