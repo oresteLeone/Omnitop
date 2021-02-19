@@ -26,8 +26,9 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
 
     private var preferite = true
     private lateinit var mNotaViewModel : NotesViewModel
-    private val adapter = NoteAdapter(this)
 
+    val favAdapter = NoteAdapter(this)
+    val allAdapter = NoteAdapter(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,13 +41,14 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
         val view =inflater.inflate(R.layout.note_fab_layout, container, false)
 
 
+
         val recyclerView = view.favNoteRecyclerView
 
-        recyclerView.adapter = adapter
+        recyclerView.adapter = favAdapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         mNotaViewModel = ViewModelProvider(this).get(NotesViewModel::class.java)
-        mNotaViewModel.readFavoriteData.observe(viewLifecycleOwner, Observer { nota -> adapter.setDataNota(nota)})
+        mNotaViewModel.readFavoriteData.observe(viewLifecycleOwner, Observer { nota -> favAdapter.setDataNota(nota)})
         return view
 
     }
@@ -71,14 +73,13 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
                 textView8.text = getString(R.string.allNote)
                 preferite = false
 
-                val adapter = NoteAdapter(this)
-                val recyclerView = view?.favNoteRecyclerView
 
-                recyclerView?.adapter = adapter
+                val recyclerView = requireView().favNoteRecyclerView
+
+                recyclerView?.adapter = allAdapter
                 recyclerView?.layoutManager = LinearLayoutManager(requireContext())
 
-                mNotaViewModel = ViewModelProvider(this).get(NotesViewModel::class.java)
-                mNotaViewModel.readAllData.observe(viewLifecycleOwner, Observer { nota -> adapter.setDataNota(nota)})
+                mNotaViewModel.readAllData.observe(viewLifecycleOwner, Observer { nota -> allAdapter.setDataNota(nota)})
             }
             else
             {
@@ -86,14 +87,12 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
                 allNotesBtn.text = getText(R.string.allNote)
                 textView8.text = getString(R.string.favorite)
 
-                val adapter = NoteAdapter(this)
-                val recyclerView = view?.favNoteRecyclerView
+                val recyclerView = requireView().favNoteRecyclerView
 
-                recyclerView?.adapter = adapter
+                recyclerView?.adapter = favAdapter
                 recyclerView?.layoutManager = LinearLayoutManager(requireContext())
 
-                mNotaViewModel = ViewModelProvider(this).get(NotesViewModel::class.java)
-                mNotaViewModel.readFavoriteData.observe(viewLifecycleOwner, Observer { nota -> adapter.setDataNota(nota)})
+                mNotaViewModel.readFavoriteData.observe(viewLifecycleOwner, Observer { nota -> favAdapter.setDataNota(nota)})
 
             }
 
@@ -105,7 +104,13 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
 
         var bundle = Bundle()
         bundle.putString("goto", this::class.java.simpleName.toString())
-        startActivity(Intent(context, ModificaNota()::class.java).putExtras(bundle).putExtra("idItem", adapter.getItemID(position)))
+        startActivity(Intent(context, ModificaNota()::class.java).putExtras(bundle).putExtra("idItem",
+                if(preferite)
+                    favAdapter.getItemID(position)
+                else
+                    allAdapter.getItemID(position)
+                )
+        )
 
 
     }
