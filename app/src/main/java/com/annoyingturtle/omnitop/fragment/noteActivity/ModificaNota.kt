@@ -8,8 +8,10 @@ import android.text.Editable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.EditText
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.annoyingturtle.omnitop.*
+import dndData.RuoloGiocatore
 import dndData.entities.Notes
 import dndData.viewModel.NotesViewModel
 import kotlinx.android.synthetic.main.activity_modifica_nota.*
@@ -32,28 +34,25 @@ class ModificaNota() : AppCompatActivity() {
 
         var extras = intent.extras
         var idNota : Int? = extras?.getInt("idItem")
-        println(idNota)
 
         mNotaViewModel = ViewModelProvider(this).get(NotesViewModel::class.java)
 
-        //mNotaViewModel.getSingleLiveData()
         if (idNota != null) {
             mNotaViewModel.getNotesFromID(idNota)
+            showNoteData()
         }
-
-        //idNota?.let { mNotaViewModel.getNotesFromID(it) }
-
-
-
-        titoloNota.setText(mNotaViewModel.getSingleLiveData().value?.titoloNota)
-        testoNota.setText(mNotaViewModel.getSingleLiveData().value?.corpoNota)
-
 
 
     }
 
-
-
+    fun showNoteData(){
+        mNotaViewModel.getSingleLiveData().observe(this, Observer {
+            titoloNota.text = Editable.Factory.getInstance().newEditable(it.titoloNota)
+            testoNota.text = Editable.Factory.getInstance().newEditable(it.corpoNota)
+            checkBoxPreferito.isChecked = it.preferito
+            checkBoxGM.isChecked = it.ruoloNota == RuoloGiocatore.DM
+        })
+    }
 
 
     /** Funzioni per la navigazione all'attività precedente*/

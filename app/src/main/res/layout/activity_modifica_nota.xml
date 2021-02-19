@@ -122,7 +122,8 @@
         android:text="Preferita"
         app:layout_constraintBottom_toTopOf="@+id/DescrizioneHolder"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titoloNotaHold" />
+        app:layout_constraintTop_toBottomOf="@+id/titoloNotaHold"
+         />
 
     <CheckBox
         android:id="@+id/checkBoxGM"
