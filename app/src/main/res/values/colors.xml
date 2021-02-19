@@ -20,6 +20,8 @@
     <color name="testoCalcolatrice">#6B6B6B</color>
     <color name="actionBarandBottomNav">#FF1A1A1A</color>
     <color name="schedaTesto">#707070</color>
+    <color name="guidaTesto">#808080</color>
+    <color name="guidaScritte">#EFEFF0</color>
 
 
 </resources>

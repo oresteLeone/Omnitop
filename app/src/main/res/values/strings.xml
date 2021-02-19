@@ -235,4 +235,117 @@
     <string name="modifica">MODIFICA</string>
 
 
+    <!-- DnD Guida -->
+
+    <string name="Guida"></string>
+
+    <string name="sceltaClasse">1: Scelta della Classe</string>
+    <string name="infoClasse">Prima ancora di definire l’aspetto fisico del vostro personaggio, vi consigliamo di iniziare scegliendone la Classe. Si tratta di una decisione cruciale, che avrà grandi ripercussioni sull’intera esperienza di gioco; ogni Classe ha infatti uno stile di gioco ben preciso, che influenzerà sia l’aspetto puramente esplorativo che lo svolgersi dei combattimenti.\n Per questa ragione, a nostro avviso, scegliere la Classe dovrebbe essere il primo passo nella creazione di un personaggio.
+
+    Se vi state chiedendo quali siano le varie Classi nel mondo di Dungeons and Dragons, non temete: Il Vostro Dungeon Master sarà lieto di aiutarvi, altrimenti fate riferimento a manuali cartacei o online.</string>
+
+    <string name="next">NEXT</string>
+
+    <string name="sceltaRazza">2: Scelta Della Razza</string>
+    <string name="infoRazza">Il mondo di Dungeons and Dragons è popolato da diverse Razze e il vostro personaggio farà parte di una di queste. Questa scelta, oltre a determinare l’aspetto estetico del vostro avatar, vi darà accesso a delle abilità uniche. I tratti razziali possono infatti includere alcune caratteristiche molto importanti, come l’Aumento del punteggio di abilità, l’Età, l’Allineamento, le Dimensioni, la Velocità, le Lingue parlate e le eventuali Sottorazze.\n
+
+        Il manuale del giocatore dispone di ben 9 razze tra le quali scegliere:\n\n
+
+                Elfo\n
+                Hafling\n
+                Nano\n
+                Umano\n
+                Dragonide\n
+                Gnomo\n
+                Mezzelfo\n
+                Mezzorco\n
+                Tiefling\n\n
+
+        Anche per quanto riguarda questo importante argomento vi consigliamo di rivolgervi al vostro Dungeon Master, ai manuali o alle risorse online che vi permetteranno di scoprire, nel dettaglio, le debolezze e i punti di forza di ogni singola Razza.</string>
+
+    <string name="sceltaBG">3: Scelta BackGround</string>
+    <string name="infoBG">Sarebbe alquanto improbabile se il vostro alter ego apparisse nel mondo di gioco dal nulla, senza avere un passato complesso e affascinante alle sue spalle. Proprio come in ogni storia che si rispetti, anche in Dungeons and Dragons ogni personaggio necessita di un background; dovrete quindi decidere le origini e la più intima natura del vostro personaggio.
+        Quali esperienze lo hanno forgiato e per quali ragioni agisce in un determinato modo? Da dove viene e cos’ha fatto prima di unirsi all’avventura? Quali sono le sue motivazioni? Siete liberi di far galoppare liberamente la vostra fantasia: ogni vostro spunto andrà a fornire dettagli importanti come le sue competenze, le lingue conosciute e addirittura l’equipaggiamento aggiuntivo del quale potrà disporre.\n
+        Questi sono solo alcuni degli esempi di background che potrete conferire al vostro personaggio, potrete trovarne altri da manuali e risorse online:\n\n
+        -Accolito\n
+        -Artigiano di Gilda\n
+        -Ciarlatano\n
+        -Criminale\n
+        -Eremita\n
+        -Eroe popolare\n
+        -Forestiero\n
+        -Intrattenitore\n
+        -Marinaio\n
+        -Monello\n
+        -Nobile\n
+        -Soldato</string>
+
+    <string name="sceltaCaratteristiche">4: Punti Caratteristica</string>
+    <string name="infoCaratteristiche">I punti di caratteristica determineranno le capacità fisiche e mentali del vostro personaggio.
+
+        Sono un totale di 6 e comprendono le seguenti voci: Forza, Destrezza, Costituzione, Intelligenza, Saggezza e Carisma.\n
+        Le caratteristiche avranno un ruolo molto importante nelle sessioni di gioco poiché influiranno sia nell’esito delle battaglie che nella riuscita delle prove che dovremo affrontare durante la nostra avventura.\n
+            L’assegnazione dei punti di caratteristica può avvenire in due modi: tramite il lancio dei dadi oppure sfruttando i valori predefiniti. Andiamo ad esaminare queste alternative nel dettaglio.\n\n
+        L’assegnazione dei punti statistica tramite il lancio dei dadi avviene nel seguente modo:\n\n
+
+        Lancia un dado 1d6 almeno 4 volte (oppure lancia contemporaneamente 4 dadi 1d6)\n
+        Elimina il numero più basso\n
+        Somma i numeri restanti\n
+        Segna il risultato su un pezzo di carta\n
+        Ripeti tutti i passaggi per almeno un totale di 6 volte\n
+        Come alternativa si possono utilizzare i punti di caratteristica predefiniti [15,14,13,12,10,8]\n\n
+
+        Disposizione dei punti ottenuti:\n
+
+        Una volta ottenuti i sei valori, si può passare alla loro disposizione. Ogni classe è affine a una o due statistiche. Proprio per questo, prima di scegliere come assegnare i valori più alti, vi consigliamo di dare una bella ripassata alla descrizione della vostra classe.
+
+        Sommare i punteggi bonus delle Razze:\n
+
+        La maggior parte delle Razze di D&amp;D dispone di bonus razziali, come l’essere Umano con il suo  +1 a tutti i punti caratteristica oppure il bonus dell’Elfo con il suo +2 in destrezza. Ricordatevi di sommare questi bonus ai punti ottenuti e di riportare il risultato sulla Scheda Personaggio.</string>
+
+    <string name="sceltaModificatori">5: Modificatori di Statistiche</string>
+    <string name="infoModificatori">Una volta ottenuto il numero preciso dei Punti Statistica si deve procedere a calcolare i modificatori di caratteristica corrispondenti, per farlo basta seguire il seguente criterio: sottrarre 10 al punteggio e didere per due il risultato, dunque ad esempio ad un
+    punteggio di 10 o 11 corrisponderà un valore di +0, ad un punteggio di 8 o 9 un valore di -1 ed ad un punteggio di 18 un valore di +4; in ogni caso l\'applicazione OmniTop calcolerà tali valori autonomamente dopo che avrai scritto i punteggi di caratteristica</string>
+
+    <string name="puntiIspirazione">6: Punti Ispirazione</string>
+    <string name="infoPuntiIspirazione">I punti ispirazione sono dei punti che vengono assegnati dal Game Maste ai giocatori durante le sessioni di gioco e possono essere utilizzati per ottenere vantaggio (tirare due volte il dado) ad un tiro di dado,
+    in ogni caso non sono importanti ai fini della creazione di una scheda</string>
+
+    <string name="profBonus">7: Bonus di Competenza</string>
+    <string name="infoProfBonus">Il bonus di competenza è il valore che indica quanto il tuo personaggio sia abile nello svolgere le sue mansioni; tale bonus si aggiunge a tutti i tiri effettuati dal personaggio con armi, strumenti o abilità in cui esso è considerato "competente" o incrementerà le classi difficoltà dei tiri salvezza contro le proprie abilità o incantesimi.\n
+    il bonus di competenza dipende esclusivamente dal livello totale del personaggio (anche se in rarissimi casi può essere modificato da oggetti o effetti). Al livello 1 il bonus di competenza di un personaggio sarà +2,
+    ed aumenterà di 1 ogni 4 livelli, divenendo quindi +3 al 5, +4 al 9, +5 al 13, +6 al 17</string>
+
+    <string name="tiriSalvezza">8: Tiri Salvezza</string>
+    <string name="infoTiriSalvezza">Il Tiro Salvezza si effettua quando il vostro personaggio diventa il bersaglio di un attacco, sia esso un Incantesimo, una trappola, un veleno, una malattia o altre minacce simili. Il calcolo del punteggio per i Tiri Salvezza avviene nel seguente modo:
+
+    Controllare in quali caratteristiche la tua classe è competente\n
+    Esempio: Chierico è competente in “Saggezza” e “Carisma”\n
+
+    Indicare le statistiche competenti contrassegnandole nell’apposita sezione della Scheda\n
+
+    Riportare i valori dei Modificatori nella sezione Tiri salvezza\n
+
+    Sommare solo nelle statistiche competenti il punteggio del Bonus di competenza</string>
+
+    <string name="sceltaAbilità">9: Abilità</string>
+    <string name="infoAbilità">I punteggi delle Abilità vengono assegnati sulla base di specifici scenari. Ad esempio, quando cercherai di imbrogliare qualcuno entrerà in gioco il punteggio Abilità Inganno. Se invece state cercando di capire se qualcuno sta bluffando, allora sarà il punteggio Abilità Intuito a determinare la vostra sorte. Questi valori andranno aggiunti ad ogni tiro che effettuerai per uno di questi punteggi. Le Abilità hanno un ruolo fondamentale per superare le insidie del mondo di Dungeons &amp; Dragons, e possono essere sfruttate sia durante i combattimenti che in fase esplorativa.\n
+
+Tutte le Abilità sono influenzate da una statistica:\n\n
+        -Forza: Atletica\n
+        -Destrezza: Acrobazia, Furtività, Rapidità di mano\n
+        -Intelligenza: Arcano, Indagare, Natura, Religione, Storia\n
+        -Carisma: Inganno, Intimidire, Intrattenere, Persuasione\n
+        -Saggezza: Addestrare Animali, Intuizione, Medicina, Percezione e Sopravvivenza\n\n
+
+        Vediamo insieme come avviene il calcolo dei punteggi di Abilità:\n
+        -Classe, Razza e background determinano le abilità in cui si è competenti\n
+        -Indicare le abilità scelte contrassegnandole nell’apposita sezione della Scheda\n
+        -In base al tipo di Abilità, riportare il valore del modificatore di caratteristica\n
+        -Sommare solo nelle Abilità competenti il punteggio del Bonus di competenza.</string>
+
+    <string name="percezionePassiva">10: Saggezza: Percezione Passiva</string>
+    <string name="infoPercezionePassiva">La Saggezza Passiva, anche detta Percezione Passiva, consiste nell’abilità di percepire eventuali insidie anche quando non ci si trova in stato di allerta. Ciò sarà molto utile per non farsi prendere alla sprovvista dall’attacco di un avversario.\n
+        La Percezione Passiva ha un punteggio pari a 10, al quale andrà sommato l’eventuale valore dell’abilità Percezione.</string>
 </resources>
+
