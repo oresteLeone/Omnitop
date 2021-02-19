@@ -17,7 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Omnitop">
-        <activity android:name=".fragment.noteActivity.ModificaNota"></activity>
+        <activity android:name=".GuidaSchedaDnDActivity"
+            android:parentActivityName=".DndSchedaActivity"/>
+        <activity android:name=".fragment.noteActivity.ModificaNota" />
         <activity android:name=".fragment.noteActivity.NuovaNota" />
         <activity android:name=".DndSchedaActivity" />
         <activity android:name=".DndCampagnaHome" />
