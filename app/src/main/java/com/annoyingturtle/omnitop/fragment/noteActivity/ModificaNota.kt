@@ -1,17 +1,15 @@
 package com.annoyingturtle.omnitop.fragment.noteActivity
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
-import android.util.AttributeSet
-import android.view.View
-import android.widget.EditText
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.annoyingturtle.omnitop.*
@@ -23,7 +21,6 @@ import kotlinx.android.synthetic.main.activity_modifica_nota.checkBoxGM
 import kotlinx.android.synthetic.main.activity_modifica_nota.checkBoxPreferito
 import kotlinx.android.synthetic.main.activity_modifica_nota.testoNota
 import kotlinx.android.synthetic.main.activity_modifica_nota.titoloNota
-import kotlinx.android.synthetic.main.activity_nuova_nota.*
 import java.lang.Exception
 
 class ModificaNota() : AppCompatActivity() {
@@ -66,11 +63,6 @@ class ModificaNota() : AppCompatActivity() {
         ButtonInsertDataUpdateNota.setOnClickListener() {
             UpdateNoteDataToDatabase()
         }
-
-        deleteNotaBtn.setOnClickListener(){
-            deleteSingleUser(notaToDelete)
-        }
-
 
     }
 
@@ -183,5 +175,17 @@ class ModificaNota() : AppCompatActivity() {
         return intento
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        var inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu_con_pulsante_cancella, menu)
+
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        deleteSingleUser(notaToDelete)
+        return super.onOptionsItemSelected(item)
+    }
 
 }
