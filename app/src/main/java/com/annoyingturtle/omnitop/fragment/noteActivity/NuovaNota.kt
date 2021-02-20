@@ -56,6 +56,7 @@ class NuovaNota() : AppCompatActivity() {
                 return
             }
             Toast.makeText(this, "La nota è stata salvata con successo", Toast.LENGTH_SHORT).show()
+            navigateUpTo(parentMetod())
         }
         else
             Toast.makeText(this, "Riempi i campi necessari!", Toast.LENGTH_SHORT).show()

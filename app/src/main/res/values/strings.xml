@@ -227,9 +227,11 @@
 
     <!-- NOTE -->
 
-    <string name="nuovaNota">+ NUOVA NOTA</string>
-    <string name="allNote">TUTTE LE NOTE</string>
-    <string name="favorite">NOTE PREFERITE</string>
+    <string name="nuovaNota">NUOVA NOTA</string>
+    <string name="allNote">MOSTRA TUTTE</string>
+    <string name="allNoteString">TUTTE LE NOTE</string>
+    <string name="favoriteString">PREFERITI</string>
+    <string name="favorite">MOSTRA PREFERITI</string>
     <string name="creaNote">Nuova Nota</string>
     <string name="modificaNota">Modifica Nota</string>
     <string name="modifica">MODIFICA</string>

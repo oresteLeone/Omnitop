@@ -19,7 +19,7 @@ interface NotesDAO {
     @Query("SELECT * FROM note_table WHERE id= :id ORDER BY id DESC")
     suspend fun getNotesFromID(id: Int): Notes
 
-    @Update
+    @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun updateNota(Nota: Notes)
 
     @Delete

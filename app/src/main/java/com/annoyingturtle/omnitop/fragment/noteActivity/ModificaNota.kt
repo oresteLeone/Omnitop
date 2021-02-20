@@ -5,9 +5,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
+import android.text.TextUtils
 import android.util.AttributeSet
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.annoyingturtle.omnitop.*
@@ -15,12 +19,21 @@ import dndData.RuoloGiocatore
 import dndData.entities.Notes
 import dndData.viewModel.NotesViewModel
 import kotlinx.android.synthetic.main.activity_modifica_nota.*
+import kotlinx.android.synthetic.main.activity_modifica_nota.checkBoxGM
+import kotlinx.android.synthetic.main.activity_modifica_nota.checkBoxPreferito
+import kotlinx.android.synthetic.main.activity_modifica_nota.testoNota
+import kotlinx.android.synthetic.main.activity_modifica_nota.titoloNota
+import kotlinx.android.synthetic.main.activity_nuova_nota.*
+import java.lang.Exception
 
 class ModificaNota() : AppCompatActivity() {
 
     private lateinit var mNotaViewModel : NotesViewModel
 
     var intento = Intent()
+
+    var idNota: Int = -1
+    lateinit var notaToDelete: Notes
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,17 +46,34 @@ class ModificaNota() : AppCompatActivity() {
         /**Visualizzazione a schermo dati attuali*/
 
         var extras = intent.extras
-        var idNota : Int? = extras?.getInt("idItem")
+        idNota = extras!!.getInt("idItem")
 
         mNotaViewModel = ViewModelProvider(this).get(NotesViewModel::class.java)
 
-        if (idNota != null) {
+        if (idNota > -1) {
+            notaToDelete = Notes(idNota,null,"TEMP",null,false,RuoloGiocatore.PG)
             mNotaViewModel.getNotesFromID(idNota)
             showNoteData()
+            mNotaViewModel.getSingleLiveData().observe(this, Observer {
+                notaToDelete.titoloNota = it.titoloNota
+                notaToDelete.corpoNota = it.corpoNota
+                notaToDelete.preferito = it.preferito
+                notaToDelete.ruoloNota = it.ruoloNota
+
+            })
+        }
+
+        ButtonInsertDataUpdateNota.setOnClickListener() {
+            UpdateNoteDataToDatabase()
+        }
+
+        deleteNotaBtn.setOnClickListener(){
+            deleteSingleUser(notaToDelete)
         }
 
 
     }
+
 
     fun showNoteData(){
         mNotaViewModel.getSingleLiveData().observe(this, Observer {
@@ -54,6 +84,54 @@ class ModificaNota() : AppCompatActivity() {
         })
     }
 
+    private fun UpdateNoteDataToDatabase(){
+        val titoloNota = titoloNota.text.toString()
+        val testoNota = testoNota.text.toString()
+        val preferito : Boolean = checkBoxPreferito.isChecked
+        val ruoloGiocatore : RuoloGiocatore = if(checkBoxGM.isChecked) RuoloGiocatore.DM
+        else
+            RuoloGiocatore.PG
+
+        if(imputCheck(titoloNota, testoNota)){
+            val nota = Notes(idNota, titoloNota = titoloNota, corpoNota =  testoNota, preferito = preferito, ruoloNota = ruoloGiocatore, Campagnaid = null)
+            try {
+                mNotaViewModel.updateNota(nota)
+            }catch (e : Exception)
+            {
+                Toast.makeText(this, "ERRORE: La nota non è stata aggiornata correttamente", Toast.LENGTH_LONG).show()
+                return
+            }
+            Toast.makeText(this, "La nota è stata aggiornata con successo", Toast.LENGTH_SHORT).show()
+            navigateUpTo(parentMetod())
+        }
+        else
+            Toast.makeText(this, "Riempi i campi necessari!", Toast.LENGTH_SHORT).show()
+
+    }
+
+    private fun imputCheck(titoloNota: String?, testoNota : String?): Boolean {
+
+        return !(TextUtils.isEmpty(titoloNota) && TextUtils.isEmpty(testoNota))
+    }
+
+    fun deleteSingleUser(notaToDelete: Notes){
+
+
+        val builder = AlertDialog.Builder(this)
+        builder.setPositiveButton("Si"){ _, _ ->
+            mNotaViewModel.getSingleLiveData().removeObservers(this)
+            mNotaViewModel.deleteNota(notaToDelete)
+            Toast.makeText(this, "Nota eliminata con successo!", Toast.LENGTH_SHORT).show()
+            navigateUpTo(parentMetod())
+
+        }
+        builder.setNegativeButton("No"){ _, _ ->
+
+        }
+        builder.setTitle("Eliminazione Nota ${notaToDelete.titoloNota}")
+        builder.setMessage("Sei sicuro di voler cancellare la nota ${notaToDelete.titoloNota}?")
+        builder.create().show()
+    }
 
     /** Funzioni per la navigazione all'attività precedente*/
 
@@ -69,7 +147,7 @@ class ModificaNota() : AppCompatActivity() {
 
     private fun parentMetod(): Intent {
         var extras = intent.extras
-        var goToIntent = extras?.getString("goto")
+        var goToIntent = extras!!.getString("goto")
 
         when {
             goToIntent.equals("HomeActivity") -> {

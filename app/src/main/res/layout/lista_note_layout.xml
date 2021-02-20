@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingVertical="16dp"
-    android:background="@color/backGround"
+    android:paddingVertical="8dp"
     android:id="@+id/notaItem">
 
 
     <ImageView
         android:id="@+id/cardNota"
         android:layout_width="match_parent"
-        android:layout_height="96dp"
+        android:layout_height="94dp"
         android:background="@drawable/card_template"
         android:elevation="@dimen/cardview_default_elevation"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Nome Nota"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/cardNotatextbg"
         app:layout_constraintStart_toStartOf="@+id/cardNotatextbg"
         app:layout_constraintTop_toTopOf="@id/cardNotatextbg"/>
@@ -44,8 +43,8 @@
 
     <ImageView
         android:id="@+id/ruoloGiocatoreNotaDM"
-        android:layout_width="26dp"
-        android:layout_height="26dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_marginStart="16dp"
         android:background="@drawable/ic_dm"
         android:visibility="gone"
@@ -55,8 +54,8 @@
 
     <ImageView
         android:id="@+id/ruoloGiocatoreNotaPG"
-        android:layout_width="26dp"
-        android:layout_height="26dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_marginStart="16dp"
         android:background="@drawable/ic_giocatore"
         android:visibility="gone"
@@ -66,8 +65,8 @@
 
     <ImageView
         android:id="@+id/notaPreferia"
-        android:layout_width="26dp"
-        android:layout_height="26dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_marginEnd="28dp"
         android:src="@drawable/ic_baseline_star_24"
         android:visibility="gone"

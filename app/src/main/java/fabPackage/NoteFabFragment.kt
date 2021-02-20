@@ -33,7 +33,6 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -41,9 +40,7 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
         val view =inflater.inflate(R.layout.note_fab_layout, container, false)
 
 
-
         val recyclerView = view.favNoteRecyclerView
-
         recyclerView.adapter = favAdapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
@@ -57,20 +54,17 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
         super.onStart()
 
         var bundle = Bundle()
-        bundle.putString("goto", this::class.java.simpleName.toString())
+        bundle.putString("goto", requireContext()::class.java.simpleName.toString())
 
         nuovaNotaBtn.setOnClickListener(){
-
-
             startActivity(Intent(context, NuovaNota::class.java).putExtras(bundle))
-
         }
 
         allNotesBtn.setOnClickListener(){
 
             if(preferite){
                 allNotesBtn.text = getString(R.string.favorite)
-                textView8.text = getString(R.string.allNote)
+                textView8.text = getString(R.string.allNoteString)
                 preferite = false
 
 
@@ -85,7 +79,7 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
             {
                 preferite = true
                 allNotesBtn.text = getText(R.string.allNote)
-                textView8.text = getString(R.string.favorite)
+                textView8.text = getString(R.string.favoriteString)
 
                 val recyclerView = requireView().favNoteRecyclerView
 
@@ -103,7 +97,7 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
     override fun onItemClick(position: Int) {
 
         var bundle = Bundle()
-        bundle.putString("goto", this::class.java.simpleName.toString())
+        bundle.putString("goto", requireContext()::class.java.simpleName.toString())
         startActivity(Intent(context, ModificaNota()::class.java).putExtras(bundle).putExtra("idItem",
                 if(preferite)
                     favAdapter.getItemID(position)
@@ -111,7 +105,6 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
                     allAdapter.getItemID(position)
                 )
         )
-
 
     }
 }
