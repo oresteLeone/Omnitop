@@ -106,7 +106,7 @@ class ModificaNota() : AppCompatActivity() {
         return !(TextUtils.isEmpty(titoloNota) && TextUtils.isEmpty(testoNota))
     }
 
-    fun deleteSingleUser(notaToDelete: Notes){
+    fun deleteSingleNota(notaToDelete: Notes){
 
 
         val builder = AlertDialog.Builder(this)
@@ -184,7 +184,7 @@ class ModificaNota() : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        deleteSingleUser(notaToDelete)
+        deleteSingleNota(notaToDelete)
         return super.onOptionsItemSelected(item)
     }
 
