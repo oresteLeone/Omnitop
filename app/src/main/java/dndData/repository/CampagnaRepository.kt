@@ -8,7 +8,7 @@ import dndData.entities.*
 class CampagnaRepository(private val CampagnaDAO: CampagnaDAO) {
 
     val readAllData: LiveData<List<Campagna>> = CampagnaDAO.readAllData()
-    val readGMData: LiveData<List<Campagna>> = CampagnaDAO.readGMData()
+    val readDMData: LiveData<List<Campagna>> = CampagnaDAO.readDMData()
     val readPGData: LiveData<List<Campagna>> = CampagnaDAO.readPGData()
 
     suspend fun addCampagna(Campagna: Campagna){

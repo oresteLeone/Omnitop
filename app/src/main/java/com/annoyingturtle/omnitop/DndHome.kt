@@ -55,23 +55,8 @@ class DndHome : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.hostfragment)
-
         return navController.navigateUp() || super.onSupportNavigateUp()
-
     }
-
-   /* **** Pulsante Ricerca ****
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-
-        var menuinflater: MenuInflater = menuInflater
-        menuinflater.inflate(R.menu.actionbar_menu, menu)
-        var addCampagnaItem: MenuItem? = menu?.findItem(R.id.idAddCampagna)
-        addCampagnaItem?.setOnMenuItemClickListener{
-            findNavController(view).navigate(R.id.action_dndRecenti_to_dndAddCampagna)
-        }
-
-        }
-*/
 
 
 

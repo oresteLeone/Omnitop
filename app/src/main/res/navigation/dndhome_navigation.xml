@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/dndRecenti"
-        android:name="com.annoyingturtle.omnitop.fragment.dndRecenti.DndRecentiFragment"
+        android:name="com.annoyingturtle.omnitop.fragment.dndHomeFragments.dndRecenti.DndRecentiFragment"
         android:label="Campagne DnD"
         tools:layout="@layout/fragment_dnd_recenti" >
         <action
@@ -25,9 +25,9 @@
     </fragment>
     <fragment
         android:id="@+id/dndGm"
-        android:name="com.annoyingturtle.omnitop.fragment.DndGmFragment"
+        android:name="com.annoyingturtle.omnitop.fragment.dndHomeFragments.dndDM.DndDMFragment"
         android:label="Campagne DnD Master"
-        tools:layout="@layout/fragment_dnd_gm" >
+        tools:layout="@layout/fragment_dnd_dm" >
         <action
             android:id="@+id/action_dndGm_to_dndRecenti"
             app:destination="@id/dndRecenti" />
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/dndPg"
-        android:name="com.annoyingturtle.omnitop.fragment.DndPgFragment"
+        android:name="com.annoyingturtle.omnitop.fragment.dndHomeFragments.dndPG.DndPgFragment"
         android:label="Campagne DnD Personaggio"
         tools:layout="@layout/fragment_dnd_pg" >
         <action
@@ -61,7 +61,7 @@
     </fragment>
     <fragment
         android:id="@+id/dndLibrary"
-        android:name="com.annoyingturtle.omnitop.fragment.DndLibraryFragment"
+        android:name="com.annoyingturtle.omnitop.fragment.dndHomeFragments.dndLibrary.DndLibraryFragment"
         android:label="Libreria DnD"
         tools:layout="@layout/fragment_dnd_library" >
         <action
@@ -79,7 +79,7 @@
     </fragment>
     <fragment
         android:id="@+id/dndAddCampagna"
-        android:name="com.annoyingturtle.omnitop.fragment.DndAddCampagnaFragment"
+        android:name="com.annoyingturtle.omnitop.fragment.dndHomeFragments.support.DndAddCampagnaFragment"
         android:label="Aggiungi Campagna"
         tools:layout="@layout/fragment_dnd_add_campagna" >
         <action

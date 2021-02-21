@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 class CampagnaViewModel(application: Application): AndroidViewModel(application) {
 
     val readAllData: LiveData<List<Campagna>>
-    val readGMData: LiveData<List<Campagna>>
+    val readDMData: LiveData<List<Campagna>>
     val readPGData: LiveData<List<Campagna>>
     private val repository: CampagnaRepository
 
@@ -21,7 +21,7 @@ class CampagnaViewModel(application: Application): AndroidViewModel(application)
         val CampagnaDAO = DNDdatabase.getDatabase(application).getCampagnaDAO()
         repository = CampagnaRepository(CampagnaDAO)
         readAllData = repository.readAllData
-        readGMData = repository.readGMData
+        readDMData = repository.readDMData
         readPGData = repository.readPGData
     }
 

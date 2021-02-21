@@ -13,8 +13,8 @@ interface CampagnaDAO {
     @Query("SELECT * FROM Campagna_table ORDER BY id DESC")
     fun readAllData(): LiveData<List<Campagna>>
 
-    @Query("SELECT * FROM Campagna_table WHERE ruoloCampagna = 'GM' ORDER BY id DESC ")
-    fun readGMData(): LiveData<List<Campagna>>
+    @Query("SELECT * FROM Campagna_table WHERE ruoloCampagna = 'DM' ORDER BY id DESC ")
+    fun readDMData(): LiveData<List<Campagna>>
 
     @Query("SELECT * FROM Campagna_table WHERE ruoloCampagna = 'PG' ORDER BY id DESC ")
     fun readPGData(): LiveData<List<Campagna>>

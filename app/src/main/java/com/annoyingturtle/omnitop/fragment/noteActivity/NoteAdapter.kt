@@ -3,7 +3,6 @@ package com.annoyingturtle.omnitop.fragment.noteActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.ListFragment
 import androidx.recyclerview.widget.RecyclerView
 import com.annoyingturtle.omnitop.R
 import dndData.entities.Notes

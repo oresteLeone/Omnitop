@@ -1,4 +1,4 @@
-package com.annoyingturtle.omnitop.fragment.dndRecenti
+package com.annoyingturtle.omnitop.fragment.dndHomeFragments.support
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,19 +8,29 @@ import com.annoyingturtle.omnitop.R
 import dndData.entities.Campagna
 import kotlinx.android.synthetic.main.lista_campagne.view.*
 
-class ListaCampagnaRecentiAdapter: RecyclerView.Adapter<ListaCampagnaRecentiAdapter.RecentiViewHolder>() {
+class ListaCampagnaAdapter(private val listener : onItemClickListner): RecyclerView.Adapter<ListaCampagnaAdapter.RecentiViewHolder>() {
 
     private var CampagnaList = emptyList<Campagna>()
 
-    class RecentiViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    inner class RecentiViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener{
 
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val pos = adapterPosition
+
+            if(pos!= RecyclerView.NO_POSITION)
+                listener.onItemClick(pos)
+        }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListaCampagnaRecentiAdapter.RecentiViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecentiViewHolder {
         return RecentiViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.lista_campagne,parent,false))
     }
 
-    override fun onBindViewHolder(holder: ListaCampagnaRecentiAdapter.RecentiViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RecentiViewHolder, position: Int) {
         val currentItem = CampagnaList[position]
         holder.itemView.nomeCampagnaCardText.text = currentItem.titoloCampagna
         if(currentItem.ruoloCampagna.toString() == "DM"){
@@ -37,5 +47,13 @@ class ListaCampagnaRecentiAdapter: RecyclerView.Adapter<ListaCampagnaRecentiAdap
 
     override fun getItemCount(): Int {
         return CampagnaList.size
+    }
+
+    interface onItemClickListner {
+        fun onItemClick(position: Int)
+    }
+
+    fun getItemID(position: Int): Int{
+        return CampagnaList[position].id
     }
 }
