@@ -26,7 +26,7 @@ data class Scheda(
         @Embedded
         var incantatore: Incantatore,
         @Embedded
-        var dettagli: Dettagli
+        var dettagli: Dettagli,
 )
 
 

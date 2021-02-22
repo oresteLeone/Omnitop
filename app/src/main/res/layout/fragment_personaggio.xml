@@ -1425,7 +1425,7 @@
             android:layout_marginTop="32dp"
 
             android:background="@color/backGround"
-            app:columnCount="2"
+            app:columnCount="3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gridLayout6"
@@ -1441,12 +1441,20 @@
                 app:layout_column="0" />
 
             <ImageButton
+                android:id="@+id/addPrivilegiETratti"
+                android:background="@color/backGround"
+                android:padding="8dp"
+                android:paddingStart="80dp"
+                android:paddingEnd="16dp"
+                app:layout_column="1"
+                app:srcCompat="@drawable/add_icon" />
+
+            <ImageButton
                 android:id="@+id/editPrivilegiETratti"
                 android:background="@color/backGround"
                 android:padding="8dp"
-                android:paddingStart="128dp"
                 android:paddingEnd="16dp"
-                app:layout_column="1"
+                app:layout_column="2"
                 app:srcCompat="@drawable/ic_baseline_edit_24" />
         </androidx.gridlayout.widget.GridLayout>
 
@@ -1507,7 +1515,84 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/gridLayout7" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/privilegiETrattiRecyclerView"
 
+            tools:listitem="@layout/lista_dati_scheda"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginTop="32dp"
+
+            android:background="@color/backGround"
+            app:columnCount="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/privilegiETrattiRecyclerView"
+            app:rowCount="1">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/competenze"
+                android:textColor="@color/schedaTesto"
+                android:textSize="24sp"
+                app:layout_column="0" />
+
+            <ImageButton
+                android:id="@+id/addCompetenzeELinguaggi"
+                android:background="@color/backGround"
+                android:padding="8dp"
+                app:layout_column="1"
+                app:srcCompat="@drawable/add_icon" />
+
+            <ImageButton
+                android:id="@+id/editCompetenzeELinguaggi"
+                android:background="@color/backGround"
+                android:padding="8dp"
+                app:layout_column="2"
+                app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/secondaryLight"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/gridLayout8" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/competenzeELinguaggiRecyclerView"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9"
+            tools:listitem="@layout/lista_dati_scheda" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

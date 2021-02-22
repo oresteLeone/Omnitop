@@ -1,4 +1,4 @@
-package com.annoyingturtle.omnitop.fragment
+package com.annoyingturtle.omnitop.fragment.schedaDndFragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,15 +8,14 @@ import android.view.ViewGroup
 import com.annoyingturtle.omnitop.R
 
 
-class PersonaggioDndFragment : Fragment() {
-
+class DndDettagliFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_personaggio, container, false)
+        return inflater.inflate(R.layout.fragment_dnd_dettagli, container, false)
     }
 
 

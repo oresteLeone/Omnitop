@@ -41,6 +41,24 @@
     <string name="cha">CHA</string>
     <string name="ts">TIRI SALVEZZA</string>
     <string name="privilegi">PRIVILEGI E TRATTI</string>
+    <string name="competenze">COMPETENZE E LINGUAGGI</string>
+    <string name="informazione">INFORMAZIONI BASE</string>
+    <string name="razza">RAZZA:</string>
+    <string name="classe">CLASSE/LIVELLO:</string>
+    <string name="backGround">BACKGROUND:</string>
+    <string name="puntiEsperienza">PUNTI ESPERIENZA:</string>
+    <string name="allienamento">ALLINEAMENTO:</string>
+    <string name="puntiisp">PUNTI ISPIRAZIONE:</string>
+    <string name="nome">NOME GIOCATORE:</string>
+    <string name="altreInfo">ALTRE INFORMAZIONI</string>
+    <string name="monete">MONETE</string>
+    <string name="mr">MR</string>
+    <string name="ma">MA</string>
+    <string name="me">ME</string>
+    <string name="mo">MO</string>
+    <string name="mp">MP</string>
+    <string name="altriOggetti">ALTRI OGGETTI</string>
+    <string name="classeIncantatore">CLASSE DA INCANTATORE</string>
 
     <!-- ABILITA' D&D -->
 
@@ -64,6 +82,15 @@
     <string name="furtività">Furtività</string>
     <string name="persuasione">Persuasione</string>
 
+    <!-- SPINNER CARATTERISTICHE CASTER LEVEL -->
+
+    <string-array name="caratteristiche">
+        <item>INT</item>
+        <item>SAG</item>
+        <item>CHA</item>
+    </string-array>
+
+    <!-- CALCOLATRICE -->
 
     <string name="num1">1</string>
     <string name="num2">2</string>
@@ -328,7 +355,7 @@
 
     Riportare i valori dei Modificatori nella sezione Tiri salvezza\n
 
-    Sommare solo nelle statistiche competenti il punteggio del Bonus di competenza</string>
+    Sommare solo nelle statistiche competenti il punteggio del Bonus di competenza.</string>
 
     <string name="sceltaAbilità">9: Abilità</string>
     <string name="infoAbilità">I punteggi delle Abilità vengono assegnati sulla base di specifici scenari. Ad esempio, quando cercherai di imbrogliare qualcuno entrerà in gioco il punteggio Abilità Inganno. Se invece state cercando di capire se qualcuno sta bluffando, allora sarà il punteggio Abilità Intuito a determinare la vostra sorte. Questi valori andranno aggiunti ad ogni tiro che effettuerai per uno di questi punteggi. Le Abilità hanno un ruolo fondamentale per superare le insidie del mondo di Dungeons &amp; Dragons, e possono essere sfruttate sia durante i combattimenti che in fase esplorativa.\n
@@ -349,5 +376,24 @@ Tutte le Abilità sono influenzate da una statistica:\n\n
     <string name="percezionePassiva">10: Saggezza: Percezione Passiva</string>
     <string name="infoPercezionePassiva">La Saggezza Passiva, anche detta Percezione Passiva, consiste nell’abilità di percepire eventuali insidie anche quando non ci si trova in stato di allerta. Ciò sarà molto utile per non farsi prendere alla sprovvista dall’attacco di un avversario.\n
         La Percezione Passiva ha un punteggio pari a 10, al quale andrà sommato l’eventuale valore dell’abilità Percezione.</string>
+    
+    <string name="sceltaAllineamento">11: Allineamento</string>
+    <string name="infoAllineamento">L\'allineamento è una caratteristica per riassumere in poche parole l\'atteggiamento morale, etico e pscicologico di un personaggio. Esso si divide in due assi:\n
+                    -Bene e Male\n
+                    -Legge e Caos\n\n
+
+    Ogni personaggio deve decidere il proprio allienamento iniziale alla creazione della scheda, ovviamente essendo l\'allineamento un valore generico che non può riassumere ogni sfaccettatura della psiche umana,
+    questi potrà cambiare nel corso dell\'avventura.\n
+    Quando si determina il proprio allinemaento bisognerà scegliere un valore su entrambi gli assi:\n\n
+        Per quanto riguarda l\'asse Bene e Male\n
+        1)Buono: Un personaggio altruista che tende ad aiutare gli altri;\n
+        2)Neutrale: Un personaggio che non ha particolari intenzioni positive verso gli altri, ma nemmeno intenzioni malevole;\n
+        3)Malvagio: Un personaggio che tenterà di fare del male agli altri o che approfitterà del loro dolore per trarne vantaggio.\n\n
+
+        Per quanto riguarda l\'asse Legge Caos\n
+        1) Legale: Un personaggio che segue la legge, che sia quella del luogo in cui vive, quella del suo ordine o una sua specifica legge morale;\n
+        2) Neutrale: Un personaggio che tende a seguire le leggi, ma che non si fa problemi ad infrangerle ogni tanto se questo dovesse portargli benefici;\n
+        3) Caotico: Un personaggio che spesso e volentieri ignora le regole ed agisce di sua spontanea volontà.
+    </string>
 </resources>
 

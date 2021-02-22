@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/personaggioDndFragment"
-        android:name="com.annoyingturtle.omnitop.fragment.PersonaggioDndFragment"
+        android:name="com.annoyingturtle.omnitop.fragment.schedaDndFragment.PersonaggioDndFragment"
         android:label="fragment_personaggio"
         tools:layout="@layout/fragment_personaggio">
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/equipaggiamentoDnDFragment"
-        android:name="com.annoyingturtle.omnitop.fragment.EquipaggiamentoDnDFragment"
+        android:name="com.annoyingturtle.omnitop.fragment.schedaDndFragment.EquipaggiamentoDnDFragment"
         android:label="fragment_equipaggiamento_dn_d"
         tools:layout="@layout/fragment_equipaggiamento_dnd" >
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/dndIncantesimiFragment"
-        android:name="com.annoyingturtle.omnitop.fragment.DndIncantesimiFragment"
+        android:name="com.annoyingturtle.omnitop.fragment.schedaDndFragment.DndIncantesimiFragment"
         android:label="fragment_dnd_incantesimi"
         tools:layout="@layout/fragment_dnd_incantesimi" >
         <action
@@ -58,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/dndDettagliFragment"
-        android:name="com.annoyingturtle.omnitop.fragment.DndDettagliFragment"
+        android:name="com.annoyingturtle.omnitop.fragment.schedaDndFragment.DndDettagliFragment"
         android:label="fragment_dnd_dettagli"
         tools:layout="@layout/fragment_dnd_dettagli" >
         <action

@@ -26,7 +26,7 @@ class GuidaSchedaDnDActivity : AppCompatActivity() {
 
         nextBtn.setOnClickListener(){
             next()
-            if (schermataAttuale == 9) schermataAttuale = 0 else schermataAttuale++
+            if (schermataAttuale == 10) schermataAttuale = 0 else schermataAttuale++
         }
 
 
@@ -45,8 +45,9 @@ class GuidaSchedaDnDActivity : AppCompatActivity() {
             6 -> {capitoloTextView.text = getString(R.string.tiriSalvezza); spiegazioneTextView.text = getString(R.string.infoTiriSalvezza)}
             7 -> {capitoloTextView.text = getString(R.string.sceltaAbilità); spiegazioneTextView.text = getString(R.string.infoAbilità)}
             8 -> {capitoloTextView.text = getString(R.string.percezionePassiva); spiegazioneTextView.text = getString(R.string.infoPercezionePassiva)}
+            9 -> {capitoloTextView.text = getString(R.string.sceltaAllineamento); spiegazioneTextView.text = getString(R.string.infoAllineamento)}
 
-            9 -> {capitoloTextView.text = getString(R.string.sceltaClasse); spiegazioneTextView.text = getString(R.string.infoClasse)}
+            10 -> {capitoloTextView.text = getString(R.string.sceltaClasse); spiegazioneTextView.text = getString(R.string.infoClasse)}
         }
     }
 }
