@@ -5,1568 +5,1648 @@
     android:id="@+id/personaggioDndFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/backGround"
     tools:context=".DndHome">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_height="wrap_content">
 
-        <androidx.gridlayout.widget.GridLayout
-            android:id="@+id/gridLayout"
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="116dp"
-            android:background="@color/backGround"
-            app:columnCount="7"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:background="@drawable/card_template"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="64dp"
+                android:background="@color/secondaryLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:columnCount="7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.101"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:rowCount="1">
+
+
+                <EditText
+                    android:id="@+id/pfAttuali"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="0"
+                    android:textColor="@color/secondaryLight"
+                    android:textSize="40sp"
+                    android:singleLine="true"
+
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/slash"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="   /   "
+                    android:textColor="@color/testoCalcolatrice"
+                    android:textSize="24sp"
+
+                    app:layout_column="1"
+                    app:layout_row="0" />
+
+                <EditText
+                    android:id="@+id/pfTotali"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="0"
+                    android:textSize="32sp"
+                    android:textColor="@color/testoCalcolatrice"
+                    android:singleLine="true"
+
+                    app:layout_column="2"
+                    app:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/pf"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/pf"
+                    android:textColor="@color/testoCalcolatrice"
+                    android:textSize="24sp"
+
+                    app:layout_column="3"
+                    app:layout_row="0" />
+
+                <ImageButton
+                    android:id="@+id/aumentaPf"
+                    android:layout_width="40dp"
+
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    app:layout_column="4"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/ic_baseline_arrow_upward_24">
+
+                </ImageButton>
+
+                <ImageButton
+                    android:id="@+id/diminuisciPF"
+                    android:layout_width="40dp"
+
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    app:layout_column="5"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/ic_baseline_arrow_downward_24">
+
+                </ImageButton>
+
+
+            </androidx.gridlayout.widget.GridLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutStatistiche"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_template"
+            android:paddingBottom="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:rowCount="1">
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout">
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/gridLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                app:columnCount="3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:rowCount="4">
+
+                <EditText
+                    android:id="@+id/classeArmatura"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="48dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:singleLine="true"
+
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <EditText
+                    android:id="@+id/iniziativa"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="48dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:singleLine="true"
+
+                    app:layout_column="1"
+                    app:layout_row="0" />
+
+                <EditText
+                    android:id="@+id/velocità"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="48dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:singleLine="true"
+
+                    app:layout_column="2"
+                    app:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/CA"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="@string/ca"
+                    android:textColor="@color/schedaTesto"
+                    android:textSize="12sp"
+
+                    app:layout_column="0"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:id="@+id/init"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="28dp"
+                    android:text="@string/iniziativa"
+                    android:textColor="@color/schedaTesto"
+                    android:textSize="12sp"
+
+                    app:layout_column="1"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:id="@+id/vel"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:text="@string/velocità"
+                    android:textColor="@color/schedaTesto"
+                    android:textSize="12sp"
+
+                    app:layout_column="2"
+                    app:layout_row="1" />
 
 
-            <EditText
-                android:id="@+id/pfAttuali"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/percezionePassiva"
+                    android:layout_width="wrap_content"
 
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:text="0"
-                android:textColor="@color/testoCalcolatrice"
-                android:textSize="24sp"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="48dp"
+                    android:paddingTop="16dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
 
-                app:layout_column="0"
-                app:layout_row="0" />
+                    app:layout_column="0"
+                    app:layout_row="2" />
 
-            <TextView
-                android:id="@+id/slash"
-                android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/profBonus"
+                    android:layout_width="wrap_content"
 
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:text="   /   "
-                android:textColor="@color/testoCalcolatrice"
-                android:textSize="24sp"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="48dp"
+                    android:paddingTop="16dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:singleLine="true"
 
-                app:layout_column="1"
-                app:layout_row="0" />
+                    app:layout_column="1"
+                    app:layout_row="2" />
 
-            <EditText
-                android:id="@+id/pfTotali"
-                android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/dadiVita"
+                    android:layout_width="wrap_content"
 
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:text="0"
-                android:textColor="@color/secondaryLight"
-                android:textSize="38sp"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="48dp"
+                    android:paddingTop="16dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:singleLine="true"
 
-                app:layout_column="2"
-                app:layout_row="0" />
+                    app:layout_column="2"
+                    app:layout_row="2" />
 
-            <TextView
-                android:id="@+id/pf"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/pp"
+                    android:layout_width="wrap_content"
 
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:text="@string/pf"
-                android:textColor="@color/testoCalcolatrice"
-                android:textSize="24sp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/passiveP"
+                    android:textColor="@color/schedaTesto"
+                    android:textSize="12sp"
 
-                app:layout_column="3"
-                app:layout_row="0" />
+                    app:layout_column="0"
+                    app:layout_row="3" />
 
-            <ImageButton
-                android:id="@+id/aumentaPf"
-                android:layout_width="40dp"
+                <TextView
+                    android:id="@+id/pb"
+                    android:layout_width="wrap_content"
 
-                android:layout_height="40dp"
-                android:background="@color/backGround"
-                android:padding="8dp"
-                app:layout_column="4"
-                app:layout_gravity="fill"
-                app:layout_row="0"
-                app:srcCompat="@drawable/ic_baseline_arrow_upward_24">
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="6dp"
+                    android:text="@string/prof"
+                    android:textColor="@color/schedaTesto"
+                    android:textSize="12sp"
 
-            </ImageButton>
+                    app:layout_column="1"
+                    app:layout_row="3" />
 
-            <ImageButton
-                android:id="@+id/diminuisciPF"
-                android:layout_width="40dp"
+                <TextView
+                    android:id="@+id/dv"
+                    android:layout_width="wrap_content"
 
-                android:layout_height="40dp"
-                android:background="@color/backGround"
-                android:padding="8dp"
-                app:layout_column="5"
-                app:layout_gravity="fill"
-                app:layout_row="0"
-                app:srcCompat="@drawable/ic_baseline_arrow_downward_24">
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24sp"
+                    android:text="@string/dv"
+                    android:textColor="@color/schedaTesto"
+                    android:textSize="12sp"
 
-            </ImageButton>
+                    app:layout_column="2"
+                    app:layout_row="3" />
 
+            </androidx.gridlayout.widget.GridLayout>
 
-        </androidx.gridlayout.widget.GridLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.gridlayout.widget.GridLayout
-            android:id="@+id/gridLayout3"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutCaratteristiche"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/backGround"
-            app:columnCount="3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gridLayout"
-            app:layout_constraintVertical_bias="0.062"
-            app:rowCount="4"
-            tools:layout_editor_absoluteX="16dp">
-
-            <EditText
-                android:id="@+id/classeArmatura"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="48dp"
-                android:text="0"
-                android:textColor="@color/white"
-                android:textSize="32sp"
-
-                app:layout_column="0"
-                app:layout_row="0" />
-
-            <EditText
-                android:id="@+id/iniziativa"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="48dp"
-                android:text="0"
-                android:textColor="@color/white"
-                android:textSize="32sp"
-
-                app:layout_column="1"
-                app:layout_row="0" />
-
-            <EditText
-                android:id="@+id/velocità"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="48dp"
-                android:text="0"
-                android:textColor="@color/white"
-                android:textSize="32sp"
-
-                app:layout_column="2"
-                app:layout_row="0" />
-
-            <TextView
-                android:id="@+id/CA"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:text="@string/ca"
-                android:textColor="@color/schedaTesto"
-                android:textSize="12sp"
-
-                app:layout_column="0"
-                app:layout_row="1" />
-
-            <TextView
-                android:id="@+id/init"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="28dp"
-                android:text="@string/iniziativa"
-                android:textColor="@color/schedaTesto"
-                android:textSize="12sp"
-
-                app:layout_column="1"
-                app:layout_row="1" />
-
-            <TextView
-                android:id="@+id/vel"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="24dp"
-                android:text="@string/velocità"
-                android:textColor="@color/schedaTesto"
-                android:textSize="12sp"
-
-                app:layout_column="2"
-                app:layout_row="1" />
-
-
-            <TextView
-                android:id="@+id/percezionePassiva"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="48dp"
-                android:paddingTop="16dp"
-                android:text="0"
-                android:textColor="@color/white"
-                android:textSize="32sp"
-
-                app:layout_column="0"
-                app:layout_row="2" />
-
-            <EditText
-                android:id="@+id/profBonus"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="48dp"
-                android:paddingTop="16dp"
-                android:text="0"
-                android:textColor="@color/white"
-                android:textSize="32sp"
-
-                app:layout_column="1"
-                app:layout_row="2" />
-
-            <EditText
-                android:id="@+id/dadiVita"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="48dp"
-                android:paddingTop="16dp"
-                android:text="0"
-                android:textColor="@color/white"
-                android:textSize="32sp"
-
-                app:layout_column="2"
-                app:layout_row="2" />
-
-            <TextView
-                android:id="@+id/pp"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:text="@string/passiveP"
-                android:textColor="@color/schedaTesto"
-                android:textSize="12sp"
-
-                app:layout_column="0"
-                app:layout_row="3" />
-
-            <TextView
-                android:id="@+id/pb"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="6dp"
-                android:text="@string/prof"
-                android:textColor="@color/schedaTesto"
-                android:textSize="12sp"
-
-                app:layout_column="1"
-                app:layout_row="3" />
-
-            <TextView
-                android:id="@+id/dv"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="24sp"
-                android:text="@string/dv"
-                android:textColor="@color/schedaTesto"
-                android:textSize="12sp"
-
-                app:layout_column="2"
-                app:layout_row="3" />
-
-        </androidx.gridlayout.widget.GridLayout>
-
-        <androidx.gridlayout.widget.GridLayout
-            android:id="@+id/gridLayout4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:layout_marginTop="32dp"
-
-            android:background="@color/backGround"
-            app:columnCount="2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gridLayout3"
-            app:rowCount="1">
-
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/caratteristiche"
-                android:textColor="@color/schedaTesto"
-                android:textSize="24sp"
-                app:layout_column="0" />
-
-            <ImageButton
-                android:id="@+id/editCaratteristiche"
-                android:background="@color/backGround"
-                android:padding="8dp"
-                android:paddingStart="128dp"
-                android:paddingEnd="16dp"
-                app:layout_column="1"
-                app:srcCompat="@drawable/ic_baseline_edit_24" />
-        </androidx.gridlayout.widget.GridLayout>
-
-        <androidx.gridlayout.widget.GridLayout
-            android:id="@+id/gridLayout5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/backGround"
-            app:columnCount="6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gridLayout4"
-            app:rowCount="5">
-
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="16dp"
-                android:text="@string/str"
-                android:textColor="@color/schedaTesto"
-                app:layout_column="0"
-                app:layout_row="0" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="16dp"
-                android:text="@string/dex"
-                android:textColor="@color/schedaTesto"
-                app:layout_column="1"
-                app:layout_row="0" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="16dp"
-                android:text="@string/con"
-                android:textColor="@color/schedaTesto"
-                app:layout_column="2"
-                app:layout_row="0" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="16dp"
-                android:text="@string/intel"
-                android:textColor="@color/schedaTesto"
-                app:layout_column="3"
-                app:layout_row="0" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="16dp"
-                android:text="@string/wis"
-                android:textColor="@color/schedaTesto"
-                app:layout_column="4"
-                app:layout_row="0" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="16dp"
-                android:text="@string/cha"
-                android:textColor="@color/schedaTesto"
-                app:layout_column="5"
-                app:layout_row="0" />
-
-            <ImageButton
-                android:id="@+id/pulsanteForza"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                app:layout_column="0"
-                app:layout_row="1" />
-
-            <TextView
-                android:id="@+id/valoreForza"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="0"
-                app:layout_row="1" />
-
-            <ImageButton
-                android:id="@+id/pulsanteDestrezza"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                app:layout_column="1"
-                app:layout_row="1" />
-
-            <TextView
-                android:id="@+id/valoreDestrezza"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="1"
-                app:layout_row="1" />
-
-            <ImageButton
-                android:id="@+id/pulsanteCostituzione"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                app:layout_column="2"
-                app:layout_row="1" />
-
-            <TextView
-                android:id="@+id/valoreCostituzione"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="2"
-                app:layout_row="1" />
-
-            <ImageButton
-                android:id="@+id/pulsanteInt"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                app:layout_column="3"
-                app:layout_row="1" />
-
-            <TextView
-                android:id="@+id/valoreInt"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="3"
-                app:layout_row="1" />
-
-            <ImageButton
-                android:id="@+id/pulsanteSag"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                app:layout_column="4"
-                app:layout_row="1" />
-
-            <TextView
-                android:id="@+id/valoreSag"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="4"
-                app:layout_row="1" />
-
-
-            <ImageButton
-                android:id="@+id/pulsanteCha"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                app:layout_column="5"
-                app:layout_row="1" />
-
-            <TextView
-                android:id="@+id/valoreCha"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="5"
-                app:layout_row="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ts"
-                android:textColor="@color/schedaTesto"
-                android:paddingTop="16dp"
-                android:textSize="16sp"
-                app:layout_columnSpan="2"
-                app:layout_column="0"
-                app:layout_row="2"
-                />
-
-            <CheckBox
-                android:id="@+id/tsForzaCheck"
-                android:layout_width="42dp"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/secondaryLight"
-                android:gravity="center"
-                 app:layout_column="0"
-                app:layout_row="3"
-
-                android:layoutDirection="rtl"/>
-
-            <CheckBox
-                android:id="@+id/tsDestrezzaCheck"
-                android:layout_width="42dp"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/secondaryLight"
-                app:layout_row="3"
-                app:layout_column="1"
-                android:layoutDirection="rtl"/>
-
-            <CheckBox
-                android:id="@+id/tsCostituzioneCheck"
-                android:layout_width="42dp"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/secondaryLight"
-                app:layout_column="2"
-                app:layout_row="3"
-                android:layoutDirection="rtl"/>
-
-            <CheckBox
-                android:id="@+id/tsIntCheck"
-                android:layout_width="42dp"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/secondaryLight"
-                app:layout_row="3"
-                app:layout_column="3"
-                android:layoutDirection="rtl"/>
-
-            <CheckBox
-                android:id="@+id/tsSaggCheck"
-                android:layout_width="42dp"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/secondaryLight"
-                app:layout_row="3"
-                app:layout_column="4"
-                android:layoutDirection="rtl"/>
-
-            <CheckBox
-                android:id="@+id/tsChaCheck"
-                android:layout_width="42dp"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/secondaryLight"
-                app:layout_row="3"
-                app:layout_column="5"
-                android:layoutDirection="rtl"/>
-
-            <ImageButton
-                android:id="@+id/pulsanteTsDex"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                app:layout_column="1"
-                app:layout_row="4" />
-
-            <ImageButton
-                android:id="@+id/pulsanteTsCos"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                app:layout_column="2"
-                app:layout_row="4" />
-
-            <ImageButton
-                android:id="@+id/pulsanteTsInt"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                app:layout_column="3"
-                app:layout_row="4" />
-
-            <ImageButton
-                android:id="@+id/pulsanteTsWis"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                app:layout_column="4"
-                app:layout_row="4" />
-
-            <ImageButton
-                android:id="@+id/pulsanteTsCha"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                app:layout_column="5"
-                app:layout_row="4" />
-
-            <ImageButton
-                android:id="@+id/pulsanteTsForza"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                app:layout_column="0"
-                app:layout_row="4" />
-
-
-        </androidx.gridlayout.widget.GridLayout>
-
-        <androidx.gridlayout.widget.GridLayout
-            android:id="@+id/gridLayout6"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@color/backGround"
-            app:columnCount="6"
+            android:background="@drawable/card_template"
+            android:paddingBottom="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gridLayout5"
-            app:rowCount="10">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/abilità"
-                android:textSize="24sp"
-                android:textColor="@color/schedaTesto"
-                app:layout_column="0"
-                app:layout_row="0"
-                app:layout_columnSpan="2"/>
-
-
-            <!-- Pulsanti infernali -->
-
-            <ImageButton
-                android:id="@+id/editAbilità"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/backGround"
-                android:src="@drawable/ic_baseline_edit_24"
-                app:layout_column="5"
-                app:layout_row="0" />
-
-            <!-- Coppia bottoni -->
-
-
-            <ImageButton
-                android:id="@+id/pulsanteAcrobazia"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="0"
-                app:layout_row="1" />
-
-            <TextView
-                android:id="@+id/valoreAcrobazia"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="0"
-                app:layout_row="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/acrobazia"
-                app:layout_row="1"
-                app:layout_column="1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dex"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="1"
-                app:layout_column="2"/>
-
-            <ImageButton
-                android:id="@+id/pulsanteIntuizione"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="3"
-                app:layout_row="1"
-                />
-
-            <TextView
-                android:id="@+id/valoreIntuizione"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="3"
-                app:layout_row="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/intuizione"
-                app:layout_row="1"
-                app:layout_column="4"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wis"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="1"
-                app:layout_column="5"/>
-
-            <!-- Fine coppia bottoni -->
-
-            <!-- Coppia bottoni -->
-
-
-            <ImageButton
-                android:id="@+id/pulsanteAddestrareAnim"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="0"
-                app:layout_row="2" />
-
-            <TextView
-                android:id="@+id/valoreAddestrareAnim"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="0"
-                app:layout_row="2" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/addestrare"
-                app:layout_row="2"
-                app:layout_column="1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wis"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="2"
-                app:layout_column="2"/>
-
-            <ImageButton
-                android:id="@+id/pulsanteMedicina"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="3"
-                app:layout_row="2"
-                />
-
-            <TextView
-                android:id="@+id/valoreMedicina"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="3"
-                app:layout_row="2" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/medicina"
-                app:layout_row="2"
-                app:layout_column="4"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wis"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="2"
-                app:layout_column="5"/>
-
-            <!-- Fine coppia bottoni -->
-
-            <!-- Coppia bottoni -->
-
-
-            <ImageButton
-                android:id="@+id/pulsanteArcano"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="0"
-                app:layout_row="3" />
-
-            <TextView
-                android:id="@+id/valoreArcano"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="0"
-                app:layout_row="3" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/arcano"
-                app:layout_row="3"
-                app:layout_column="1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/intel"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="3"
-                app:layout_column="2"/>
-
-            <ImageButton
-                android:id="@+id/pulsanteNatura"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="3"
-                app:layout_row="3"
-                />
-
-            <TextView
-                android:id="@+id/valoreNatua"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="3"
-                app:layout_row="3" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/natura"
-                app:layout_row="3"
-                app:layout_column="4"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/intel"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="3"
-                app:layout_column="5"/>
-
-            <!-- Fine coppia bottoni -->
-
-            <!-- Coppia bottoni -->
-
-
-            <ImageButton
-                android:id="@+id/pulsanteAtrletica"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="0"
-                app:layout_row="4" />
-
-            <TextView
-                android:id="@+id/valoreAtletica"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="0"
-                app:layout_row="4" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/atletica"
-                app:layout_row="4"
-                app:layout_column="1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/str"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="4"
-                app:layout_column="2"/>
-
-            <ImageButton
-                android:id="@+id/pulsantePercezione"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="3"
-                app:layout_row="4"
-                />
-
-            <TextView
-                android:id="@+id/valorePercezione"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="3"
-                app:layout_row="4" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/percezione"
-                app:layout_row="4"
-                app:layout_column="4"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wis"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="4"
-                app:layout_column="5"/>
-
-            <!-- Fine coppia bottoni -->
-
-            <!-- Coppia bottoni -->
-
-
-            <ImageButton
-                android:id="@+id/pulsanteFurtività"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="0"
-                app:layout_row="5" />
-
-            <TextView
-                android:id="@+id/valoreFurtività"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="0"
-                app:layout_row="5" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/furtività"
-                app:layout_row="5"
-                app:layout_column="1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dex"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="5"
-                app:layout_column="2"/>
-
-            <ImageButton
-                android:id="@+id/pulsantePersuasione"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="3"
-                app:layout_row="5"
-                />
-
-            <TextView
-                android:id="@+id/valorePersuasione"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="3"
-                app:layout_row="5" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/persuasione"
-                app:layout_row="5"
-                app:layout_column="4"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cha"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="5"
-                app:layout_column="5"/>
-
-            <!-- Fine coppia bottoni -->
-
-            <!-- Coppia bottoni -->
-
-
-            <ImageButton
-                android:id="@+id/pulsanteIndagare"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="0"
-                app:layout_row="6" />
-
-            <TextView
-                android:id="@+id/valoreIndagare"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="0"
-                app:layout_row="6" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/indagare"
-                app:layout_row="6"
-                app:layout_column="1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/intel"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="6"
-                app:layout_column="2"/>
-
-            <ImageButton
-                android:id="@+id/pulsanteRapiditaDiMano"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="3"
-                app:layout_row="6"
-                />
-
-            <TextView
-                android:id="@+id/valoreRapiditaDiMano"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="3"
-                app:layout_row="6" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/rapDiMa"
-                app:layout_row="6"
-                app:layout_column="4"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dex"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="6"
-                app:layout_column="5"/>
-
-            <!-- Fine coppia bottoni -->
-
-            <!-- Coppia bottoni -->
-
-
-            <ImageButton
-                android:id="@+id/pulsanteIngano"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="0"
-                app:layout_row="7" />
-
-            <TextView
-                android:id="@+id/valoreInganno"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="0"
-                app:layout_row="7" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/inganno"
-                app:layout_row="7"
-                app:layout_column="1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cha"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="7"
-                app:layout_column="2"/>
-
-            <ImageButton
-                android:id="@+id/pulsanteReligione"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="3"
-                app:layout_row="7" />
-
-            <TextView
-                android:id="@+id/valoreReligione"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="3"
-                app:layout_row="7" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/religione"
-                app:layout_row="7"
-                app:layout_column="4"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/intel"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="7"
-                app:layout_column="5" />
-
-            <!-- Fine coppia bottoni -->
-
-            <!-- Coppia bottoni -->
-
-
-            <ImageButton
-                android:id="@+id/pulsanteIntimidire"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="0"
-                app:layout_row="8" />
-
-            <TextView
-                android:id="@+id/valoreIntimidire"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="0"
-                app:layout_row="8" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/intimidire"
-                app:layout_row="8"
-                app:layout_column="1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cha"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="8"
-                app:layout_column="2"/>
-
-            <ImageButton
-                android:id="@+id/pulsanteSopravvivenza"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="3"
-                app:layout_row="8"
-                />
-
-            <TextView
-                android:id="@+id/valoreSopravvivenza"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="3"
-                app:layout_row="8" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sopravvivenza"
-                app:layout_row="8"
-                app:layout_column="4"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wis"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="8"
-                app:layout_column="5"/>
-
-            <!-- Fine coppia bottoni -->
-
-            <ImageButton
-                android:id="@+id/pulsanteIntrattenere"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="0"
-                app:layout_row="9" />
-
-            <TextView
-                android:id="@+id/valoreIntrattenere"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="0"
-                app:layout_row="9" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/intimidire"
-                app:layout_row="9"
-                app:layout_column="1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cha"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="9"
-                app:layout_column="2"/>
-
-            <ImageButton
-                android:id="@+id/pulsanteStoria"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/raggruppa_895"
-                android:paddingTop="16dp"
-                app:layout_column="3"
-                app:layout_row="9"
-                />
-
-            <TextView
-                android:id="@+id/valoreStoria"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:clickable="false"
-                android:gravity="center"
-                android:maxWidth="@android:dimen/app_icon_size"
-                android:maxHeight="@android:dimen/app_icon_size"
-                android:text="+0"
-                android:textSize="16sp"
-                app:layout_column="3"
-                app:layout_row="9" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/storia"
-                app:layout_row="9"
-                app:layout_column="4"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/intel"
-                android:textColor="@color/schedaTesto"
-                android:paddingLeft="4dp"
-                app:layout_row="9"
-                app:layout_column="5"/>
-
-
-
-
-
-
-        </androidx.gridlayout.widget.GridLayout>
-
-        <androidx.gridlayout.widget.GridLayout
-            android:id="@+id/gridLayout7"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutStatistiche">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/secondaryLight"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/gridLayout5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gridLayout4" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="112dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/secondaryLight"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/gridLayout5" />
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/gridLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginStart="16dp"
+
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                app:columnCount="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rowCount="1">
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/caratteristiche"
+                    android:textColor="@color/schedaTesto"
+                    android:textSize="24sp"
+                    app:layout_column="0" />
+
+                <ImageButton
+                    android:id="@+id/editCaratteristiche"
+                    android:layout_marginStart="128dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:paddingEnd="16dp"
+                    app:layout_column="1"
+                    app:srcCompat="@drawable/ic_baseline_edit_24" />
+            </androidx.gridlayout.widget.GridLayout>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/gridLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                app:columnCount="6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gridLayout4"
+                app:rowCount="5">
+
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:text="@string/str"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:text="@string/dex"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="1"
+                    app:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:text="@string/con"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="2"
+                    app:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:text="@string/intel"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="3"
+                    app:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:text="@string/wis"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="4"
+                    app:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:text="@string/cha"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="5"
+                    app:layout_row="0" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteForza"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_column="0"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:id="@+id/valoreForza"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="0"
+                    app:layout_row="1" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteDestrezza"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_column="1"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:id="@+id/valoreDestrezza"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="1"
+                    app:layout_row="1" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteCostituzione"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_column="2"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:id="@+id/valoreCostituzione"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="2"
+                    app:layout_row="1" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteInt"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_column="3"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:id="@+id/valoreInt"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="3"
+                    app:layout_row="1" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteSag"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_column="4"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:id="@+id/valoreSag"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="4"
+                    app:layout_row="1" />
+
+
+                <ImageButton
+                    android:id="@+id/pulsanteCha"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_column="5"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:id="@+id/valoreCha"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="5"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:text="@string/ts"
+                    android:textColor="@color/schedaTesto"
+                    android:textSize="16sp"
+                    app:layout_column="0"
+                    app:layout_columnSpan="2"
+                    app:layout_row="2" />
+
+                <CheckBox
+                    android:id="@+id/tsForzaCheck"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/secondaryLight"
+                    android:gravity="center"
+                    android:layoutDirection="rtl"
+                    app:layout_column="0"
+
+                    app:layout_row="3" />
+
+                <CheckBox
+                    android:id="@+id/tsDestrezzaCheck"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/secondaryLight"
+                    android:layoutDirection="rtl"
+                    app:layout_column="1"
+                    app:layout_row="3" />
+
+                <CheckBox
+                    android:id="@+id/tsCostituzioneCheck"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/secondaryLight"
+                    android:layoutDirection="rtl"
+                    app:layout_column="2"
+                    app:layout_row="3" />
+
+                <CheckBox
+                    android:id="@+id/tsIntCheck"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/secondaryLight"
+                    android:layoutDirection="rtl"
+                    app:layout_column="3"
+                    app:layout_row="3" />
+
+                <CheckBox
+                    android:id="@+id/tsSaggCheck"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/secondaryLight"
+                    android:layoutDirection="rtl"
+                    app:layout_column="4"
+                    app:layout_row="3" />
+
+                <CheckBox
+                    android:id="@+id/tsChaCheck"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/secondaryLight"
+                    android:layoutDirection="rtl"
+                    app:layout_column="5"
+                    app:layout_row="3" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteTsDex"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_column="1"
+                    app:layout_row="4" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteTsCos"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_column="2"
+                    app:layout_row="4" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteTsInt"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_column="3"
+                    app:layout_row="4" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteTsWis"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_column="4"
+                    app:layout_row="4" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteTsCha"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_column="5"
+                    app:layout_row="4" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteTsForza"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_column="0"
+                    app:layout_row="4" />
+
+
+            </androidx.gridlayout.widget.GridLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutAbilità"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:layout_marginTop="32dp"
-
-            android:background="@color/backGround"
-            app:columnCount="3"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/card_template"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gridLayout6"
-            app:rowCount="1">
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutCaratteristiche">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="28dp"
+                android:background="@color/secondaryLight"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/gridLayout6" />
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/gridLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                app:columnCount="6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:rowCount="10"
+                tools:layout_editor_absoluteY="8dp">
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/privilegi"
-                android:textColor="@color/schedaTesto"
-                android:textSize="24sp"
-                app:layout_column="0" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/abilità"
+                    android:textColor="@color/schedaTesto"
+                    android:textSize="24sp"
+                    app:layout_column="0"
+                    app:layout_columnSpan="2"
+                    app:layout_row="0" />
 
-            <ImageButton
-                android:id="@+id/addPrivilegiETratti"
-                android:background="@color/backGround"
-                android:padding="8dp"
-                android:paddingStart="80dp"
-                android:paddingEnd="16dp"
-                app:layout_column="1"
-                app:srcCompat="@drawable/add_icon" />
 
-            <ImageButton
-                android:id="@+id/editPrivilegiETratti"
-                android:background="@color/backGround"
-                android:padding="8dp"
-                android:paddingEnd="16dp"
-                app:layout_column="2"
-                app:srcCompat="@drawable/ic_baseline_edit_24" />
-        </androidx.gridlayout.widget.GridLayout>
+                <!-- Pulsanti infernali -->
 
-        <ImageView
-            android:id="@+id/imageView2"
+                <!-- Coppia bottoni -->
+
+
+                <ImageButton
+                    android:id="@+id/editAbilità"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_edit_24"
+                    app:layout_column="5"
+                    app:layout_row="0" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteAcrobazia"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="0"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:id="@+id/valoreAcrobazia"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="0"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/acrobazia"
+                    app:layout_column="1"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/dex"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="2"
+                    app:layout_row="1" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteIntuizione"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="3"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:id="@+id/valoreIntuizione"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="3"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intuizione"
+                    app:layout_column="4"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/wis"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="5"
+                    app:layout_row="1" />
+
+                <!-- Fine coppia bottoni -->
+
+                <!-- Coppia bottoni -->
+
+
+                <ImageButton
+                    android:id="@+id/pulsanteAddestrareAnim"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="0"
+                    app:layout_row="2" />
+
+                <TextView
+                    android:id="@+id/valoreAddestrareAnim"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="0"
+                    app:layout_row="2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addestrare"
+                    app:layout_column="1"
+                    app:layout_row="2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/wis"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="2"
+                    app:layout_row="2" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteMedicina"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="3"
+                    app:layout_row="2" />
+
+                <TextView
+                    android:id="@+id/valoreMedicina"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="3"
+                    app:layout_row="2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/medicina"
+                    app:layout_column="4"
+                    app:layout_row="2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/wis"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="5"
+                    app:layout_row="2" />
+
+                <!-- Fine coppia bottoni -->
+
+                <!-- Coppia bottoni -->
+
+
+                <ImageButton
+                    android:id="@+id/pulsanteArcano"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="0"
+                    app:layout_row="3" />
+
+                <TextView
+                    android:id="@+id/valoreArcano"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="0"
+                    app:layout_row="3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arcano"
+                    app:layout_column="1"
+                    app:layout_row="3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/intel"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="2"
+                    app:layout_row="3" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteNatura"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="3"
+                    app:layout_row="3" />
+
+                <TextView
+                    android:id="@+id/valoreNatua"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="3"
+                    app:layout_row="3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/natura"
+                    app:layout_column="4"
+                    app:layout_row="3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/intel"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="5"
+                    app:layout_row="3" />
+
+                <!-- Fine coppia bottoni -->
+
+                <!-- Coppia bottoni -->
+
+
+                <ImageButton
+                    android:id="@+id/pulsanteAtrletica"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="0"
+                    app:layout_row="4" />
+
+                <TextView
+                    android:id="@+id/valoreAtletica"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="0"
+                    app:layout_row="4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/atletica"
+                    app:layout_column="1"
+                    app:layout_row="4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/str"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="2"
+                    app:layout_row="4" />
+
+                <ImageButton
+                    android:id="@+id/pulsantePercezione"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="3"
+                    app:layout_row="4" />
+
+                <TextView
+                    android:id="@+id/valorePercezione"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="3"
+                    app:layout_row="4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/percezione"
+                    app:layout_column="4"
+                    app:layout_row="4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/wis"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="5"
+                    app:layout_row="4" />
+
+                <!-- Fine coppia bottoni -->
+
+                <!-- Coppia bottoni -->
+
+
+                <ImageButton
+                    android:id="@+id/pulsanteFurtività"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="0"
+                    app:layout_row="5" />
+
+                <TextView
+                    android:id="@+id/valoreFurtività"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="0"
+                    app:layout_row="5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/furtività"
+                    app:layout_column="1"
+                    app:layout_row="5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/dex"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="2"
+                    app:layout_row="5" />
+
+                <ImageButton
+                    android:id="@+id/pulsantePersuasione"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="3"
+                    app:layout_row="5" />
+
+                <TextView
+                    android:id="@+id/valorePersuasione"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="3"
+                    app:layout_row="5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/persuasione"
+                    app:layout_column="4"
+                    app:layout_row="5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/cha"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="5"
+                    app:layout_row="5" />
+
+                <!-- Fine coppia bottoni -->
+
+                <!-- Coppia bottoni -->
+
+
+                <ImageButton
+                    android:id="@+id/pulsanteIndagare"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="0"
+                    app:layout_row="6" />
+
+                <TextView
+                    android:id="@+id/valoreIndagare"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="0"
+                    app:layout_row="6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/indagare"
+                    app:layout_column="1"
+                    app:layout_row="6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/intel"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="2"
+                    app:layout_row="6" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteRapiditaDiMano"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="3"
+                    app:layout_row="6" />
+
+                <TextView
+                    android:id="@+id/valoreRapiditaDiMano"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="3"
+                    app:layout_row="6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rapDiMa"
+                    app:layout_column="4"
+                    app:layout_row="6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/dex"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="5"
+                    app:layout_row="6" />
+
+                <!-- Fine coppia bottoni -->
+
+                <!-- Coppia bottoni -->
+
+
+                <ImageButton
+                    android:id="@+id/pulsanteIngano"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="0"
+                    app:layout_row="7" />
+
+                <TextView
+                    android:id="@+id/valoreInganno"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="0"
+                    app:layout_row="7" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inganno"
+                    app:layout_column="1"
+                    app:layout_row="7" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/cha"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="2"
+                    app:layout_row="7" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteReligione"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="3"
+                    app:layout_row="7" />
+
+                <TextView
+                    android:id="@+id/valoreReligione"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="3"
+                    app:layout_row="7" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/religione"
+                    app:layout_column="4"
+                    app:layout_row="7" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/intel"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="5"
+                    app:layout_row="7" />
+
+                <!-- Fine coppia bottoni -->
+
+                <!-- Coppia bottoni -->
+
+
+                <ImageButton
+                    android:id="@+id/pulsanteIntimidire"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="0"
+                    app:layout_row="8" />
+
+                <TextView
+                    android:id="@+id/valoreIntimidire"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="0"
+                    app:layout_row="8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intimidire"
+                    app:layout_column="1"
+                    app:layout_row="8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/cha"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="2"
+                    app:layout_row="8" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteSopravvivenza"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="3"
+                    app:layout_row="8" />
+
+                <TextView
+                    android:id="@+id/valoreSopravvivenza"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="3"
+                    app:layout_row="8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sopravvivenza"
+                    app:layout_column="4"
+                    app:layout_row="8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/wis"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="5"
+                    app:layout_row="8" />
+
+                <!-- Fine coppia bottoni -->
+
+                <ImageButton
+                    android:id="@+id/pulsanteIntrattenere"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="0"
+                    app:layout_row="9" />
+
+                <TextView
+                    android:id="@+id/valoreIntrattenere"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="0"
+                    app:layout_row="9" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intimidire"
+                    app:layout_column="1"
+                    app:layout_row="9" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/cha"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="2"
+                    app:layout_row="9" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteStoria"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    android:paddingTop="16dp"
+                    app:layout_column="3"
+                    app:layout_row="9" />
+
+                <TextView
+                    android:id="@+id/valoreStoria"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_column="3"
+                    app:layout_row="9" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/storia"
+                    app:layout_column="4"
+                    app:layout_row="9" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="@string/intel"
+                    android:textColor="@color/schedaTesto"
+                    app:layout_column="5"
+                    app:layout_row="9" />
+
+
+            </androidx.gridlayout.widget.GridLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutPrivilegiETratti"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginBottom="12dp"
-            android:background="@color/secondaryLight"
-            android:paddingHorizontal="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/gridLayout4"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="56dp"
+            android:background="@drawable/card_template"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayoutCompetenzeELinguaggi"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/gridLayout5">
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutAbilità">
 
-        </ImageView>
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/gridLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="16dp"
+                app:columnCount="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rowCount="1">
 
-        <ImageView
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/privilegi"
+                    android:textColor="@color/schedaTesto"
+                    android:textSize="24sp"
+                    app:layout_column="0" />
+
+                <ImageButton
+                    android:id="@+id/addPrivilegiETratti"
+                    android:layout_marginStart="80dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+
+                    app:layout_column="1"
+                    app:srcCompat="@drawable/add_icon" />
+
+                <ImageButton
+                    android:id="@+id/editPrivilegiETratti"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    app:layout_column="2"
+                    app:srcCompat="@drawable/ic_baseline_edit_24" />
+            </androidx.gridlayout.widget.GridLayout>
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/secondaryLight"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/gridLayout7" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/privilegiETrattiRecyclerView"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8"
+                tools:listitem="@layout/lista_dati_scheda" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutCompetenzeELinguaggi"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/secondaryLight"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/card_template"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gridLayout">
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutPrivilegiETratti">
 
-        </ImageView>
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/gridLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="112dp"
-            android:background="@color/secondaryLight"
-            android:paddingHorizontal="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/gridLayout5" />
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="28dp"
-            android:background="@color/secondaryLight"
-            android:paddingHorizontal="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/gridLayout6" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="32dp"
-            android:background="@color/secondaryLight"
-            android:paddingHorizontal="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/gridLayout7" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/privilegiETrattiRecyclerView"
-
-            tools:listitem="@layout/lista_dati_scheda"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
-
-        <androidx.gridlayout.widget.GridLayout
-            android:id="@+id/gridLayout8"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:layout_marginTop="32dp"
-
-            android:background="@color/backGround"
-            app:columnCount="3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/privilegiETrattiRecyclerView"
-            app:rowCount="1">
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                app:columnCount="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:rowCount="1"
+                tools:layout_editor_absoluteY="8dp">
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/competenze"
-                android:textColor="@color/schedaTesto"
-                android:textSize="24sp"
-                app:layout_column="0" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/competenze"
+                    android:textColor="@color/schedaTesto"
+                    android:textSize="24sp"
+                    app:layout_column="0" />
 
-            <ImageButton
-                android:id="@+id/addCompetenzeELinguaggi"
-                android:background="@color/backGround"
-                android:padding="8dp"
-                app:layout_column="1"
-                app:srcCompat="@drawable/add_icon" />
+                <ImageButton
+                    android:id="@+id/addCompetenzeELinguaggi"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    app:layout_column="1"
+                    app:srcCompat="@drawable/add_icon" />
 
-            <ImageButton
-                android:id="@+id/editCompetenzeELinguaggi"
-                android:background="@color/backGround"
-                android:padding="8dp"
-                app:layout_column="2"
-                app:srcCompat="@drawable/ic_baseline_edit_24" />
+                <ImageButton
+                    android:id="@+id/editCompetenzeELinguaggi"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    app:layout_column="2"
+                    app:srcCompat="@drawable/ic_baseline_edit_24" />
 
 
-        </androidx.gridlayout.widget.GridLayout>
+            </androidx.gridlayout.widget.GridLayout>
 
         <ImageView
             android:id="@+id/imageView9"
@@ -1587,12 +1667,13 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="64dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView9"
             tools:listitem="@layout/lista_dati_scheda" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

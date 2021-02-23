@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:background="@color/backGround">
+        android:background="#1e1e1e">
 
         <TextView
             android:id="@+id/titoloInfo"
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
-            android:background="@color/backGround"
+            android:background="@android:color/transparent"
             android:src="@drawable/ic_baseline_expand_more_24"
             app:layout_constraintBottom_toTopOf="@+id/imageView5"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="AAAAAAAAA"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"

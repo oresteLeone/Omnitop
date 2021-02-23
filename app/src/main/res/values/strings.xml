@@ -81,6 +81,23 @@
     <string name="storia">Storia</string>
     <string name="furtività">Furtività</string>
     <string name="persuasione">Persuasione</string>
+    <string name="caratteristicaInc">CARATTERISTICA\n INCANTATORE</string>
+    <string name="CDIncantesimi">CD TIRO SALVEZZA\n \t\tINCANTESIMI</string>
+    <string name="BAI">\t\t\t\t\t\tBONUS DI\n ATTACCO INCANTESIMI</string>
+
+    <!-- INCANTESIMI -->
+
+    <string name="trucchetti">TRUCCHETTI</string>
+    <string name="lv1">LIVELLO 1</string>
+    <string name="lv2">LIVELLO 2</string>
+    <string name="lv3">LIVELLO 3</string>
+    <string name="lv4">LIVELLO 4</string>
+    <string name="lv5">LIVELLO 5</string>
+    <string name="lv6">LIVELLO 6</string>
+    <string name="lv7">LIVELLO 7</string>
+    <string name="lv8">LIVELLO 8</string>
+    <string name="lv9">LIVELLO 9</string>
+    <string name="slot">SLOT</string>
 
     <!-- SPINNER CARATTERISTICHE CASTER LEVEL -->
 
