@@ -4,7 +4,6 @@
         android:id="@+id/personaggioDndFragment"
         android:enabled="true"
         android:title="@string/prsg">
-
     </item>
 
     <item

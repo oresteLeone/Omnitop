@@ -99,6 +99,9 @@
     <string name="lv9">LIVELLO 9</string>
     <string name="slot">SLOT</string>
 
+    <string name="mostraInc">ELENCO INCANTESIMI</string>
+    <string name="nascondiInc">NASCONDI ELENCO</string>
+
     <!-- SPINNER CARATTERISTICHE CASTER LEVEL -->
 
     <string-array name="caratteristiche">

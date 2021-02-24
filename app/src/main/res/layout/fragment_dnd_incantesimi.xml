@@ -10,343 +10,1389 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="256dp">
+        android:paddingBottom="56dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayoutInfoIncantatore"
+            android:id="@+id/constraintLayout4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="136dp"
-            android:background="@drawable/card_template"
-            android:paddingBottom="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:text="@string/classeIncantatore"
-                android:textColor="@color/schedaTesto"
-                android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageButton
-                android:id="@+id/editClasseIncantatore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/backGround"
-                android:src="@drawable/ic_baseline_edit_24"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView21"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView21"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutInfoIncantatore"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="4dp"
-                android:background="@color/secondaryLight"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView21" />
-
-            <androidx.gridlayout.widget.GridLayout
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                app:columnCount="3"
+                android:layout_marginTop="136dp"
+                android:background="@drawable/card_template"
+                android:paddingBottom="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView21"
-                app:rowCount="3">
+                app:layout_constraintTop_toTopOf="parent">
 
-                <EditText
-                    android:id="@+id/classeIncantatore"
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/classeIncantatore"
+                    android:textColor="@color/schedaTesto"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/editClasseIncantatore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_edit_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView21"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView21"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Inserisci la classe da incantatore"
-                    android:textSize="20sp"
-                    app:layout_column="0"
-                    app:layout_columnSpan="3"
-                    app:layout_row="0"
-                    android:singleLine="true"/>
-
-                <EditText
-                    android:id="@+id/caratteristicaIncantatore"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="Caratteristica"
-                    android:textSize="16sp"
-                    app:layout_column="0"
-                    app:layout_row="1"
-                    android:singleLine="true"/>
-
-                <TextView
-                    android:id="@+id/CDIncantesimi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="56dp"
-                    android:layout_marginEnd="56dp"
-                    android:text="0"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_column="1"
-                    app:layout_row="1" />
-
-                <TextView
-                    android:id="@+id/TPCIncantesimi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="76dp"
-                    android:layout_marginEnd="56dp"
-                    android:text="0"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_column="2"
-                    app:layout_row="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/caratteristicaInc"
-                    android:textColor="@color/schedaTesto"
-                    android:textSize="12sp"
-                    app:layout_column="0"
-                    app:layout_row="2" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/CDIncantesimi"
-                    android:textColor="@color/schedaTesto"
-                    android:textSize="12sp"
-                    android:layout_marginStart="8dp"
-                    app:layout_column="1"
-                    app:layout_row="2" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/BAI"
-                    android:textColor="@color/schedaTesto"
-                    android:layout_marginStart="8dp"
-                    android:textSize="12sp"
-                    app:layout_column="2"
-                    app:layout_row="2" />
-
-
-            </androidx.gridlayout.widget.GridLayout>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="89dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/secondaryLight"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        <!-- LISTA INCANTESIMI -->
-
-        <!-- Trucchetti -->
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/trucchetti"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="56dp"
-            android:background="@drawable/card_template"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/constraintLayoutInfoIncantatore">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayoutTrucchetti"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/transparent"
-                android:paddingHorizontal="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-
-                <TextView
-                    android:id="@+id/tv_trucchetti"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/trucchetti"
-                    android:textColor="@color/schedaTesto"
-                    android:textSize="24sp"
-                    app:layout_column="0"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/secondaryLight"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
-                <ImageButton
-                    android:id="@+id/addTrucchetti"
+                <androidx.gridlayout.widget.GridLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:background="@android:color/transparent"
-                    android:padding="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:columnCount="3"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.786"
-                    app:layout_constraintStart_toEndOf="@+id/tv_trucchetti"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/add_icon" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView21"
+                    app:rowCount="3">
 
-                <ImageButton
-                    android:id="@+id/editTrucchetti"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:padding="8dp"
+                    <EditText
+                        android:id="@+id/classeIncantatore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Inserisci la classe da incantatore"
+                        android:singleLine="true"
+                        android:textSize="20sp"
+                        app:layout_column="0"
+                        app:layout_columnSpan="3"
+                        app:layout_row="0" />
+
+                    <EditText
+                        android:id="@+id/caratteristicaIncantatore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Caratteristica"
+                        android:singleLine="true"
+                        android:textSize="16sp"
+                        app:layout_column="0"
+                        app:layout_row="1" />
+
+                    <TextView
+                        android:id="@+id/CDIncantesimi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="56dp"
+                        android:layout_marginEnd="56dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_column="1"
+                        app:layout_row="1" />
+
+                    <TextView
+                        android:id="@+id/TPCIncantesimi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="76dp"
+                        android:layout_marginEnd="56dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_column="2"
+                        app:layout_row="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/caratteristicaInc"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="12sp"
+                        app:layout_column="0"
+                        app:layout_row="2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/CDIncantesimi"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="12sp"
+                        app:layout_column="1"
+                        app:layout_row="2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/BAI"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="12sp"
+                        app:layout_column="2"
+                        app:layout_row="2" />
+
+
+                </androidx.gridlayout.widget.GridLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="74dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/secondaryLight"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/addTrucchetti"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_baseline_edit_24" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="32dp"
-                android:background="@color/secondaryLight"
-                android:paddingHorizontal="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/constraintLayoutTrucchetti" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/trucchettiRecyclerView"
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView8"
-                tools:listitem="@layout/lista_dati_scheda" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!-- LV1 -->
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/incatnesimiLV1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="56dp"
-            android:background="@drawable/card_template"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/trucchetti">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayoutIncantesimiLV1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/transparent"
-                android:paddingHorizontal="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-
-                <TextView
-                    android:id="@+id/tv_LV1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lv1"
-                    android:textColor="@color/schedaTesto"
-                    android:textSize="24sp"
-                    app:layout_column="0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageButton
-                    android:id="@+id/addLV1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:background="@android:color/transparent"
-                    android:padding="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.786"
-                    app:layout_constraintStart_toEndOf="@+id/tv_LV1"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/add_icon" />
 
-                <ImageButton
-                    android:id="@+id/editLV1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:padding="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/addLV1"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_baseline_edit_24" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <ImageView
-                android:id="@+id/imageView9"
+
+            <!-- LISTA INCANTESIMI -->
+
+            <!-- Trucchetti -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/trucchetti"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="32dp"
-                android:background="@color/secondaryLight"
-                android:paddingHorizontal="16dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/card_template"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/constraintLayoutIncantesimiLV1" />
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutInfoIncantatore">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/LV1RecyclerView"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutTrucchetti"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
+
+                    <TextView
+                        android:id="@+id/tv_trucchetti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/trucchetti"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="24sp"
+                        app:layout_column="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/addTrucchetti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.786"
+                        app:layout_constraintStart_toEndOf="@+id/tv_trucchetti"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/add_icon" />
+
+                    <ImageButton
+                        android:id="@+id/editTrucchetti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/addTrucchetti"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/secondaryLight"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/constraintLayoutTrucchetti" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/trucchettiRecyclerView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView8"
+                    tools:listitem="@layout/lista_dati_scheda" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- LV1 -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutLV1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/card_template"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView9"
-                tools:listitem="@layout/lista_dati_scheda" />
+                app:layout_constraintTop_toBottomOf="@id/trucchetti">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/gridLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="16dp"
+                    app:columnCount="7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rowCount="1">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lv1"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="24sp"
+                        app:layout_column="0" />
+
+                    <EditText
+                        android:id="@+id/slotLv1Attuali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/secondaryLight"
+                        android:textSize="24sp"
+                        app:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="2" />
+
+                    <EditText
+                        android:id="@+id/slotLv1Totali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/slot"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="4" />
+
+                    <ImageButton
+                        android:id="@+id/addLv1"
+                        android:layout_marginStart="32dp"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="5"
+                        app:srcCompat="@drawable/add_icon" />
+
+                    <ImageButton
+                        android:id="@+id/editLv1"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="34dp"
+                    android:background="@color/secondaryLight"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/gridLayout" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lv1RecyclerView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView9"
+                    tools:listitem="@layout/lista_dati_scheda" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- LV2 -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutLV2"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/card_template"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutLV1">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/gridLayoutLv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="16dp"
+                    app:columnCount="7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rowCount="1">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lv2"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="24sp"
+                        app:layout_column="0" />
+
+                    <EditText
+                        android:id="@+id/slotLv2Attuali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/secondaryLight"
+                        android:textSize="24sp"
+                        app:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="2" />
+
+                    <EditText
+                        android:id="@+id/slotLv2Totali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/slot"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="4" />
+
+                    <ImageButton
+                        android:id="@+id/addLv2"
+                        android:layout_marginStart="32dp"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="5"
+                        app:srcCompat="@drawable/add_icon" />
+
+                    <ImageButton
+                        android:id="@+id/editLv2"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="34dp"
+                    android:background="@color/secondaryLight"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/gridLayoutLv2" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lv2RecyclerView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView10"
+                    tools:listitem="@layout/lista_dati_scheda" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- LV3 -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutLV3"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/card_template"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutLV2">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/gridLayoutLV3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="16dp"
+                    app:columnCount="7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rowCount="1">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lv3"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="24sp"
+                        app:layout_column="0" />
+
+                    <EditText
+                        android:id="@+id/slotLv3Attuali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/secondaryLight"
+                        android:textSize="24sp"
+                        app:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="2" />
+
+                    <EditText
+                        android:id="@+id/slotLv3Totali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/slot"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="4" />
+
+                    <ImageButton
+                        android:id="@+id/addLv3"
+                        android:layout_marginStart="32dp"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="5"
+                        app:srcCompat="@drawable/add_icon" />
+
+                    <ImageButton
+                        android:id="@+id/editLv3"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="34dp"
+                    android:background="@color/secondaryLight"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/gridLayoutLV3" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lv3RecyclerView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView11"
+                    tools:listitem="@layout/lista_dati_scheda" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- LV4 -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutLV4"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/card_template"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutLV3">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/gridLayoutLV4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="16dp"
+                    app:columnCount="7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rowCount="1">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lv4"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="24sp"
+                        app:layout_column="0" />
+
+                    <EditText
+                        android:id="@+id/slotLv4Attuali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/secondaryLight"
+                        android:textSize="24sp"
+                        app:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="2" />
+
+                    <EditText
+                        android:id="@+id/slotLv4Totali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/slot"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="4" />
+
+                    <ImageButton
+                        android:id="@+id/addLv4"
+                        android:layout_marginStart="32dp"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="5"
+                        app:srcCompat="@drawable/add_icon" />
+
+                    <ImageButton
+                        android:id="@+id/editLv4"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="34dp"
+                    android:background="@color/secondaryLight"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/gridLayoutLV4" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lv4RecyclerView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView12"
+                    tools:listitem="@layout/lista_dati_scheda" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- LV5-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutLV5"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/card_template"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutLV4">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/gridLayoutLV5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="16dp"
+                    app:columnCount="7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rowCount="1">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lv5"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="24sp"
+                        app:layout_column="0" />
+
+                    <EditText
+                        android:id="@+id/slotLv5Attuali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/secondaryLight"
+                        android:textSize="24sp"
+                        app:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="2" />
+
+                    <EditText
+                        android:id="@+id/slotLv5Totali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/slot"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="4" />
+
+                    <ImageButton
+                        android:id="@+id/addLv5"
+                        android:layout_marginStart="32dp"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="5"
+                        app:srcCompat="@drawable/add_icon" />
+
+                    <ImageButton
+                        android:id="@+id/editLv5"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="34dp"
+                    android:background="@color/secondaryLight"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/gridLayoutLV5" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lv5RecyclerView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView13"
+                    tools:listitem="@layout/lista_dati_scheda" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- LV6 -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutLV6"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/card_template"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutLV5">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/gridLayoutLV6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="16dp"
+                    app:columnCount="7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rowCount="1">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lv6"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="24sp"
+                        app:layout_column="0" />
+
+                    <EditText
+                        android:id="@+id/slotLv6Attuali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/secondaryLight"
+                        android:textSize="24sp"
+                        app:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="2" />
+
+                    <EditText
+                        android:id="@+id/slotLv6Totali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/slot"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="4" />
+
+                    <ImageButton
+                        android:id="@+id/addLv6"
+                        android:layout_marginStart="32dp"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="5"
+                        app:srcCompat="@drawable/add_icon" />
+
+                    <ImageButton
+                        android:id="@+id/editLv6"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="34dp"
+                    android:background="@color/secondaryLight"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/gridLayoutLV6" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lv6RecyclerView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView14"
+                    tools:listitem="@layout/lista_dati_scheda" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- LV 7 -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutLV7"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/card_template"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutLV6">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/gridLayoutLV7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="16dp"
+                    app:columnCount="7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rowCount="1">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lv7"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="24sp"
+                        app:layout_column="0" />
+
+                    <EditText
+                        android:id="@+id/slotLv7Attuali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/secondaryLight"
+                        android:textSize="24sp"
+                        app:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="2" />
+
+                    <EditText
+                        android:id="@+id/slotLv7Totali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/slot"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="4" />
+
+                    <ImageButton
+                        android:id="@+id/addLv7"
+                        android:layout_marginStart="32dp"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="5"
+                        app:srcCompat="@drawable/add_icon" />
+
+                    <ImageButton
+                        android:id="@+id/editLv7"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="34dp"
+                    android:background="@color/secondaryLight"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/gridLayoutLV7" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lv7RecyclerView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView15"
+                    tools:listitem="@layout/lista_dati_scheda" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- LV8 -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutLV8"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/card_template"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutLV7">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/gridLayoutLV8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="16dp"
+                    app:columnCount="7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rowCount="1">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lv8"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="24sp"
+                        app:layout_column="0" />
+
+                    <EditText
+                        android:id="@+id/slotLv8Attuali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/secondaryLight"
+                        android:textSize="24sp"
+                        app:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="2" />
+
+                    <EditText
+                        android:id="@+id/slotLv8Totali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/slot"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="4" />
+
+                    <ImageButton
+                        android:id="@+id/addLv8"
+                        android:layout_marginStart="32dp"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="5"
+                        app:srcCompat="@drawable/add_icon" />
+
+                    <ImageButton
+                        android:id="@+id/editLv8"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="34dp"
+                    android:background="@color/secondaryLight"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/gridLayoutLV8" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lv8RecyclerView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView16"
+                    tools:listitem="@layout/lista_dati_scheda" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- LV 9 -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutLV9"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/card_template"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutLV8">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/gridLayoutLV9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="16dp"
+                    app:columnCount="7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rowCount="1">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lv9"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="24sp"
+                        app:layout_column="0" />
+
+                    <EditText
+                        android:id="@+id/slotLv9Attuali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/secondaryLight"
+                        android:textSize="24sp"
+                        app:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="2" />
+
+                    <EditText
+                        android:id="@+id/slotLv9Totali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/slot"
+                        android:textColor="@color/schedaTesto"
+                        android:textSize="20sp"
+                        app:layout_column="4" />
+
+                    <ImageButton
+                        android:id="@+id/addLv9"
+                        android:layout_marginStart="32dp"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="5"
+                        app:srcCompat="@drawable/add_icon" />
+
+                    <ImageButton
+                        android:id="@+id/editLv9"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="34dp"
+                    android:background="@color/secondaryLight"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/gridLayoutLV9" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lv9RecyclerView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView17"
+                    tools:listitem="@layout/lista_dati_scheda" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:backgroundTint="@color/PrimaryLight"
+            android:text="@string/mostraInc"
+            android:textColor="@color/backGround"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

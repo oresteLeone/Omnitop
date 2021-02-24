@@ -52,6 +52,7 @@
                 <EditText
                     android:id="@+id/pfAttuali"
                     android:layout_width="wrap_content"
+                    android:inputType="number"
 
                     android:layout_height="wrap_content"
                     android:padding="8dp"
@@ -79,6 +80,7 @@
                 <EditText
                     android:id="@+id/pfTotali"
                     android:layout_width="wrap_content"
+                    android:inputType="number"
 
                     android:layout_height="wrap_content"
                     android:padding="8dp"
@@ -163,6 +165,7 @@
                 <EditText
                     android:id="@+id/classeArmatura"
                     android:layout_width="wrap_content"
+                    android:inputType="number"
 
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="48dp"
@@ -177,6 +180,7 @@
                 <EditText
                     android:id="@+id/iniziativa"
                     android:layout_width="wrap_content"
+                    android:inputType="number"
 
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="48dp"
@@ -191,6 +195,7 @@
                 <EditText
                     android:id="@+id/velocità"
                     android:layout_width="wrap_content"
+                    android:inputType="numberDecimal"
 
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="48dp"
@@ -258,6 +263,7 @@
                 <EditText
                     android:id="@+id/profBonus"
                     android:layout_width="wrap_content"
+                    android:inputType="number"
 
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="48dp"
@@ -273,6 +279,7 @@
                 <EditText
                     android:id="@+id/dadiVita"
                     android:layout_width="wrap_content"
+                    android:inputType="number"
 
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="48dp"
