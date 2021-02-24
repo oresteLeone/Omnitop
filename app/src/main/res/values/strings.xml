@@ -412,5 +412,9 @@ Tutte le Abilità sono influenzate da una statistica:\n\n
         2) Neutrale: Un personaggio che tende a seguire le leggi, ma che non si fa problemi ad infrangerle ogni tanto se questo dovesse portargli benefici;\n
         3) Caotico: Un personaggio che spesso e volentieri ignora le regole ed agisce di sua spontanea volontà.
     </string>
+    <string name="nuovo_elemento_libreria">Nuovo Elemento Libreria</string>
+    <string name="nuova_nota">Nuova Nota</string>
+    <string name="nuova_scheda">Nuova Scheda</string>
+    <string name="informazioni_campagna">Informazioni Campagna</string>
 </resources>
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/infoCampagna"
+        android:title="@string/informazioni_campagna"
+        android:icon="@drawable/ic_guida"
+        android:iconTint="@color/white"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/nuovaSchedaOpt"
+        android:title="@string/nuova_scheda"
+        app:showAsAction="collapseActionView"
+        android:icon="@drawable/add_icon"
+        android:iconTint="@color/white"/>
+
+    <item
+        android:id="@+id/nuovaNotaOpt"
+        android:title="@string/nuova_nota"
+        app:showAsAction="collapseActionView"
+        android:icon="@drawable/add_icon"
+        android:iconTint="@color/white" />
+
+    <item
+        android:id="@+id/nuovoElementoLibOpt"
+        android:title="@string/nuovo_elemento_libreria"
+        app:showAsAction="collapseActionView"
+        android:icon="@drawable/add_icon"
+        android:iconTint="@color/white" />
+
+
+</menu>

@@ -22,7 +22,6 @@
         <activity android:name=".fragment.noteActivity.ModificaNota" />
         <activity android:name=".fragment.noteActivity.NuovaNota" />
         <activity android:name=".DndSchedaActivity" />
-        <activity android:name=".DndCampagnaHome" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -37,6 +36,10 @@
             android:name=".DndHome"
             android:label="@string/dnd"
             android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".DndCampagnaHome"
+            android:label="Campagna DND"
+            android:parentActivityName=".DndHome"/>
     </application>
 
 </manifest>

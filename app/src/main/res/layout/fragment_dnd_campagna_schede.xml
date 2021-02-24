@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/backGround"
-    android:id="@+id/fragmentDNDPg"
+    android:id="@+id/dnDCampagnaSchedeFragment"
     tools:context=".DndHome">
 
     <TextView

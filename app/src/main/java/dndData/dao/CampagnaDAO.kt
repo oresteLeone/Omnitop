@@ -25,5 +25,8 @@ interface CampagnaDAO {
     @Delete
     suspend fun deleteCampagna(Campagna: Campagna)
 
+    @Query("SELECT * FROM Campagna_table WHERE id= :id ORDER BY id DESC")
+    suspend fun getCampagnaFromID(id: Int): Campagna
+
 
 }

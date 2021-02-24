@@ -23,4 +23,8 @@ class CampagnaRepository(private val CampagnaDAO: CampagnaDAO) {
         CampagnaDAO.deleteCampagna(Campagna)
     }
 
+    suspend fun getCampagnaFromID(id: Int): Campagna {
+        return CampagnaDAO.getCampagnaFromID(id)
+    }
+
 }

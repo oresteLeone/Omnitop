@@ -3,6 +3,7 @@ package dndData.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import dndData.database.DNDdatabase
 import dndData.entities.*
@@ -16,6 +17,9 @@ class CampagnaViewModel(application: Application): AndroidViewModel(application)
     val readDMData: LiveData<List<Campagna>>
     val readPGData: LiveData<List<Campagna>>
     private val repository: CampagnaRepository
+    var singleLiveData: MutableLiveData<Campagna> = lazy {
+        MutableLiveData<Campagna>()
+    }.value
 
     init {
         val CampagnaDAO = DNDdatabase.getDatabase(application).getCampagnaDAO()
@@ -41,6 +45,15 @@ class CampagnaViewModel(application: Application): AndroidViewModel(application)
     fun deleteCampagna(Campagna: Campagna){
         viewModelScope.launch(Dispatchers.IO){
             repository.deleteCampagna(Campagna)
+        }
+    }
+
+    fun getSingleLiveData(): LiveData<Campagna> = singleLiveData
+
+    fun getCampagnaFromID(id:Int){
+        viewModelScope.launch(Dispatchers.IO){
+            val item = repository.getCampagnaFromID(id)
+            singleLiveData.postValue(item)
         }
     }
 

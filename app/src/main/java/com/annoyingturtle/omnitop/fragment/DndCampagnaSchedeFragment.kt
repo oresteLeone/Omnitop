@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.annoyingturtle.omnitop.R
 
 
-class DnDCampagnaSchedeFragment : Fragment() {
+class DndCampagnaSchedeFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
