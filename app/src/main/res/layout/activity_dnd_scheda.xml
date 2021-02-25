@@ -47,6 +47,10 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/diceBtn1"
+
+        app:tint="@null"
+
+
         android:focusable="true"
         android:backgroundTint="@color/fabFiglio"
         android:contextClickable="true"
@@ -63,6 +67,10 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/cardBtn1"
+
+        app:tint="@null"
+
+
         app:maxImageSize="48dp"
         android:contextClickable="true"
         android:backgroundTint="@color/fabFiglio"
@@ -79,6 +87,9 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/gridBtn1"
+
+        app:tint="@null"
+
         app:maxImageSize="48dp"
         android:visibility="invisible"
         android:contextClickable="true"
@@ -95,6 +106,9 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/noteBtn1"
+
+        app:tint="@null"
+
         android:contextClickable="true"
         android:visibility="invisible"
         android:backgroundTint="@color/fabFiglio"
