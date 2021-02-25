@@ -21,9 +21,9 @@ import fabPackage.AbsFab
 
 class DndCampagnaHome : AppCompatActivity() {
 
-    lateinit var mCampagnaViewModel: CampagnaViewModel
+   /* lateinit var mCampagnaViewModel: CampagnaViewModel*/
     var extras = intent.extras
-    var idCampagna = extras!!.getInt("idItem")
+    var idCampagna = extras?.getInt("idItem")
 
     lateinit var mytablayout: TabLayout
 
@@ -31,9 +31,9 @@ class DndCampagnaHome : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dnd_campagna_home)
 
-        mCampagnaViewModel = ViewModelProvider(this).get(CampagnaViewModel::class.java)
+        /*mCampagnaViewModel = ViewModelProvider(this).get(CampagnaViewModel::class.java)
         mCampagnaViewModel.getCampagnaFromID(idCampagna)
-        showBasicCampagnaData()
+        showBasicCampagnaData()*/
 
 
         /**Action Bar */
