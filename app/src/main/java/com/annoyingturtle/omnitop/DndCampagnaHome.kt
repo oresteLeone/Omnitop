@@ -1,9 +1,12 @@
 package com.annoyingturtle.omnitop
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -21,9 +24,9 @@ import fabPackage.AbsFab
 
 class DndCampagnaHome : AppCompatActivity() {
 
-   /* lateinit var mCampagnaViewModel: CampagnaViewModel*/
-    var extras = intent.extras
-    var idCampagna = extras?.getInt("idItem")
+    lateinit var mCampagnaViewModel: CampagnaViewModel
+
+    var idCampagna: Int = -1
 
     lateinit var mytablayout: TabLayout
 
@@ -31,9 +34,12 @@ class DndCampagnaHome : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dnd_campagna_home)
 
-        /*mCampagnaViewModel = ViewModelProvider(this).get(CampagnaViewModel::class.java)
+        var extras = intent.extras
+        idCampagna = extras!!.getInt("idItem")
+
+        mCampagnaViewModel = ViewModelProvider(this).get(CampagnaViewModel::class.java)
         mCampagnaViewModel.getCampagnaFromID(idCampagna)
-        showBasicCampagnaData()*/
+        showBasicCampagnaData()
 
 
         /**Action Bar */
@@ -69,10 +75,10 @@ class DndCampagnaHome : AppCompatActivity() {
     }
 
     private fun showBasicCampagnaData() {
-       /* mCampagnaViewModel.getSingleLiveData().observe(this, Observer {
+       mCampagnaViewModel.getSingleLiveData().observe(this, Observer {
+            supportActionBar?.title= it.titoloCampagna
 
-
-        })*/
+        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -81,6 +87,20 @@ class DndCampagnaHome : AppCompatActivity() {
         inflater.inflate(R.menu.menu_risorse_campagna, menu)
 
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.nuovaSchedaOpt -> Toast.makeText(this, "nuovascheda", Toast.LENGTH_SHORT).show()
+
+            R.id.nuovaNotaOpt -> Toast.makeText(this, "nuovanota", Toast.LENGTH_SHORT).show()
+
+            R.id.nuovoElementoLibOpt -> Toast.makeText(this, "nuovoele", Toast.LENGTH_SHORT).show()
+
+            R.id.infoCampagna -> Toast.makeText(this, "info", Toast.LENGTH_SHORT).show()
+        }
+
+            return true
     }
 
     override fun onSupportNavigateUp(): Boolean {

@@ -42,10 +42,11 @@ class DndDMFragment : Fragment(), ListaCampagnaAdapter.onItemClickListner {
 
     override fun onItemClick(position: Int) {
 
-       /* var bundle = Bundle()
-        bundle.putString("goto", requireContext()::class.java.simpleName.toString())    prima di put extra putExtras(bundle)*/
+        var idItem = adapter.getItemID(position)
+        /* var bundle = Bundle()
+         bundle.putString("goto", requireContext()::class.java.simpleName.toString())    prima di put extra putExtras(bundle)*/
         startActivity(
-            Intent(context, DndCampagnaHome::class.java).putExtra("idItem", adapter.getItemID(position))
+            Intent(context, DndCampagnaHome::class.java).putExtra("idItem", idItem )
         )
 
     }
