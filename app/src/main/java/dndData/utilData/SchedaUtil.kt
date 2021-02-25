@@ -34,38 +34,28 @@ data class Statistiche(
         var tiroSalvezzaWIS: Boolean?,
         var tiroSalvezzaCHA: Boolean?,
 
-        var abAcrobazia: LvlCompetenza,
-        var abAddestrare:LvlCompetenza,
-        var abArcano:LvlCompetenza,
-        var abAtletica:LvlCompetenza,
-        var abFurtivita:LvlCompetenza,
-        var abIndagare:LvlCompetenza,
-        var abInganno:LvlCompetenza,
-        var abIntimidire:LvlCompetenza,
-        var abIntrattenere:LvlCompetenza,
-        var abIntuizione:LvlCompetenza,
-        var abMedicina:LvlCompetenza,
-        var abNatura:LvlCompetenza,
-        var abPersuasione:LvlCompetenza,
-        var abRapiditMano:LvlCompetenza,
-        var abReligione:LvlCompetenza,
-        var abSoprav:LvlCompetenza,
-        var abStoria:LvlCompetenza,
+        var abAcrobazia: LvlCompetenza?,
+        var abAddestrare:LvlCompetenza?,
+        var abArcano:LvlCompetenza?,
+        var abAtletica:LvlCompetenza?,
+        var abFurtivita:LvlCompetenza?,
+        var abIndagare:LvlCompetenza?,
+        var abInganno:LvlCompetenza?,
+        var abIntimidire:LvlCompetenza?,
+        var abIntrattenere:LvlCompetenza?,
+        var abIntuizione:LvlCompetenza?,
+        var abMedicina:LvlCompetenza?,
+        var abNatura:LvlCompetenza?,
+        var abPersuasione:LvlCompetenza?,
+        var abRapiditMano:LvlCompetenza?,
+        var abReligione:LvlCompetenza?,
+        var abSoprav:LvlCompetenza?,
+        var abStoria:LvlCompetenza?,
 
         )
 
 //-------------------------------------------------------------
 
-data class Equipaggiamento(
-    @Embedded   var moneteTotali: Money,
-    @Embedded   var scheda: Scheda,
-    @Relation(
-                parentColumn = "id",
-                entityColumn = "scheda_id",
-                entity = Scheda::class
-    )
-    var oggetti: List<Oggetti>
-)
 data class Money(
         var moneteR:Int?,
         var moneteA:Int?,

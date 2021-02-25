@@ -3,6 +3,7 @@ package dndData.dao
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import dndData.entities.*
+import dndData.relationData.SchedeCampagna
 
 @Dao
 interface CampagnaDAO {
@@ -27,6 +28,9 @@ interface CampagnaDAO {
 
     @Query("SELECT * FROM Campagna_table WHERE id= :id ORDER BY id DESC")
     suspend fun getCampagnaFromID(id: Int): Campagna
+
+    @Query("SELECT * FROM SCHEDA_TABLE JOIN CAMPAGNA_TABLE ON CAMPAGNA_TABLE.id = SCHEDA_TABLE.campagna_id ORDER BY id DESC ")
+    fun readAllSchede(): LiveData<List<SchedeCampagna>>
 
 
 }

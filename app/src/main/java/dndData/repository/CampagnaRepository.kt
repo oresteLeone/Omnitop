@@ -4,12 +4,14 @@ import androidx.lifecycle.LiveData
 import androidx.room.Update
 import dndData.dao.CampagnaDAO
 import dndData.entities.*
+import dndData.relationData.SchedeCampagna
 
 class CampagnaRepository(private val CampagnaDAO: CampagnaDAO) {
 
     val readAllData: LiveData<List<Campagna>> = CampagnaDAO.readAllData()
     val readDMData: LiveData<List<Campagna>> = CampagnaDAO.readDMData()
     val readPGData: LiveData<List<Campagna>> = CampagnaDAO.readPGData()
+    val readAllSchede: LiveData<List<SchedeCampagna>> = CampagnaDAO.readAllSchede()
 
     suspend fun addCampagna(Campagna: Campagna){
         CampagnaDAO.addCampagna(Campagna)

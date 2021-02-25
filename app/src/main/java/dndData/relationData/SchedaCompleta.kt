@@ -3,11 +3,23 @@ package dndData.relationData
 import androidx.room.Embedded
 import androidx.room.Relation
 import dndData.entities.*
+import dndData.utilData.Dettagli
+import dndData.utilData.Incantatore
+import dndData.utilData.Money
+import dndData.utilData.Statistiche
 
 data class SchedaCompleta(
 
     @Embedded
     var scheda: Scheda,
+    @Embedded
+    var statistiche: Statistiche?,
+    @Embedded
+    var incantatore: Incantatore?,
+    @Embedded
+    var dettagli: Dettagli?,
+
+    @Embedded   var moneteTotali: Money,
 
     @Relation(
         parentColumn = "id",

@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import dndData.database.DNDdatabase
 import dndData.entities.*
+import dndData.relationData.SchedeCampagna
 import dndData.repository.CampagnaRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -16,6 +17,8 @@ class CampagnaViewModel(application: Application): AndroidViewModel(application)
     val readAllData: LiveData<List<Campagna>>
     val readDMData: LiveData<List<Campagna>>
     val readPGData: LiveData<List<Campagna>>
+    val readAllSchede: LiveData<List<SchedeCampagna>>
+
     private val repository: CampagnaRepository
     var singleLiveData: MutableLiveData<Campagna> = lazy {
         MutableLiveData<Campagna>()
@@ -27,6 +30,7 @@ class CampagnaViewModel(application: Application): AndroidViewModel(application)
         readAllData = repository.readAllData
         readDMData = repository.readDMData
         readPGData = repository.readPGData
+        readAllSchede = repository.readAllSchede
     }
 
     fun addCampagna(Campagna: Campagna){
