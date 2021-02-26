@@ -396,7 +396,7 @@ Tutte le Abilità sono influenzate da una statistica:\n\n
     <string name="percezionePassiva">10: Saggezza: Percezione Passiva</string>
     <string name="infoPercezionePassiva">La Saggezza Passiva, anche detta Percezione Passiva, consiste nell’abilità di percepire eventuali insidie anche quando non ci si trova in stato di allerta. Ciò sarà molto utile per non farsi prendere alla sprovvista dall’attacco di un avversario.\n
         La Percezione Passiva ha un punteggio pari a 10, al quale andrà sommato l’eventuale valore dell’abilità Percezione.</string>
-    
+
     <string name="sceltaAllineamento">11: Allineamento</string>
     <string name="infoAllineamento">L\'allineamento è una caratteristica per riassumere in poche parole l\'atteggiamento morale, etico e pscicologico di un personaggio. Esso si divide in due assi:\n
                     -Bene e Male\n
@@ -419,5 +419,7 @@ Tutte le Abilità sono influenzate da una statistica:\n\n
     <string name="nuova_nota">Nuova Nota</string>
     <string name="nuova_scheda">Nuova Scheda</string>
     <string name="informazioni_campagna">Informazioni Campagna</string>
+    <string name="nome_personaggio">Nome Personaggio</string>
+    <string name="png">PNG</string>
 </resources>
 

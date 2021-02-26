@@ -46,7 +46,7 @@ class NuovaNota() : AppCompatActivity() {
         else
             RuoloGiocatore.PG
 
-        if(imputCheck(titoloNota, testoNota)){
+        if(inputCheck(titoloNota, testoNota)){
             val nota = Notes(0, titoloNota = titoloNota, corpoNota =  testoNota, preferito = preferito, ruoloNota = ruoloGiocatore, Campagnaid = null)
             try {
                 mNotaViewModel.addNota(nota)
@@ -63,7 +63,7 @@ class NuovaNota() : AppCompatActivity() {
 
     }
 
-    private fun imputCheck(titoloNota: String?, testoNota : String?): Boolean {
+    private fun inputCheck(titoloNota: String?, testoNota : String?): Boolean {
 
         return !(TextUtils.isEmpty(titoloNota) && TextUtils.isEmpty(testoNota))
     }

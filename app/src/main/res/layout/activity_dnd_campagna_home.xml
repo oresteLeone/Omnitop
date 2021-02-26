@@ -42,7 +42,8 @@
       app:layout_constraintBottom_toTopOf="@+id/addBtn1"
       app:layout_constraintEnd_toEndOf="@+id/addBtn1"
       app:srcCompat="@drawable/dicebicon_1"
-      android:contentDescription="@string/TODO"/>
+      android:contentDescription="@string/TODO"
+      app:tint="@null"/>
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/cardBtn1"
@@ -58,7 +59,8 @@
       app:layout_constraintBottom_toTopOf="@+id/diceBtn1"
       app:layout_constraintEnd_toEndOf="@+id/diceBtn1"
       app:srcCompat="@drawable/cards_icon_bonw_1"
-      android:contentDescription="@string/TODO"/>
+      android:contentDescription="@string/TODO"
+      app:tint="@null"/>
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/gridBtn1"
@@ -74,7 +76,8 @@
       app:layout_constraintBottom_toTopOf="@+id/cardBtn1"
       app:layout_constraintEnd_toEndOf="@+id/cardBtn1"
       app:srcCompat="@drawable/battlegrid_icon__1"
-      android:contentDescription="@string/TODO"/>
+      android:contentDescription="@string/TODO"
+      app:tint="@null"/>
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/noteBtn1"
@@ -90,7 +93,8 @@
       app:layout_constraintBottom_toTopOf="@+id/gridBtn1"
       app:layout_constraintEnd_toEndOf="@+id/gridBtn1"
       app:srcCompat="@drawable/notes_icon__1"
-      android:contentDescription="@string/TODO"/>
+      android:contentDescription="@string/TODO"
+      app:tint="@null"/>
 
   <com.google.android.material.tabs.TabLayout
       android:id="@+id/tabNav"
@@ -124,13 +128,12 @@
       android:name="androidx.navigation.fragment.NavHostFragment"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
       app:defaultNavHost="true"
-      app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/tabNav"
-      app:layout_constraintVertical_bias="1.0"
       app:navGraph="@navigation/dnd_campagna_navigation" />
 
   <com.google.android.material.appbar.AppBarLayout

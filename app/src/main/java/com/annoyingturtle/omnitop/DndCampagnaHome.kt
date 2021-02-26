@@ -44,7 +44,6 @@ class DndCampagnaHome : AppCompatActivity() {
 
         /**Action Bar */
         setSupportActionBar(myToolbar)
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
@@ -56,7 +55,7 @@ class DndCampagnaHome : AppCompatActivity() {
 
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 if (tab?.text.toString() == "SCHEDE")
-                    navController.navigate(R.id.dnDCampagnaSchedeFragment)
+                    navController.navigate(R.id.dndCampagnaSchedeFragment)
                 else if (tab?.text.toString() == "NOTE")
                     navController.navigate(R.id.dndCamapagnaNoteFragment)
                 else
@@ -91,7 +90,7 @@ class DndCampagnaHome : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.nuovaSchedaOpt -> Toast.makeText(this, "nuovascheda", Toast.LENGTH_SHORT).show()
+            R.id.nuovaSchedaOpt -> startActivity(Intent(this,DndCampagnaNuovaScheda::class.java).putExtra("idCampagna", idCampagna))
 
             R.id.nuovaNotaOpt -> Toast.makeText(this, "nuovanota", Toast.LENGTH_SHORT).show()
 
@@ -107,6 +106,7 @@ class DndCampagnaHome : AppCompatActivity() {
         val navController = findNavController(R.id.campagnafragmenthost)
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
+
 
 
 }

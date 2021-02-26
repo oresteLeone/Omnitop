@@ -17,11 +17,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Omnitop">
-        <activity android:name=".GuidaSchedaDnDActivity"
-            android:parentActivityName=".DndSchedaActivity"/>
+
+        <activity
+            android:name=".DndCampagnaNuovaScheda"
+            android:parentActivityName=".DndCampagnaHome"/>
+
+        <activity
+            android:name=".GuidaSchedaDnDActivity"
+            android:parentActivityName=".DndSchedaActivity" />
+
         <activity android:name=".fragment.noteActivity.ModificaNota" />
+
         <activity android:name=".fragment.noteActivity.NuovaNota" />
-        <activity android:name=".DndSchedaActivity" />
+
+        <activity android:name=".DndSchedaActivity"
+            android:parentActivityName=".DndCampagnaHome"/>
+
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -31,15 +42,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".HomeActivity" />
+
         <activity
             android:name=".DndHome"
             android:label="@string/dnd"
             android:parentActivityName=".HomeActivity" />
+
         <activity
             android:name=".DndCampagnaHome"
             android:label="Campagna DND"
-            android:parentActivityName=".DndHome"/>
+            android:parentActivityName=".DndHome" />
     </application>
 
 </manifest>

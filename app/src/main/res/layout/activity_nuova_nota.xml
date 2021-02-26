@@ -40,7 +40,7 @@
         android:layout_marginEnd="24dp"
         android:textColorHint="@color/PrimaryLight65op"
         app:boxStrokeColor="@color/PrimaryLight"
-        app:hintTextColor="@color/Primary"
+        app:hintTextColor="@color/PrimaryLight65op"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
             android:layout_weight="1"
             android:hint="Titolo Nota"
             android:padding="24dp"
-            android:textColorHint="@color/PrimaryLight" />
+            android:textColorHint="@color/PrimaryLight65op" />
     </com.google.android.material.textfield.TextInputLayout>
 
 

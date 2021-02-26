@@ -19,7 +19,6 @@ data class Scheda(
         @ColumnInfo(name = "id") val id: Int,
         @ColumnInfo(name = "campagna_id") val Campagnaid: Int,
         var nomePG: String,
-        var nomeGiocatore: String?,
         var tipoScheda: TipoScheda
 
 )

@@ -11,10 +11,10 @@
         android:label="Schede"
         tools:layout="@layout/fragment_dnd_campagna_schede" >
         <action
-            android:id="@+id/action_dnDCampagnaSchedeFragment_to_dndCamapagnaNoteFragment"
+            android:id="@+id/action_dndCampagnaSchedeFragment_to_dndCamapagnaNoteFragment"
             app:destination="@id/dndCamapagnaNoteFragment" />
         <action
-            android:id="@+id/action_dnDCampagnaSchedeFragment_to_dndCampagnaCompendiumFragment"
+            android:id="@+id/action_dndCampagnaSchedeFragment_to_dndCampagnaCompendiumFragment"
             app:destination="@id/dndCampagnaCompendiumFragment" />
     </fragment>
     <fragment
@@ -23,7 +23,7 @@
         android:label="fragment_dnd_camapagna_note"
         tools:layout="@layout/fragment_dnd_camapagna_note" >
         <action
-            android:id="@+id/action_dndCamapagnaNoteFragment_to_dnDCampagnaSchedeFragment"
+            android:id="@+id/action_dndCamapagnaNoteFragment_to_dndCampagnaSchedeFragment"
             app:destination="@id/dndCampagnaSchedeFragment" />
         <action
             android:id="@+id/action_dndCamapagnaNoteFragment_to_dndCampagnaCompendiumFragment"
@@ -38,7 +38,7 @@
             android:id="@+id/action_dndCampagnaCompendiumFragment_to_dndCamapagnaNoteFragment"
             app:destination="@id/dndCamapagnaNoteFragment" />
         <action
-            android:id="@+id/action_dndCampagnaCompendiumFragment_to_dnDCampagnaSchedeFragment"
+            android:id="@+id/action_dndCampagnaCompendiumFragment_to_dndCampagnaSchedeFragment"
             app:destination="@id/dndCampagnaSchedeFragment" />
     </fragment>
 </navigation>

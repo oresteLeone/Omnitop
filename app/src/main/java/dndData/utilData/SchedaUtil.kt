@@ -96,6 +96,7 @@ data class Incantatore(
 //-------------------------------------------------------------
 
 data class Dettagli(
+    var nomeGiocatore: String?,
     var background: String?,
     var allineamento: String?,
     var exp: Int?,

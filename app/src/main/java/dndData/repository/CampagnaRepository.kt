@@ -11,7 +11,6 @@ class CampagnaRepository(private val CampagnaDAO: CampagnaDAO) {
     val readAllData: LiveData<List<Campagna>> = CampagnaDAO.readAllData()
     val readDMData: LiveData<List<Campagna>> = CampagnaDAO.readDMData()
     val readPGData: LiveData<List<Campagna>> = CampagnaDAO.readPGData()
-    val readAllSchede: LiveData<List<SchedeCampagna>> = CampagnaDAO.readAllSchede()
 
     suspend fun addCampagna(Campagna: Campagna){
         CampagnaDAO.addCampagna(Campagna)
@@ -27,6 +26,10 @@ class CampagnaRepository(private val CampagnaDAO: CampagnaDAO) {
 
     suspend fun getCampagnaFromID(id: Int): Campagna {
         return CampagnaDAO.getCampagnaFromID(id)
+    }
+
+    suspend fun readAllSchedeFromCampagnaID(id: Int): LiveData<List<Scheda>>{
+        return CampagnaDAO.readAllSchedeFromCampagnaID(id)
     }
 
 }

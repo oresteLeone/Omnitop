@@ -29,8 +29,8 @@ interface CampagnaDAO {
     @Query("SELECT * FROM Campagna_table WHERE id= :id ORDER BY id DESC")
     suspend fun getCampagnaFromID(id: Int): Campagna
 
-    @Query("SELECT * FROM SCHEDA_TABLE JOIN CAMPAGNA_TABLE ON CAMPAGNA_TABLE.id = SCHEDA_TABLE.campagna_id ORDER BY id DESC ")
-    fun readAllSchede(): LiveData<List<SchedeCampagna>>
+    @Query("SELECT * FROM Scheda_table WHERE campagna_id= :id ORDER BY id DESC")
+    suspend fun readAllSchedeFromCampagnaID(id: Int): LiveData<List<Scheda>>
 
 
 }
