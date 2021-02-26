@@ -30,7 +30,7 @@ interface CampagnaDAO {
     suspend fun getCampagnaFromID(id: Int): Campagna
 
     @Query("SELECT * FROM Scheda_table WHERE campagna_id= :id ORDER BY id DESC")
-    suspend fun readAllSchedeFromCampagnaID(id: Int): LiveData<List<Scheda>>
+    fun readAllSchedeFromCampagnaID(id: Int): LiveData<List<Scheda>>
 
 
 }

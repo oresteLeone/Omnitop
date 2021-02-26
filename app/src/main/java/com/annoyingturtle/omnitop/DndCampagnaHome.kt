@@ -97,6 +97,9 @@ class DndCampagnaHome : AppCompatActivity() {
             R.id.nuovoElementoLibOpt -> Toast.makeText(this, "nuovoele", Toast.LENGTH_SHORT).show()
 
             R.id.infoCampagna -> Toast.makeText(this, "info", Toast.LENGTH_SHORT).show()
+
+            else -> onBackPressed()
+
         }
 
             return true
