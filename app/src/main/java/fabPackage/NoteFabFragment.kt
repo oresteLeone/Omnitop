@@ -2,14 +2,18 @@ package fabPackage
 
 import android.content.Context
 import android.content.Intent
+import android.content.Intent.*
 import android.os.BaseBundle
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.NavUtils.getParentActivityIntent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.annoyingturtle.omnitop.DndCampagnaHome
+import com.annoyingturtle.omnitop.DndSchedaActivity
 import com.annoyingturtle.omnitop.HomeActivity
 import com.annoyingturtle.omnitop.R
 import com.annoyingturtle.omnitop.fragment.noteActivity.ModificaNota
@@ -53,8 +57,23 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
     override fun onStart() {
         super.onStart()
 
+        var campagnaHome = "DndCampagnaHome"
+        var schedaActivity = "DndSchedaActivity"
+
+        var activity = requireActivity()
         var bundle = Bundle()
         bundle.putString("goto", requireContext()::class.java.simpleName.toString())
+        when(requireContext()::class.java.simpleName.toString()){
+
+            campagnaHome -> {
+                activity = requireActivity() as DndCampagnaHome
+                bundle.putInt("idCampagna", activity.idCampagna)
+            }
+            schedaActivity -> {
+                activity = requireActivity() as DndSchedaActivity
+                bundle.putInt("idScheda", activity.idScheda)
+            }
+        }
 
         nuovaNotaBtn.setOnClickListener(){
             startActivity(Intent(context, NuovaNota::class.java).putExtras(bundle))
@@ -98,7 +117,7 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
 
         var bundle = Bundle()
         bundle.putString("goto", requireContext()::class.java.simpleName.toString())
-        startActivity(Intent(context, ModificaNota()::class.java).putExtras(bundle).putExtra("idItem",
+        startActivity(Intent(context, ModificaNota()::class.java).putExtras(bundle).putExtra("idNota",
                 if(preferite)
                     favAdapter.getItemID(position)
                 else

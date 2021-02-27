@@ -184,8 +184,13 @@ class ModificaNota() : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        deleteSingleNota(notaToDelete)
-        return super.onOptionsItemSelected(item)
+        when(item.itemId){
+            R.id.cancellaNotaBtn -> deleteSingleNota(notaToDelete)
+
+            else -> onBackPressed()
+        }
+        return true
     }
+
 
 }
