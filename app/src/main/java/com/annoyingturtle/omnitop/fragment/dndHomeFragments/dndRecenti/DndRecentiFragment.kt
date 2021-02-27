@@ -46,9 +46,8 @@ class DndRecentiFragment : Fragment(), ListaCampagnaAdapter.onItemClickListner  
         /* var bundle = Bundle()
          bundle.putString("goto", requireContext()::class.java.simpleName.toString())    prima di put extra putExtras(bundle)*/
         startActivity(
-            Intent(context, DndCampagnaHome::class.java).putExtra("idItem", idItem )
+            Intent(context, DndCampagnaHome::class.java).putExtra("idCampagna", idItem )
         )
-
     }
 
 }

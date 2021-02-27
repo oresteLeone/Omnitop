@@ -35,7 +35,7 @@ class DndCampagnaHome : AppCompatActivity() {
         setContentView(R.layout.activity_dnd_campagna_home)
 
         var extras = intent.extras
-        idCampagna = extras!!.getInt("idItem")
+        idCampagna = extras!!.getInt("idCampagna")
 
         mCampagnaViewModel = ViewModelProvider(this).get(CampagnaViewModel::class.java)
         mCampagnaViewModel.getCampagnaFromID(idCampagna)

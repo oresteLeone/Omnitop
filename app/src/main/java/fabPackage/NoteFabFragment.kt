@@ -31,6 +31,7 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
     private var preferite = true
     private lateinit var mNotaViewModel : NotesViewModel
 
+    var bundle = Bundle()
     val favAdapter = NoteAdapter(this)
     val allAdapter = NoteAdapter(this)
 
@@ -61,7 +62,7 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
         var schedaActivity = "DndSchedaActivity"
 
         var activity = requireActivity()
-        var bundle = Bundle()
+
         bundle.putString("goto", requireContext()::class.java.simpleName.toString())
         when(requireContext()::class.java.simpleName.toString()){
 
@@ -115,8 +116,8 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
 
     override fun onItemClick(position: Int) {
 
-        var bundle = Bundle()
-        bundle.putString("goto", requireContext()::class.java.simpleName.toString())
+        /*var bundle = Bundle()
+        bundle.putString("goto", requireContext()::class.java.simpleName.toString())*/
         startActivity(Intent(context, ModificaNota()::class.java).putExtras(bundle).putExtra("idNota",
                 if(preferite)
                     favAdapter.getItemID(position)

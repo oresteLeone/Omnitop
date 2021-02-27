@@ -23,6 +23,7 @@ class DndCampagnaNuovaScheda : AppCompatActivity() {
 
     var idCampagna: Int = -1
     lateinit var mSchedaViewModel: SchedaViewModel
+    var extras: Bundle? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +34,7 @@ class DndCampagnaNuovaScheda : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
-        var extras = intent.extras
+        extras = intent.extras
         idCampagna = extras!!.getInt("idCampagna")
 
         mSchedaViewModel = ViewModelProvider(this).get(SchedaViewModel::class.java)
@@ -53,17 +54,22 @@ class DndCampagnaNuovaScheda : AppCompatActivity() {
 
             /**Valore per le statistiche della scheda*/
 
-            val statistiche = Statistiche("","",0,0,0,0,0.0,0,2,0,0,0,0,0,0,0, false,false,false,false,false,false,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD)
+            val statistiche = Statistiche("","",0,0,0,0,0.0,0,2,0,
+                0,0,0,0,0,0,
+                false,false,false,false,false,false,
+                LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,
+                LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,
+                LvlCompetenza.NONADD,LvlCompetenza.NONADD)
 
             /**Valore per Incantatore */
-            var incantatore = Incantatore("","",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+            var incantatore = Incantatore("","",0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0)
 
 
 
             /** Valore per dettagli*/
 
             val dettagli = Dettagli("","","",0,0,0,"")
-
 
 
 
@@ -79,7 +85,7 @@ class DndCampagnaNuovaScheda : AppCompatActivity() {
                 return
             }
             Toast.makeText(this, "La scheda è stata salvata con successo", Toast.LENGTH_SHORT).show()
-            navigateUpTo(Intent(this,DndCampagnaHome::class.java).putExtra("idItem", idCampagna ))
+            navigateUpTo(Intent(this, DndCampagnaHome::class.java).putExtra("idCampagna", idCampagna ))
         }
         else
             Toast.makeText(this, "Riempi i campi necessari!", Toast.LENGTH_SHORT).show()
@@ -89,4 +95,10 @@ class DndCampagnaNuovaScheda : AppCompatActivity() {
 
         return TextUtils.isEmpty(nomePersonaggio)
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+
+       return navigateUpTo(Intent(this, DndCampagnaHome::class.java).putExtra("idCampagna", idCampagna ))
+    }
+
 }

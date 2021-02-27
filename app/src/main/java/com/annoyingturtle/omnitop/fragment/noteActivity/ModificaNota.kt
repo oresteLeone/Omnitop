@@ -28,10 +28,11 @@ class ModificaNota() : AppCompatActivity() {
     private lateinit var mNotaViewModel : NotesViewModel
 
     var intento = Intent()
-
+    var extras : Bundle? = null
     var idNota: Int = -1
     lateinit var notaToDelete: Notes
 
+    var campagnaid: Int? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modifica_nota)
@@ -42,21 +43,19 @@ class ModificaNota() : AppCompatActivity() {
 
         /**Visualizzazione a schermo dati attuali*/
 
-        var extras = intent.extras
-        idNota = extras!!.getInt("idItem")
+        extras = intent?.extras
+
+        idNota = extras!!.getInt("idNota")
 
         mNotaViewModel = ViewModelProvider(this).get(NotesViewModel::class.java)
 
         if (idNota > -1) {
-            notaToDelete = Notes(idNota,null,"TEMP",null,false,RuoloGiocatore.PG)
+
             mNotaViewModel.getNotesFromID(idNota)
             showNoteData()
             mNotaViewModel.getSingleLiveData().observe(this, Observer {
-                notaToDelete.titoloNota = it.titoloNota
-                notaToDelete.corpoNota = it.corpoNota
-                notaToDelete.preferito = it.preferito
-                notaToDelete.ruoloNota = it.ruoloNota
-
+                notaToDelete = Notes(idNota, it.Campagnaid,it.titoloNota,it.corpoNota,it.preferito,it.ruoloNota)
+                campagnaid = it.Campagnaid
             })
         }
 
@@ -84,8 +83,9 @@ class ModificaNota() : AppCompatActivity() {
         else
             RuoloGiocatore.PG
 
+
         if(imputCheck(titoloNota, testoNota)){
-            val nota = Notes(idNota, titoloNota = titoloNota, corpoNota =  testoNota, preferito = preferito, ruoloNota = ruoloGiocatore, Campagnaid = null)
+            val nota = Notes(idNota, titoloNota = titoloNota, corpoNota =  testoNota, preferito = preferito, ruoloNota = ruoloGiocatore, Campagnaid = campagnaid)
             try {
                 mNotaViewModel.updateNota(nota)
             }catch (e : Exception)
@@ -138,7 +138,7 @@ class ModificaNota() : AppCompatActivity() {
     }
 
     private fun parentMetod(): Intent {
-        var extras = intent.extras
+
         var goToIntent = extras!!.getString("goto")
 
         when {
@@ -150,7 +150,7 @@ class ModificaNota() : AppCompatActivity() {
 
             }
             goToIntent.equals("DndSchedaActivity") -> {
-                intento = Intent(this@ModificaNota, DndSchedaActivity::class.java)
+                intento = Intent(this@ModificaNota, DndSchedaActivity::class.java).putExtra("idScheda", extras?.getInt("idScheda"))
 
                 intento.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 intento.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
@@ -164,7 +164,7 @@ class ModificaNota() : AppCompatActivity() {
 
             }
             goToIntent.equals("DndCampagnaHome") -> {
-                intento = Intent(this@ModificaNota, DndCampagnaHome::class.java)
+                intento = Intent(this@ModificaNota, DndCampagnaHome::class.java).putExtra("idCampagna", extras?.getInt("idCampagna"))
 
                 intento.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 intento.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP

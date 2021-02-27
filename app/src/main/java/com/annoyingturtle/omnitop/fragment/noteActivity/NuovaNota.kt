@@ -18,13 +18,15 @@ import java.sql.SQLException
 
 class NuovaNota() : AppCompatActivity() {
 
-
+    var extras: Bundle? = null
 
     private lateinit var mNotaViewModel : NotesViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nuova_nota)
+
+        extras = intent?.extras
 
         /** Action bar */
         setSupportActionBar(myToolbarCreaNota)
@@ -47,7 +49,7 @@ class NuovaNota() : AppCompatActivity() {
             RuoloGiocatore.PG
 
         if(inputCheck(titoloNota, testoNota)){
-            val nota = Notes(0, titoloNota = titoloNota, corpoNota =  testoNota, preferito = preferito, ruoloNota = ruoloGiocatore, Campagnaid = null)
+            val nota = Notes(0, null, titoloNota = titoloNota, corpoNota =  testoNota, preferito = preferito, ruoloNota = ruoloGiocatore )
             try {
                 mNotaViewModel.addNota(nota)
             }catch (e : Exception)
@@ -82,7 +84,7 @@ class NuovaNota() : AppCompatActivity() {
 
     private fun parentMetod(): Intent {
         var intento = Intent()
-        var extras = intent.extras
+
         var goToIntent = extras?.getString("goto")
 
         when {
@@ -94,7 +96,7 @@ class NuovaNota() : AppCompatActivity() {
 
             }
             goToIntent.equals("DndSchedaActivity") -> {
-                intento = Intent(this, DndSchedaActivity::class.java)
+                intento = Intent(this, DndSchedaActivity::class.java).putExtra("idScheda", extras?.getInt("idScheda"))
 
                 intento.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 intento.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
@@ -108,7 +110,7 @@ class NuovaNota() : AppCompatActivity() {
 
             }
             goToIntent.equals("DndCampagnaHome") -> {
-                intento = Intent(this, DndCampagnaHome::class.java)
+                intento = Intent(this, DndCampagnaHome::class.java).putExtra("idCampagna", extras?.getInt("idCampagna"))
 
                 intento.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 intento.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
