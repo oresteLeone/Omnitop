@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DndCampagnaHome"
+    tools:context=".DndSchedaActivity"
     android:background="@color/backGround"
     >
 
@@ -151,6 +151,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:navGraph="@navigation/dnd_scheda_navigation" />
+        app:navGraph="@navigation/dnd_scheda_navigation"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

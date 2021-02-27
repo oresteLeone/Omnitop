@@ -19,7 +19,19 @@ data class Scheda(
         @ColumnInfo(name = "id") val id: Int,
         @ColumnInfo(name = "campagna_id") val Campagnaid: Int,
         var nomePG: String,
-        var tipoScheda: TipoScheda
+        var tipoScheda: TipoScheda,
+
+        @Embedded
+        var statistiche: Statistiche?,
+
+        @Embedded
+        var incantatore: Incantatore?,
+
+        @Embedded
+        var dettagli: Dettagli?,
+
+        @Embedded
+        var moneteTotali: Money?
 
 )
 

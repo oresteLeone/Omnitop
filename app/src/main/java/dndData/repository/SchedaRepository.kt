@@ -12,6 +12,14 @@ class SchedaRepository(private val SchedaDAO: SchedaDAO) {
         SchedaDAO.addScheda(Scheda)
     }
 
+    fun getSchedaFromID(id : Int): Scheda {
+        return SchedaDAO.getSchedaFromID(id)
+    }
+
+    /*fun getSchedaCompletaFromID(id: Int): SchedaCompletaEntity{
+        return SchedaDAO.getSchedaCompletaFromID(id)
+    }*/
+
     suspend fun updateScheda(Scheda: Scheda){
         SchedaDAO.updateScheda(Scheda)
     }

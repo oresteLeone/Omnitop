@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.annoyingturtle.omnitop.DndCampagnaHome
+import com.annoyingturtle.omnitop.DndSchedaActivity
 import com.annoyingturtle.omnitop.R
 import kotlinx.android.synthetic.main.fragment_dnd_campagna_schede.view.*
 
@@ -43,13 +44,8 @@ class DndCampagnaSchedeFragment : Fragment(), SchedeCampagnaAdapter.onItemClickL
 
     override fun onItemClick(position: Int) {
 
-       var idItem = adapter.getItemID(position)
-        /* var bundle = Bundle()
-         bundle.putString("goto", requireContext()::class.java.simpleName.toString())    prima di put extra putExtras(bundle)*//*
-        startActivity(
-            Intent(context, DndCampagnaHome::class.java).putExtra("idItem", idItem )
-        )*/
-        Toast.makeText(requireContext() , "scheda $idItem", Toast.LENGTH_SHORT).show()
+        startActivity(Intent(context, DndSchedaActivity::class.java).putExtra("idScheda", adapter.getItemID(position)))
+
     }
 
 

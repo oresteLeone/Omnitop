@@ -13,6 +13,12 @@ interface SchedaDAO {
     @Query("SELECT * FROM scheda_table ORDER BY id DESC")
     fun readAllData(): LiveData<List<Scheda>>
 
+    @Query("SELECT * FROM scheda_table WHERE id= :id ORDER BY id DESC")
+    fun getSchedaFromID(id: Int): Scheda
+
+    //@Query("SELECT * FROM schedaCompleta_table WHERE id= :id ORDER BY id DESC")
+    //fun getSchedaCompletaFromID(id: Int): SchedaCompletaEntity
+
     @Update
     suspend fun updateScheda(Scheda: Scheda)
 

@@ -12,11 +12,11 @@ import dndData.entities.Scheda
 data class Statistiche(
         var razza: String?,
         var classe: String?,
-        var lvl: Int?,
-        var puntiFerita: Int?,
+        var puntiFeritaAttuali: Int?,
+        var puntiFeritaTotali: Int?,
         var classeArmatura: Int?,
         var iniziativa: Int?,
-        var velocitaMov: Int?,
+        var velocitaMov: Double?,
         var percezionePassiva: Int?,
         var bonusCompetenza: Int?,
         var dadoVita: Int?,
@@ -46,11 +46,12 @@ data class Statistiche(
         var abIntuizione:LvlCompetenza?,
         var abMedicina:LvlCompetenza?,
         var abNatura:LvlCompetenza?,
+        var abPercezione:LvlCompetenza?,
         var abPersuasione:LvlCompetenza?,
         var abRapiditMano:LvlCompetenza?,
         var abReligione:LvlCompetenza?,
         var abSoprav:LvlCompetenza?,
-        var abStoria:LvlCompetenza?,
+        var abStoria:LvlCompetenza?
 
         )
 
@@ -70,7 +71,7 @@ data class Money(
 data class Incantatore(
     var incantatoreClasse: String?,
     var carIncantatore: String?,
-    var cd: String?,
+    var cd: Int?,
     var bonus: Int?,
     var slotLVL1MAX: Int?,
     var slotLVL1: Int?,
@@ -101,6 +102,7 @@ data class Dettagli(
     var allineamento: String?,
     var exp: Int?,
     var puntiIspirazione: Int?,
-    var descrizioni: String?
+    var puntiEperienza: Int?,
+    var altreInformazioni: String?
 
 )
