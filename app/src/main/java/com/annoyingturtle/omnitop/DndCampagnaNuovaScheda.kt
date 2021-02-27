@@ -7,8 +7,13 @@ import android.text.TextUtils
 import android.widget.Toast
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.ViewModelProvider
+import dndData.LvlCompetenza
 import dndData.TipoScheda
 import dndData.entities.Scheda
+import dndData.utilData.Dettagli
+import dndData.utilData.Incantatore
+import dndData.utilData.Money
+import dndData.utilData.Statistiche
 import dndData.viewModel.SchedaViewModel
 import kotlinx.android.synthetic.main.activity_dnd_campagna_nuova_scheda.*
 import kotlinx.android.synthetic.main.activity_nuova_nota.*
@@ -45,7 +50,28 @@ class DndCampagnaNuovaScheda : AppCompatActivity() {
                 TipoScheda.PG
 
         if(!inputCheck(nomePersonaggio)){
-            val scheda = Scheda(0,idCampagna,nomePersonaggio,tipoScheda)
+
+            /**Valore per le statistiche della scheda*/
+
+            val statistiche = Statistiche("","",0,0,0,0,0.0,0,2,0,0,0,0,0,0,0, false,false,false,false,false,false,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD)
+
+            /**Valore per Incantatore */
+            var incantatore = Incantatore("","",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+
+
+
+            /** Valore per dettagli*/
+
+            val dettagli = Dettagli("","","",0,0,0,"")
+
+
+
+
+            /** Valore per le monete della scheda*/
+            val moneteTotali = Money(0,0,0,0,0)
+
+
+            val scheda = Scheda(0,idCampagna,nomePersonaggio,tipoScheda, statistiche, incantatore, dettagli, moneteTotali)
             try {
                 mSchedaViewModel.addScheda(scheda)
             }catch (e: Exception){

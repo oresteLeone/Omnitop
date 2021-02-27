@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backGround"
-    android:id="@+id/fragmentDettagli">
+    android:id="@+id/fragmentDettagli"
+    tools:context=".DndSchedaActivity"
+    >
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -137,7 +139,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView12" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/backGround"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -159,7 +161,7 @@
                 android:background="@color/secondaryLight"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
+                app:layout_constraintTop_toBottomOf="@+id/backGround" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -174,7 +176,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/nomeGiocatore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -197,7 +199,7 @@
                 android:background="@color/secondaryLight"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                app:layout_constraintTop_toBottomOf="@+id/nomeGiocatore" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -212,7 +214,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView14" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/allineamento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -235,7 +237,7 @@
                 android:background="@color/secondaryLight"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText3" />
+                app:layout_constraintTop_toBottomOf="@+id/allineamento" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -250,7 +252,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView15" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/puntiEsperienza"
+
+                android:inputType="number"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -273,7 +278,7 @@
                 android:background="@color/secondaryLight"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText4" />
+                app:layout_constraintTop_toBottomOf="@+id/puntiEsperienza" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -288,7 +293,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/puntiIspirazione"
+
+                android:inputType="number"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -310,7 +318,7 @@
                 android:background="@color/secondaryLight"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText5" />
+                app:layout_constraintTop_toBottomOf="@+id/puntiIspirazione" />
 
             <ImageButton
                 android:id="@+id/editInformazioniBase"
@@ -377,6 +385,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
                 <EditText
+                    android:id="@+id/altreInformazioni"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
