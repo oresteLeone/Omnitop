@@ -34,7 +34,7 @@ class DndCampagnaSchedeFragment : Fragment(), SchedeCampagnaAdapter.onItemClickL
         val recyclerView = view.SchedeCampagnaRecyclerView
         recyclerView.adapter = adapter
         recyclerView.layoutManager = GridLayoutManager(requireContext(),2, LinearLayoutManager.VERTICAL , false)
-        campagnaHome.mCampagnaViewModel.readAllSchedeFromCampagnaID.observe(viewLifecycleOwner, Observer { scheda ->
+        campagnaHome.mCampagnaViewModel.getListaLiveDataScheda().observe(viewLifecycleOwner, Observer { scheda ->
             adapter?.setDataSchede(scheda)
 
         })

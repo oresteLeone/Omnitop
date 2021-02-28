@@ -28,7 +28,7 @@ class CampagnaRepository(private val CampagnaDAO: CampagnaDAO) {
         return CampagnaDAO.getCampagnaFromID(id)
     }
 
-    suspend fun readAllSchedeFromCampagnaID(id: Int): LiveData<List<Scheda>>{
+    suspend fun readAllSchedeFromCampagnaID(id: Int): List<Scheda>{
         return CampagnaDAO.readAllSchedeFromCampagnaID(id)
     }
 
