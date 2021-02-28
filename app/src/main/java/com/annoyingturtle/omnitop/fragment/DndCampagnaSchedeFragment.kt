@@ -19,8 +19,8 @@ import kotlinx.android.synthetic.main.fragment_dnd_campagna_schede.view.*
 
 class DndCampagnaSchedeFragment : Fragment(), SchedeCampagnaAdapter.onItemClickListner {
 
-    var adapter: SchedeCampagnaAdapter? = null
-
+    lateinit var adapter: SchedeCampagnaAdapter
+    lateinit var campagnaHome: DndCampagnaHome
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,7 +28,7 @@ class DndCampagnaSchedeFragment : Fragment(), SchedeCampagnaAdapter.onItemClickL
     ): View? {
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.fragment_dnd_campagna_schede, container, false)
-        var campagnaHome: DndCampagnaHome = requireActivity() as DndCampagnaHome
+        campagnaHome = requireActivity() as DndCampagnaHome
 
         adapter = SchedeCampagnaAdapter(this)
         val recyclerView = view.SchedeCampagnaRecyclerView
@@ -44,7 +44,9 @@ class DndCampagnaSchedeFragment : Fragment(), SchedeCampagnaAdapter.onItemClickL
 
     override fun onItemClick(position: Int) {
 
-        startActivity(Intent(context, DndSchedaActivity::class.java).putExtra("idScheda", adapter?.getItemID(position)))
+        campagnaHome.extras.putInt("idScheda", adapter.getItemID(position))
+        campagnaHome.extras.putInt("idCampagna", campagnaHome.idCampagna)
+        startActivity(Intent(context, DndSchedaActivity::class.java).putExtras(campagnaHome.extras))
 
     }
 

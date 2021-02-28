@@ -17,7 +17,6 @@ class CampagnaViewModel(application: Application): AndroidViewModel(application)
     val readAllData: LiveData<List<Campagna>>
     val readDMData: LiveData<List<Campagna>>
     val readPGData: LiveData<List<Campagna>>
-    /*lateinit var readAllSchedeFromCampagnaID: LiveData<List<Scheda>>*/
 
     var schedeCampagnaData: MutableLiveData<List<Scheda>> = lazy {
         MutableLiveData<List<Scheda>>()
@@ -66,7 +65,6 @@ class CampagnaViewModel(application: Application): AndroidViewModel(application)
             singleLiveData.postValue(item)
             var list = repository.readAllSchedeFromCampagnaID(id)
             schedeCampagnaData.postValue(list)
-            /*readAllSchedeFromCampagnaID = repository.readAllSchedeFromCampagnaID(id)*/
 
         }
     }

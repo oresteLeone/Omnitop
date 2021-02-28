@@ -286,7 +286,7 @@
 
     <!-- DnD Guida -->
 
-    <string name="Guida"></string>
+    <string name="Guida">Guida alla Creazione</string>
 
     <string name="sceltaClasse">1: Scelta della Classe</string>
     <string name="infoClasse">Prima ancora di definire l’aspetto fisico del vostro personaggio, vi consigliamo di iniziare scegliendone la Classe. Si tratta di una decisione cruciale, che avrà grandi ripercussioni sull’intera esperienza di gioco; ogni Classe ha infatti uno stile di gioco ben preciso, che influenzerà sia l’aspetto puramente esplorativo che lo svolgersi dei combattimenti.\n Per questa ragione, a nostro avviso, scegliere la Classe dovrebbe essere il primo passo nella creazione di un personaggio.

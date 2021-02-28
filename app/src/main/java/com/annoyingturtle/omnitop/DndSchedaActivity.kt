@@ -29,7 +29,7 @@ class DndSchedaActivity : AppCompatActivity() {
     var idScheda = -1
     lateinit var schedaToDelete : Scheda
 
-    var extras: Bundle? = null
+    lateinit var extras: Bundle
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +51,7 @@ class DndSchedaActivity : AppCompatActivity() {
 
         /** Inizializzazione scheda */
 
-        extras = intent.extras
+        extras = intent.extras!!
         idScheda = extras!!.getInt("idScheda")
 
         mSchedaViewModel = ViewModelProvider(this).get(SchedaViewModel::class.java)
@@ -83,7 +83,7 @@ class DndSchedaActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when(item.itemId){
-            R.id.idGuida -> startActivity(Intent(this, GuidaSchedaDnDActivity::class.java).putExtra("idScheda", idScheda))
+            R.id.idGuida -> startActivity(Intent(this, GuidaSchedaDnDActivity::class.java).putExtras(extras))
 
             else -> onBackPressed()
         }
@@ -97,5 +97,9 @@ class DndSchedaActivity : AppCompatActivity() {
         mSchedaViewModel.getSingleLiveData().observe(this, Observer {
             supportActionBar?.title = Editable.Factory.getInstance().newEditable(it.nomePG)
         })
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navigateUpTo(Intent(this, DndCampagnaHome::class.java).putExtra("idCampagna", extras.getInt("idCampagna") ))
     }
 }

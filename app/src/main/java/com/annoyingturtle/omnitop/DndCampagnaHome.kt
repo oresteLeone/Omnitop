@@ -25,16 +25,15 @@ import fabPackage.AbsFab
 class DndCampagnaHome : AppCompatActivity() {
 
     lateinit var mCampagnaViewModel: CampagnaViewModel
-
     var idCampagna: Int = -1
-
     lateinit var mytablayout: TabLayout
+    lateinit var extras: Bundle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dnd_campagna_home)
 
-        var extras = intent.extras
+        extras = intent.extras!!
         idCampagna = extras!!.getInt("idCampagna")
 
         mCampagnaViewModel = ViewModelProvider(this).get(CampagnaViewModel::class.java)
@@ -90,7 +89,7 @@ class DndCampagnaHome : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.nuovaSchedaOpt -> startActivity(Intent(this,DndCampagnaNuovaScheda::class.java).putExtra("idCampagna", idCampagna))
+            R.id.nuovaSchedaOpt -> startActivity(Intent(this,DndCampagnaNuovaScheda::class.java).putExtras(extras))
 
             R.id.nuovaNotaOpt -> Toast.makeText(this, "nuovanota", Toast.LENGTH_SHORT).show()
 

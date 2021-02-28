@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_guida_scheda_dn_d.*
 class GuidaSchedaDnDActivity : AppCompatActivity() {
 
     var schermataAttuale = 0
-    var extras: Bundle? = null
+    lateinit var extras: Bundle
     var idScheda: Int =-1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +21,8 @@ class GuidaSchedaDnDActivity : AppCompatActivity() {
         /** Action Bar */
         setSupportActionBar(myToolbarGuidaDnd)
 
-        extras= intent.extras
-        idScheda= extras!!.getInt("idScheda")
+        extras= intent.extras!!/*
+        idScheda= extras!!.getInt("idScheda")*/
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
@@ -57,6 +57,6 @@ class GuidaSchedaDnDActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
 
-        return navigateUpTo(Intent(this, DndSchedaActivity::class.java).putExtra("idScheda", idScheda ))
+        return navigateUpTo(Intent(this, DndSchedaActivity::class.java).putExtras(extras))
     }
 }
