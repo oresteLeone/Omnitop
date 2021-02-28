@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.annoyingturtle.omnitop.R
+import dndData.RuoloGiocatore
 import dndData.entities.Campagna
 import kotlinx.android.synthetic.main.lista_campagne.view.*
 
@@ -33,9 +34,9 @@ class ListaCampagnaAdapter(private val listener : onItemClickListner): RecyclerV
     override fun onBindViewHolder(holder: RecentiViewHolder, position: Int) {
         val currentItem = CampagnaList[position]
         holder.itemView.nomeCampagnaCardText.text = currentItem.titoloCampagna
-        if(currentItem.ruoloCampagna.toString() == "DM"){
+        if(currentItem.ruoloCampagna == RuoloGiocatore.DM){
             holder.itemView.ruoloGiocatoreCampagnaDM.visibility = View.VISIBLE
-        }else{
+        }else if(currentItem.ruoloCampagna == RuoloGiocatore.PG){
             holder.itemView.ruoloGiocatoreCampagnaPG.visibility = View.VISIBLE
         }
     }

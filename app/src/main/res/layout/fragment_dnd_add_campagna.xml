@@ -51,33 +51,22 @@
             android:textColorHint="@color/PrimaryLight65op" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ruoloCam"
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/checkBoxDM"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:textColorHint="@color/PrimaryLight65op"
-        app:boxStrokeColor="@color/PrimaryLight"
-        app:helperText="DM / PG"
-        app:hintTextColor="@color/PrimaryLight65op"
+        android:layout_marginTop="8dp"
+        android:text="@string/gm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titoloNotaHold">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ruoloCam_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ruolo Rivestito" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/titoloNotaHold"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/DescrizioneHolder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:textColorHint="@color/PrimaryLight65op"
         app:boxStrokeColor="@color/PrimaryLight"
         app:helperText="opzionale"
@@ -85,7 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ruoloCam">
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxDM">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/descrizioneCam_et"

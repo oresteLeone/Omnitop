@@ -36,35 +36,24 @@ class DndAddCampagnaFragment : Fragment() {
     private fun insertCampagnaDataToDatabase() {
 
         val titoloCampagna = titoloCam_et.text.toString()
-        val ruoloCampagna = ruoloCam_et.text.toString()
+        val ruoloCampagna = if (checkBoxDM.isChecked) RuoloGiocatore.DM
+                            else RuoloGiocatore.PG
         val descrizioneCampagna = descrizioneCam_et.text?.toString()
 
-        if(inputcheck(titoloCampagna,ruoloCampagna)){
-            if(ruoloCampagna == RuoloGiocatore.DM.toString()) {
-                val Campagna = Campagna(0, titoloCampagna, RuoloGiocatore.DM, descrizioneCampagna)
+        if(!inputcheck(titoloCampagna)){
+                val Campagna = Campagna(0, titoloCampagna, ruoloCampagna, descrizioneCampagna)
                 mCampagnaViewModel.addCampagna(Campagna)
                 Toast.makeText(requireContext(), "Campagna aggiunta con successo!", Toast.LENGTH_SHORT).show()
-                findNavController().navigate(R.id.action_dndAddCampagna_to_dndRecenti)
-            }
-            else if (ruoloCampagna == RuoloGiocatore.PG.toString()){
-                val Campagna = Campagna(0, titoloCampagna, RuoloGiocatore.PG, descrizioneCampagna)
-                mCampagnaViewModel.addCampagna(Campagna)
-                Toast.makeText(requireContext(), "Campagna aggiunta con successo!", Toast.LENGTH_SHORT).show()
-                findNavController().navigate(R.id.action_dndAddCampagna_to_dndRecenti)
-            }
-            else{
-                Toast.makeText(requireContext(), "Utilizza i valori consigliati!", Toast.LENGTH_SHORT).show()
-            }
+                findNavController().navigateUp()
         }
         else{
-            Toast.makeText(requireContext(), "Riempi i campi necessari!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Titolo Campagna non può essere vuoto!", Toast.LENGTH_SHORT).show()
         }
-
     }
 
-    private fun inputcheck(titoloCampagna: String?, ruoloCampagna: String?): Boolean{
+    private fun inputcheck(titoloCampagna: String?): Boolean{
 
-        return !(TextUtils.isEmpty(titoloCampagna) && TextUtils.isEmpty(ruoloCampagna))
+        return (TextUtils.isEmpty(titoloCampagna))
 
     }
 }
