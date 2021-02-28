@@ -6,6 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "incantesimi_table",foreignKeys = arrayOf(
         ForeignKey(
+                onDelete = ForeignKey.CASCADE,
                 entity = Scheda::class,
                 parentColumns = arrayOf("id"),
                 childColumns = arrayOf("scheda_id")

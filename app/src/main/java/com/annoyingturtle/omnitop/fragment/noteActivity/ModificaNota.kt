@@ -44,7 +44,6 @@ class ModificaNota() : AppCompatActivity() {
         /**Visualizzazione a schermo dati attuali*/
 
         extras = intent?.extras
-
         idNota = extras!!.getInt("idNota")
 
         mNotaViewModel = ViewModelProvider(this).get(NotesViewModel::class.java)
@@ -85,7 +84,7 @@ class ModificaNota() : AppCompatActivity() {
 
 
         if(imputCheck(titoloNota, testoNota)){
-            val nota = Notes(idNota, titoloNota = titoloNota, corpoNota =  testoNota, preferito = preferito, ruoloNota = ruoloGiocatore, Campagnaid = campagnaid)
+            val nota = Notes(idNota, campagnaid, titoloNota, testoNota, preferito, ruoloGiocatore)
             try {
                 mNotaViewModel.updateNota(nota)
             }catch (e : Exception)

@@ -4,6 +4,7 @@ import androidx.room.*
 
 @Entity(tableName = "privilegi_e_tratti_table",foreignKeys = arrayOf(
     ForeignKey(
+        onDelete = ForeignKey.CASCADE,
         entity = Scheda::class,
         parentColumns = arrayOf("id"),
         childColumns = arrayOf("scheda_id")

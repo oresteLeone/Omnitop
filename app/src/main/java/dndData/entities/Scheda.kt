@@ -1,6 +1,7 @@
 package dndData.entities
 
 import androidx.room.*
+import androidx.room.ForeignKey.CASCADE
 import dndData.TipoScheda
 import dndData.utilData.*
 
@@ -8,6 +9,7 @@ import dndData.utilData.*
 @Entity(tableName = "Scheda_table",
 foreignKeys = arrayOf(
     ForeignKey(
+        onDelete = CASCADE ,
         entity = Campagna::class,
         parentColumns = arrayOf("id"),
         childColumns = arrayOf("campagna_id")

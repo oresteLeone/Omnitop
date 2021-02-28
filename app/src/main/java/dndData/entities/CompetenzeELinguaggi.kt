@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "competenze_e_linguaggi_table",foreignKeys = arrayOf(
     ForeignKey(
+        onDelete = ForeignKey.CASCADE,
         entity = Scheda::class,
         parentColumns = arrayOf("id"),
         childColumns = arrayOf("scheda_id")

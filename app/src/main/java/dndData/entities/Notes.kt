@@ -11,6 +11,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 @Entity(tableName = "note_table", foreignKeys = arrayOf(
     ForeignKey(
+        onDelete = ForeignKey.CASCADE,
         entity = Campagna::class,
         parentColumns = arrayOf("id"),
         childColumns = arrayOf("campagna_id")
