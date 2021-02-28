@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.fragment_dnd_campagna_schede.view.*
 
 class DndCampagnaSchedeFragment : Fragment(), SchedeCampagnaAdapter.onItemClickListner {
 
-    lateinit var adapter: SchedeCampagnaAdapter
+    var adapter: SchedeCampagnaAdapter? = null
 
 
     override fun onCreateView(
@@ -35,7 +35,7 @@ class DndCampagnaSchedeFragment : Fragment(), SchedeCampagnaAdapter.onItemClickL
         recyclerView.adapter = adapter
         recyclerView.layoutManager = GridLayoutManager(requireContext(),2, LinearLayoutManager.VERTICAL , false)
         campagnaHome.mCampagnaViewModel.readAllSchedeFromCampagnaID.observe(viewLifecycleOwner, Observer { scheda ->
-            adapter.setDataSchede(scheda)
+            adapter?.setDataSchede(scheda)
 
         })
 
@@ -44,7 +44,7 @@ class DndCampagnaSchedeFragment : Fragment(), SchedeCampagnaAdapter.onItemClickL
 
     override fun onItemClick(position: Int) {
 
-        startActivity(Intent(context, DndSchedaActivity::class.java).putExtra("idScheda", adapter.getItemID(position)))
+        startActivity(Intent(context, DndSchedaActivity::class.java).putExtra("idScheda", adapter?.getItemID(position)))
 
     }
 
