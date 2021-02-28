@@ -17,18 +17,18 @@
         android:roundIcon="@mipmap/ic_omnitoplauncher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Omnitop">
-        <activity android:name=".DndCampagnaHomeInfoDati"></activity>
+        <activity android:name=".dndCampagnaHomeActivity.DndCampagnaHomeInfoDati"></activity>
         <activity
-            android:name=".DndCampagnaNuovaScheda"
-            android:parentActivityName=".DndCampagnaHome" />
+            android:name=".dndCampagnaHomeActivity.DndCampagnaNuovaScheda"
+            android:parentActivityName=".dndCampagnaHomeActivity.DndCampagnaHome" />
         <activity
-            android:name=".GuidaSchedaDnDActivity"
-            android:parentActivityName=".DndSchedaActivity" />
-        <activity android:name=".fragment.noteActivity.ModificaNota" />
-        <activity android:name=".fragment.noteActivity.NuovaNota" />
+            android:name=".dndSchedaActivity.GuidaSchedaDnDActivity"
+            android:parentActivityName=".dndSchedaActivity.DndSchedaActivity" />
+        <activity android:name="com.annoyingturtle.omnitop.noteActivity.ModificaNota" />
+        <activity android:name="com.annoyingturtle.omnitop.noteActivity.NuovaNota" />
         <activity
-            android:name=".DndSchedaActivity"
-            android:parentActivityName=".DndCampagnaHome" />
+            android:name=".dndSchedaActivity.DndSchedaActivity"
+            android:parentActivityName=".dndCampagnaHomeActivity.DndCampagnaHome" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.Omnitop">
@@ -42,13 +42,13 @@
             android:name=".HomeActivity"
             android:theme="@style/Theme.Omnitop" />
         <activity
-            android:name=".DndHome"
+            android:name=".dndHomeActivity.DndHome"
             android:label="@string/dnd"
             android:parentActivityName=".HomeActivity" />
         <activity
-            android:name=".DndCampagnaHome"
+            android:name=".dndCampagnaHomeActivity.DndCampagnaHome"
             android:label="Campagna DND"
-            android:parentActivityName=".DndHome" />
+            android:parentActivityName=".dndHomeActivity.DndHome" />
     </application>
 
 </manifest>

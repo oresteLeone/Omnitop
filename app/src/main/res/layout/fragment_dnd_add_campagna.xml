@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/backGround"
     android:padding="24dp"
-    tools:context=".fragment.dndHomeFragments.support.DndAddCampagnaFragment">
+    tools:context=".dndHomeActivity.dndHomeFragments.support.DndAddCampagnaFragment">
 
     <TextView
         android:id="@+id/TitoloframeAddCampagna"

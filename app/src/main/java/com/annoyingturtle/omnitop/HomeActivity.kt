@@ -2,18 +2,16 @@ package com.annoyingturtle.omnitop
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.annoyingturtle.omnitop.dndHomeActivity.DndHome
 import kotlinx.android.synthetic.main.activity_home.*
 import fabPackage.AbsFab
 import fabPackage.AdapterRecyclerListaGiochi
 import fabPackage.ItemListaGiochi
-import kotlinx.android.synthetic.main.activity_dnd_home.*
 import kotlinx.android.synthetic.main.activity_home.addBtn1
 import kotlinx.android.synthetic.main.activity_home.cardBtn1
 import kotlinx.android.synthetic.main.activity_home.diceBtn1

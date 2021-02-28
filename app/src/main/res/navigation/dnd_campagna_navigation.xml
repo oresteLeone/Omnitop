@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/dndCampagnaSchedeFragment"
-        android:name="com.annoyingturtle.omnitop.fragment.DndCampagnaSchedeFragment"
+        android:name="com.annoyingturtle.omnitop.dndCampagnaHomeActivity.dndCampagnaFragments.DndCampagnaSchedeFragment"
         android:label="Schede"
         tools:layout="@layout/fragment_dnd_campagna_schede" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/dndCamapagnaNoteFragment"
-        android:name="com.annoyingturtle.omnitop.fragment.DndCamapagnaNoteFragment"
+        android:name="com.annoyingturtle.omnitop.dndCampagnaHomeActivity.dndCampagnaFragments.DndCamapagnaNoteFragment"
         android:label="fragment_dnd_camapagna_note"
         tools:layout="@layout/fragment_dnd_camapagna_note" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/dndCampagnaCompendiumFragment"
-        android:name="com.annoyingturtle.omnitop.fragment.DndCampagnaCompendiumFragment"
+        android:name="com.annoyingturtle.omnitop.dndCampagnaHomeActivity.dndCampagnaFragments.DndCampagnaCompendiumFragment"
         android:label="Compendium"
         tools:layout="@layout/fragment_dnd_campagna_compendium" >
         <action

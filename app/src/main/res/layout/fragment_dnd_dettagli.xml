@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/backGround"
     android:id="@+id/fragmentDettagli"
-    tools:context=".DndSchedaActivity"
+    tools:context=".dndSchedaActivity.DndSchedaActivity"
     >
 
     <androidx.core.widget.NestedScrollView

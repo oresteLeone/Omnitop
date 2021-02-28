@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/backGround"
     android:id="@+id/dndCampagnaCompendiumFragment"
-    tools:context=".DndHome">
+    tools:context=".dndHomeActivity.DndHome">
 
 
     <TextView
