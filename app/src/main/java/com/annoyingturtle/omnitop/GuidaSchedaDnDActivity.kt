@@ -1,5 +1,6 @@
 package com.annoyingturtle.omnitop
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.Navigation
@@ -10,7 +11,8 @@ import kotlinx.android.synthetic.main.activity_guida_scheda_dn_d.*
 class GuidaSchedaDnDActivity : AppCompatActivity() {
 
     var schermataAttuale = 0
-
+    var extras: Bundle? = null
+    var idScheda: Int =-1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +21,8 @@ class GuidaSchedaDnDActivity : AppCompatActivity() {
         /** Action Bar */
         setSupportActionBar(myToolbarGuidaDnd)
 
+        extras= intent.extras
+        idScheda= extras!!.getInt("idScheda")
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
@@ -49,5 +53,10 @@ class GuidaSchedaDnDActivity : AppCompatActivity() {
 
             10 -> {capitoloTextView.text = getString(R.string.sceltaClasse); spiegazioneTextView.text = getString(R.string.infoClasse)}
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+
+        return navigateUpTo(Intent(this, DndSchedaActivity::class.java).putExtra("idScheda", idScheda ))
     }
 }

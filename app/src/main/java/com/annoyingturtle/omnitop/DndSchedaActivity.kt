@@ -26,10 +26,10 @@ import fabPackage.AbsFab
 class DndSchedaActivity : AppCompatActivity() {
 
     private lateinit var mSchedaViewModel : SchedaViewModel
-    var intento = Intent()
     var idScheda = -1
     lateinit var schedaToDelete : Scheda
 
+    var extras: Bundle? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +51,7 @@ class DndSchedaActivity : AppCompatActivity() {
 
         /** Inizializzazione scheda */
 
-        var extras = intent.extras
+        extras = intent.extras
         idScheda = extras!!.getInt("idScheda")
 
         mSchedaViewModel = ViewModelProvider(this).get(SchedaViewModel::class.java)
@@ -83,7 +83,7 @@ class DndSchedaActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when(item.itemId){
-            R.id.idGuida -> startActivity(Intent(this, GuidaSchedaDnDActivity::class.java))
+            R.id.idGuida -> startActivity(Intent(this, GuidaSchedaDnDActivity::class.java).putExtra("idScheda", idScheda))
 
             else -> onBackPressed()
         }
