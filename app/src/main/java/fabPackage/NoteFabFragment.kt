@@ -113,7 +113,7 @@ class NoteFabFragment() : BottomSheetDialogFragment(), NoteAdapter.OnItemClickLi
 
         /*var bundle = Bundle()
         bundle.putString("goto", requireContext()::class.java.simpleName.toString())*/
-        startActivity(Intent(context, ModificaNota()::class.java).putExtras(bundle).putExtra("idNota",
+        startActivity(Intent(context, ModificaNota::class.java).putExtras(bundle).putExtra("idNota",
                 if(preferite)
                     favAdapter.getItemID(position)
                 else

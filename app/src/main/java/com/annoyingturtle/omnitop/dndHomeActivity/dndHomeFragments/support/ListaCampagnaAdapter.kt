@@ -36,8 +36,10 @@ class ListaCampagnaAdapter(private val listener : onItemClickListner): RecyclerV
         holder.itemView.nomeCampagnaCardText.text = currentItem.titoloCampagna
         if(currentItem.ruoloCampagna == RuoloGiocatore.DM){
             holder.itemView.ruoloGiocatoreCampagnaDM.visibility = View.VISIBLE
+            holder.itemView.ruoloGiocatoreCampagnaPG.visibility = View.GONE
         }else if(currentItem.ruoloCampagna == RuoloGiocatore.PG){
             holder.itemView.ruoloGiocatoreCampagnaPG.visibility = View.VISIBLE
+            holder.itemView.ruoloGiocatoreCampagnaDM.visibility = View.GONE
         }
     }
 

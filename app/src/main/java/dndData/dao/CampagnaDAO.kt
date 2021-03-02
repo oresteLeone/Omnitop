@@ -32,5 +32,8 @@ interface CampagnaDAO {
     @Query("SELECT * FROM Scheda_table WHERE campagna_id= :id ORDER BY id DESC")
     suspend fun readAllSchedeFromCampagnaID(id: Int): List<Scheda>
 
+    @Query("SELECT * FROM note_table WHERE campagna_id= :id ORDER BY id DESC")
+    suspend fun readAllNotesFromCampagnaID(id: Int): List<Notes>
+
 
 }

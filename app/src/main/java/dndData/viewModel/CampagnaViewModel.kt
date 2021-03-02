@@ -22,6 +22,10 @@ class CampagnaViewModel(application: Application): AndroidViewModel(application)
         MutableLiveData<List<Scheda>>()
     }.value
 
+    var notesCampagnaData: MutableLiveData<List<Notes>> = lazy {
+        MutableLiveData<List<Notes>>()
+    }.value
+
     private val repository: CampagnaRepository
     var singleLiveData: MutableLiveData<Campagna> = lazy {
         MutableLiveData<Campagna>()
@@ -59,12 +63,16 @@ class CampagnaViewModel(application: Application): AndroidViewModel(application)
 
     fun getListaLiveDataScheda(): LiveData<List<Scheda>> = schedeCampagnaData
 
+    fun getListaLiveDataNote():LiveData<List<Notes>> = notesCampagnaData
+
     fun getCampagnaFromID(id:Int){
         viewModelScope.launch(Dispatchers.IO){
             val item = repository.getCampagnaFromID(id)
             singleLiveData.postValue(item)
-            var list = repository.readAllSchedeFromCampagnaID(id)
-            schedeCampagnaData.postValue(list)
+            var listSchede = repository.readAllSchedeFromCampagnaID(id)
+            schedeCampagnaData.postValue(listSchede)
+            var listNotes = repository.readAllNotesFromCampagnaID(id)
+            notesCampagnaData.postValue(listNotes)
 
         }
     }

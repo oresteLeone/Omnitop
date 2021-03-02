@@ -41,10 +41,10 @@ class NuovaNota() : AppCompatActivity() {
     }
 
     private fun insertNoteDataToDatabase(){
-        val titoloNota = titoloNota.text.toString()
-        val testoNota = testoNota.text.toString()
+        val titoloNota = titoloNota_et.text.toString()
+        val testoNota = testoNota_et.text.toString()
         val preferito : Boolean = checkBoxPreferito.isChecked
-        val ruoloGiocatore : RuoloGiocatore = if(checkBoxGM.isChecked) RuoloGiocatore.DM
+        val ruoloGiocatore : RuoloGiocatore = if(checkBoxDM.isChecked) RuoloGiocatore.DM
         else
             RuoloGiocatore.PG
 

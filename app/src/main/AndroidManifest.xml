@@ -17,15 +17,17 @@
         android:roundIcon="@mipmap/ic_omnitoplauncher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Omnitop">
-        <activity android:name=".dndCampagnaHomeActivity.DndCampagnaHomeInfoDati"></activity>
+        <activity android:name=".dndCampagnaHomeActivity.DndCampagnaModificaNota"></activity>
+        <activity android:name=".dndCampagnaHomeActivity.DndCampagnaHomeNuovaNota" />
+        <activity android:name=".dndCampagnaHomeActivity.DndCampagnaHomeInfoDati" />
         <activity
             android:name=".dndCampagnaHomeActivity.DndCampagnaNuovaScheda"
             android:parentActivityName=".dndCampagnaHomeActivity.DndCampagnaHome" />
         <activity
             android:name=".dndSchedaActivity.GuidaSchedaDnDActivity"
             android:parentActivityName=".dndSchedaActivity.DndSchedaActivity" />
-        <activity android:name="com.annoyingturtle.omnitop.noteActivity.ModificaNota" />
-        <activity android:name="com.annoyingturtle.omnitop.noteActivity.NuovaNota" />
+        <activity android:name=".noteActivity.ModificaNota" />
+        <activity android:name=".noteActivity.NuovaNota" />
         <activity
             android:name=".dndSchedaActivity.DndSchedaActivity"
             android:parentActivityName=".dndCampagnaHomeActivity.DndCampagnaHome" />

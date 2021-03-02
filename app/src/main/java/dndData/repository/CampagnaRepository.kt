@@ -32,4 +32,8 @@ class CampagnaRepository(private val CampagnaDAO: CampagnaDAO) {
         return CampagnaDAO.readAllSchedeFromCampagnaID(id)
     }
 
+    suspend fun readAllNotesFromCampagnaID(id: Int): List<Notes>{
+        return CampagnaDAO.readAllNotesFromCampagnaID(id)
+    }
+
 }

@@ -17,6 +17,8 @@ class NotesViewModel(application: Application): AndroidViewModel(application) {
     val readAllData: LiveData<List<Notes>>
     val readFavoriteData: LiveData<List<Notes>>
 
+
+
     var singleLiveData: MutableLiveData<Notes> = lazy {
         MutableLiveData<Notes>()
     }.value

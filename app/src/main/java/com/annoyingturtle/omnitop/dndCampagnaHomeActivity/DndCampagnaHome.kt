@@ -90,7 +90,7 @@ class DndCampagnaHome : AppCompatActivity() {
         when(item.itemId){
             R.id.nuovaSchedaOpt -> startActivity(Intent(this, DndCampagnaNuovaScheda::class.java).putExtras(extras))
 
-            R.id.nuovaNotaOpt -> Toast.makeText(this, "nuovanota", Toast.LENGTH_SHORT).show()
+            R.id.nuovaNotaOpt -> startActivity(Intent(this, DndCampagnaHomeNuovaNota::class.java).putExtras(extras))
 
             R.id.nuovoElementoLibOpt -> Toast.makeText(this, "nuovoele", Toast.LENGTH_SHORT).show()
 
