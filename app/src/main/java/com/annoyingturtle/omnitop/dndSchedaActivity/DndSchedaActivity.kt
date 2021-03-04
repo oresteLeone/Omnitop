@@ -13,8 +13,10 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.annoyingturtle.omnitop.R
 import com.annoyingturtle.omnitop.dndCampagnaHomeActivity.DndCampagnaHome
+import com.annoyingturtle.omnitop.dndSchedaActivity.dndSchedaFragments.DndDettagliFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dndData.entities.Scheda
+import dndData.utilData.Dettagli
 import dndData.viewModel.SchedaViewModel
 import kotlinx.android.synthetic.main.activity_dnd_campagna_home.*
 import kotlinx.android.synthetic.main.activity_home.addBtn1
@@ -23,13 +25,14 @@ import kotlinx.android.synthetic.main.activity_home.diceBtn1
 import kotlinx.android.synthetic.main.activity_home.gridBtn1
 import kotlinx.android.synthetic.main.activity_home.noteBtn1
 import fabPackage.AbsFab
+import kotlinx.android.synthetic.main.fragment_dnd_dettagli.*
+import kotlinx.android.synthetic.main.fragment_dnd_dettagli.view.*
 
-class DndSchedaActivity : AppCompatActivity() {
+class DndSchedaActivity : AppCompatActivity(){
 
-    private lateinit var mSchedaViewModel : SchedaViewModel
+    private lateinit var mSchedaViewModel: SchedaViewModel
     var idScheda = -1
-    lateinit var schedaToDelete : Scheda
-
+    lateinit var schedaToDelete: Scheda
     lateinit var extras: Bundle
 
 
@@ -46,7 +49,8 @@ class DndSchedaActivity : AppCompatActivity() {
 
 
         /********** FAB ***********/
-        val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this, supportFragmentManager)
+        val fab =
+            AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this, supportFragmentManager)
         fab.startListener(this)
 
 
@@ -56,7 +60,7 @@ class DndSchedaActivity : AppCompatActivity() {
         idScheda = extras!!.getInt("idScheda")
 
         mSchedaViewModel = ViewModelProvider(this).get(SchedaViewModel::class.java)
-        if (idScheda > -1){
+        if (idScheda > -1) {
             mSchedaViewModel.getSchedaFromID(idScheda)
             showSchedaData()
 
@@ -83,8 +87,13 @@ class DndSchedaActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        when(item.itemId){
-            R.id.idGuida -> startActivity(Intent(this, GuidaSchedaDnDActivity::class.java).putExtras(extras))
+        when (item.itemId) {
+            R.id.idGuida -> startActivity(
+                Intent(
+                    this,
+                    GuidaSchedaDnDActivity::class.java
+                ).putExtras(extras)
+            )
 
             else -> onBackPressed()
         }
@@ -94,13 +103,21 @@ class DndSchedaActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    fun showSchedaData(){
+    fun showSchedaData() {
         mSchedaViewModel.getSingleLiveData().observe(this, Observer {
             supportActionBar?.title = Editable.Factory.getInstance().newEditable(it.nomePG)
         })
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        return navigateUpTo(Intent(this, DndCampagnaHome::class.java).putExtra("idCampagna", extras.getInt("idCampagna") ))
+        return navigateUpTo(
+            Intent(this, DndCampagnaHome::class.java).putExtra(
+                "idCampagna",
+                extras.getInt("idCampagna")
+            )
+        )
     }
+
+
+
 }

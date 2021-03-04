@@ -17,7 +17,11 @@
         android:roundIcon="@mipmap/ic_omnitoplauncher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Omnitop">
-        <activity android:name=".dndCampagnaHomeActivity.DndCampagnaModificaNota"></activity>
+        <activity android:name=".dndSchedaActivity.dndSchedaFragments.UpdateAbilita"></activity>
+        <activity
+            android:name=".dndSchedaActivity.dndSchedaFragments.UpdateCaratteristicheScheda"
+            android:parentActivityName=".dndSchedaActivity.DndSchedaActivity" />
+        <activity android:name=".dndCampagnaHomeActivity.DndCampagnaModificaNota" />
         <activity android:name=".dndCampagnaHomeActivity.DndCampagnaHomeNuovaNota" />
         <activity android:name=".dndCampagnaHomeActivity.DndCampagnaHomeInfoDati" />
         <activity

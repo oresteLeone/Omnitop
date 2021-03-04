@@ -10,14 +10,11 @@ import dndData.entities.Oggetti
 import dndData.entities.Scheda
 
 data class Statistiche(
-        var razza: String?,
-        var classe: String?,
         var puntiFeritaAttuali: Int?,
         var puntiFeritaTotali: Int?,
         var classeArmatura: Int?,
         var iniziativa: Int?,
         var velocitaMov: Double?,
-        var percezionePassiva: Int?,
         var bonusCompetenza: Int?,
         var dadoVita: Int?,
 
@@ -34,24 +31,24 @@ data class Statistiche(
         var tiroSalvezzaWIS: Boolean?,
         var tiroSalvezzaCHA: Boolean?,
 
-        var abAcrobazia: LvlCompetenza?,
-        var abAddestrare:LvlCompetenza?,
-        var abArcano:LvlCompetenza?,
-        var abAtletica:LvlCompetenza?,
-        var abFurtivita:LvlCompetenza?,
-        var abIndagare:LvlCompetenza?,
-        var abInganno:LvlCompetenza?,
-        var abIntimidire:LvlCompetenza?,
-        var abIntrattenere:LvlCompetenza?,
-        var abIntuizione:LvlCompetenza?,
-        var abMedicina:LvlCompetenza?,
-        var abNatura:LvlCompetenza?,
-        var abPercezione:LvlCompetenza?,
-        var abPersuasione:LvlCompetenza?,
-        var abRapiditMano:LvlCompetenza?,
-        var abReligione:LvlCompetenza?,
-        var abSoprav:LvlCompetenza?,
-        var abStoria:LvlCompetenza?
+        var abAcrobazia: Int?,
+        var abAddestrare:Int?,
+        var abArcano:Int?,
+        var abAtletica:Int?,
+        var abFurtivita:Int?,
+        var abIndagare:Int?,
+        var abInganno:Int?,
+        var abIntimidire:Int?,
+        var abIntrattenere:Int?,
+        var abIntuizione:Int?,
+        var abMedicina:Int?,
+        var abNatura:Int?,
+        var abPercezione:Int?,
+        var abPersuasione:Int?,
+        var abRapiditMano:Int?,
+        var abReligione:Int?,
+        var abSoprav:Int?,
+        var abStoria:Int?
 
         )
 
@@ -97,12 +94,13 @@ data class Incantatore(
 //-------------------------------------------------------------
 
 data class Dettagli(
-    var nomeGiocatore: String?,
+    var razza: String?,
+    var classe: String?,
     var background: String?,
+    var nomeGiocatore: String?,
     var allineamento: String?,
     var exp: Int?,
     var puntiIspirazione: Int?,
-    var puntiEperienza: Int?,
     var altreInformazioni: String?
 
 )

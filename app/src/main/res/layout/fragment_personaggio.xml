@@ -8,7 +8,6 @@
     android:background="@color/backGround"
     tools:context=".dndSchedaActivity.DndSchedaActivity">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -26,6 +25,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
+                android:id="@+id/imageView22"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="64dp"
@@ -54,6 +54,8 @@
                     android:layout_width="wrap_content"
                     android:inputType="number"
 
+                    android:clickable="false"
+                    android:focusable="false"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
                     android:text="0"
@@ -81,6 +83,8 @@
                     android:id="@+id/pfTotali"
                     android:layout_width="wrap_content"
                     android:inputType="number"
+                    android:clickable="false"
+                    android:focusable="false"
 
                     android:layout_height="wrap_content"
                     android:padding="8dp"
@@ -134,7 +138,40 @@
                 </ImageButton>
 
 
+
+
             </androidx.gridlayout.widget.GridLayout>
+
+            <ImageButton
+                android:id="@+id/editStatisticheBase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/imageView22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.701"
+                app:layout_constraintStart_toEndOf="@+id/gridLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.541"
+                app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+            <ImageButton
+                android:id="@+id/editStatisticheBaseSALVA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/imageView22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.701"
+                app:layout_constraintStart_toEndOf="@+id/gridLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.541"
+                app:srcCompat="@drawable/ic_baseline_save_24"
+                android:tint="@color/Secondary"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -152,9 +189,7 @@
             <androidx.gridlayout.widget.GridLayout
                 android:id="@+id/gridLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 app:columnCount="3"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -165,14 +200,16 @@
                 <EditText
                     android:id="@+id/classeArmatura"
                     android:layout_width="wrap_content"
-                    android:inputType="number"
-
                     android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+
+                    android:inputType="number"
                     android:paddingHorizontal="48dp"
+                    android:singleLine="true"
                     android:text="0"
                     android:textColor="@color/white"
                     android:textSize="32sp"
-                    android:singleLine="true"
 
                     app:layout_column="0"
                     app:layout_row="0" />
@@ -180,14 +217,16 @@
                 <EditText
                     android:id="@+id/iniziativa"
                     android:layout_width="wrap_content"
-                    android:inputType="number"
-
                     android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+
+                    android:inputType="number"
                     android:paddingHorizontal="48dp"
+                    android:singleLine="true"
                     android:text="0"
                     android:textColor="@color/white"
                     android:textSize="32sp"
-                    android:singleLine="true"
 
                     app:layout_column="1"
                     app:layout_row="0" />
@@ -195,14 +234,16 @@
                 <EditText
                     android:id="@+id/velocità"
                     android:layout_width="wrap_content"
-                    android:inputType="numberDecimal"
-
                     android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+
+                    android:inputType="numberDecimal"
                     android:paddingHorizontal="48dp"
+                    android:singleLine="true"
                     android:text="0"
                     android:textColor="@color/white"
                     android:textSize="32sp"
-                    android:singleLine="true"
 
                     app:layout_column="2"
                     app:layout_row="0" />
@@ -263,15 +304,17 @@
                 <EditText
                     android:id="@+id/profBonus"
                     android:layout_width="wrap_content"
-                    android:inputType="number"
-
                     android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+
+                    android:inputType="number"
                     android:paddingHorizontal="48dp"
                     android:paddingTop="16dp"
+                    android:singleLine="true"
                     android:text="0"
                     android:textColor="@color/white"
                     android:textSize="32sp"
-                    android:singleLine="true"
 
                     app:layout_column="1"
                     app:layout_row="2" />
@@ -279,15 +322,17 @@
                 <EditText
                     android:id="@+id/dadiVita"
                     android:layout_width="wrap_content"
-                    android:inputType="number"
-
                     android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+
+                    android:inputType="number"
                     android:paddingHorizontal="48dp"
                     android:paddingTop="16dp"
+                    android:singleLine="true"
                     android:text="0"
                     android:textColor="@color/white"
                     android:textSize="32sp"
-                    android:singleLine="true"
 
                     app:layout_column="2"
                     app:layout_row="2" />
@@ -370,21 +415,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/gridLayout5" />
 
-            <androidx.gridlayout.widget.GridLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/gridLayout4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
                 android:layout_marginStart="16dp"
 
-                android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
                 android:background="@android:color/transparent"
-                app:columnCount="2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:rowCount="1">
+                app:layout_constraintTop_toTopOf="parent">
 
 
                 <TextView
@@ -394,27 +436,49 @@
                     android:text="@string/caratteristiche"
                     android:textColor="@color/schedaTesto"
                     android:textSize="24sp"
-                    app:layout_column="0" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
                     android:id="@+id/editCaratteristiche"
-                    android:layout_marginStart="128dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:padding="8dp"
-                    android:paddingEnd="16dp"
-                    app:layout_column="1"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.879"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_baseline_edit_24" />
-            </androidx.gridlayout.widget.GridLayout>
+
+                <ImageButton
+                    android:id="@+id/editCaratteristicheSALVA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.879"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_save_24"
+                    android:tint="@color/Secondary"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.gridlayout.widget.GridLayout
                 android:id="@+id/gridLayout5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:background="@android:color/transparent"
                 app:columnCount="6"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/gridLayout4"
                 app:rowCount="5">
@@ -620,6 +684,7 @@
 
                 <CheckBox
                     android:id="@+id/tsForzaCheck"
+                    android:clickable="false"
                     android:layout_width="42dp"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/secondaryLight"
@@ -631,6 +696,7 @@
 
                 <CheckBox
                     android:id="@+id/tsDestrezzaCheck"
+                    android:clickable="false"
                     android:layout_width="42dp"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/secondaryLight"
@@ -641,6 +707,7 @@
                 <CheckBox
                     android:id="@+id/tsCostituzioneCheck"
                     android:layout_width="42dp"
+                    android:clickable="false"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/secondaryLight"
                     android:layoutDirection="rtl"
@@ -650,6 +717,7 @@
                 <CheckBox
                     android:id="@+id/tsIntCheck"
                     android:layout_width="42dp"
+                    android:clickable="false"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/secondaryLight"
                     android:layoutDirection="rtl"
@@ -659,6 +727,7 @@
                 <CheckBox
                     android:id="@+id/tsSaggCheck"
                     android:layout_width="42dp"
+                    android:clickable="false"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/secondaryLight"
                     android:layoutDirection="rtl"
@@ -668,6 +737,7 @@
                 <CheckBox
                     android:id="@+id/tsChaCheck"
                     android:layout_width="42dp"
+                    android:clickable="false"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/secondaryLight"
                     android:layoutDirection="rtl"
@@ -1036,7 +1106,7 @@
 
 
                 <ImageButton
-                    android:id="@+id/pulsanteAtrletica"
+                    android:id="@+id/pulsanteAtletica"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:background="@drawable/raggruppa_895"
@@ -1468,7 +1538,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/intimidire"
+                    android:text="@string/intrattenere"
                     app:layout_column="1"
                     app:layout_row="9" />
 

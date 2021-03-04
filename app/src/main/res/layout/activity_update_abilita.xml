@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dndSchedaActivity.dndSchedaFragments.UpdateAbilita">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutModificaAbilità"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/myToolbarModificaAbilità"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            tools:layout_editor_absoluteY="30dp" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_template"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayoutModificaAbilità">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/card_template"
+            android:paddingBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayoutModificaAbilità"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/nda"
+                android:visibility="visible"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/acrobazia"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/addestrare"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/arcano"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/atletica"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/furtività"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/indagare"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/inganno"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/intimidire"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/intrattenere"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/intuizione"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/medicina"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/natura"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/percezione"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/persuasione"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/rapDiMa"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView47" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/religione"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/sopravvivenza"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="82dp"
+                android:text="@string/storia"
+                android:textColor="@color/schedaTesto"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+
+            <RadioGroup
+                android:id="@+id/radioAcrobazia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
+                app:layout_constraintStart_toEndOf="@+id/textView31"
+                app:layout_constraintTop_toBottomOf="@+id/textView30">
+
+
+                <RadioButton
+                    android:id="@+id/acrobazia0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto"/>
+
+                <RadioButton
+                    android:id="@+id/acrobazia1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto"/>
+
+                <RadioButton
+                    android:id="@+id/acrobazia2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto"/>
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioAddestrare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintHorizontal_bias="1.007"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView32"
+                app:layout_constraintTop_toBottomOf="@+id/radioAcrobazia">
+
+
+                <RadioButton
+                    android:id="@+id/addestrare0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/addestrare1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/addestrare2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioArcano"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView33"
+                app:layout_constraintTop_toBottomOf="@+id/radioAddestrare">
+
+
+                <RadioButton
+                    android:id="@+id/Arcano0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Arcano1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Arcano2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioAtletica"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView34"
+                app:layout_constraintTop_toBottomOf="@+id/radioArcano">
+
+
+                <RadioButton
+                    android:id="@+id/Atletica0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Atletica1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Atletica2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioFurtività"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView35"
+                app:layout_constraintTop_toBottomOf="@+id/radioAtletica">
+
+
+                <RadioButton
+                    android:id="@+id/Furtività0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Furtività1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Furtività2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioIndagare"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView36"
+                app:layout_constraintTop_toBottomOf="@+id/radioFurtività">
+
+
+                <RadioButton
+                    android:id="@+id/Indagare0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Indagare1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Indagare2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioInganno"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView37"
+                app:layout_constraintTop_toBottomOf="@+id/radioIndagare">
+
+
+                <RadioButton
+                    android:id="@+id/Inganno0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Inganno1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Inganno2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioIntimidire"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView38"
+                app:layout_constraintTop_toBottomOf="@+id/radioInganno">
+
+
+                <RadioButton
+                    android:id="@+id/Intimidire0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Intimidire1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Intimidire2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioIntrattenere"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView46"
+                app:layout_constraintTop_toBottomOf="@+id/radioIntimidire">
+
+
+                <RadioButton
+                    android:id="@+id/Intrattenere0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Intrattenere1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Intrattenere2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioIntuizione"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView39"
+                app:layout_constraintTop_toBottomOf="@+id/radioIntrattenere">
+
+
+                <RadioButton
+                    android:id="@+id/Intuizione0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Intuizione1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Intuizione2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioMedicina"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView40"
+                app:layout_constraintTop_toBottomOf="@+id/radioIntuizione">
+
+
+                <RadioButton
+                    android:id="@+id/Medicina0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Medicina1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Medicina2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioNatura"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView41"
+                app:layout_constraintTop_toBottomOf="@+id/radioMedicina">
+
+
+                <RadioButton
+                    android:id="@+id/Natura0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Natura1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Natura2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioPercezione"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView42"
+                app:layout_constraintTop_toBottomOf="@+id/radioNatura">
+
+
+                <RadioButton
+                    android:id="@+id/Percezione0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Percezione1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Percezione2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioPersuasione"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView47"
+                app:layout_constraintTop_toBottomOf="@+id/radioPercezione">
+
+
+                <RadioButton
+                    android:id="@+id/Persuasione0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Persuasione1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Persuasione2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioRapidità"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView43"
+                app:layout_constraintTop_toBottomOf="@+id/radioPersuasione">
+
+
+                <RadioButton
+                    android:id="@+id/Rapidità0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Rapidità1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Rapidità2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioReligione"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView44"
+                app:layout_constraintTop_toBottomOf="@+id/radioRapidità">
+
+
+                <RadioButton
+                    android:id="@+id/Religione0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Religione1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Religione2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioSopravvivenza"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView45"
+                app:layout_constraintTop_toBottomOf="@+id/radioReligione">
+
+
+                <RadioButton
+                    android:id="@+id/Sopravvivenza0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Sopravvivenza1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Sopravvivenza2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioStoria"
+                app:layout_constraintHorizontal_bias="1.007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView46"
+                app:layout_constraintTop_toBottomOf="@+id/radioSopravvivenza">
+
+
+                <RadioButton
+                    android:id="@+id/Storia0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nda"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Storia1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addestrato"
+                    android:textColor="@color/schedaTesto" />
+
+                <RadioButton
+                    android:id="@+id/Storia2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esperto"
+                    android:textColor="@color/schedaTesto" />
+
+            </RadioGroup>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

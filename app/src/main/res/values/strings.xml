@@ -62,6 +62,11 @@
 
     <!-- ABILITA' D&D -->
 
+    <string name="valore">VALORE</string>
+    <string name="nda">NON ADDESTRATO / ADDESTRATO / ESPERTO</string>
+    <string name="addestrato">ADDESTRATO</string>
+    <string name="esperto">ESPERTO</string>
+
     <string name="abilità">ABILITÀ</string>
     <string name="acrobazia">Acrobazia</string>
     <string name="intuizione">Intuizione</string>

@@ -64,6 +64,8 @@
                 app:layout_constraintTop_toBottomOf="@id/imageView10" />
 
             <EditText
+                android:focusable="false"
+                android:clickable="false"
                 android:id="@+id/classe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -102,7 +104,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
             <EditText
-                android:id="@+id/razza"
+                android:focusable="false"
+                android:clickable="false"
+
+                android:id="@+id/razza_Et"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -124,7 +129,7 @@
                 android:background="@color/secondaryLight"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/razza" />
+                app:layout_constraintTop_toBottomOf="@+id/razza_Et" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -139,6 +144,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView12" />
 
             <EditText
+                android:focusable="false"
+                android:clickable="false"
                 android:id="@+id/backGround"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -176,6 +183,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
             <EditText
+                android:focusable="false"
+                android:clickable="false"
                 android:id="@+id/nomeGiocatore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -214,6 +223,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView14" />
 
             <EditText
+                android:focusable="false"
+                android:clickable="false"
                 android:id="@+id/allineamento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -254,6 +265,8 @@
             <EditText
                 android:id="@+id/puntiEsperienza"
 
+                android:focusable="false"
+                android:clickable="false"
                 android:inputType="number"
 
                 android:layout_width="wrap_content"
@@ -293,8 +306,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 
             <EditText
+
                 android:id="@+id/puntiIspirazione"
 
+                android:focusable="false"
+                android:clickable="false"
                 android:inputType="number"
 
                 android:layout_width="wrap_content"
@@ -332,7 +348,23 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/textView9"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="visible"/>
+            <ImageButton
+                android:id="@+id/editInformazioniBaseSALVA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="136dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:tint="@color/Secondary"
+                android:src="@drawable/ic_baseline_save_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -363,14 +395,29 @@
                     android:id="@+id/editAltreInformazioni"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_edit_24"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.876"
+                    app:layout_constraintStart_toEndOf="@+id/textView17"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/editAltreInformazioniSALVA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="114dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="16dp"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/ic_baseline_edit_24"
+                    android:src="@drawable/ic_baseline_save_24"
+                    android:tint="@color/Secondary"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView17"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="gone"/>
 
                 <ImageView
                     android:id="@+id/imageView17"
@@ -385,6 +432,8 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
                 <EditText
+                    android:focusable="false"
+                    android:clickable="false"
                     android:id="@+id/altreInformazioni"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

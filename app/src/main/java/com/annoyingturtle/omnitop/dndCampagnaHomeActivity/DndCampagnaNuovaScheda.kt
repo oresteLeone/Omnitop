@@ -53,12 +53,10 @@ class DndCampagnaNuovaScheda : AppCompatActivity() {
 
             /**Valore per le statistiche della scheda*/
 
-            val statistiche = Statistiche("","",0,0,0,0,0.0,0,2,0,
-                0,0,0,0,0,0,
-                false,false,false,false,false,false,
-                LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,
-                LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,LvlCompetenza.NONADD,
-                LvlCompetenza.NONADD,LvlCompetenza.NONADD)
+            val statistiche = Statistiche(0,0,0,0,0.0,2,0,0,
+                0,0,0,0,0,false,false,false,false,false,false,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0)
 
             /**Valore per Incantatore */
             var incantatore = Incantatore("","",0,0,0,0,0,0,0,0,0,0,
@@ -68,7 +66,7 @@ class DndCampagnaNuovaScheda : AppCompatActivity() {
 
             /** Valore per dettagli*/
 
-            val dettagli = Dettagli("","","",0,0,0,"")
+            val dettagli = Dettagli("","","","","",0,0,"")
 
 
 

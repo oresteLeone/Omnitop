@@ -55,6 +55,23 @@
                     android:layout_marginEnd="16dp"
                     android:background="@android:color/transparent"
                     android:src="@drawable/ic_baseline_edit_24"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView21"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/editClasseIncantatoreSALVA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_save_24"
+                    android:tint="@color/Secondary"
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toEndOf="@+id/textView21"
@@ -88,6 +105,8 @@
                         android:layout_height="wrap_content"
                         android:background="@null"
                         android:hint="Inserisci la classe da incantatore"
+                        android:clickable="false"
+                        android:focusable="false"
                         android:singleLine="true"
                         android:textSize="20sp"
                         app:layout_column="0"
@@ -99,30 +118,38 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="Caratteristica"
+                        android:clickable="false"
+                        android:focusable="false"
                         android:singleLine="true"
                         android:textSize="16sp"
                         app:layout_column="0"
                         app:layout_row="1" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/CDIncantesimi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="56dp"
                         android:layout_marginEnd="56dp"
                         android:text="0"
+                        android:inputType="number"
+                        android:clickable="false"
+                        android:focusable="false"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         app:layout_column="1"
                         app:layout_row="1" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/TPCIncantesimi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="76dp"
                         android:layout_marginEnd="56dp"
                         android:text="0"
+                        android:inputType="number"
+                        android:clickable="false"
+                        android:focusable="false"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         app:layout_column="2"
@@ -150,7 +177,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
                         android:text="@string/BAI"
                         android:textColor="@color/schedaTesto"
                         android:textSize="12sp"
@@ -236,10 +262,24 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:padding="8dp"
+                        android:visibility="visible"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/addTrucchetti"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+                    <ImageButton
+                        android:id="@+id/editTrucchettiSALVA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/addTrucchetti"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_save_24"
+                        android:tint="@color/Secondary"
+                        android:visibility="gone"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <ImageView
@@ -306,6 +346,10 @@
                         app:layout_column="0" />
 
                     <EditText
+
+                        android:focusable="false"
+                        android:clickable="false"
+
                         android:id="@+id/slotLv1Attuali"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -314,6 +358,7 @@
                         android:inputType="number"
                         android:singleLine="true"
                         android:text="0"
+                        android:hint="0"
                         android:textColor="@color/secondaryLight"
                         android:textSize="24sp"
                         app:layout_column="1" />
@@ -328,12 +373,16 @@
 
                     <EditText
                         android:id="@+id/slotLv1Totali"
+                        android:focusable="false"
+                        android:clickable="false"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@null"
                         android:inputType="number"
                         android:singleLine="true"
                         android:text="0"
+                        android:hint="0"
+
                         android:textColor="@color/schedaTesto"
                         android:textSize="20sp"
                         app:layout_column="3" />
@@ -360,7 +409,18 @@
                         android:background="@android:color/transparent"
                         android:padding="8dp"
                         app:layout_column="6"
+                        android:visibility="visible"
                         app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+                    <ImageButton
+                        android:id="@+id/editLv1SALVA"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:layout_row="0"
+                        app:srcCompat="@drawable/ic_baseline_save_24"
+                        android:tint="@color/Secondary"
+                        android:visibility="gone"/>
                 </androidx.gridlayout.widget.GridLayout>
 
                 <ImageView
@@ -431,6 +491,10 @@
 
                     <EditText
                         android:id="@+id/slotLv2Attuali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="48dp"
@@ -452,6 +516,10 @@
 
                     <EditText
                         android:id="@+id/slotLv2Totali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@null"
@@ -484,7 +552,19 @@
                         android:background="@android:color/transparent"
                         android:padding="8dp"
                         app:layout_column="6"
-                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                        app:srcCompat="@drawable/ic_baseline_edit_24"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/editLv2SALVA"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:layout_row="0"
+
+                        app:srcCompat="@drawable/ic_baseline_save_24"
+                        android:tint="@color/Secondary"
+                        android:visibility="gone"/>
                 </androidx.gridlayout.widget.GridLayout>
 
                 <ImageView
@@ -555,6 +635,10 @@
 
                     <EditText
                         android:id="@+id/slotLv3Attuali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="48dp"
@@ -576,6 +660,10 @@
 
                     <EditText
                         android:id="@+id/slotLv3Totali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@null"
@@ -608,7 +696,19 @@
                         android:background="@android:color/transparent"
                         android:padding="8dp"
                         app:layout_column="6"
-                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                        app:srcCompat="@drawable/ic_baseline_edit_24"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/editLv3SALVA"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:layout_row="0"
+
+                        app:srcCompat="@drawable/ic_baseline_save_24"
+                        android:tint="@color/Secondary"
+                        android:visibility="gone"/>
                 </androidx.gridlayout.widget.GridLayout>
 
                 <ImageView
@@ -679,6 +779,10 @@
 
                     <EditText
                         android:id="@+id/slotLv4Attuali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="48dp"
@@ -700,6 +804,10 @@
 
                     <EditText
                         android:id="@+id/slotLv4Totali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@null"
@@ -732,7 +840,19 @@
                         android:background="@android:color/transparent"
                         android:padding="8dp"
                         app:layout_column="6"
-                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                        app:srcCompat="@drawable/ic_baseline_edit_24"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/editLv4SALVA"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:layout_row="0"
+
+                        app:srcCompat="@drawable/ic_baseline_save_24"
+                        android:tint="@color/Secondary"
+                        android:visibility="gone"/>
                 </androidx.gridlayout.widget.GridLayout>
 
                 <ImageView
@@ -803,6 +923,10 @@
 
                     <EditText
                         android:id="@+id/slotLv5Attuali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="48dp"
@@ -824,6 +948,10 @@
 
                     <EditText
                         android:id="@+id/slotLv5Totali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@null"
@@ -856,7 +984,19 @@
                         android:background="@android:color/transparent"
                         android:padding="8dp"
                         app:layout_column="6"
-                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                        app:srcCompat="@drawable/ic_baseline_edit_24"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/editLv5SALVA"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:layout_row="0"
+
+                        app:srcCompat="@drawable/ic_baseline_save_24"
+                        android:tint="@color/Secondary"
+                        android:visibility="gone"/>
                 </androidx.gridlayout.widget.GridLayout>
 
                 <ImageView
@@ -927,6 +1067,10 @@
 
                     <EditText
                         android:id="@+id/slotLv6Attuali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="48dp"
@@ -948,6 +1092,10 @@
 
                     <EditText
                         android:id="@+id/slotLv6Totali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@null"
@@ -973,14 +1121,28 @@
                         android:background="@android:color/transparent"
                         android:padding="8dp"
                         app:layout_column="5"
-                        app:srcCompat="@drawable/add_icon" />
+                        app:srcCompat="@drawable/add_icon"
+                        android:visibility="visible"/>
+
 
                     <ImageButton
                         android:id="@+id/editLv6"
                         android:background="@android:color/transparent"
                         android:padding="8dp"
                         app:layout_column="6"
-                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                        app:srcCompat="@drawable/ic_baseline_edit_24"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/editLv6SALVA"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:layout_row="0"
+
+                        app:srcCompat="@drawable/ic_baseline_save_24"
+                        android:tint="@color/Secondary"
+                        android:visibility="gone"/>
                 </androidx.gridlayout.widget.GridLayout>
 
                 <ImageView
@@ -1051,6 +1213,10 @@
 
                     <EditText
                         android:id="@+id/slotLv7Attuali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="48dp"
@@ -1072,6 +1238,10 @@
 
                     <EditText
                         android:id="@+id/slotLv7Totali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@null"
@@ -1104,7 +1274,19 @@
                         android:background="@android:color/transparent"
                         android:padding="8dp"
                         app:layout_column="6"
-                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                        app:srcCompat="@drawable/ic_baseline_edit_24"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/editLv7SALVA"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:layout_row="0"
+
+                        app:srcCompat="@drawable/ic_baseline_save_24"
+                        android:tint="@color/Secondary"
+                        android:visibility="gone"/>
                 </androidx.gridlayout.widget.GridLayout>
 
                 <ImageView
@@ -1175,6 +1357,10 @@
 
                     <EditText
                         android:id="@+id/slotLv8Attuali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="48dp"
@@ -1196,6 +1382,10 @@
 
                     <EditText
                         android:id="@+id/slotLv8Totali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@null"
@@ -1228,7 +1418,19 @@
                         android:background="@android:color/transparent"
                         android:padding="8dp"
                         app:layout_column="6"
-                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                        app:srcCompat="@drawable/ic_baseline_edit_24"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/editLv8SALVA"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:layout_row="0"
+
+                        app:srcCompat="@drawable/ic_baseline_save_24"
+                        android:tint="@color/Secondary"
+                        android:visibility="gone"/>
                 </androidx.gridlayout.widget.GridLayout>
 
                 <ImageView
@@ -1299,6 +1501,10 @@
 
                     <EditText
                         android:id="@+id/slotLv9Attuali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="48dp"
@@ -1320,6 +1526,10 @@
 
                     <EditText
                         android:id="@+id/slotLv9Totali"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:hint="0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@null"
@@ -1352,7 +1562,19 @@
                         android:background="@android:color/transparent"
                         android:padding="8dp"
                         app:layout_column="6"
-                        app:srcCompat="@drawable/ic_baseline_edit_24" />
+                        app:srcCompat="@drawable/ic_baseline_edit_24"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/editLv9SALVA"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        app:layout_column="6"
+                        app:layout_row="0"
+
+                        app:srcCompat="@drawable/ic_baseline_save_24"
+                        android:tint="@color/Secondary"
+                        android:visibility="gone"/>
                 </androidx.gridlayout.widget.GridLayout>
 
                 <ImageView
