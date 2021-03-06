@@ -7,6 +7,8 @@ import android.text.Editable
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -95,6 +97,14 @@ class DndSchedaActivity : AppCompatActivity(){
                 ).putExtras(extras)
             )
 
+            R.id.idDelete -> {
+                mSchedaViewModel.getSingleLiveData().observe(this, Observer {
+                    schedaToDelete = Scheda(idScheda, it.Campagnaid, it.nomePG, it.tipoScheda, it.statistiche, it.incantatore, it.dettagli, it.moneteTotali)
+
+                    eliminaScheda(schedaToDelete)
+                })
+            }
+
             else -> onBackPressed()
         }
 
@@ -119,5 +129,25 @@ class DndSchedaActivity : AppCompatActivity(){
     }
 
 
+    /** Funzione per la cancellazione di una Scheda (e per eventuali cancellazioni a cascata future)*/
+
+    fun eliminaScheda(scheda : Scheda){
+
+        val conferma = AlertDialog.Builder(this)
+        conferma.setPositiveButton("Sì"){ _, _ ->
+            mSchedaViewModel.getSingleLiveData().removeObservers(this)
+            mSchedaViewModel.deleteScheda(schedaToDelete)
+            Toast.makeText(this, "Scheda eliminata con successo!", Toast.LENGTH_SHORT).show()
+            navigateUpTo(Intent(this, DndCampagnaHome::class.java).putExtra("idCampagna", extras.getInt("idCampagna")))
+
+        }
+        conferma.setNegativeButton("No"){ _, _ ->
+
+        }
+        conferma.setTitle("Eliminazione Scheda ${scheda.nomePG}")
+        conferma.setMessage("Sei sicuro di voler cancellare la scheda ${scheda.nomePG}?")
+        conferma.create().show()
+    }
 
 }
+

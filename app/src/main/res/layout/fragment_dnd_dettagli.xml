@@ -51,290 +51,204 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/classeHold"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColorHint="@color/PrimaryLight65op"
+                app:boxStrokeColor="@color/PrimaryLight"
+                app:hintTextColor="@color/PrimaryLight65op"
+                app:layout_constraintTop_toBottomOf="@+id/razza_Hold"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/razza"
-                android:textColor="@color/schedaTesto"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imageView10" />
+                android:layout_marginEnd="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/classe"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:hint="Inserire la classe:"
+                    android:textSize="16sp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:focusable="false"
-                android:clickable="false"
-                android:id="@+id/classe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:hint="Inserire la classe..."
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.24"
-                app:layout_constraintStart_toEndOf="@+id/textView10"
-                app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
-            <ImageView
-                android:id="@+id/imageView12"
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/razza_Hold"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/secondaryLight"
+                android:layout_height="wrap_content"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/classe" />
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                android:textColorHint="@color/PrimaryLight65op"
+                app:boxStrokeColor="@color/PrimaryLight"
+                app:hintTextColor="@color/PrimaryLight65op"
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/classe"
-                android:textColor="@color/schedaTesto"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+                android:layout_marginEnd="16dp">
 
-            <EditText
-                android:focusable="false"
-                android:clickable="false"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/razza_Et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:hint="Razza:"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                android:id="@+id/razza_Et"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:hint="Inserire la razza..."
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/textView10"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-            <ImageView
-                android:id="@+id/imageView11"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/BGHold"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/secondaryLight"
+                android:layout_height="wrap_content"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/razza_Et" />
+                app:layout_constraintTop_toBottomOf="@+id/classeHold"
+                android:textColorHint="@color/PrimaryLight65op"
+                app:boxStrokeColor="@color/PrimaryLight"
+                app:hintTextColor="@color/PrimaryLight65op"
 
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/backGround"
-                android:textColor="@color/schedaTesto"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+                android:layout_marginEnd="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/backGround"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:hint="BackGround:"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/classeHold" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:focusable="false"
-                android:clickable="false"
-                android:id="@+id/backGround"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:hint="Inserire il BackGround..."
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView12"
-                app:layout_constraintTop_toBottomOf="@+id/imageView12" />
-
-            <ImageView
-                android:id="@+id/imageView13"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/NomeGiocatoreHold"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/secondaryLight"
+                android:layout_height="wrap_content"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/backGround" />
+                app:layout_constraintTop_toBottomOf="@+id/BGHold"
+                android:textColorHint="@color/PrimaryLight65op"
+                app:boxStrokeColor="@color/PrimaryLight"
+                app:hintTextColor="@color/PrimaryLight65op"
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/nome"
-                android:textColor="@color/schedaTesto"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+                android:layout_marginEnd="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nomeGiocatore"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:hint="Nome Giocatore"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/BGHold" />
 
-            <EditText
-                android:focusable="false"
-                android:clickable="false"
-                android:id="@+id/nomeGiocatore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:hint="Inserire il tuo Nome"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.175"
-                app:layout_constraintStart_toEndOf="@+id/textView13"
-                app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <ImageView
-                android:id="@+id/imageView14"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/allineamentoHold"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/secondaryLight"
+                android:layout_height="wrap_content"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nomeGiocatore" />
+                app:layout_constraintTop_toBottomOf="@+id/NomeGiocatoreHold"
+                android:textColorHint="@color/PrimaryLight65op"
+                app:boxStrokeColor="@color/PrimaryLight"
+                app:hintTextColor="@color/PrimaryLight65op"
 
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/allienamento"
-                android:textColor="@color/schedaTesto"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+                android:layout_marginEnd="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/allineamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:hint="Allineamento:"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/NomeGiocatoreHold" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:focusable="false"
-                android:clickable="false"
-                android:id="@+id/allineamento"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:hint="Inserire Allineamento"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.34"
-                app:layout_constraintStart_toEndOf="@+id/textView14"
-                app:layout_constraintTop_toBottomOf="@+id/imageView14" />
-
-            <ImageView
-                android:id="@+id/imageView15"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/puntiEsperienzaHold"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/secondaryLight"
+                android:layout_height="wrap_content"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/allineamento" />
+                app:layout_constraintTop_toBottomOf="@+id/allineamentoHold"
+                android:textColorHint="@color/PrimaryLight65op"
+                app:boxStrokeColor="@color/PrimaryLight"
+                app:hintTextColor="@color/PrimaryLight65op"
 
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/puntiEsperienza"
-                android:textColor="@color/schedaTesto"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+                android:layout_marginEnd="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/puntiEsperienza"
 
-            <EditText
-                android:id="@+id/puntiEsperienza"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:hint="Punti Esperienza:"
+                    android:inputType="number"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/allineamentoHold" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                android:focusable="false"
-                android:clickable="false"
-                android:inputType="number"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:hint="Numero PX"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.056"
-                app:layout_constraintStart_toEndOf="@+id/textView15"
-                app:layout_constraintTop_toBottomOf="@+id/imageView15" />
-
-            <ImageView
-                android:id="@+id/imageView16"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/puntiIspirazioneaHold"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/secondaryLight"
+                android:layout_height="wrap_content"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/puntiEsperienza" />
+                app:layout_constraintTop_toBottomOf="@+id/puntiEsperienzaHold"
+                android:textColorHint="@color/PrimaryLight65op"
+                app:boxStrokeColor="@color/PrimaryLight"
+                app:hintTextColor="@color/PrimaryLight65op"
 
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/puntiisp"
-                android:textColor="@color/schedaTesto"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+                android:layout_marginEnd="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/puntiIspirazione"
 
-            <EditText
-
-                android:id="@+id/puntiIspirazione"
-
-                android:focusable="false"
-                android:clickable="false"
-                android:inputType="number"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:hint="Numero Punti Ispirazione"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.17"
-                app:layout_constraintStart_toEndOf="@+id/textView16"
-                app:layout_constraintTop_toBottomOf="@+id/imageView16" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/secondaryLight"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/puntiIspirazione" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:hint="Punti Ispirazione:"
+                    android:inputType="number"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/puntiEsperienzaHold" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <ImageButton
                 android:id="@+id/editInformazioniBase"

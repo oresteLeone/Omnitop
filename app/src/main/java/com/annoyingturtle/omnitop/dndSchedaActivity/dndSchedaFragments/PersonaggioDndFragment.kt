@@ -340,9 +340,16 @@ class PersonaggioDndFragment : Fragment() {
 
     fun salvaStatBase(mostraToast: Int){
         mSchedaViewModel.getSingleLiveData().observe(viewLifecycleOwner, Observer {
+            val pfA : Int = if (pfAttuali.text.isEmpty()) 0 else pfAttuali.text.toString().toInt()
+            val pfT : Int = if (pfTotali.text.isEmpty()) 0 else pfTotali.text.toString().toInt()
+            val ca : Int = if (classeArmatura.text.isEmpty()) 0 else classeArmatura.text.toString().toInt()
+            val ini : Int = if (iniziativa.text.isEmpty()) 0 else iniziativa.text.toString().toInt()
+            val vel : Double = if (velocità.text.isEmpty()) 0.0 else velocità.text.toString().toDouble()
+            val prf : Int = if (profBonus.text.isEmpty()) 0 else profBonus.text.toString().toInt()
+            val dv : Int = if (dadiVita.text.isEmpty()) 0 else dadiVita.text.toString().toInt()
+
             val personaggioNuovo = Statistiche(
-                pfAttuali.text.toString().toInt(), pfTotali.text.toString().toInt(), classeArmatura.text.toString().toInt(), iniziativa.text.toString().toInt(),
-                velocità.text.toString().toDouble(), profBonus.text.toString().toInt(), dadiVita.text.toString().toInt(),
+                pfA, pfT, ca, ini, vel, prf, dv,
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche?.STR, mSchedaViewModel.getSingleLiveData().value!!.statistiche?.DEX,
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche?.CON, mSchedaViewModel.getSingleLiveData().value!!.statistiche?.INT,
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche?.WIS, mSchedaViewModel.getSingleLiveData().value!!.statistiche?.CHA,

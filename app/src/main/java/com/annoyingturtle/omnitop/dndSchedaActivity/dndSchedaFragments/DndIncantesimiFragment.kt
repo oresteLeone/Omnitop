@@ -15,6 +15,7 @@ import dndData.entities.Scheda
 import dndData.utilData.Incantatore
 import dndData.viewModel.SchedaViewModel
 import kotlinx.android.synthetic.main.fragment_dnd_incantesimi.*
+import kotlinx.android.synthetic.main.fragment_personaggio.*
 import java.lang.Exception
 import kotlin.math.log
 
@@ -391,11 +392,11 @@ class DndIncantesimiFragment : Fragment() {
 
 
             mSchedaViewModel.getSingleLiveData().observe(this, Observer {
+                val cd : Int = if (CDIncantesimi.text.isEmpty()) 0 else CDIncantesimi.text.toString().toInt()
+                val tpc : Int = if (TPCIncantesimi.text.isEmpty()) 0 else TPCIncantesimi.text.toString().toInt()
+
                 val nuovoIncantatore = Incantatore(
-                    classeIncantatore.text.toString(),
-                    caratteristicaIncantatore.text.toString(),
-                    CDIncantesimi.text.toString().toInt(),
-                    TPCIncantesimi.text.toString().toInt(),
+                    classeIncantatore.text.toString(), caratteristicaIncantatore.text.toString(), cd, tpc,
                     mSchedaViewModel.getSingleLiveData().value?.incantatore?.slotLVL1MAX, mSchedaViewModel.getSingleLiveData().value?.incantatore?.slotLVL1,
                     mSchedaViewModel.getSingleLiveData().value?.incantatore?.slotLVL2MAX, mSchedaViewModel.getSingleLiveData().value?.incantatore?.slotLVL2,
                     mSchedaViewModel.getSingleLiveData().value?.incantatore?.slotLVL3MAX, mSchedaViewModel.getSingleLiveData().value?.incantatore?.slotLVL3,

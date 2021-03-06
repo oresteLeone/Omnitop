@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@drawable/card_template"
-            android:paddingBottom="16dp"
+            android:paddingBottom="64dp"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayoutModificaAbilità"
             tools:layout_editor_absoluteX="0dp">
 
@@ -48,9 +48,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/nda"
-                android:visibility="visible"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -61,22 +61,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/acrobazia"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView32"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView30" />
+                app:layout_constraintTop_toBottomOf="@id/textView30" />
 
             <TextView
                 android:id="@+id/textView32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="26dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/addestrare"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView33"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
@@ -85,10 +87,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/arcano"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView34"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
@@ -97,10 +100,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/atletica"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView35"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
@@ -109,10 +113,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/furtività"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView36"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView34" />
 
@@ -121,10 +126,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/indagare"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView37"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView35" />
 
@@ -133,10 +139,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/inganno"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView38"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
@@ -145,10 +152,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="26dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/intimidire"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView46"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView37" />
 
@@ -157,10 +165,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/intrattenere"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView39"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
@@ -169,10 +178,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="16dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/intuizione"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView40"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView46" />
 
@@ -181,10 +191,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/medicina"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView41"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
@@ -193,10 +204,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/natura"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView42"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
@@ -205,10 +217,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/percezione"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView47"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView41" />
 
@@ -217,10 +230,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/persuasione"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView43"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
@@ -229,10 +243,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/rapDiMa"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView44"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView47" />
 
@@ -241,10 +256,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/religione"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView45"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
@@ -253,19 +269,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/sopravvivenza"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView16"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView44" />
 
             <TextView
+                android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
-                android:layout_marginBottom="82dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/storia"
                 android:textColor="@color/schedaTesto"
                 android:textSize="14sp"
@@ -278,9 +295,10 @@
                 android:id="@+id/radioAcrobazia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioAddestrare"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView31"
@@ -292,21 +310,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto"/>
+                    android:textColor="@color/schedaTesto" />
 
                 <RadioButton
                     android:id="@+id/acrobazia1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto"/>
+                    android:textColor="@color/schedaTesto" />
 
                 <RadioButton
                     android:id="@+id/acrobazia2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto"/>
+                    android:textColor="@color/schedaTesto" />
 
             </RadioGroup>
 
@@ -314,10 +332,12 @@
                 android:id="@+id/radioAddestrare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
-                app:layout_constraintHorizontal_bias="1.007"
+                app:layout_constraintBottom_toTopOf="@+id/radioArcano"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView32"
                 app:layout_constraintTop_toBottomOf="@+id/radioAcrobazia">
 
@@ -347,12 +367,14 @@
 
             <RadioGroup
                 android:id="@+id/radioArcano"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioAtletica"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView33"
                 app:layout_constraintTop_toBottomOf="@+id/radioAddestrare">
 
@@ -382,12 +404,14 @@
 
             <RadioGroup
                 android:id="@+id/radioAtletica"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioFurtività"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView34"
                 app:layout_constraintTop_toBottomOf="@+id/radioArcano">
 
@@ -417,12 +441,14 @@
 
             <RadioGroup
                 android:id="@+id/radioFurtività"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioIndagare"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView35"
                 app:layout_constraintTop_toBottomOf="@+id/radioAtletica">
 
@@ -452,12 +478,14 @@
 
             <RadioGroup
                 android:id="@+id/radioIndagare"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioInganno"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView36"
                 app:layout_constraintTop_toBottomOf="@+id/radioFurtività">
 
@@ -487,12 +515,14 @@
 
             <RadioGroup
                 android:id="@+id/radioInganno"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioIntimidire"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView37"
                 app:layout_constraintTop_toBottomOf="@+id/radioIndagare">
 
@@ -522,12 +552,14 @@
 
             <RadioGroup
                 android:id="@+id/radioIntimidire"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioIntrattenere"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView38"
                 app:layout_constraintTop_toBottomOf="@+id/radioInganno">
 
@@ -557,12 +589,14 @@
 
             <RadioGroup
                 android:id="@+id/radioIntrattenere"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioIntuizione"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView46"
                 app:layout_constraintTop_toBottomOf="@+id/radioIntimidire">
 
@@ -592,12 +626,14 @@
 
             <RadioGroup
                 android:id="@+id/radioIntuizione"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioMedicina"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView39"
                 app:layout_constraintTop_toBottomOf="@+id/radioIntrattenere">
 
@@ -627,12 +663,14 @@
 
             <RadioGroup
                 android:id="@+id/radioMedicina"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioNatura"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView40"
                 app:layout_constraintTop_toBottomOf="@+id/radioIntuizione">
 
@@ -662,12 +700,14 @@
 
             <RadioGroup
                 android:id="@+id/radioNatura"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioPercezione"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView41"
                 app:layout_constraintTop_toBottomOf="@+id/radioMedicina">
 
@@ -697,12 +737,14 @@
 
             <RadioGroup
                 android:id="@+id/radioPercezione"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioPersuasione"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView42"
                 app:layout_constraintTop_toBottomOf="@+id/radioNatura">
 
@@ -732,12 +774,14 @@
 
             <RadioGroup
                 android:id="@+id/radioPersuasione"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioRapidità"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView47"
                 app:layout_constraintTop_toBottomOf="@+id/radioPercezione">
 
@@ -767,12 +811,14 @@
 
             <RadioGroup
                 android:id="@+id/radioRapidità"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioReligione"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView43"
                 app:layout_constraintTop_toBottomOf="@+id/radioPersuasione">
 
@@ -802,12 +848,14 @@
 
             <RadioGroup
                 android:id="@+id/radioReligione"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioSopravvivenza"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView44"
                 app:layout_constraintTop_toBottomOf="@+id/radioRapidità">
 
@@ -837,12 +885,14 @@
 
             <RadioGroup
                 android:id="@+id/radioSopravvivenza"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/radioStoria"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.007"
                 app:layout_constraintStart_toEndOf="@+id/textView45"
                 app:layout_constraintTop_toBottomOf="@+id/radioReligione">
 
@@ -872,13 +922,15 @@
 
             <RadioGroup
                 android:id="@+id/radioStoria"
-                app:layout_constraintHorizontal_bias="1.007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView46"
+                app:layout_constraintHorizontal_bias="1.007"
+                app:layout_constraintStart_toEndOf="@+id/textView16"
                 app:layout_constraintTop_toBottomOf="@+id/radioSopravvivenza">
 
 

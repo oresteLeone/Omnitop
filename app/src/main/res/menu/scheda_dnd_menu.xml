@@ -11,4 +11,13 @@
 
         />
 
+    <item
+        android:id = "@+id/idDelete"
+        android:title = "Elimina"
+        android:icon="@drawable/ic_baseline_delete_24"
+        android:iconTint="@color/white"
+        app:showAsAction="always"
+
+        />
+
 </menu>

@@ -18,6 +18,7 @@ import dndData.utilData.Dettagli
 import dndData.viewModel.SchedaViewModel
 import kotlinx.android.synthetic.main.fragment_dnd_dettagli.*
 import kotlinx.android.synthetic.main.fragment_dnd_dettagli.view.*
+import kotlinx.android.synthetic.main.fragment_personaggio.*
 import java.lang.Integer.parseInt
 import java.lang.RuntimeException
 
@@ -149,9 +150,13 @@ class DndDettagliFragment : Fragment() {
     }
 
     fun updateInfBase(){
+
+        val exp : Int = if (puntiEsperienza.text?.isEmpty()!!) 0 else puntiEsperienza.text.toString().toInt()
+        val puntiIsp : Int = if (puntiIspirazione.text?.isEmpty()!!) 0 else puntiIspirazione.text.toString().toInt()
+
         mSchedaViewModel.getSingleLiveData().observe(viewLifecycleOwner, Observer {
         val dettagliNuovi = Dettagli(razza_Et.text.toString(),classe.text.toString(), backGround.text.toString(),nomeGiocatore.text.toString(),allineamento.text.toString(),
-            puntiEsperienza.text.toString().toInt(),puntiIspirazione.text.toString().toInt(), mSchedaViewModel.getSingleLiveData().value!!.dettagli?.altreInformazioni)
+            exp ,puntiIsp, mSchedaViewModel.getSingleLiveData().value!!.dettagli?.altreInformazioni)
 
             mSchedaViewModel.updateScheda(Scheda(
                 mSchedaViewModel.getSingleLiveData().value!!.id,
