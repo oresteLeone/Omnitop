@@ -44,7 +44,7 @@ class DndCampagnaHomeInfoDati : AppCompatActivity() {
         mCampagnaViewModel.getCampagnaFromID(idCampagna)
         showCampagnaData()
         mCampagnaViewModel.getSingleLiveData().observe(this, Observer {
-            campagnaToDelete = Campagna(idCampagna,it.titoloCampagna,it.ruoloCampagna,it.descrizione)
+            campagnaToDelete = Campagna(idCampagna,it.titoloCampagna,it.ruoloCampagna,it.descrizione,it.copertinaBitmap)
         })
 
         ButtonUpdateDataCampagna.setOnClickListener(){
@@ -61,7 +61,7 @@ class DndCampagnaHomeInfoDati : AppCompatActivity() {
                                                 RuoloGiocatore.PG
 
         if (!inputCheck(titoloCampagna)){
-            val campagnaUpdate = Campagna(idCampagna,titoloCampagna,ruoloCampagna,descrizioneCampagna)
+            val campagnaUpdate = Campagna(idCampagna,titoloCampagna,ruoloCampagna,descrizioneCampagna, null)
 
             try {
                 mCampagnaViewModel.updateCampagna(campagnaUpdate)

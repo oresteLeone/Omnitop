@@ -9,11 +9,14 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import coil.load
+import coil.transform.BlurTransformation
 import com.annoyingturtle.omnitop.dndCampagnaHomeActivity.DndCampagnaHome
 import com.annoyingturtle.omnitop.R
 import com.annoyingturtle.omnitop.dndHomeActivity.dndHomeFragments.support.ListaCampagnaAdapter
 import dndData.viewModel.CampagnaViewModel
 import kotlinx.android.synthetic.main.fragment_dnd_recenti.view.*
+import kotlinx.android.synthetic.main.lista_campagne.*
 
 class DndRecentiFragment : Fragment(), ListaCampagnaAdapter.onItemClickListner  {
 

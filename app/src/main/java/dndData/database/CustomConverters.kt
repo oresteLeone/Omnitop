@@ -2,12 +2,14 @@ package dndData.database
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.net.Uri
 import androidx.room.TypeConverter
 import dndData.LvlCompetenza
 import dndData.RuoloGiocatore
 import dndData.TipoOggetto
 import dndData.TipoScheda
 import java.io.ByteArrayOutputStream
+import java.io.File
 
 class CustomConverters {
 
@@ -43,7 +45,7 @@ class CustomConverters {
     @TypeConverter
     fun fromBitmapToByteArray(bitmap: Bitmap): ByteArray{
         val outputStream = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.PNG,100, outputStream)
+        bitmap.compress(Bitmap.CompressFormat.JPEG,20, outputStream)
         return outputStream.toByteArray()
     }
 

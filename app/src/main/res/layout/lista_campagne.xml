@@ -6,70 +6,86 @@
     android:layout_height="wrap_content"
     android:paddingVertical="8dp">
 
-    <ImageView
-        android:id="@+id/imgCampagna"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="112dp"
-        android:elevation="@dimen/cardview_default_elevation"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
+        android:layout_height="wrap_content"
         android:id="@+id/cardCampagna"
-        android:layout_width="match_parent"
-        android:layout_height="112dp"
-        android:background="@drawable/card_template"
         android:elevation="@dimen/cardview_default_elevation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/cardCampagnatextbg"
+            android:id="@+id/imgCampagna"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/card_template"
-            android:elevation="@dimen/cardview_default_elevation"
-            app:layout_constraintBottom_toBottomOf="@id/cardCampagna"
-            app:layout_constraintEnd_toEndOf="@id/cardCampagna"
-            app:layout_constraintStart_toStartOf="@id/cardCampagna" />
+            android:layout_height="112dp"
+            android:scaleType="matrix"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/nomeCampagnaCardText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="Nome Campagna"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/cardCampagnatextbg"
-                    app:layout_constraintStart_toStartOf="@+id/cardCampagnatextbg"
-                    app:layout_constraintTop_toTopOf="@id/cardCampagnatextbg"/>
+            <ImageView
+                android:id="@+id/blurred"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:alpha="0.5"
+                android:background="@color/backGround"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-    <ImageView
-        android:id="@+id/ruoloGiocatoreCampagnaDM"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/ic_dm"
-        app:layout_constraintBottom_toTopOf="@+id/cardCampagnatextbg"
-        app:layout_constraintStart_toStartOf="@+id/cardCampagna"
-        app:layout_constraintTop_toTopOf="@+id/cardCampagna"
-        android:visibility="gone"/>
+            <ImageView
+                android:id="@+id/cardCampagnatextbg"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/card_template"
+                app:layout_constraintBottom_toBottomOf="@id/imgCampagna"
+                app:layout_constraintEnd_toEndOf="@id/imgCampagna"
+                app:layout_constraintStart_toStartOf="@id/imgCampagna" />
 
-    <ImageView
-        android:id="@+id/ruoloGiocatoreCampagnaPG"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/ic_giocatore"
-        app:layout_constraintBottom_toTopOf="@+id/cardCampagnatextbg"
-        app:layout_constraintStart_toStartOf="@+id/cardCampagna"
-        app:layout_constraintTop_toTopOf="@+id/cardCampagna"
-        android:visibility="gone"/>
+            <TextView
+                android:id="@+id/nomeCampagnaCardText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Nome Campagna"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardCampagnatextbg"
+                app:layout_constraintStart_toStartOf="@+id/cardCampagnatextbg"
+                app:layout_constraintTop_toTopOf="@id/cardCampagnatextbg"/>
 
+
+            <ImageView
+                android:id="@+id/ruoloGiocatoreCampagnaDM"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/ic_dm"
+                app:layout_constraintBottom_toTopOf="@+id/cardCampagnatextbg"
+                app:layout_constraintStart_toStartOf="@+id/imgCampagna"
+                app:layout_constraintTop_toTopOf="@+id/imgCampagna"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/ruoloGiocatoreCampagnaPG"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/ic_giocatore"
+                app:layout_constraintBottom_toTopOf="@+id/cardCampagnatextbg"
+                app:layout_constraintStart_toStartOf="@+id/imgCampagna"
+                app:layout_constraintTop_toTopOf="@+id/imgCampagna"
+                android:visibility="gone"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,11 +34,12 @@
         android:id="@+id/imageCampaign"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:layout_marginTop="24dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/card_template"
+        android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appBarLayout"/>
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/addImageBtn"

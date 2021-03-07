@@ -3,11 +3,16 @@ package com.annoyingturtle.omnitop.dndHomeActivity.dndHomeFragments.support
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import coil.transform.BlurTransformation
 import com.annoyingturtle.omnitop.R
+import com.annoyingturtle.omnitop.dndHomeActivity.DndHome
 import dndData.RuoloGiocatore
 import dndData.entities.Campagna
 import kotlinx.android.synthetic.main.lista_campagne.view.*
+import java.security.AccessController.getContext
 
 class ListaCampagnaAdapter(private val listener : onItemClickListner): RecyclerView.Adapter<ListaCampagnaAdapter.RecentiViewHolder>() {
 
@@ -34,6 +39,8 @@ class ListaCampagnaAdapter(private val listener : onItemClickListner): RecyclerV
     override fun onBindViewHolder(holder: RecentiViewHolder, position: Int) {
         val currentItem = CampagnaList[position]
         holder.itemView.nomeCampagnaCardText.text = currentItem.titoloCampagna
+       // holder.itemView.imgCampagna.load(currentItem.copertinaUri)
+        holder.itemView.imgCampagna.load(currentItem.copertinaBitmap)
         if(currentItem.ruoloCampagna == RuoloGiocatore.DM){
             holder.itemView.ruoloGiocatoreCampagnaDM.visibility = View.VISIBLE
             holder.itemView.ruoloGiocatoreCampagnaPG.visibility = View.GONE
