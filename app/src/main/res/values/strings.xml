@@ -426,5 +426,6 @@ Tutte le Abilità sono influenzate da una statistica:\n\n
     <string name="informazioni_campagna">Informazioni Campagna</string>
     <string name="nome_personaggio">Nome Personaggio</string>
     <string name="png">PNG</string>
+    <string name="dungeon_master">Dungeon Master</string>
 </resources>
 

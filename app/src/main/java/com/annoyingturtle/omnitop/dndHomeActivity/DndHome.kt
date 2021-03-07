@@ -1,5 +1,6 @@
 package com.annoyingturtle.omnitop.dndHomeActivity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -31,7 +32,7 @@ class DndHome : AppCompatActivity() {
 
 
         addCampagnaIcon.setOnClickListener {
-            findNavController(R.id.hostfragment).navigate(R.id.dndAddCampagna)
+            startActivity(Intent(this, DndHomeNuovaCampagna::class.java))
 
         }
 
