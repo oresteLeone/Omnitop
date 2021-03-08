@@ -29,28 +29,50 @@ android:background="@color/backGround">
 
 </com.google.android.material.appbar.AppBarLayout>
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageCampaign"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/card_template"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/addImageBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#26121212"
+        android:foreground="@drawable/ic_outline_add_photo_alternate_24_65op"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/imageCampaign"
+        app:layout_constraintEnd_toEndOf="@id/imageCampaign"
+        app:layout_constraintStart_toStartOf="@id/imageCampaign"
+        app:layout_constraintTop_toTopOf="@id/imageCampaign" />
+
 <com.google.android.material.textfield.TextInputLayout
     android:id="@+id/NomeCampagnaHold"
-    android:layout_width="match_parent"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_marginStart="24dp"
     android:layout_marginTop="24dp"
+    android:layout_marginStart="16dp"
     android:layout_marginEnd="24dp"
     android:textColorHint="@color/PrimaryLight65op"
     app:boxStrokeColor="@color/PrimaryLight"
     app:hintTextColor="@color/PrimaryLight65op"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.5"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+    app:layout_constraintStart_toEndOf="@id/imageCampaign"
+    app:layout_constraintTop_toBottomOf="@id/appBarLayout">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/NomeCampagna_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:hint="Nome Campagna"
-        android:padding="24dp"
+        android:hint="Titolo Campagna"
         android:textColorHint="@color/PrimaryLight65op" />
 
 </com.google.android.material.textfield.TextInputLayout>
@@ -86,7 +108,6 @@ android:background="@color/backGround">
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Descrizione Campagna"
-            android:padding="24dp"
             android:textColorHint="@color/PrimaryLight65op" />
 
     </com.google.android.material.textfield.TextInputLayout>

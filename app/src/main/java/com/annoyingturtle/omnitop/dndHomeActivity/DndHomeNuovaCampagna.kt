@@ -46,10 +46,13 @@ class DndHomeNuovaCampagna : AppCompatActivity() {
             val ruoloCampagna = if (checkBoxDM.isChecked) RuoloGiocatore.DM
             else RuoloGiocatore.PG
             val descrizioneCampagna = descrizioneCam_et.text?.toString()
+            var copertinaCampagna: Bitmap? = null
 
             if(!inputcheck(titoloCampagna)){
                 lifecycleScope.launch{
-                    val copertinaCampagna = getBitmapCampagna(copertinaCampagnaUri)
+
+                   if(copertinaCampagnaUri!=null) copertinaCampagna = getBitmapCampagna(copertinaCampagnaUri)
+                                                else copertinaCampagna = null
                     val newCampagna = Campagna(0, titoloCampagna, ruoloCampagna, descrizioneCampagna, copertinaCampagna )
                     insertCampagnaDataToDatabase(newCampagna)
                 }
@@ -64,7 +67,7 @@ class DndHomeNuovaCampagna : AppCompatActivity() {
         addImageBtn.setOnClickListener{
             val intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.setType("image/*")
-            startActivityForResult(Intent.createChooser(intent, "Scegli Copertina Immagine"), 1)
+            startActivityForResult(Intent.createChooser(intent, "Scegli Copertina Campagna"), 1)
 
         }
 
