@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.annoyingturtle.omnitop.R
+import com.annoyingturtle.omnitop.dndSchedaActivity.DndSchedaActivity
 import dndData.entities.Scheda
 import dndData.utilData.Statistiche
 import dndData.viewModel.SchedaViewModel
@@ -94,6 +95,7 @@ class PersonaggioDndFragment : Fragment() {
                 dadiVita.isFocusableInTouchMode = false
 
                 salvaStatBase(1)
+                (activity as DndSchedaActivity).chiudiKeyboard()
 
             }
 

@@ -110,6 +110,8 @@ class DndDettagliFragment : Fragment() {
                 puntiIspirazione.isFocusableInTouchMode = false
 
                 updateInfBase()
+
+                (activity as DndSchedaActivity).chiudiKeyboard()
             }
 
         editAltreInformazioni.setOnClickListener(){
@@ -130,6 +132,7 @@ class DndDettagliFragment : Fragment() {
             altreInformazioni.isFocusableInTouchMode = false
 
             updateAltreInfo()
+            (activity as DndSchedaActivity).chiudiKeyboard()
 
         }
 
@@ -197,6 +200,8 @@ class DndDettagliFragment : Fragment() {
 
 
     }
+
+
 
 
 }

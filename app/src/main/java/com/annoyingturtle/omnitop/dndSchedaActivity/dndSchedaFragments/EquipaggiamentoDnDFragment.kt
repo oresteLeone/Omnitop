@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.annoyingturtle.omnitop.R
+import com.annoyingturtle.omnitop.dndSchedaActivity.DndSchedaActivity
 import dndData.entities.Scheda
 import dndData.utilData.Money
 import dndData.viewModel.SchedaViewModel
@@ -81,6 +82,7 @@ class EquipaggiamentoDnDFragment : Fragment() {
             moneteElectrum.isClickable = false
 
             updateMonete()
+            (activity as DndSchedaActivity).chiudiKeyboard()
         }
 
     }
