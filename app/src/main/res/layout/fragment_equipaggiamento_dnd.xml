@@ -95,6 +95,7 @@
 
                 <EditText
                     android:id="@+id/moneteRame"
+                    android:maxLength="9"
 
                     android:layout_width="56dp"
                     android:layout_height="wrap_content"
@@ -112,6 +113,7 @@
 
                 <EditText
                     android:id="@+id/moneteArgento"
+                    android:maxLength="9"
                     android:layout_width="56dp"
                     android:layout_height="wrap_content"
                     android:clickable="false"
@@ -128,6 +130,7 @@
 
                 <EditText
                     android:id="@+id/moneteElectrum"
+                    android:maxLength="9"
                     android:layout_width="56dp"
                     android:layout_height="wrap_content"
                     android:clickable="false"
@@ -144,6 +147,7 @@
 
                 <EditText
                     android:id="@+id/moneteOro"
+                    android:maxLength="9"
                     android:layout_width="56dp"
                     android:layout_height="wrap_content"
                     android:clickable="false"
@@ -160,6 +164,7 @@
 
                 <EditText
                     android:id="@+id/monetePlatino"
+                    android:maxLength="9"
                     android:layout_width="56dp"
                     android:layout_height="wrap_content"
                     android:clickable="false"

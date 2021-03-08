@@ -54,6 +54,7 @@
                     android:id="@+id/pfAttuali"
                     android:layout_width="wrap_content"
                     android:inputType="number"
+                    android:maxLength="3"
 
                     android:clickable="false"
                     android:focusable="false"
@@ -83,6 +84,7 @@
                 <EditText
                     android:id="@+id/pfTotali"
                     android:layout_width="wrap_content"
+                    android:maxLength="3"
                     android:inputType="number"
                     android:clickable="false"
                     android:focusable="false"
@@ -189,6 +191,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
+                android:maxLength="2"
 
                 android:layout_marginTop="16dp"
                 android:clickable="false"
@@ -210,6 +213,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:clickable="false"
+                android:maxLength="2"
 
                 android:focusable="false"
                 android:inputType="number"
@@ -229,6 +233,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:maxLength="4"
 
                 android:clickable="false"
                 android:focusable="false"
@@ -309,6 +314,7 @@
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:focusable="false"
+                android:maxLength="1"
 
                 android:inputType="number"
                 android:paddingHorizontal="48dp"
@@ -327,6 +333,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
+                android:maxLength="2"
 
                 android:clickable="false"
                 android:focusable="false"
@@ -464,17 +471,15 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.gridlayout.widget.GridLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/gridLayout5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                app:columnCount="6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.39"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gridLayout4"
-                app:rowCount="5">
+                app:layout_constraintTop_toBottomOf="@+id/gridLayout4">
 
 
                 <TextView
@@ -484,8 +489,10 @@
                     android:paddingHorizontal="16dp"
                     android:text="@string/str"
                     android:textColor="@color/schedaTesto"
-                    app:layout_column="0"
-                    app:layout_row="0" />
+                    app:layout_constraintEnd_toStartOf="@+id/textView6"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -495,6 +502,10 @@
                     android:text="@string/dex"
                     android:textColor="@color/schedaTesto"
                     app:layout_column="1"
+                    app:layout_constraintEnd_toStartOf="@+id/textView5"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView7"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_row="0" />
 
                 <TextView
@@ -504,8 +515,10 @@
                     android:paddingHorizontal="16dp"
                     android:text="@string/con"
                     android:textColor="@color/schedaTesto"
-                    app:layout_column="2"
-                    app:layout_row="0" />
+                    app:layout_constraintEnd_toStartOf="@+id/textView4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView6"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -514,8 +527,10 @@
                     android:paddingHorizontal="16dp"
                     android:text="@string/intel"
                     android:textColor="@color/schedaTesto"
-                    app:layout_column="3"
-                    app:layout_row="0" />
+                    app:layout_constraintEnd_toStartOf="@+id/textView3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView5"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -524,8 +539,10 @@
                     android:paddingHorizontal="16dp"
                     android:text="@string/wis"
                     android:textColor="@color/schedaTesto"
-                    app:layout_column="4"
-                    app:layout_row="0" />
+                    app:layout_constraintEnd_toStartOf="@+id/textView2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView4"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -534,259 +551,314 @@
                     android:paddingHorizontal="16dp"
                     android:text="@string/cha"
                     android:textColor="@color/schedaTesto"
-                    app:layout_column="5"
-                    app:layout_row="0" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView3"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
                     android:id="@+id/pulsanteForza"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:background="@drawable/raggruppa_895"
-                    app:layout_column="0"
-                    app:layout_row="1" />
-
-                <TextView
-                    android:id="@+id/valoreForza"
-                    android:layout_width="60dp"
-                    android:layout_height="55dp"
-                    android:clickable="false"
-                    android:gravity="center"
-                    android:maxWidth="@android:dimen/app_icon_size"
-                    android:maxHeight="@android:dimen/app_icon_size"
-                    android:text="+0"
-                    android:textSize="16sp"
-                    app:layout_column="0"
-                    app:layout_row="1" />
+                    app:layout_constraintEnd_toStartOf="@+id/pulsanteDestrezza"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
                 <ImageButton
                     android:id="@+id/pulsanteDestrezza"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:background="@drawable/raggruppa_895"
-                    app:layout_column="1"
-                    app:layout_row="1" />
-
-                <TextView
-                    android:id="@+id/valoreDestrezza"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:clickable="false"
-                    android:gravity="center"
-                    android:maxWidth="@android:dimen/app_icon_size"
-                    android:maxHeight="@android:dimen/app_icon_size"
-                    android:text="+0"
-                    android:textSize="16sp"
-                    app:layout_column="1"
-                    app:layout_row="1" />
+                    app:layout_constraintEnd_toStartOf="@+id/pulsanteCostituzione"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pulsanteForza"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
                 <ImageButton
                     android:id="@+id/pulsanteCostituzione"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:background="@drawable/raggruppa_895"
-                    app:layout_column="2"
-                    app:layout_row="1" />
-
-                <TextView
-                    android:id="@+id/valoreCostituzione"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:clickable="false"
-                    android:gravity="center"
-                    android:maxWidth="@android:dimen/app_icon_size"
-                    android:maxHeight="@android:dimen/app_icon_size"
-                    android:text="+0"
-                    android:textSize="16sp"
-                    app:layout_column="2"
-                    app:layout_row="1" />
+                    app:layout_constraintEnd_toStartOf="@+id/pulsanteInt"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pulsanteDestrezza"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
                 <ImageButton
                     android:id="@+id/pulsanteInt"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:background="@drawable/raggruppa_895"
-                    app:layout_column="3"
-                    app:layout_row="1" />
-
-                <TextView
-                    android:id="@+id/valoreInt"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:clickable="false"
-                    android:gravity="center"
-                    android:maxWidth="@android:dimen/app_icon_size"
-                    android:maxHeight="@android:dimen/app_icon_size"
-                    android:text="+0"
-                    android:textSize="16sp"
-                    app:layout_column="3"
-                    app:layout_row="1" />
+                    app:layout_constraintEnd_toStartOf="@+id/pulsanteSag"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pulsanteCostituzione"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
                 <ImageButton
                     android:id="@+id/pulsanteSag"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:background="@drawable/raggruppa_895"
-                    app:layout_column="4"
-                    app:layout_row="1" />
-
-                <TextView
-                    android:id="@+id/valoreSag"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:clickable="false"
-                    android:gravity="center"
-                    android:maxWidth="@android:dimen/app_icon_size"
-                    android:maxHeight="@android:dimen/app_icon_size"
-                    android:text="+0"
-                    android:textSize="16sp"
-                    app:layout_column="4"
-                    app:layout_row="1" />
-
+                    app:layout_constraintEnd_toStartOf="@+id/pulsanteCha"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pulsanteInt"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
                 <ImageButton
                     android:id="@+id/pulsanteCha"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:background="@drawable/raggruppa_895"
-                    app:layout_column="5"
-                    app:layout_row="1" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pulsanteSag"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
                 <TextView
-                    android:id="@+id/valoreCha"
+                    android:id="@+id/valoreForza"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
+
                     android:clickable="false"
                     android:gravity="center"
                     android:maxWidth="@android:dimen/app_icon_size"
                     android:maxHeight="@android:dimen/app_icon_size"
                     android:text="+0"
                     android:textSize="16sp"
-                    app:layout_column="5"
-                    app:layout_row="1" />
+                    app:layout_constraintBottom_toBottomOf="@+id/pulsanteForza"
+                    app:layout_constraintStart_toStartOf="@+id/pulsanteForza" />
 
                 <TextView
+                    android:id="@+id/valoreDestrezza"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pulsanteDestrezza"
+                    app:layout_constraintStart_toStartOf="@+id/pulsanteDestrezza" />
+
+                <TextView
+                    android:id="@+id/valoreCostituzione"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/pulsanteCostituzione"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/valoreInt"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pulsanteInt"
+                    app:layout_constraintEnd_toEndOf="@+id/pulsanteInt" />
+
+                <TextView
+                    android:id="@+id/valoreSag"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pulsanteSag"
+                    app:layout_constraintEnd_toEndOf="@+id/pulsanteSag" />
+
+                <TextView
+                    android:id="@+id/valoreCha"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:maxWidth="@android:dimen/app_icon_size"
+                    android:maxHeight="@android:dimen/app_icon_size"
+                    android:text="+0"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pulsanteCha"
+                    app:layout_constraintEnd_toEndOf="@+id/pulsanteCha" />
+
+                <TextView
+                    android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
                     android:paddingTop="16dp"
                     android:text="@string/ts"
                     android:textColor="@color/schedaTesto"
                     android:textSize="16sp"
-                    app:layout_column="0"
-                    app:layout_columnSpan="2"
-                    app:layout_row="2" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pulsanteForza" />
 
                 <CheckBox
                     android:id="@+id/tsForzaCheck"
-                    android:layout_width="42dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
                     android:buttonTint="@color/secondaryLight"
                     android:clickable="false"
                     android:gravity="center"
-                    android:layoutDirection="rtl"
-                    app:layout_column="0"
-
-                    app:layout_row="3" />
+                    app:layout_constraintEnd_toStartOf="@+id/tsDestrezzaCheck"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
                 <CheckBox
                     android:id="@+id/tsDestrezzaCheck"
-                    android:layout_width="42dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
                     android:buttonTint="@color/secondaryLight"
                     android:clickable="false"
-                    android:layoutDirection="rtl"
-                    app:layout_column="1"
-                    app:layout_row="3" />
+                    android:gravity="center"
+                    app:layout_constraintEnd_toStartOf="@+id/tsCostituzioneCheck"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tsForzaCheck"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
                 <CheckBox
                     android:id="@+id/tsCostituzioneCheck"
-                    android:layout_width="42dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
                     android:buttonTint="@color/secondaryLight"
                     android:clickable="false"
-                    android:layoutDirection="rtl"
-                    app:layout_column="2"
-                    app:layout_row="3" />
+                    android:gravity="center"
+                    app:layout_constraintEnd_toStartOf="@+id/tsIntCheck"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tsDestrezzaCheck"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
                 <CheckBox
                     android:id="@+id/tsIntCheck"
-                    android:layout_width="42dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="8dp"
                     android:buttonTint="@color/secondaryLight"
                     android:clickable="false"
-                    android:layoutDirection="rtl"
-                    app:layout_column="3"
-                    app:layout_row="3" />
+                    android:gravity="center"
+                    app:layout_constraintEnd_toStartOf="@+id/tsSaggCheck"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tsCostituzioneCheck"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
                 <CheckBox
                     android:id="@+id/tsSaggCheck"
-                    android:layout_width="42dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
                     android:buttonTint="@color/secondaryLight"
                     android:clickable="false"
-                    android:layoutDirection="rtl"
-                    app:layout_column="4"
-                    app:layout_row="3" />
+                    android:gravity="center"
+                    app:layout_constraintEnd_toStartOf="@+id/tsChaCheck"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tsIntCheck"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
                 <CheckBox
                     android:id="@+id/tsChaCheck"
-                    android:layout_width="42dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
                     android:buttonTint="@color/secondaryLight"
                     android:clickable="false"
-                    android:layoutDirection="rtl"
-                    app:layout_column="5"
-                    app:layout_row="3" />
-
-                <ImageButton
-                    android:id="@+id/pulsanteTsDex"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:background="@drawable/raggruppa_895"
-                    app:layout_column="1"
-                    app:layout_row="4" />
-
-                <ImageButton
-                    android:id="@+id/pulsanteTsCos"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:background="@drawable/raggruppa_895"
-                    app:layout_column="2"
-                    app:layout_row="4" />
-
-                <ImageButton
-                    android:id="@+id/pulsanteTsInt"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:background="@drawable/raggruppa_895"
-                    app:layout_column="3"
-                    app:layout_row="4" />
-
-                <ImageButton
-                    android:id="@+id/pulsanteTsWis"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:background="@drawable/raggruppa_895"
-                    app:layout_column="4"
-                    app:layout_row="4" />
-
-                <ImageButton
-                    android:id="@+id/pulsanteTsCha"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:background="@drawable/raggruppa_895"
-                    app:layout_column="5"
-                    app:layout_row="4" />
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tsSaggCheck"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
                 <ImageButton
                     android:id="@+id/pulsanteTsForza"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:background="@drawable/raggruppa_895"
-                    app:layout_column="0"
-                    app:layout_row="4" />
+                    app:layout_constraintEnd_toStartOf="@+id/pulsanteTsDex"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tsForzaCheck" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteTsDex"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_constraintEnd_toStartOf="@+id/pulsanteTsCos"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pulsanteTsForza"
+                    app:layout_constraintTop_toBottomOf="@+id/tsDestrezzaCheck" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteTsCos"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_constraintEnd_toStartOf="@+id/pulsanteTsInt"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pulsanteTsDex"
+                    app:layout_constraintTop_toBottomOf="@+id/tsCostituzioneCheck" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteTsInt"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_constraintEnd_toStartOf="@+id/pulsanteTsWis"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pulsanteTsCos"
+                    app:layout_constraintTop_toBottomOf="@+id/tsIntCheck" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteTsWis"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_constraintEnd_toStartOf="@+id/pulsanteTsCha"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pulsanteTsInt"
+                    app:layout_constraintTop_toBottomOf="@+id/tsSaggCheck" />
+
+                <ImageButton
+                    android:id="@+id/pulsanteTsCha"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/raggruppa_895"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pulsanteTsWis"
+                    app:layout_constraintTop_toBottomOf="@+id/tsChaCheck" />
 
 
-            </androidx.gridlayout.widget.GridLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -797,7 +869,6 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/card_template"
             android:paddingBottom="8dp"
-            android:paddingTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/constraintLayoutCaratteristiche">
@@ -817,942 +888,843 @@
                 android:id="@+id/gridLayout6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="8dp">
 
-
                 <TextView
-        android:id="@+id/textView48"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/abilità"
-        android:textColor="@color/schedaTesto"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/editAbilità"
-        app:layout_constraintHorizontal_bias="0.059"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/editAbilità"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_baseline_edit_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/pulsanteAcrobazia"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/raggruppa_895"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView49"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView48" />
-
-
-    <TextView
-        android:id="@+id/textView49"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/acrobazia"
-        app:layout_constraintEnd_toStartOf="@+id/textView50"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pulsanteAcrobazia"
-        app:layout_constraintTop_toBottomOf="@+id/textView48" />
-
-
-                <TextView
-                    android:id="@+id/textView50"
+                    android:id="@+id/textView48"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="28dp"
-                    android:paddingLeft="4dp"
-                    android:text="@string/dex"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/abilità"
                     android:textColor="@color/schedaTesto"
-                    app:layout_constraintEnd_toStartOf="@+id/pulsanteIntuizione"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/textView49"
-                    app:layout_constraintTop_toBottomOf="@+id/textView48" />
-
-                <ImageButton
-                    android:id="@+id/pulsanteIntuizione"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/raggruppa_895"
-                    android:paddingTop="16dp"
-                    app:layout_constraintEnd_toStartOf="@+id/textView51"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/textView50"
-                    app:layout_constraintTop_toBottomOf="@+id/textView48" />
-
-    <TextView
-        android:id="@+id/textView51"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/intuizione"
-        app:layout_constraintEnd_toStartOf="@+id/textView52"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pulsanteIntuizione"
-        app:layout_constraintTop_toBottomOf="@+id/textView48" />
-
-                <TextView
-                    android:id="@+id/textView52"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="28dp"
-                    android:paddingLeft="4dp"
-                    android:text="@string/wis"
-                    android:textColor="@color/schedaTesto"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/textView51"
-                    app:layout_constraintTop_toBottomOf="@+id/textView48" />
-
-    <TextView
-        android:id="@+id/valoreAcrobazia"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-
-        android:clickable="false"
-        android:gravity="center"
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/pulsanteAcrobazia"
-        app:layout_constraintTop_toTopOf="@+id/pulsanteAcrobazia" />
-
-    <TextView
-        android:id="@+id/valoreIntuizione"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteIntuizione"
-        app:layout_constraintTop_toTopOf="@+id/pulsanteIntuizione" />
-
-    <ImageButton
-        android:id="@+id/pulsanteAddestrareAnim"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/raggruppa_895"
-        app:layout_constraintEnd_toStartOf="@+id/textView53"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteAcrobazia" />
-
-
-    <TextView
-        android:id="@+id/textView53"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/addestrare"
-        app:layout_constraintEnd_toStartOf="@+id/textView54"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pulsanteAddestrareAnim"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteIntuizione" />
-
-    <TextView
-        android:id="@+id/textView54"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/wis"
-        android:textColor="@color/schedaTesto"
-        app:layout_constraintEnd_toStartOf="@+id/pulsanteMedicina"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView53"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteIntuizione" />
-
-    <ImageButton
-        android:id="@+id/pulsanteMedicina"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/raggruppa_895"
-        app:layout_constraintEnd_toStartOf="@+id/textView55"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView54"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteIntuizione" />
-
-    <TextView
-        android:id="@+id/textView55"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/medicina"
-        app:layout_constraintEnd_toStartOf="@+id/textView56"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pulsanteMedicina"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteIntuizione" />
-
-                <TextView
-                    android:id="@+id/textView56"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="8dp"
-                    android:text="@string/wis"
-                    android:textColor="@color/schedaTesto"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/textView55"
-                    app:layout_constraintTop_toBottomOf="@+id/pulsanteIntuizione" />
-
-    <TextView
-        android:id="@+id/valoreAddestrareAnim"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-
-        android:gravity="center"
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteAddestrareAnim"
-        app:layout_constraintTop_toTopOf="@+id/pulsanteAddestrareAnim" />
-
-    <TextView
-        android:id="@+id/valoreMedicina"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsanteMedicina"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteMedicina" />
-
-    <ImageButton
-        android:id="@+id/pulsanteArcano"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="2dp"
-        android:background="@drawable/raggruppa_895"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView57"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteAddestrareAnim" />
-
-    <TextView
-        android:id="@+id/textView57"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="6dp"
-        android:text="@string/arcano"
-        app:layout_constraintEnd_toStartOf="@+id/textView58"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pulsanteArcano"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteAddestrareAnim" />
-
-    <TextView
-        android:id="@+id/textView58"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/intel"
-        android:textColor="@color/schedaTesto"
-        app:layout_constraintEnd_toStartOf="@+id/pulsanteNatura"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView57"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteAddestrareAnim" />
-
-    <ImageButton
-        android:id="@+id/pulsanteNatura"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="12dp"
-        android:background="@drawable/raggruppa_895"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView59"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView58"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteMedicina" />
-
-    <TextView
-        android:id="@+id/textView59"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/natura"
-        app:layout_constraintEnd_toStartOf="@+id/textView60"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pulsanteNatura"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteMedicina" />
-
-    <TextView
-        android:id="@+id/textView60"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/intel"
-        android:textColor="@color/schedaTesto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView59"
-        app:layout_constraintTop_toBottomOf="@+id/valoreMedicina" />
-
-    <TextView
-        android:id="@+id/valoreArcano"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
-
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsanteArcano"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteArcano" />
-
-
-    <TextView
-        android:id="@+id/valoreNatua"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsanteNatura"
-        app:layout_constraintEnd_toEndOf="@+id/pulsanteNatura" />
-
-
-    <ImageButton
-        android:id="@+id/pulsanteAtletica"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="2dp"
-        android:background="@drawable/raggruppa_895"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView61"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteArcano" />
-
-    <TextView
-        android:id="@+id/textView61"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/atletica"
-        app:layout_constraintEnd_toStartOf="@+id/textView62"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pulsanteAtletica"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteArcano" />
-
-    <TextView
-        android:id="@+id/textView62"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:paddingLeft="4dp"
-        android:text="@string/str"
-        android:textColor="@color/schedaTesto"
-        app:layout_constraintEnd_toStartOf="@+id/pulsantePercezione"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView61"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteArcano" />
-
-    <ImageButton
-        android:id="@+id/pulsantePercezione"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@drawable/raggruppa_895"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView63"
-        app:layout_constraintStart_toEndOf="@+id/textView62"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteNatura" />
-
-    <TextView
-        android:id="@+id/textView63"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/percezione"
-        app:layout_constraintEnd_toStartOf="@+id/textView64"
-        app:layout_constraintStart_toEndOf="@+id/pulsantePercezione"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteNatura" />
-
-    <TextView
-        android:id="@+id/textView64"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/wis"
-        android:textColor="@color/schedaTesto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView63"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteNatura" />
-
-    <TextView
-        android:id="@+id/valoreAtletica"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
-
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsanteAtletica"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteAtletica" />
-
-    <TextView
-        android:id="@+id/valorePercezione"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsantePercezione"
-        app:layout_constraintStart_toStartOf="@+id/pulsantePercezione" />
-
-    <ImageButton
-        android:id="@+id/pulsanteFurtività"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="4dp"
-        android:background="@drawable/raggruppa_895"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView65"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteAtletica" />
-
-                <TextView
-                    android:id="@+id/textView65"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="14dp"
-                    android:text="@string/furtività"
-                    app:layout_constraintEnd_toStartOf="@+id/textView66"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/pulsanteFurtività"
-                    app:layout_constraintTop_toBottomOf="@+id/pulsanteAtletica" />
-
-    <TextView
-        android:id="@+id/textView66"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="4dp"
-        android:text="@string/dex"
-        android:textColor="@color/schedaTesto"
-        app:layout_constraintEnd_toStartOf="@+id/pulsantePersuasione"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView65"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteAtletica" />
-
-    <ImageButton
-        android:id="@+id/pulsantePersuasione"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/raggruppa_895"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView67"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView66"
-        app:layout_constraintTop_toBottomOf="@+id/pulsantePercezione" />
-
-    <TextView
-        android:id="@+id/textView67"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/persuasione"
-        app:layout_constraintEnd_toStartOf="@+id/textView68"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pulsantePersuasione"
-        app:layout_constraintTop_toBottomOf="@+id/pulsantePercezione" />
-
-    <TextView
-        android:id="@+id/textView68"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="4dp"
-        android:text="@string/cha"
-        android:textColor="@color/schedaTesto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView67"
-        app:layout_constraintTop_toBottomOf="@+id/pulsantePercezione" />
-
-    <TextView
-        android:id="@+id/valoreFurtività"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
-
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsanteFurtività"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteFurtività" />
-
-    <TextView
-        android:id="@+id/valorePersuasione"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsantePersuasione"
-        app:layout_constraintStart_toStartOf="@+id/pulsantePersuasione" />
-
-    <ImageButton
-        android:id="@+id/pulsanteIndagare"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="2dp"
-        android:background="@drawable/raggruppa_895"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView69"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteFurtività" />
-
-    <TextView
-        android:id="@+id/textView69"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="6dp"
-        android:text="@string/indagare"
-        app:layout_constraintEnd_toStartOf="@+id/textView70"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pulsanteIndagare"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteFurtività" />
-
-    <TextView
-        android:id="@+id/textView70"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="4dp"
-        android:text="@string/intel"
-        android:textColor="@color/schedaTesto"
-        app:layout_constraintEnd_toStartOf="@+id/pulsanteRapiditaDiMano"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView69"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteFurtività" />
-
-    <ImageButton
-        android:id="@+id/pulsanteRapiditaDiMano"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/raggruppa_895"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView71"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView70"
-        app:layout_constraintTop_toBottomOf="@+id/pulsantePersuasione" />
-
-    <TextView
-        android:id="@+id/textView71"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/rapDiMa"
-        app:layout_constraintEnd_toStartOf="@+id/textView72"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pulsanteRapiditaDiMano"
-        app:layout_constraintTop_toBottomOf="@+id/valorePersuasione" />
-
-    <TextView
-        android:id="@+id/textView72"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="4dp"
-        android:text="@string/dex"
-        android:textColor="@color/schedaTesto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView71"
-        app:layout_constraintTop_toBottomOf="@+id/pulsantePersuasione" />
-
-
-    <TextView
-        android:id="@+id/valoreIndagare"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-
-        android:gravity="center"
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsanteIndagare"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteIndagare" />
-
-    <TextView
-        android:id="@+id/valoreRapiditaDiMano"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsanteRapiditaDiMano"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteRapiditaDiMano" />
-
-                <ImageButton
-                    android:id="@+id/pulsanteIngano"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginEnd="2dp"
-                    android:background="@drawable/raggruppa_895"
-                    android:paddingTop="16dp"
-                    app:layout_constraintEnd_toStartOf="@+id/textView73"
+                    android:textSize="24sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/pulsanteIndagare" />
-
-    <TextView
-        android:id="@+id/textView73"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/inganno"
-        app:layout_constraintEnd_toStartOf="@+id/textView74"
-        app:layout_constraintStart_toEndOf="@+id/pulsanteIngano"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteIndagare" />
-
-    <TextView
-        android:id="@+id/textView74"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:paddingLeft="4dp"
-        android:text="@string/cha"
-        android:textColor="@color/schedaTesto"
-        app:layout_constraintEnd_toStartOf="@+id/pulsanteReligione"
-        app:layout_constraintStart_toEndOf="@+id/textView73"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteIndagare" />
-
-    <ImageButton
-        android:id="@+id/pulsanteReligione"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@drawable/raggruppa_895"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView75"
-        app:layout_constraintStart_toEndOf="@+id/textView74"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteRapiditaDiMano" />
-
-    <TextView
-        android:id="@+id/textView75"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/religione"
-        app:layout_column="4"
-        app:layout_constraintEnd_toStartOf="@+id/textView76"
-        app:layout_constraintStart_toEndOf="@+id/pulsanteReligione"
-        app:layout_constraintTop_toBottomOf="@+id/valoreRapiditaDiMano"
-        app:layout_row="7" />
-
-    <TextView
-        android:id="@+id/textView76"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="4dp"
-        android:text="@string/intel"
-        android:textColor="@color/schedaTesto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView75"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteRapiditaDiMano" />
-
-    <TextView
-        android:id="@+id/valoreInganno"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
-
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsanteIngano"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteIngano" />
-
-    <TextView
-        android:id="@+id/valoreReligione"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsanteReligione"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteReligione" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
-                    android:id="@+id/pulsanteIntimidire"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_marginStart="36dp"
-                    android:background="@drawable/raggruppa_895"
-                    android:paddingTop="16dp"
-                    app:layout_column="0"
-                    app:layout_constraintEnd_toStartOf="@+id/textView77"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/pulsanteIngano"
-                    app:layout_row="8" />
-
-                <TextView
-                    android:id="@+id/textView77"
+                    android:id="@+id/editAbilità"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/intimidire"
-                    app:layout_constraintEnd_toStartOf="@+id/textView78"
-                    app:layout_constraintStart_toEndOf="@+id/pulsanteIntimidire"
-                    app:layout_constraintTop_toBottomOf="@+id/pulsanteIngano" />
-
-                <TextView
-                    android:id="@+id/textView78"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="16dp"
-                    android:paddingLeft="4dp"
-                    android:text="@string/cha"
-                    android:textColor="@color/schedaTesto"
-                    app:layout_constraintEnd_toStartOf="@+id/pulsanteSopravvivenza"
-                    app:layout_constraintStart_toEndOf="@+id/textView77"
-                    app:layout_constraintTop_toBottomOf="@+id/pulsanteIngano" />
-
-    <ImageButton
-        android:id="@+id/pulsanteSopravvivenza"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="4dp"
-        android:background="@drawable/raggruppa_895"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView79"
-        app:layout_constraintStart_toEndOf="@+id/textView78"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteReligione" />
-
-                <TextView
-                    android:id="@+id/textView79"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/sopravvivenza"
-                    app:layout_constraintEnd_toStartOf="@+id/textView80"
-                    app:layout_constraintStart_toEndOf="@+id/pulsanteSopravvivenza"
-                    app:layout_constraintTop_toBottomOf="@+id/valoreReligione" />
-
-                <TextView
-                    android:id="@+id/textView80"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="22dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="32dp"
-                    android:paddingLeft="4dp"
-                    android:text="@string/wis"
-                    android:textColor="@color/schedaTesto"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_edit_24"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView79"
-                    app:layout_constraintTop_toBottomOf="@+id/valoreReligione" />
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toStartOf="@+id/constraintLayout6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView48">
+
+                    <ImageButton
+                        android:id="@+id/pulsanteAcrobazia"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView49"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/acrobazia"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteAcrobazia"
+                        app:layout_constraintTop_toTopOf="@+id/pulsanteAcrobazia" />
+
+                    <TextView
+                        android:id="@+id/textView50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:paddingLeft="4dp"
+                        android:text="@string/dex"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/valoreAcrobazia"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@+id/pulsanteAcrobazia"
+                        app:layout_constraintTop_toTopOf="@+id/pulsanteAcrobazia" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteAddestrareAnim"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteAcrobazia" />
+
+                    <TextView
+                        android:id="@+id/textView53"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/addestrare"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteAddestrareAnim"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteAcrobazia" />
+
+                    <TextView
+                        android:id="@+id/textView54"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/wis"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteAcrobazia" />
+
+                    <TextView
+                        android:id="@+id/valoreAddestrareAnim"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+
+                        android:gravity="center"
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteAddestrareAnim"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteAddestrareAnim" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteArcano"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteAddestrareAnim" />
+
+                    <TextView
+                        android:id="@+id/valoreArcano"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteArcano"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteArcano" />
+
+                    <TextView
+                        android:id="@+id/textView57"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/arcano"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteArcano"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteAddestrareAnim" />
+
+                    <TextView
+                        android:id="@+id/textView58"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="3dp"
+                        android:text="@string/intel"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteAddestrareAnim" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteAtletica"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteArcano" />
+
+                    <TextView
+                        android:id="@+id/valoreAtletica"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteAtletica"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteAtletica" />
+
+                    <TextView
+                        android:id="@+id/textView61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/atletica"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteAtletica"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteArcano" />
+
+                    <TextView
+                        android:id="@+id/textView62"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/str"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteArcano" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteFurtività"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteAtletica" />
+
+                    <TextView
+                        android:id="@+id/valoreFurtività"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteFurtività"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteFurtività" />
+
+                    <TextView
+                        android:id="@+id/textView65"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/furtività"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteFurtività"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteAtletica" />
+
+                    <TextView
+                        android:id="@+id/textView66"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/dex"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteAtletica" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteIndagare"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteFurtività" />
 
 
-    <TextView
-        android:id="@+id/valoreIntimidire"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
+                    <TextView
+                        android:id="@+id/textView69"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/indagare"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteIndagare"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteFurtività" />
 
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsanteIntimidire"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteIntimidire" />
+                    <TextView
+                        android:id="@+id/textView70"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="3dp"
+                        android:text="@string/intel"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteFurtività" />
+
+                    <TextView
+                        android:id="@+id/valoreIndagare"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+
+                        android:gravity="center"
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteIndagare"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteIndagare" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteIngano"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteIndagare" />
+
+                    <TextView
+                        android:id="@+id/textView73"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/inganno"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteIngano"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteIndagare" />
+
+                    <TextView
+                        android:id="@+id/textView74"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/cha"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteIndagare" />
+
+                    <TextView
+                        android:id="@+id/valoreInganno"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteIngano"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteIngano" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteIntimidire"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_column="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteIngano"
+                        app:layout_row="8" />
+
+                    <TextView
+                        android:id="@+id/textView77"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/intimidire"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteIntimidire"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteIngano" />
+
+                    <TextView
+                        android:id="@+id/textView78"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/cha"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteIngano" />
+
+                    <TextView
+                        android:id="@+id/valoreIntimidire"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteIntimidire"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteIntimidire" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteIntrattenere"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteIntimidire" />
+
+                    <TextView
+                        android:id="@+id/textView81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/intrattenere"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteIntrattenere"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteIntimidire" />
+
+                    <TextView
+                        android:id="@+id/textView82"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/cha"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.03"
+                        app:layout_constraintStart_toEndOf="@+id/textView81"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteIntimidire" />
+
+                    <TextView
+                        android:id="@+id/valoreIntrattenere"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteIntrattenere"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteIntrattenere" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <TextView
-        android:id="@+id/valoreSopravvivenza"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsanteSopravvivenza"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteSopravvivenza" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/constraintLayout5"
+                    app:layout_constraintTop_toBottomOf="@+id/textView48">
 
-    <ImageButton
-        android:id="@+id/pulsanteIntrattenere"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@drawable/raggruppa_895"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView81"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteIntimidire" />
+                    <ImageButton
+                        android:id="@+id/pulsanteIntuizione"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/intuizione"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteIntuizione"
+                        app:layout_constraintTop_toTopOf="@+id/pulsanteIntuizione" />
+
+                    <TextView
+                        android:id="@+id/textView52"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/wis"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/pulsanteIntuizione" />
+
+                    <TextView
+                        android:id="@+id/valoreIntuizione"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteIntuizione"
+                        app:layout_constraintTop_toTopOf="@+id/pulsanteIntuizione" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteMedicina"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteIntuizione" />
+
+                    <TextView
+                        android:id="@+id/textView55"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/medicina"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteMedicina"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteIntuizione" />
+
+                    <TextView
+                        android:id="@+id/textView56"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/wis"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteIntuizione" />
+
+                    <TextView
+                        android:id="@+id/valoreMedicina"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteMedicina"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteMedicina" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteNatura"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteMedicina" />
+
+                    <TextView
+                        android:id="@+id/textView59"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/natura"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteNatura"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteMedicina" />
 
 
-    <TextView
-        android:id="@+id/textView81"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/intrattenere"
-        app:layout_constraintEnd_toStartOf="@+id/textView82"
-        app:layout_constraintStart_toEndOf="@+id/pulsanteIntrattenere"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteIntimidire" />
+                    <TextView
+                        android:id="@+id/textView60"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="3dp"
+                        android:text="@string/intel"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/valoreMedicina" />
 
-    <TextView
-        android:id="@+id/textView82"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="4dp"
-        android:text="@string/cha"
-        android:textColor="@color/schedaTesto"
-        app:layout_constraintEnd_toStartOf="@+id/pulsanteStoria"
-        app:layout_constraintStart_toEndOf="@+id/textView81"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteIntimidire" />
+                    <TextView
+                        android:id="@+id/valoreNatua"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteNatura"
+                        app:layout_constraintEnd_toEndOf="@+id/pulsanteNatura" />
 
-    <ImageButton
-        android:id="@+id/pulsanteStoria"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginEnd="6dp"
-        android:background="@drawable/raggruppa_895"
-        android:paddingTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView83"
-        app:layout_constraintStart_toEndOf="@+id/textView82"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteSopravvivenza" />
+                    <ImageButton
+                        android:id="@+id/pulsantePercezione"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteNatura" />
 
-    <TextView
-        android:id="@+id/textView83"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:text="@string/storia"
-        app:layout_constraintEnd_toStartOf="@+id/textView84"
-        app:layout_constraintStart_toEndOf="@+id/pulsanteStoria"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteSopravvivenza" />
+                    <TextView
+                        android:id="@+id/textView63"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/percezione"
+                        app:layout_constraintStart_toEndOf="@+id/pulsantePercezione"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteNatura" />
 
-    <TextView
-        android:id="@+id/textView84"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="4dp"
-        android:text="@string/intel"
-        android:textColor="@color/schedaTesto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView83"
-        app:layout_constraintTop_toBottomOf="@+id/pulsanteSopravvivenza" />
+                    <TextView
+                        android:id="@+id/textView64"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/wis"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteNatura" />
 
-    <TextView
-        android:id="@+id/valoreIntrattenere"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
+                    <TextView
+                        android:id="@+id/valorePercezione"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsantePercezione"
+                        app:layout_constraintStart_toStartOf="@+id/pulsantePercezione" />
 
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsanteIntrattenere"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteIntrattenere" />
+                    <ImageButton
+                        android:id="@+id/pulsantePersuasione"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsantePercezione" />
 
-    <TextView
-        android:id="@+id/valoreStoria"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:clickable="false"
-        android:gravity="center"
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:text="+0"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pulsanteStoria"
-        app:layout_constraintStart_toStartOf="@+id/pulsanteStoria" />
+                    <TextView
+                        android:id="@+id/textView67"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/persuasione"
+                        app:layout_constraintStart_toEndOf="@+id/pulsantePersuasione"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsantePercezione" />
+
+                    <TextView
+                        android:id="@+id/textView68"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:paddingLeft="4dp"
+                        android:text="@string/cha"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView67"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsantePercezione" />
+
+                    <TextView
+                        android:id="@+id/valorePersuasione"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsantePersuasione"
+                        app:layout_constraintStart_toStartOf="@+id/pulsantePersuasione" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteRapiditaDiMano"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsantePersuasione" />
+
+                    <TextView
+                        android:id="@+id/textView71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/rapDiMa"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteRapiditaDiMano"
+                        app:layout_constraintTop_toBottomOf="@+id/valorePersuasione" />
+
+                    <TextView
+                        android:id="@+id/textView72"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:paddingLeft="4dp"
+                        android:text="@string/dex"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsantePersuasione" />
+
+                    <TextView
+                        android:id="@+id/valoreRapiditaDiMano"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteRapiditaDiMano"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteRapiditaDiMano" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteReligione"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteRapiditaDiMano" />
+
+                    <TextView
+                        android:id="@+id/textView75"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/religione"
+                        app:layout_column="4"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteReligione"
+                        app:layout_constraintTop_toBottomOf="@+id/valoreRapiditaDiMano" />
+
+                    <TextView
+                        android:id="@+id/textView76"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="3dp"
+                        android:paddingLeft="4dp"
+                        android:text="@string/intel"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteRapiditaDiMano" />
+
+                    <TextView
+                        android:id="@+id/valoreReligione"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteReligione"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteReligione" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteSopravvivenza"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteReligione" />
+
+                    <TextView
+                        android:id="@+id/textView79"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/sopravvivenza"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteSopravvivenza"
+                        app:layout_constraintTop_toBottomOf="@+id/valoreReligione" />
+
+                    <TextView
+                        android:id="@+id/textView80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:paddingLeft="4dp"
+                        android:text="@string/wis"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/valoreReligione" />
+
+                    <TextView
+                        android:id="@+id/valoreSopravvivenza"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteSopravvivenza"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteSopravvivenza" />
+
+                    <ImageButton
+                        android:id="@+id/pulsanteStoria"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/raggruppa_895"
+                        android:paddingTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteSopravvivenza" />
+
+                    <TextView
+                        android:id="@+id/textView83"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/storia"
+                        app:layout_constraintStart_toEndOf="@+id/pulsanteStoria"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteSopravvivenza" />
+
+                    <TextView
+                        android:id="@+id/textView84"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="3dp"
+                        android:paddingLeft="4dp"
+                        android:text="@string/intel"
+                        android:textColor="@color/schedaTesto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pulsanteSopravvivenza" />
+
+                    <TextView
+                        android:id="@+id/valoreStoria"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:maxWidth="@android:dimen/app_icon_size"
+                        android:maxHeight="@android:dimen/app_icon_size"
+                        android:text="+0"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pulsanteStoria"
+                        app:layout_constraintStart_toStartOf="@+id/pulsanteStoria" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
