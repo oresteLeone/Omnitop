@@ -76,7 +76,6 @@
 
         <activity
             android:name=".dndCampagnaHomeActivity.DndCampagnaHome"
-            android:label="Campagna DND"
             android:parentActivityName=".dndHomeActivity.DndHome" />
     </application>
 

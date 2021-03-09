@@ -38,14 +38,17 @@ class CustomConverters {
     fun fromTipoOggetto(value: TipoOggetto) = value.name
 
     @TypeConverter
-    fun fromByteArrayToBitmap(byteArray: ByteArray): Bitmap {
-        return BitmapFactory.decodeByteArray(byteArray,0,byteArray.size)
+    fun fromByteArrayToBitmap(byteArray: ByteArray?): Bitmap? {
+        if (byteArray != null) {
+            return BitmapFactory.decodeByteArray(byteArray,0,byteArray.size)
+        }
+        return null
     }
 
     @TypeConverter
-    fun fromBitmapToByteArray(bitmap: Bitmap): ByteArray{
+    fun fromBitmapToByteArray(bitmap: Bitmap?): ByteArray?{
         val outputStream = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.JPEG,20, outputStream)
+        bitmap?.compress(Bitmap.CompressFormat.JPEG,20, outputStream)
         return outputStream.toByteArray()
     }
 

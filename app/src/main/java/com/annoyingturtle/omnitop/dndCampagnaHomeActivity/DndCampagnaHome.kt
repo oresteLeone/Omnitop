@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import coil.load
 import com.annoyingturtle.omnitop.R
 import com.google.android.material.tabs.TabLayout
 import dndData.viewModel.CampagnaViewModel
@@ -20,6 +21,9 @@ import kotlinx.android.synthetic.main.activity_home.diceBtn1
 import kotlinx.android.synthetic.main.activity_home.gridBtn1
 import kotlinx.android.synthetic.main.activity_home.noteBtn1
 import fabPackage.AbsFab
+import kotlinx.android.synthetic.main.activity_dnd_campagna_home.myToolbar
+import kotlinx.android.synthetic.main.activity_dnd_campagna_home.tabNav
+import kotlinx.android.synthetic.main.activity_dnd_campagna_home_alter.*
 
 class DndCampagnaHome : AppCompatActivity() {
 
@@ -33,19 +37,26 @@ class DndCampagnaHome : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dnd_campagna_home)
 
+        /**Action Bar */
+        setSupportActionBar(myToolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+
         extras = intent.extras!!
         idCampagna = extras!!.getInt("idCampagna")
 
         mCampagnaViewModel = ViewModelProvider(this).get(CampagnaViewModel::class.java)
         mCampagnaViewModel.getCampagnaFromID(idCampagna)
+        mCampagnaViewModel.getSingleLiveData().observe(this, Observer {
+            supportActionBar?.title= it.titoloCampagna
+            /*if(it.copertinaBitmap!= null){
+                imageCampaignTopBar.load(it.copertinaBitmap)
+            }*/
+        })
+        /*showBasicCampagnaData()*/
 
-        showBasicCampagnaData()
 
 
-        /**Action Bar */
-        setSupportActionBar(myToolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
 
         /** Navigare fra le schede */
         val navController = findNavController(R.id.campagnafragmenthost)
@@ -74,10 +85,7 @@ class DndCampagnaHome : AppCompatActivity() {
     }
 
     private fun showBasicCampagnaData() {
-       mCampagnaViewModel.getSingleLiveData().observe(this, Observer {
-            supportActionBar?.title= it.titoloCampagna
 
-        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
