@@ -39,7 +39,6 @@ class ListaCampagnaAdapter(private val listener : onItemClickListner): RecyclerV
     override fun onBindViewHolder(holder: RecentiViewHolder, position: Int) {
         val currentItem = CampagnaList[position]
         holder.itemView.nomeCampagnaCardText.text = currentItem.titoloCampagna
-       // holder.itemView.imgCampagna.load(currentItem.copertinaUri)
         holder.itemView.imgCampagna.load(currentItem.copertinaBitmap)
         if(currentItem.ruoloCampagna == RuoloGiocatore.DM){
             holder.itemView.ruoloGiocatoreCampagnaDM.visibility = View.VISIBLE

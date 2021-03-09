@@ -20,15 +20,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imgCampagna"
-            android:layout_width="match_parent"
-            android:layout_height="112dp"
-            android:scaleType="matrix"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/imgCampagna"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/blurred"
@@ -46,21 +46,25 @@
                 android:id="@+id/cardCampagnatextbg"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:background="@drawable/card_template"
+                android:alpha="0.5"
+                android:background="@color/backGround"
                 app:layout_constraintBottom_toBottomOf="@id/imgCampagna"
                 app:layout_constraintEnd_toEndOf="@id/imgCampagna"
                 app:layout_constraintStart_toStartOf="@id/imgCampagna" />
 
             <TextView
                 android:id="@+id/nomeCampagnaCardText"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:singleLine="true"
                 android:text="Nome Campagna"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/cardCampagnatextbg"
+                app:layout_constraintEnd_toEndOf="@+id/cardCampagnatextbg"
                 app:layout_constraintStart_toStartOf="@+id/cardCampagnatextbg"
-                app:layout_constraintTop_toTopOf="@id/cardCampagnatextbg"/>
+                app:layout_constraintTop_toTopOf="@id/cardCampagnatextbg" />
 
 
             <ImageView
