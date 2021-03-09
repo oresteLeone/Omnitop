@@ -51,6 +51,8 @@ class EstrazioneCarteFragment() : BottomSheetDialogFragment() {
 
                 }
             }
+
+            cartaEstratta.text = ""
         }
 
         btn_estrai.setOnClickListener(){
@@ -68,6 +70,7 @@ class EstrazioneCarteFragment() : BottomSheetDialogFragment() {
                 1 -> carteFrancesi = mischia(carteFrancesi)
                 else -> tarocchi = mischia(tarocchi)
             }
+            cartaEstratta.text = ""
         }
 
     }

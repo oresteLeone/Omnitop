@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.annoyingturtle.omnitop.R
+import com.annoyingturtle.omnitop.dndSchedaActivity.DndSchedaActivity
 import dndData.entities.Scheda
 import dndData.utilData.Statistiche
 import dndData.viewModel.SchedaViewModel
@@ -94,6 +95,7 @@ class PersonaggioDndFragment : Fragment() {
                 dadiVita.isFocusableInTouchMode = false
 
                 salvaStatBase(1)
+                (activity as DndSchedaActivity).chiudiKeyboard()
 
             }
 
@@ -136,17 +138,17 @@ class PersonaggioDndFragment : Fragment() {
 
             percezionePassiva.text = (10 + Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abPercezione.toString()).toString().toInt() +
-                    Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
 
             profBonus.text= Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString())
             dadiVita.text= Editable.Factory.getInstance().newEditable(it.statistiche?.dadoVita.toString())
 
-            valoreForza.text= ((Editable.Factory.getInstance().newEditable(it.statistiche?.STR.toString()).toString().toInt() -10)/2).toString()
-            valoreDestrezza.text= ((Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt() -10)/2).toString()
-            valoreCostituzione.text= ((Editable.Factory.getInstance().newEditable(it.statistiche?.CON.toString()).toString().toInt() -10)/2).toString()
-            valoreInt.text= ((Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt() -10)/2).toString()
-            valoreSag.text= ((Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt() -10)/2).toString()
-            valoreCha.text= ((Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt() -10)/2).toString()
+            valoreForza.text= calcolaModificatore((Editable.Factory.getInstance().newEditable(it.statistiche?.STR.toString()).toString().toInt())).toString()
+            valoreDestrezza.text= calcolaModificatore((Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString()
+            valoreCostituzione.text= calcolaModificatore((Editable.Factory.getInstance().newEditable(it.statistiche?.CON.toString()).toString().toInt())).toString()
+            valoreInt.text= calcolaModificatore((Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString()
+            valoreSag.text= calcolaModificatore((Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString()
+            valoreCha.text= calcolaModificatore((Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString()
 
             tsForzaCheck.isChecked = it.statistiche?.tiroSalvezzaSTR == true
             tsDestrezzaCheck.isChecked = it.statistiche?.tiroSalvezzaDEX == true
@@ -158,71 +160,71 @@ class PersonaggioDndFragment : Fragment() {
 
             valoreAcrobazia.text =(Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abAcrobazia.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
 
             valoreAddestrareAnim.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abAddestrare.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
 
             valoreArcano.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abArcano.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
 
             valoreAtletica.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abAtletica.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.STR.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.STR.toString()).toString().toInt())).toString().toInt()).toString()
 
             valoreFurtività.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abFurtivita.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
 
             valoreIndagare.text = ((Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIndagare.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt() -10)/2).toString().toInt()).toString())
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString())     //// DA QUA
 
             valoreInganno.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abInganno.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
 
             valoreIntimidire.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIntimidire.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
 
             valoreIntuizione.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIntuizione.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
 
             valoreMedicina.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abMedicina.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
 
             valoreNatua.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abNatura.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
 
             valorePercezione.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abPercezione.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
 
             valorePersuasione.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abPersuasione.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
 
             valoreRapiditaDiMano.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abRapiditMano.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
 
             valoreReligione.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abReligione.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
 
             valoreSopravvivenza.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abSoprav.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
 
             valoreStoria.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abStoria.toString()).toString().toInt() +
-                    ((Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt() -10)/2).toString().toInt()).toString()
+                    (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
 
         })
 
@@ -468,6 +470,16 @@ class PersonaggioDndFragment : Fragment() {
         }
     }
 
+
+    fun calcolaModificatore(stat: Int): Int{
+
+        if (stat<10)
+            if(stat%2 !=0)
+               return (stat-10)/2-1
+
+        return  (stat-10)/2
+
+    }
 
 
 }

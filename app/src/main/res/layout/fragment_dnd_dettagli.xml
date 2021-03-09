@@ -207,6 +207,7 @@
                 android:layout_marginEnd="16dp">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/puntiEsperienza"
+                    android:maxLength="9"
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -237,7 +238,7 @@
                 android:layout_marginEnd="16dp">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/puntiIspirazione"
-
+                    android:maxLength="9"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clickable="false"

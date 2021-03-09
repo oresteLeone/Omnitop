@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.annoyingturtle.omnitop.R
+import com.annoyingturtle.omnitop.dndSchedaActivity.DndSchedaActivity
 import dndData.entities.Scheda
 import dndData.utilData.Incantatore
 import dndData.viewModel.SchedaViewModel
@@ -157,6 +158,7 @@ class DndIncantesimiFragment : Fragment() {
             TPCIncantesimi.isClickable = false
 
             updateDatiIncantatore()
+            (activity as DndSchedaActivity).chiudiKeyboard()
 
         }
 
@@ -279,6 +281,7 @@ class DndIncantesimiFragment : Fragment() {
             slotLv1Totali.isFocusableInTouchMode = false
 
             updateLivello1()
+            (activity as DndSchedaActivity).chiudiKeyboard()
         }
 
         editLv2SALVA.setOnClickListener(){
@@ -292,6 +295,7 @@ class DndIncantesimiFragment : Fragment() {
             slotLv2Totali.isFocusableInTouchMode = false
 
             updateLivello2()
+            (activity as DndSchedaActivity).chiudiKeyboard()
         }
 
         editLv3SALVA.setOnClickListener(){
@@ -305,6 +309,7 @@ class DndIncantesimiFragment : Fragment() {
             slotLv3Totali.isFocusableInTouchMode = false
 
             updateLivello3()
+            (activity as DndSchedaActivity).chiudiKeyboard()
         }
 
         editLv4SALVA.setOnClickListener(){
@@ -318,6 +323,7 @@ class DndIncantesimiFragment : Fragment() {
             slotLv4Totali.isFocusableInTouchMode = false
 
             updateLivello4()
+            (activity as DndSchedaActivity).chiudiKeyboard()
         }
 
         editLv5SALVA.setOnClickListener(){
@@ -331,6 +337,7 @@ class DndIncantesimiFragment : Fragment() {
             slotLv5Totali.isFocusableInTouchMode = false
 
             updateLivello5()
+            (activity as DndSchedaActivity).chiudiKeyboard()
         }
 
         editLv6SALVA.setOnClickListener(){
@@ -344,6 +351,7 @@ class DndIncantesimiFragment : Fragment() {
             slotLv6Totali.isFocusableInTouchMode = false
 
             updateLivello6()
+            (activity as DndSchedaActivity).chiudiKeyboard()
         }
 
         editLv7SALVA.setOnClickListener(){
@@ -357,6 +365,7 @@ class DndIncantesimiFragment : Fragment() {
             slotLv7Totali.isFocusableInTouchMode = false
 
             updateLivello7()
+            (activity as DndSchedaActivity).chiudiKeyboard()
         }
 
         editLv8SALVA.setOnClickListener(){
@@ -370,6 +379,7 @@ class DndIncantesimiFragment : Fragment() {
             slotLv8Totali.isFocusableInTouchMode = false
 
             updateLivello8()
+            (activity as DndSchedaActivity).chiudiKeyboard()
         }
 
         editLv9SALVA.setOnClickListener(){
@@ -383,6 +393,7 @@ class DndIncantesimiFragment : Fragment() {
             slotLv9Totali.isFocusableInTouchMode = false
 
             updateLivello9()
+            (activity as DndSchedaActivity).chiudiKeyboard()
         }
 
     }
