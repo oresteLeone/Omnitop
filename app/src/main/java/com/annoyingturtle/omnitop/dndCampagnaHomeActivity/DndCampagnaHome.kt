@@ -27,6 +27,7 @@ class DndCampagnaHome : AppCompatActivity() {
     var idCampagna: Int = -1
     lateinit var mytablayout: TabLayout
     lateinit var extras: Bundle
+    var isExtendedToolbar: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +38,7 @@ class DndCampagnaHome : AppCompatActivity() {
 
         mCampagnaViewModel = ViewModelProvider(this).get(CampagnaViewModel::class.java)
         mCampagnaViewModel.getCampagnaFromID(idCampagna)
+
         showBasicCampagnaData()
 
 
