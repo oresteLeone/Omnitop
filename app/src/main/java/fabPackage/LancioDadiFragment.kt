@@ -20,6 +20,7 @@ class LancioDadiFragment : BottomSheetDialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
+        if (requireContext()::class.java.simpleName.toString() == "GrigliaDIBattagliaActivity") return inflater.inflate(R.layout.lancio_dadi_landscape_layout, container, false)
         return inflater.inflate(R.layout.lancio_dadi_layout2, container, false)
     }
 

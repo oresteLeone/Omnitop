@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fabPackage.GrigliaDIBattagliaActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/myToolbarGriglia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            tools:layout_editor_absoluteY="30dp" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/fabPadre"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:visibility="visible"
+        app:backgroundTint="#00FFFFFF"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="48dp"
+        app:srcCompat="@drawable/ic_more"
+        android:contentDescription="@string/TODO" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/diceBtn1"
+
+        app:tint="@null"
+
+
+        android:focusable="true"
+        android:backgroundTint="@color/fabFiglio"
+        android:contextClickable="true"
+        app:maxImageSize="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/addBtn1"
+        app:layout_constraintEnd_toEndOf="@+id/addBtn1"
+        app:srcCompat="@drawable/dicebicon_1"
+        android:contentDescription="@string/TODO"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/cardBtn1"
+
+        app:tint="@null"
+
+        app:maxImageSize="48dp"
+        android:contextClickable="true"
+        android:backgroundTint="@color/fabFiglio"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:focusable="true"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/diceBtn1"
+        app:layout_constraintEnd_toEndOf="@+id/diceBtn1"
+        app:srcCompat="@drawable/cards_icon_bonw_1"
+        android:contentDescription="@string/TODO"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/gridBtn1"
+
+        app:tint="@null"
+
+
+        app:maxImageSize="48dp"
+        android:visibility="gone"
+        android:contextClickable="true"
+        android:backgroundTint="@color/fabFiglio"
+        android:layout_width="wrap_content"
+        android:focusable="true"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/cardBtn1"
+        app:layout_constraintEnd_toEndOf="@+id/cardBtn1"
+        app:srcCompat="@drawable/battlegrid_icon__1"
+        android:contentDescription="@string/TODO"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/noteBtn1"
+
+        android:layout_width="wrap_content"
+
+
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/fabFiglio"
+        android:clickable="true"
+        android:contentDescription="@string/TODO"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/cardBtn1"
+        app:layout_constraintEnd_toEndOf="@+id/gridBtn1"
+        app:maxImageSize="48dp"
+        app:srcCompat="@drawable/notes_icon__1"
+        app:tint="@null" />
+
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/mappa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mappa_griglia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

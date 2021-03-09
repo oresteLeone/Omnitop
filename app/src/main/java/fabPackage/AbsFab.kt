@@ -1,15 +1,17 @@
 package fabPackage
 
 import android.content.Context
+import android.content.Intent
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.FragmentManager
 import com.annoyingturtle.omnitop.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton, gridBtn1: FloatingActionButton, noteBtn1: FloatingActionButton, diceBtn1: FloatingActionButton, contesto : Context, fragmentManager: FragmentManager) {
+open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton, gridBtn1: FloatingActionButton, noteBtn1: FloatingActionButton, diceBtn1: FloatingActionButton, contesto : Context,
+                  fragmentManager: FragmentManager, intentGriglia : Intent?= null) {
     //class AbsFab constructor(addBtn1 : FloatingActionButton, cardBtn1 : FloatingActionButton, gridBtn1 : FloatingActionButton, noteBtn1 : FloatingActionButton, diceBtn1 : FloatingActionButton){
 
     /****** Variabili pulsanti FAB*****/
@@ -26,6 +28,9 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
     val noteBottomsheet = NoteFabFragment()
     val estrazioneCarteBottomsheet = EstrazioneCarteFragment()
 
+    /** Intent per la griglia */
+
+    val griglia = intentGriglia
 
 
     private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(contesto, R.anim.rotate_open_anim) }
@@ -51,9 +56,9 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
         }
 
         gridBtn.setOnClickListener {
-            Toast.makeText(contesto, "Pulsante Griglia", Toast.LENGTH_SHORT).show()
-            onAddButtonClicked()
-
+            //Toast.makeText(contesto, "Pulsante Griglia", Toast.LENGTH_SHORT).show()
+            startActivity(contesto, griglia as Intent, null)
+                    onAddButtonClicked()
         }
 
         noteBtn.setOnClickListener {
@@ -94,7 +99,7 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
             addBtn.startAnimation(rotateOpen)
             diceBtn.startAnimation(fromBottom)
             cardBtn.startAnimation(fromBottom)
-            gridBtn.startAnimation(fromBottom)
+            if(griglia!=null) gridBtn.startAnimation(fromBottom)
             noteBtn.startAnimation(fromBottom)
         }
         else
@@ -102,7 +107,7 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
             addBtn.startAnimation(rotateClose)
             diceBtn.startAnimation(toBottom)
             cardBtn.startAnimation(toBottom)
-            gridBtn.startAnimation(toBottom)
+            if(griglia!=null) gridBtn.startAnimation(toBottom)
             noteBtn.startAnimation(toBottom)
         }
     }
@@ -111,14 +116,14 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
         if(!clicked){
             diceBtn.visibility = View.VISIBLE
             cardBtn.visibility = View.VISIBLE
-            gridBtn.visibility = View.VISIBLE
+            if(griglia!=null) gridBtn.visibility = View.VISIBLE
             noteBtn.visibility = View.VISIBLE
         }
         else
         {
             diceBtn.visibility = View.INVISIBLE
             cardBtn.visibility = View.INVISIBLE
-            gridBtn.visibility = View.INVISIBLE
+            if(griglia!=null) gridBtn.visibility = View.INVISIBLE
             noteBtn.visibility = View.INVISIBLE
         }
 
@@ -129,14 +134,14 @@ open class AbsFab(addBtn1: FloatingActionButton, cardBtn1: FloatingActionButton,
         {
             diceBtn.isClickable=false
             cardBtn.isClickable=false
-            gridBtn.isClickable=false
+            if(griglia!=null) gridBtn.isClickable=false
             diceBtn.isClickable=false
         }
         else
         {
             diceBtn.isClickable=true
             cardBtn.isClickable=true
-            gridBtn.isClickable=true
+            if(griglia!=null) gridBtn.isClickable=true
             diceBtn.isClickable=true
         }
     }

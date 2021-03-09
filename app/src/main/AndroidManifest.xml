@@ -17,7 +17,9 @@
         android:roundIcon="@mipmap/ic_omnitoplauncher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Omnitop">
-        <activity android:name=".dndSchedaActivity.dndSchedaFragments.UpdateAbilita"></activity>
+        <activity android:name="fabPackage.GrigliaDIBattagliaActivity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".dndSchedaActivity.dndSchedaFragments.UpdateAbilita" />
         <activity
             android:name=".dndSchedaActivity.dndSchedaFragments.UpdateCaratteristicheScheda"
             android:parentActivityName=".dndSchedaActivity.DndSchedaActivity" />
