@@ -23,6 +23,25 @@ class UpdateAbilita : AppCompatActivity() {
     var idScheda = -1
     private lateinit var mSchedaViewModel : SchedaViewModel
 
+    var acrobazia = 0
+    var addestrare = 0
+    var arcano = 0
+    var atletica = 0
+    var furtivita = 0
+    var indagare = 0
+    var inganno = 0
+    var intimidire = 0
+    var intrattenere = 0
+    var intuizione = 0
+    var medicina = 0
+    var natura = 0
+    var percezione = 0
+    var persuasione = 0
+    var rapidita = 0
+    var religione = 0
+    var sopravvivenza = 0
+    var storia = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -78,24 +97,6 @@ class UpdateAbilita : AppCompatActivity() {
 
         mSchedaViewModel.getSingleLiveData().observe(this, Observer {
 
-            var acrobazia = 0
-            var addestrare = 0
-            var arcano = 0
-            var atletica = 0
-            var furtivita = 0
-            var indagare = 0
-            var inganno = 0
-            var intimidire = 0
-            var intrattenere = 0
-            var intuizione = 0
-            var medicina = 0
-            var natura = 0
-            var percezione = 0
-            var persuasione = 0
-            var rapidita = 0
-            var religione = 0
-            var sopravvivenza = 0
-            var storia = 0
 
             acrobazia = Editable.Factory.getInstance().newEditable(it.statistiche?.abAcrobazia.toString()).toString().toInt()
             addestrare = Editable.Factory.getInstance().newEditable(it.statistiche?.abAddestrare.toString()).toString().toInt()
@@ -232,58 +233,48 @@ class UpdateAbilita : AppCompatActivity() {
     fun salvaDati(){
 
         mSchedaViewModel.getSingleLiveData().observe(this, Observer {
-            var acrobazia = 0
+
             if(acrobazia0.isChecked) acrobazia=0 else if (acrobazia1.isChecked) acrobazia = 1 else if (acrobazia2.isChecked) acrobazia = 2
 
-            var addestrare = 0
             if(addestrare0.isChecked) addestrare=0 else if (addestrare1.isChecked) addestrare = 1 else if (addestrare2.isChecked) addestrare = 2
 
-            var arcano = 0
             if(Arcano0.isChecked) arcano=0 else if (Arcano1.isChecked) arcano = 1 else if (Arcano2.isChecked) arcano = 2
 
-            var atletica = 0
             if(Atletica0.isChecked) atletica=0 else if (Atletica1.isChecked) atletica = 1 else if (Atletica2.isChecked) atletica = 2
 
-            var furtivita = 0
             if(Furtività0.isChecked) furtivita=0 else if (Furtività1.isChecked) furtivita = 1 else if (Furtività2.isChecked) furtivita = 2
 
-            var indagare = 0
             if(Indagare0.isChecked) indagare=0 else if (Indagare1.isChecked) indagare = 1 else if (Indagare2.isChecked) indagare = 2
 
-            var inganno = 0
             if(Inganno0.isChecked) inganno=0 else if (Inganno1.isChecked) inganno = 1 else if (Inganno2.isChecked) inganno = 2
 
-            var intimidire = 0
             if(Intimidire0.isChecked) intimidire=0 else if (Intimidire1.isChecked) intimidire = 1 else if (Intimidire2.isChecked) intimidire = 2
 
-            var intrattenere = 0
             if(Intrattenere0.isChecked) intrattenere=0 else if (Intrattenere1.isChecked) intrattenere = 1 else if (Intrattenere2.isChecked) intrattenere = 2
 
-            var intuizione = 0
-            if(Intuizione0.isChecked) intuizione=0 else if (Intuizione1.isChecked) intuizione = 1 else if (Intrattenere2.isChecked) intuizione = 2
+            if(Intuizione0.isChecked) intuizione=0 else if (Intuizione1.isChecked) intuizione = 1 else if (Intuizione2.isChecked) intuizione = 2
 
-            var medicina = 0
             if(Medicina0.isChecked) medicina=0 else if (Medicina1.isChecked) medicina = 1 else if (Medicina2.isChecked) medicina = 2
 
-            var natura = 0
+
             if(Natura0.isChecked) natura=0 else if (Natura1.isChecked) natura = 1 else if (Natura2.isChecked) natura = 2
 
-            var percezione = 0
+
             if(Percezione0.isChecked) percezione=0 else if (Percezione1.isChecked) percezione = 1 else if (Percezione2.isChecked) percezione = 2
 
-            var persuasione = 0
+
             if(Persuasione0.isChecked) persuasione=0 else if (Persuasione1.isChecked) persuasione = 1 else if (Persuasione2.isChecked) persuasione = 2
 
-            var rapidita = 0
+
             if(Rapidità0.isChecked) rapidita=0 else if (Rapidità1.isChecked) rapidita = 1 else if (Rapidità2.isChecked) rapidita = 2
 
-            var religione = 0
+
             if(Religione0.isChecked) religione=0 else if (Religione1.isChecked) religione = 1 else if (Religione2.isChecked) religione = 2
 
-            var sopravvivenza = 0
+
             if(Sopravvivenza0.isChecked) sopravvivenza=0 else if (Sopravvivenza1.isChecked) sopravvivenza = 1 else if (Sopravvivenza2.isChecked) sopravvivenza = 2
 
-            var storia = 0
+
             if(Storia0.isChecked) storia=0 else if (Storia1.isChecked) storia = 1 else if (Storia2.isChecked) storia = 2
 
             val statisticheNuove = Statistiche(

@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.annoyingturtle.omnitop.R
@@ -162,10 +163,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abAcrobazia.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abAcrobazia == 1 ) {
-                pulsanteAcrobazia.background.setTint(resources.getColor(R.color.secondaryLight65op))
+               pulsanteAcrobazia.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+               textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
             }else if (it.statistiche?.abAcrobazia == 2){
-                pulsanteAcrobazia.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView49.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteAcrobazia.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
+                pulsanteAcrobazia.background.setTintList(null)
             }
 
 
@@ -173,10 +178,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abAddestrare.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abAddestrare == 1 ) {
-                pulsanteAddestrareAnim.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteAddestrareAnim.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abAddestrare == 2){
-                pulsanteAddestrareAnim.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView53.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteAddestrareAnim.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView53.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                textView53.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
+                pulsanteAddestrareAnim.background.setTintList(null)
             }
 
 
@@ -184,10 +193,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abArcano.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abArcano == 1 ) {
-                pulsanteArcano.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteArcano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abArcano == 2){
-                pulsanteArcano.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView57.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteArcano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView57.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                textView57.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                pulsanteArcano.background.setTintList(null)
             }
 
 
@@ -195,10 +208,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abAtletica.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.STR.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abAtletica == 1 ) {
-                pulsanteAtletica.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteAtletica.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abAtletica == 2){
-                pulsanteAtletica.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView61.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteAtletica.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView61.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                pulsanteAtletica.background.setTintList(null)
+                textView61.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -207,10 +224,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abFurtivita.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abFurtivita == 1 ) {
-                pulsanteFurtività.background.setTint(resources.getColor(R.color.secondaryLight65op))
+               pulsanteFurtività.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abFurtivita == 2){
-                pulsanteFurtività.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView65.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteFurtività.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView65.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                pulsanteFurtività.background.setTintList(null)
+                textView65.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -219,10 +240,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIndagare.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString())     //// DA QUA
             if (it.statistiche?.abIndagare == 1 ) {
-                pulsanteIndagare.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteIndagare.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abIndagare == 2){
-                pulsanteIndagare.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView69.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteIndagare.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView69.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+              pulsanteIndagare.background.setTintList(null)
+                textView69.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -231,10 +256,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abInganno.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abInganno == 1 ) {
-                pulsanteIngano.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteIngano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abInganno == 2){
-                pulsanteIngano.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView73.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteIngano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView73.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                pulsanteIngano.background.setTintList(null)
+                textView73.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -242,10 +271,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIntimidire.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abIntimidire == 1 ) {
-                pulsanteIntimidire.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteIntimidire.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abIntimidire == 2){
-                pulsanteIntimidire.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView77.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteIntimidire.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView77.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                pulsanteIntimidire.background.setTintList(null)
+               textView77.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -254,10 +287,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIntuizione.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abIntuizione == 1 ) {
-                pulsanteIntuizione.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteIntuizione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abIntuizione == 2){
-                pulsanteIntuizione.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView51.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteIntuizione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView51.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                pulsanteIntuizione.background.setTintList(null)
+                textView51.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -266,10 +303,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIntrattenere.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abIntrattenere == 1 ) {
-                pulsanteIntrattenere.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteIntrattenere.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abIntrattenere == 2){
-                pulsanteIntrattenere.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView81.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteIntrattenere.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView81.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                pulsanteIntrattenere.background.setTintList(null)
+                textView81.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -277,10 +318,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abMedicina.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abMedicina == 1 ) {
-                pulsanteMedicina.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteMedicina.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abMedicina == 2){
-                pulsanteMedicina.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView55.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteMedicina.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView55.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                pulsanteMedicina.background.setTintList(null)
+                textView55.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -288,10 +333,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abNatura.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abNatura == 1 ) {
-                pulsanteNatura.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteNatura.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abNatura == 2){
-                pulsanteNatura.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView59.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteNatura.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView59.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                pulsanteNatura.background.setTintList(null)
+                textView59.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -299,10 +348,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abPercezione.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abPercezione == 1 ) {
-                pulsantePercezione.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsantePercezione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abPercezione == 2){
-                pulsantePercezione.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView63.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsantePercezione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView63.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+              pulsantePercezione.background.setTintList(null)
+                textView63.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -310,10 +363,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abPersuasione.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abPersuasione == 1 ) {
-                pulsantePersuasione.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsantePersuasione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abPersuasione == 2){
-                pulsantePersuasione.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView67.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsantePersuasione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView67.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                pulsantePersuasione.background.setTintList(null)
+                textView67.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -321,10 +378,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abRapiditMano.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abRapiditMano == 1 ) {
-                pulsanteRapiditaDiMano.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteRapiditaDiMano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abRapiditMano == 2){
-                pulsanteRapiditaDiMano.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView71.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteRapiditaDiMano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView71.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                pulsanteRapiditaDiMano.background.setTintList(null)
+                textView71.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -332,10 +393,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abReligione.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abReligione == 1 ) {
-                pulsanteReligione.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteReligione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abReligione == 2){
-                pulsanteReligione.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView75.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteReligione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView75.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                pulsanteReligione.background.setTintList(null)
+                textView75.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -343,10 +408,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abSoprav.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abSoprav == 1 ) {
-                pulsanteSopravvivenza.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteSopravvivenza.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abSoprav == 2){
-                pulsanteSopravvivenza.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView79.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteSopravvivenza.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView79.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                pulsanteSopravvivenza.background.setTintList(null)
+                textView79.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
 
@@ -354,10 +423,14 @@ class PersonaggioDndFragment : Fragment() {
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abStoria.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
             if (it.statistiche?.abStoria == 1 ) {
-                pulsanteStoria.background.setTint(resources.getColor(R.color.secondaryLight65op))
+                pulsanteStoria.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }else if (it.statistiche?.abStoria == 2){
-                pulsanteStoria.background.setTint(resources.getColor(R.color.secondaryLight65op))
-                textView83.setTextColor(resources.getColor(R.color.secondaryLight65op))
+                pulsanteStoria.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                textView83.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }else{
+                pulsanteStoria.background.setTintList(null)
+                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
 
         })

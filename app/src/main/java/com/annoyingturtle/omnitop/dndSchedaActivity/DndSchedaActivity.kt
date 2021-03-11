@@ -40,7 +40,7 @@ class DndSchedaActivity : AppCompatActivity(){
     var idScheda = -1
     lateinit var schedaToDelete: Scheda
     lateinit var extras: Bundle
-
+    var campagnaid =-1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,6 +64,7 @@ class DndSchedaActivity : AppCompatActivity(){
 
         extras = intent.extras!!
         idScheda = extras!!.getInt("idScheda")
+        campagnaid = extras!!.getInt("idCampagna")
 
         mSchedaViewModel = ViewModelProvider(this).get(SchedaViewModel::class.java)
         if (idScheda > -1) {
@@ -127,9 +128,9 @@ class DndSchedaActivity : AppCompatActivity(){
         return navigateUpTo(
             Intent(this, DndCampagnaHome::class.java).putExtra(
                 "idCampagna",
-                extras.getInt("idCampagna")
+                campagnaid)
             )
-        )
+
     }
 
 
@@ -142,7 +143,7 @@ class DndSchedaActivity : AppCompatActivity(){
             mSchedaViewModel.getSingleLiveData().removeObservers(this)
             mSchedaViewModel.deleteScheda(schedaToDelete)
             Toast.makeText(this, "Scheda eliminata con successo!", Toast.LENGTH_SHORT).show()
-            navigateUpTo(Intent(this, DndCampagnaHome::class.java).putExtra("idCampagna", extras.getInt("idCampagna")))
+            navigateUpTo(Intent(this, DndCampagnaHome::class.java).putExtra("idCampagna", campagnaid))
 
         }
         conferma.setNegativeButton("No"){ _, _ ->
