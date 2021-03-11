@@ -23,6 +23,9 @@
         android:roundIcon="@mipmap/ic_omnitoplauncher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Omnitop">
+        <activity android:name="fabPackage.GrigliaDIBattagliaActivity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".dndSchedaActivity.dndSchedaFragments.UpdateAbilita" />
 
         <activity android:name=".dndHomeActivity.DndHomeNuovaCampagna"
             android:parentActivityName=".dndHomeActivity.DndHome"

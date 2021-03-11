@@ -23,6 +23,7 @@ class EstrazioneCarteFragment() : BottomSheetDialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
+        if (requireContext()::class.java.simpleName.toString() == "GrigliaDIBattagliaActivity") return inflater.inflate(R.layout.estrazione_carte_landscape_layout, container, false)
         return inflater.inflate(R.layout.estrazione_carte_layout, container, false)
     }
     override fun onStart() {

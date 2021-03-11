@@ -25,6 +25,7 @@ import kotlinx.android.synthetic.main.activity_dnd_campagna_home.myToolbar
 import kotlinx.android.synthetic.main.activity_dnd_campagna_home.tabNav
 import kotlinx.android.synthetic.main.activity_dnd_campagna_home_alter.*
 import kotlinx.android.synthetic.main.lista_note_layout.view.*
+import fabPackage.GrigliaDIBattagliaActivity
 
 class DndCampagnaHome : AppCompatActivity() {
 
@@ -52,7 +53,6 @@ class DndCampagnaHome : AppCompatActivity() {
 
 
 
-
         /** Navigare fra le schede */
         val navController = findNavController(R.id.campagnafragmenthost)
         mytablayout = tabNav
@@ -75,12 +75,12 @@ class DndCampagnaHome : AppCompatActivity() {
 
 
         /********** FAB ***********/
-        val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this, supportFragmentManager)
+        val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this, supportFragmentManager, Intent(this, GrigliaDIBattagliaActivity::class.java))
         fab.startListener(this)
     }
 
     private fun showBasicCampagnaData() {
-        mCampagnaViewModel.getSingleLiveData().observe(this, Observer {
+       mCampagnaViewModel.getSingleLiveData().observe(this, Observer {
             supportActionBar?.title= it.titoloCampagna
             if(it.copertinaBitmap!= null){
                 imageCampaignTopBar.load(it.copertinaBitmap)

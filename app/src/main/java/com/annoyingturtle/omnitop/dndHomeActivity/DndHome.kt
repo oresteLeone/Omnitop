@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_home.diceBtn1
 import kotlinx.android.synthetic.main.activity_home.gridBtn1
 import kotlinx.android.synthetic.main.activity_home.noteBtn1
 import fabPackage.AbsFab
+import fabPackage.GrigliaDIBattagliaActivity
 
 class DndHome : AppCompatActivity() {
 
@@ -38,7 +39,7 @@ class DndHome : AppCompatActivity() {
 
 
         /********** FAB ***********/
-        val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this, supportFragmentManager)
+        val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this, supportFragmentManager, Intent(this, GrigliaDIBattagliaActivity::class.java))
         fab.startListener(this)
 
     }

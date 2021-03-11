@@ -11,6 +11,7 @@ import com.annoyingturtle.omnitop.dndHomeActivity.DndHome
 import kotlinx.android.synthetic.main.activity_home.*
 import fabPackage.AbsFab
 import fabPackage.AdapterRecyclerListaGiochi
+import fabPackage.GrigliaDIBattagliaActivity
 import fabPackage.ItemListaGiochi
 import kotlinx.android.synthetic.main.activity_home.addBtn1
 import kotlinx.android.synthetic.main.activity_home.cardBtn1
@@ -56,7 +57,7 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
 
 
         /********** FAB ***********/
-        val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this, supportFragmentManager)
+        val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this, supportFragmentManager, Intent(this, GrigliaDIBattagliaActivity::class.java))
         fab.startListener(this)
 
 
