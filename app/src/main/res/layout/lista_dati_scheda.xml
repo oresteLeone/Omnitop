@@ -20,7 +20,7 @@
             android:layout_marginStart="16dp"
             android:text="Titolo"
             android:textSize="26sp"
-            android:textColor="@color/schedaTesto"
+            android:textColor="@color/schedaTestoLow"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

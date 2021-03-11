@@ -25,7 +25,8 @@ android:background="@color/backGround">
         android:theme="?attr/actionBarTheme"
         app:title="Informazioni Campagna"
         app:titleTextColor="@color/white"
-        tools:layout_editor_absoluteY="30dp" />
+        tools:layout_editor_absoluteY="30dp"
+        app:menu="@menu/menu_con_pulsante_cancella"/>
 
 </com.google.android.material.appbar.AppBarLayout>
 
@@ -71,7 +72,6 @@ android:background="@color/backGround">
         android:id="@+id/NomeCampagna_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:hint="Titolo Campagna"
         android:textColorHint="@color/PrimaryLight65op" />
 
@@ -106,7 +106,6 @@ android:background="@color/backGround">
             android:id="@+id/DescrizioneCampagna_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:hint="Descrizione Campagna"
             android:textColorHint="@color/PrimaryLight65op" />
 

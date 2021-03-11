@@ -6,14 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".dndCampagnaHomeActivity.DndCampagnaHome"
-    android:background="@color/backGround"
-    android:fitsSystemWindows="true">
+    android:background="@color/backGround">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="152dp"
-        android:fitsSystemWindows="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,29 +22,22 @@
             app:expandedTitleMarginStart="72dp"
             app:expandedTitleMarginBottom="28dp"
             app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded"
-            app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed"
-            android:fitsSystemWindows="true"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-            app:contentScrim="?attr/colorPrimary"
-            app:statusBarScrim="?attr/colorPrimaryVariant">
+            app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed">
 
             <ImageView
                 android:id="@+id/imageCampaignTopBar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:fitsSystemWindows="true"/>
+                android:scaleType="centerCrop"/>
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/myToolbarExtended"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/transparent"
+            android:background="#80121212"
             android:theme="?attr/actionBarTheme"
             app:menu="@menu/menu_risorse_campagna"
-            app:layout_scrollFlags="scroll|enterAlways|snap"
             android:elevation="0dp"
-            app:layout_collapseMode="pin"
             app:title="Nome Campagna"/>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>

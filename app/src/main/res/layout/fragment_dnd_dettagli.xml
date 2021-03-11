@@ -34,7 +34,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="136dp"
                 android:text="@string/informazione"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/schedaTestoLow"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -301,7 +301,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="32dp"
                     android:text="@string/altreInfo"
-                    android:textColor="@color/schedaTesto"
+                    android:textColor="@color/schedaTestoLow"
                     android:textSize="24sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

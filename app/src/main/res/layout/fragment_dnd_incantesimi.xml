@@ -41,7 +41,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="4dp"
                     android:text="@string/classeIncantatore"
-                    android:textColor="@color/schedaTesto"
+                    android:textColor="@color/schedaTestoLow"
                     android:textSize="24sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -159,7 +159,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/caratteristicaInc"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="12sp"
                         app:layout_column="0"
                         app:layout_row="2" />
@@ -169,7 +169,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="@string/CDIncantesimi"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="12sp"
                         app:layout_column="1"
                         app:layout_row="2" />
@@ -178,7 +178,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/BAI"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="12sp"
                         app:layout_column="2"
                         app:layout_row="2" />
@@ -235,7 +235,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/trucchetti"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="24sp"
                         app:layout_column="0"
                         app:layout_constraintStart_toStartOf="parent"
@@ -339,7 +339,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/lv1"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="24sp"
                         app:layout_column="0" />
 
@@ -365,7 +365,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="/"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="2" />
 
@@ -381,7 +381,7 @@
                         android:text="0"
                         android:hint="0"
 
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="3" />
 
@@ -390,7 +390,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:text="@string/slot"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="4" />
 
@@ -483,7 +483,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/lv2"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="24sp"
                         app:layout_column="0" />
 
@@ -508,7 +508,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="/"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="2" />
 
@@ -524,7 +524,7 @@
                         android:inputType="number"
                         android:singleLine="true"
                         android:text="0"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="3" />
 
@@ -533,7 +533,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:text="@string/slot"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="4" />
 
@@ -627,7 +627,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/lv3"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="24sp"
                         app:layout_column="0" />
 
@@ -652,7 +652,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="/"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="2" />
 
@@ -668,7 +668,7 @@
                         android:inputType="number"
                         android:singleLine="true"
                         android:text="0"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="3" />
 
@@ -677,7 +677,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:text="@string/slot"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="4" />
 
@@ -771,7 +771,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/lv4"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="24sp"
                         app:layout_column="0" />
 
@@ -796,7 +796,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="/"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="2" />
 
@@ -812,7 +812,7 @@
                         android:inputType="number"
                         android:singleLine="true"
                         android:text="0"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="3" />
 
@@ -821,7 +821,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:text="@string/slot"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="4" />
 
@@ -915,7 +915,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/lv5"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="24sp"
                         app:layout_column="0" />
 
@@ -940,7 +940,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="/"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="2" />
 
@@ -956,7 +956,7 @@
                         android:inputType="number"
                         android:singleLine="true"
                         android:text="0"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="3" />
 
@@ -965,7 +965,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:text="@string/slot"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="4" />
 
@@ -1059,7 +1059,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/lv6"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="24sp"
                         app:layout_column="0" />
 
@@ -1084,7 +1084,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="/"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="2" />
 
@@ -1100,7 +1100,7 @@
                         android:inputType="number"
                         android:singleLine="true"
                         android:text="0"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="3" />
 
@@ -1109,7 +1109,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:text="@string/slot"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="4" />
 
@@ -1205,7 +1205,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/lv7"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="24sp"
                         app:layout_column="0" />
 
@@ -1230,7 +1230,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="/"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="2" />
 
@@ -1246,7 +1246,7 @@
                         android:inputType="number"
                         android:singleLine="true"
                         android:text="0"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="3" />
 
@@ -1255,7 +1255,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:text="@string/slot"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="4" />
 
@@ -1349,7 +1349,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/lv8"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="24sp"
                         app:layout_column="0" />
 
@@ -1374,7 +1374,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="/"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="2" />
 
@@ -1390,7 +1390,7 @@
                         android:inputType="number"
                         android:singleLine="true"
                         android:text="0"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="3" />
 
@@ -1399,7 +1399,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:text="@string/slot"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="4" />
 
@@ -1493,7 +1493,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/lv9"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="24sp"
                         app:layout_column="0" />
 
@@ -1518,7 +1518,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="/"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="2" />
 
@@ -1534,7 +1534,7 @@
                         android:inputType="number"
                         android:singleLine="true"
                         android:text="0"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="3" />
 
@@ -1543,7 +1543,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:text="@string/slot"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         android:textSize="20sp"
                         app:layout_column="4" />
 

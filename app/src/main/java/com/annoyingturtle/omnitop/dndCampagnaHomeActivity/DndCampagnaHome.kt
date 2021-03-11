@@ -24,6 +24,7 @@ import fabPackage.AbsFab
 import kotlinx.android.synthetic.main.activity_dnd_campagna_home.myToolbar
 import kotlinx.android.synthetic.main.activity_dnd_campagna_home.tabNav
 import kotlinx.android.synthetic.main.activity_dnd_campagna_home_alter.*
+import kotlinx.android.synthetic.main.lista_note_layout.view.*
 
 class DndCampagnaHome : AppCompatActivity() {
 
@@ -31,14 +32,14 @@ class DndCampagnaHome : AppCompatActivity() {
     var idCampagna: Int = -1
     lateinit var mytablayout: TabLayout
     lateinit var extras: Bundle
-    var isExtendedToolbar: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dnd_campagna_home)
+        setContentView(R.layout.activity_dnd_campagna_home_alter)
 
         /**Action Bar */
-        setSupportActionBar(myToolbar)
+        setSupportActionBar(myToolbarExtended)
+        supportActionBar?.title = ""
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
@@ -47,13 +48,7 @@ class DndCampagnaHome : AppCompatActivity() {
 
         mCampagnaViewModel = ViewModelProvider(this).get(CampagnaViewModel::class.java)
         mCampagnaViewModel.getCampagnaFromID(idCampagna)
-        mCampagnaViewModel.getSingleLiveData().observe(this, Observer {
-            supportActionBar?.title= it.titoloCampagna
-            /*if(it.copertinaBitmap!= null){
-                imageCampaignTopBar.load(it.copertinaBitmap)
-            }*/
-        })
-        /*showBasicCampagnaData()*/
+        showBasicCampagnaData()
 
 
 
@@ -85,7 +80,12 @@ class DndCampagnaHome : AppCompatActivity() {
     }
 
     private fun showBasicCampagnaData() {
-
+        mCampagnaViewModel.getSingleLiveData().observe(this, Observer {
+            supportActionBar?.title= it.titoloCampagna
+            if(it.copertinaBitmap!= null){
+                imageCampaignTopBar.load(it.copertinaBitmap)
+            }
+        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -21,13 +21,15 @@
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
-            tools:layout_editor_absoluteY="30dp" />
+            tools:layout_editor_absoluteY="30dp"
+            app:menu="@menu/menu_salvataggio_dati_scheda"
+            app:title="Competenze Abilità"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/card_template"
+        android:background="@color/backGround"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayoutModificaAbilità">
@@ -35,8 +37,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/card_template"
+            android:layout_marginTop="16dp"
+            android:background="@color/backGround"
             android:paddingBottom="64dp"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayoutModificaAbilità"
             tools:layout_editor_absoluteX="0dp">
@@ -48,8 +50,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/nda"
-                android:textColor="@color/schedaTesto"
-                android:textSize="14sp"
+                android:textColor="@color/schedaTestoLow"
+                android:textSize="12sp"
                 android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -63,7 +65,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/acrobazia"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView32"
                 app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +78,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/addestrare"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView33"
                 app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +91,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/arcano"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView34"
                 app:layout_constraintStart_toStartOf="parent"
@@ -102,7 +104,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/atletica"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView35"
                 app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +117,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/furtività"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView36"
                 app:layout_constraintStart_toStartOf="parent"
@@ -128,7 +130,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/indagare"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView37"
                 app:layout_constraintStart_toStartOf="parent"
@@ -141,7 +143,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/inganno"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView38"
                 app:layout_constraintStart_toStartOf="parent"
@@ -154,7 +156,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/intimidire"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView46"
                 app:layout_constraintStart_toStartOf="parent"
@@ -167,7 +169,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/intrattenere"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView39"
                 app:layout_constraintStart_toStartOf="parent"
@@ -180,7 +182,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/intuizione"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView40"
                 app:layout_constraintStart_toStartOf="parent"
@@ -193,7 +195,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="28dp"
                 android:text="@string/medicina"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView41"
                 app:layout_constraintStart_toStartOf="parent"
@@ -206,7 +208,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/natura"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView42"
                 app:layout_constraintStart_toStartOf="parent"
@@ -219,7 +221,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/percezione"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView47"
                 app:layout_constraintStart_toStartOf="parent"
@@ -232,7 +234,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/persuasione"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView43"
                 app:layout_constraintStart_toStartOf="parent"
@@ -245,7 +247,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/rapDiMa"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView44"
                 app:layout_constraintStart_toStartOf="parent"
@@ -258,7 +260,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/religione"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView45"
                 app:layout_constraintStart_toStartOf="parent"
@@ -271,7 +273,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/sopravvivenza"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView16"
                 app:layout_constraintStart_toStartOf="parent"
@@ -284,7 +286,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/storia"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/guidaScritteHigh"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -310,21 +312,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow"/>
 
                 <RadioButton
                     android:id="@+id/acrobazia1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/acrobazia2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -347,21 +349,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/addestrare1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/addestrare2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -384,21 +386,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Arcano1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Arcano2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -421,21 +423,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Atletica1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Atletica2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -458,21 +460,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Furtività1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Furtività2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -495,21 +497,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Indagare1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Indagare2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -532,21 +534,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Inganno1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Inganno2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -569,21 +571,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Intimidire1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Intimidire2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -606,21 +608,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Intrattenere1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Intrattenere2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -643,21 +645,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Intuizione1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Intuizione2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -680,21 +682,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Medicina1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Medicina2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -717,21 +719,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Natura1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Natura2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -754,21 +756,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Percezione1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Percezione2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -791,21 +793,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Persuasione1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Persuasione2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -828,21 +830,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Rapidità1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Rapidità2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -865,21 +867,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Religione1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Religione2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -902,21 +904,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Sopravvivenza1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Sopravvivenza2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 
@@ -939,21 +941,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nda"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Storia1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Addestrato"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
                 <RadioButton
                     android:id="@+id/Storia2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Esperto"
-                    android:textColor="@color/schedaTesto" />
+                    android:textColor="@color/schedaTestoLow" />
 
             </RadioGroup>
 

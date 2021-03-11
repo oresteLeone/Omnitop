@@ -6,7 +6,7 @@
         android:id = "@+id/cancellaNotaBtn"
         android:title = "delete"
         android:icon="@drawable/ic_baseline_delete_24"
-        android:iconTint="@color/white"
+        android:iconTint="@color/icons"
         app:showAsAction="always"
 
         />

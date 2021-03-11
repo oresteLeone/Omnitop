@@ -255,7 +255,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="@string/ca"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/schedaTestoLow"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@+id/init"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -270,7 +270,7 @@
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="28dp"
                 android:text="@string/iniziativa"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/schedaTestoLow"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@+id/vel"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -285,7 +285,7 @@
                 android:layout_marginEnd="16dp"
                 android:paddingHorizontal="24dp"
                 android:text="@string/velocità"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/schedaTestoLow"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -358,7 +358,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/passiveP"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/schedaTestoLow"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@+id/pb"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -372,7 +372,7 @@
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="6dp"
                 android:text="@string/prof"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/schedaTestoLow"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@+id/dv"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -388,7 +388,7 @@
                 android:layout_marginEnd="16dp"
                 android:paddingHorizontal="24sp"
                 android:text="@string/dv"
-                android:textColor="@color/schedaTesto"
+                android:textColor="@color/schedaTestoLow"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -449,7 +449,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/caratteristiche"
-                    android:textColor="@color/schedaTesto"
+                    android:textColor="@color/schedaTestoLow"
                     android:textSize="24sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -488,7 +488,7 @@
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="16dp"
                     android:text="@string/str"
-                    android:textColor="@color/schedaTesto"
+                    android:textColor="@color/schedaTestoLow"
                     app:layout_constraintEnd_toStartOf="@+id/textView6"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -500,7 +500,7 @@
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="16dp"
                     android:text="@string/dex"
-                    android:textColor="@color/schedaTesto"
+                    android:textColor="@color/schedaTestoLow"
                     app:layout_column="1"
                     app:layout_constraintEnd_toStartOf="@+id/textView5"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -514,7 +514,7 @@
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="16dp"
                     android:text="@string/con"
-                    android:textColor="@color/schedaTesto"
+                    android:textColor="@color/schedaTestoLow"
                     app:layout_constraintEnd_toStartOf="@+id/textView4"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/textView6"
@@ -526,7 +526,7 @@
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="16dp"
                     android:text="@string/intel"
-                    android:textColor="@color/schedaTesto"
+                    android:textColor="@color/schedaTestoLow"
                     app:layout_constraintEnd_toStartOf="@+id/textView3"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/textView5"
@@ -538,7 +538,7 @@
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="16dp"
                     android:text="@string/wis"
-                    android:textColor="@color/schedaTesto"
+                    android:textColor="@color/schedaTestoLow"
                     app:layout_constraintEnd_toStartOf="@+id/textView2"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/textView4"
@@ -550,7 +550,7 @@
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="16dp"
                     android:text="@string/cha"
-                    android:textColor="@color/schedaTesto"
+                    android:textColor="@color/schedaTestoLow"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/textView3"
@@ -708,7 +708,7 @@
                     android:layout_marginTop="24dp"
                     android:paddingTop="16dp"
                     android:text="@string/ts"
-                    android:textColor="@color/schedaTesto"
+                    android:textColor="@color/schedaTestoLow"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/pulsanteForza" />
@@ -903,7 +903,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:text="@string/abilità"
-                    android:textColor="@color/schedaTesto"
+                    android:textColor="@color/schedaTestoLow"
                     android:textSize="24sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -954,7 +954,7 @@
                         android:layout_marginTop="16dp"
                         android:paddingLeft="4dp"
                         android:text="@string/dex"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -996,7 +996,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="@string/wis"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/pulsanteAcrobazia" />
 
@@ -1053,7 +1053,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="3dp"
                         android:text="@string/intel"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/pulsanteAddestrareAnim" />
 
@@ -1096,7 +1096,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="@string/str"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/pulsanteArcano" />
 
@@ -1139,7 +1139,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="@string/dex"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/pulsanteAtletica" />
 
@@ -1170,7 +1170,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="3dp"
                         android:text="@string/intel"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/pulsanteFurtività" />
 
@@ -1213,7 +1213,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="@string/cha"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/pulsanteIndagare" />
 
@@ -1258,7 +1258,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="@string/cha"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/pulsanteIngano" />
 
@@ -1302,7 +1302,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="16dp"
                         android:text="@string/cha"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.03"
                         app:layout_constraintStart_toEndOf="@+id/textView81"
@@ -1359,7 +1359,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="@string/wis"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/pulsanteIntuizione" />
 
@@ -1400,7 +1400,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="@string/wis"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/pulsanteIntuizione" />
 
@@ -1444,7 +1444,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="3dp"
                         android:text="@string/intel"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/valoreMedicina" />
 
@@ -1486,7 +1486,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="@string/wis"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/pulsanteNatura" />
 
@@ -1530,7 +1530,7 @@
                         android:layout_marginTop="16dp"
                         android:paddingLeft="4dp"
                         android:text="@string/cha"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/textView67"
                         app:layout_constraintTop_toBottomOf="@+id/pulsantePercezione" />
@@ -1574,7 +1574,7 @@
                         android:layout_marginTop="16dp"
                         android:paddingLeft="4dp"
                         android:text="@string/dex"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/pulsantePersuasione" />
 
@@ -1619,7 +1619,7 @@
                         android:layout_marginEnd="3dp"
                         android:paddingLeft="4dp"
                         android:text="@string/intel"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/pulsanteRapiditaDiMano" />
 
@@ -1662,7 +1662,7 @@
                         android:layout_marginTop="16dp"
                         android:paddingLeft="4dp"
                         android:text="@string/wis"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/valoreReligione" />
 
@@ -1706,7 +1706,7 @@
                         android:layout_marginEnd="3dp"
                         android:paddingLeft="4dp"
                         android:text="@string/intel"
-                        android:textColor="@color/schedaTesto"
+                        android:textColor="@color/schedaTestoLow"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/pulsanteSopravvivenza" />
 
@@ -1763,7 +1763,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/privilegi"
-                    android:textColor="@color/schedaTesto"
+                    android:textColor="@color/schedaTestoLow"
                     android:textSize="24sp"
                     app:layout_column="0" />
 
@@ -1841,7 +1841,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/competenze"
-                    android:textColor="@color/schedaTesto"
+                    android:textColor="@color/schedaTestoLow"
                     android:textSize="24sp"
                     app:layout_column="0" />
 

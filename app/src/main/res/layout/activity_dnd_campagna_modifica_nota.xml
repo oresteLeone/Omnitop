@@ -26,7 +26,8 @@
             android:theme="?attr/actionBarTheme"
             app:title="Modifica Nota Campagna"
             app:titleTextColor="@color/white"
-            tools:layout_editor_absoluteY="30dp">
+            tools:layout_editor_absoluteY="30dp"
+            app:menu="@menu/menu_con_pulsante_cancella">
 
         </androidx.appcompat.widget.Toolbar>
 

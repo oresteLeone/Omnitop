@@ -73,10 +73,11 @@
                 android:layout_height="28dp"
                 android:layout_marginStart="16dp"
                 android:background="@drawable/ic_dm"
+                android:backgroundTint="@color/white"
+                android:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@+id/cardCampagnatextbg"
                 app:layout_constraintStart_toStartOf="@+id/imgCampagna"
-                app:layout_constraintTop_toTopOf="@+id/imgCampagna"
-                android:visibility="gone"/>
+                app:layout_constraintTop_toTopOf="@+id/imgCampagna" />
 
             <ImageView
                 android:id="@+id/ruoloGiocatoreCampagnaPG"
