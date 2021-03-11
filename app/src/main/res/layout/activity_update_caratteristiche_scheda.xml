@@ -134,7 +134,6 @@
             android:id="@+id/textView28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/ts"
             android:textColor="@color/schedaTestoLow"
@@ -145,10 +144,12 @@
 
         <EditText
             android:id="@+id/forza"
-            android:layout_width="wrap_content"
+            android:layout_width="32dp"
             android:layout_height="wrap_content"
             android:hint="0"
             android:inputType="number"
+            android:maxLength="2"
+            android:textAlignment="center"
             android:textColorHint="@color/PrimaryLight65op"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -158,11 +159,13 @@
 
         <EditText
             android:id="@+id/destrezza"
-            android:layout_width="wrap_content"
+            android:layout_width="32dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:hint="0"
             android:inputType="number"
+            android:maxLength="2"
+            android:textAlignment="center"
             android:textColorHint="@color/PrimaryLight65op"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -172,12 +175,14 @@
 
         <EditText
             android:id="@+id/costituzione"
-            android:layout_width="wrap_content"
+            android:layout_width="32dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
             android:hint="0"
             android:inputType="number"
+            android:maxLength="2"
+            android:textAlignment="center"
             android:textColorHint="@color/PrimaryLight65op"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -187,11 +192,13 @@
 
         <EditText
             android:id="@+id/intelligenza"
-            android:layout_width="wrap_content"
+            android:layout_width="32dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:hint="0"
             android:inputType="number"
+            android:maxLength="2"
+            android:textAlignment="center"
             android:textColorHint="@color/PrimaryLight65op"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -201,11 +208,13 @@
 
         <EditText
             android:id="@+id/saggezza"
-            android:layout_width="wrap_content"
+            android:layout_width="32dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:hint="0"
             android:inputType="number"
+            android:maxLength="2"
+            android:textAlignment="center"
             android:textColorHint="@color/PrimaryLight65op"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -215,11 +224,13 @@
 
         <EditText
             android:id="@+id/carisma"
-            android:layout_width="wrap_content"
+            android:layout_width="32dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:hint="0"
             android:inputType="number"
+            android:maxLength="2"
+            android:textAlignment="center"
             android:textColorHint="@color/PrimaryLight65op"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"

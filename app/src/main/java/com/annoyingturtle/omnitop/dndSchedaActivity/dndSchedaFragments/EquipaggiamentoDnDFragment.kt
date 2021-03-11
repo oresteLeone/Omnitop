@@ -63,6 +63,9 @@ class EquipaggiamentoDnDFragment : Fragment() {
 
             moneteElectrum.isFocusableInTouchMode = true
             moneteElectrum.isClickable = true
+
+            monetePlatino.isFocusableInTouchMode = true
+            monetePlatino.isClickable = true
         }
 
         editMoneteSALVA.setOnClickListener(){
@@ -80,6 +83,9 @@ class EquipaggiamentoDnDFragment : Fragment() {
 
             moneteElectrum.isFocusableInTouchMode = false
             moneteElectrum.isClickable = false
+
+            monetePlatino.isFocusableInTouchMode = false
+            monetePlatino.isClickable = false
 
             updateMonete()
             (activity as DndSchedaActivity).chiudiKeyboard()
