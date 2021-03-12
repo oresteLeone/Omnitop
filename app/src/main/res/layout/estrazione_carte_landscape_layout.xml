@@ -29,7 +29,7 @@
             android:id="@+id/nomeMazzo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="4dp"
             android:text="@string/CarteNapoletane"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -42,11 +42,10 @@
             android:id="@+id/card1"
             android:layout_width="133dp"
             android:layout_height="200dp"
-            android:layout_marginBottom="12dp"
             android:src="@drawable/cardshape"
-            app:layout_constraintBottom_toTopOf="@+id/cartaEstratta"
+            app:layout_constraintBottom_toTopOf="@+id/btn_change"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nomeMazzo" />
 
@@ -57,11 +56,10 @@
             android:text=""
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_change"
+            app:layout_constraintBottom_toBottomOf="@+id/card1"
             app:layout_constraintEnd_toEndOf="@+id/card1"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/card1"
-            app:layout_constraintTop_toBottomOf="@+id/card1">
+            app:layout_constraintTop_toTopOf="@+id/card1">
 
         </TextView>
 
@@ -70,45 +68,37 @@
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/cambiomazzobtn"
             android:textColor="@color/Primary"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_estrai"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/btn_mischia"
-            app:layout_constraintTop_toBottomOf="@+id/cartaEstratta" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/btn_estrai"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="39dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:backgroundTint="@color/Primary"
             android:text="@string/estraicarta"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btn_change"
-            app:layout_constraintTop_toBottomOf="@+id/card1" />
+            app:layout_constraintStart_toEndOf="@+id/btn_change" />
 
         <Button
             android:id="@+id/btn_mischia"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/mischiaMazzo"
             android:textColor="@color/Primary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_change"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/card1"
-            app:layout_constraintVertical_bias="0.897" />
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
