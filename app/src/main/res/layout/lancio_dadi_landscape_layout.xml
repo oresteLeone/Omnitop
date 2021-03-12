@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backGround">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/gridLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="86dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
 
         <ImageButton
             android:id="@+id/d2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="96dp"
+            android:layout_marginStart="116dp"
             android:background="@color/backGround"
             app:layout_constraintEnd_toStartOf="@+id/d4"
             app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +77,7 @@
             android:id="@+id/d12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="96dp"
+            android:layout_marginEnd="116dp"
             android:background="@color/backGround"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/d10"
@@ -89,8 +90,8 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
 
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:padding="8dp"
@@ -108,7 +109,7 @@
             android:layout_width="48dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:padding="8dp"
@@ -125,8 +126,8 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
 
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:padding="8dp"
@@ -144,7 +145,7 @@
             android:layout_width="48dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:padding="8dp"
@@ -161,8 +162,8 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
 
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:padding="8dp"
@@ -178,8 +179,8 @@
             android:id="@+id/d20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="96dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="116dp"
             android:background="@color/backGround"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/divide"
@@ -191,9 +192,9 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="116dp"
 
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:padding="8dp"
@@ -210,10 +211,10 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0dffffff"
-            android:elevation="1dp"
 
+            android:elevation="1dp"
             android:padding="8dp"
             android:text="@string/num5"
             android:textColor="@color/white"
@@ -228,9 +229,9 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:backgroundTint="#0DFFFFFF"
+            android:layout_marginTop="2dp"
 
+            android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:padding="8dp"
             android:text="@string/num6"
@@ -246,7 +247,7 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="48dp"
             android:layout_height="100dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0DFFFFFF"
 
             android:elevation="1dp"
@@ -264,10 +265,10 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0DFFFFFF"
-            android:elevation="1dp"
 
+            android:elevation="1dp"
             android:padding="8dp"
             android:text="@string/multiply"
             android:textColor="@color/white"
@@ -281,8 +282,8 @@
             android:id="@+id/d100"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="96dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="116dp"
             android:background="@color/backGround"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/multiply"
@@ -294,9 +295,9 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="116dp"
 
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:padding="8dp"
@@ -313,9 +314,9 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:backgroundTint="#0DFFFFFF"
+            android:layout_marginTop="2dp"
 
+            android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:padding="8dp"
             android:text="@string/num2"
@@ -331,9 +332,9 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:backgroundTint="#0DFFFFFF"
+            android:layout_marginTop="2dp"
 
+            android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:padding="8dp"
             android:text="@string/num3"
@@ -349,8 +350,8 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
 
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:padding="8dp"
@@ -366,8 +367,8 @@
             android:id="@+id/dx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="96dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="116dp"
             android:background="@color/backGround"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/minus"
@@ -380,9 +381,9 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="120dp"
 
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0DFFFFFF"
             android:clickable="true"
             android:elevation="1dp"
@@ -401,8 +402,8 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
 
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:padding="8dp"
@@ -420,7 +421,7 @@
             android:layout_width="48dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:padding="8dp"
@@ -437,8 +438,8 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="96dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="120dp"
             android:backgroundTint="#0DFFFFFF"
             android:elevation="1dp"
             android:minWidth="135dp"
@@ -454,7 +455,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <TextView
         android:id="@+id/displayCalcolatrice"
         android:layout_width="0dp"
@@ -464,11 +464,11 @@
         android:text=""
         android:textAlignment="textEnd"
         android:textColor="@color/testoCalcolatrice"
-        android:textSize="24sp"
+        android:textSize="20sp"
 
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/imageView23"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.142"
@@ -478,20 +478,26 @@
         android:id="@+id/risultatoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
         android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayCalcolatrice" />
+        app:layout_constraintTop_toBottomOf="@+id/displayCalcolatrice"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
+        android:id="@+id/imageView23"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+
+
+        android:layout_marginTop="26dp"
         android:layout_marginBottom="8dp"
-
-
         android:background="@color/PrimaryLight65op"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/displayCalcolatrice" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
