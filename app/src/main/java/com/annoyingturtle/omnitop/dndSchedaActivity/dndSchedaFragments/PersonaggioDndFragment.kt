@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
@@ -41,10 +43,149 @@ class PersonaggioDndFragment : Fragment() {
         if (idScheda > -1){
             mSchedaViewModel.getSchedaFromID(idScheda)
             showSchedaData()
-
+            //coloreDadi()
 
         }
         return view
+    }
+
+    private fun coloreDadi() {
+        var str = valoreForza.text.toString().toInt()
+        var dex = valoreDestrezza.text.toString().toInt()
+        var inte = valoreInt.text.toString().toInt()
+        var wis = valoreSag.text.toString().toInt()
+        var cha = valoreCha.text.toString().toInt()
+
+        var bonus = profBonus.text.toString().toInt()
+        /**Acrobazia*/
+        coloreDadoAbilita(pulsanteAcrobazia,
+            textView49,
+            valoreAcrobazia.text.toString().toInt(),
+            bonus, dex )
+
+        /**AddestrareAnim*/
+        coloreDadoAbilita(pulsanteAddestrareAnim,
+            textView53,
+            valoreAddestrareAnim.text.toString().toInt(),
+            bonus, wis )
+
+        /**Arcano*/
+        coloreDadoAbilita(pulsanteArcano,
+            textView57,
+            valoreArcano.text.toString().toInt(),
+            bonus, inte )
+
+        /**Atletica*/
+        coloreDadoAbilita(pulsanteAtletica,
+            textView61,
+            valoreAtletica.text.toString().toInt(),
+            bonus, str )
+
+        /**Furtività*/
+        coloreDadoAbilita(pulsanteFurtività,
+            textView65,
+            valoreFurtività.text.toString().toInt(),
+            bonus, dex )
+
+        /**Indagare*/
+        coloreDadoAbilita(pulsanteIndagare,
+            textView69,
+            valoreIndagare.text.toString().toInt(),
+            bonus, inte )
+
+        /**Inganno*/
+        coloreDadoAbilita(pulsanteIngano,
+            textView73,
+            valoreInganno.text.toString().toInt(),
+            bonus, cha )
+
+        /**Intimidire*/
+        coloreDadoAbilita(pulsanteIntimidire,
+            textView77,
+            valoreIntimidire.text.toString().toInt(),
+            bonus, cha )
+
+        /**intrattenere*/
+        coloreDadoAbilita(pulsanteIntrattenere,
+            textView81,
+            valoreIntrattenere.text.toString().toInt(),
+            bonus, cha )
+
+        /**intuizione*/
+        coloreDadoAbilita(pulsanteIntuizione,
+            textView51,
+            valoreIntuizione.text.toString().toInt(),
+            bonus, wis )
+
+        /**medicina*/
+        coloreDadoAbilita(pulsanteMedicina,
+            textView55,
+            valoreMedicina.text.toString().toInt(),
+            bonus, wis )
+
+        /**natura*/
+        coloreDadoAbilita(pulsanteNatura,
+            textView59,
+            valoreNatua.text.toString().toInt(),
+            bonus, inte )
+
+        /**percezione*/
+        coloreDadoAbilita(pulsantePercezione,
+            textView63,
+            valorePercezione.text.toString().toInt(),
+            bonus, wis )
+
+        /**persuasione*/
+        coloreDadoAbilita(pulsantePersuasione,
+            textView67,
+            valorePersuasione.text.toString().toInt(),
+            bonus, cha )
+
+        /**rapidita*/
+        coloreDadoAbilita(pulsanteRapiditaDiMano,
+            textView71,
+            valoreRapiditaDiMano.text.toString().toInt(),
+            bonus, dex )
+
+        /**religione*/
+        coloreDadoAbilita(pulsanteReligione,
+            textView75,
+            valoreReligione.text.toString().toInt(),
+            bonus, inte )
+
+        /**sopravvivenza*/
+        coloreDadoAbilita(pulsanteSopravvivenza,
+            textView79,
+            valoreSopravvivenza.text.toString().toInt(),
+            bonus, wis )
+
+        /**storia*/
+        coloreDadoAbilita(pulsanteStoria,
+            textView83,
+            valoreStoria.text.toString().toInt(),
+            bonus, inte )
+
+    }
+
+    private fun coloreDadoAbilita(pulsante: ImageButton, text: TextView, valore: Int, bonus: Int, modCar: Int) {
+        var tmp = valore - modCar
+        var grado = tmp/bonus
+
+        when(grado){
+            0 -> {
+                    pulsante.background.setTintList(null)
+                    text.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
+                }
+            1 ->{
+                pulsante.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                text.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
+            }
+            2 ->{
+                pulsante.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                text.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+            }
+        }
+
     }
 
     override fun onStart() {
@@ -168,7 +309,7 @@ class PersonaggioDndFragment : Fragment() {
             valoreAcrobazia.text =(Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abAcrobazia.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abAcrobazia) {
+            /*when (it.statistiche?.abAcrobazia) {
                 1 -> {
                 //    pulsanteAcrobazia.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
@@ -181,13 +322,13 @@ class PersonaggioDndFragment : Fragment() {
                     textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
                     //pulsanteAcrobazia.background.setTintList(null)
                 }
-            }
+            }*/
 
 
             valoreAddestrareAnim.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abAddestrare.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abAddestrare) {
+            /*when (it.statistiche?.abAddestrare) {
                 1 -> {
                     //pulsanteAddestrareAnim.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView53.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -200,13 +341,13 @@ class PersonaggioDndFragment : Fragment() {
                     textView53.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
                     //pulsanteAddestrareAnim.background.setTintList(null)
                 }
-            }
+            }*/
 
 
             valoreArcano.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abArcano.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abArcano) {
+            /*when (it.statistiche?.abArcano) {
                 1 -> {
                    // pulsanteArcano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView57.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -219,13 +360,13 @@ class PersonaggioDndFragment : Fragment() {
                     textView57.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                    // pulsanteArcano.background.setTintList(null)
                 }
-            }
+            }*/
 
 
             valoreAtletica.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abAtletica.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.STR.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abAtletica) {
+            /*when (it.statistiche?.abAtletica) {
                 1 -> {
                    // pulsanteAtletica.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView61.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -238,14 +379,14 @@ class PersonaggioDndFragment : Fragment() {
                     //pulsanteAtletica.background.setTintList(null)
                     textView61.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
 
             valoreFurtività.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abFurtivita.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abFurtivita) {
+            /*when (it.statistiche?.abFurtivita) {
                 1 -> {
                     //pulsanteFurtività.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView65.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -258,14 +399,14 @@ class PersonaggioDndFragment : Fragment() {
                     //pulsanteFurtività.background.setTintList(null)
                     textView65.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
 
             valoreIndagare.text = ((Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIndagare.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString())     //// DA QUA
-            when (it.statistiche?.abIndagare) {
+            /*when (it.statistiche?.abIndagare) {
                 1 -> {
                     //pulsanteIndagare.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView69.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -278,14 +419,14 @@ class PersonaggioDndFragment : Fragment() {
                   //  pulsanteIndagare.background.setTintList(null)
                     textView69.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
 
             valoreInganno.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abInganno.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abInganno) {
+            /*when (it.statistiche?.abInganno) {
                 1 -> {
                    // pulsanteIngano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView73.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -298,13 +439,13 @@ class PersonaggioDndFragment : Fragment() {
                     // pulsanteIngano.background.setTintList(null)
                     textView73.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
             valoreIntimidire.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIntimidire.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abIntimidire) {
+            /*when (it.statistiche?.abIntimidire) {
                 1 -> {
                     // pulsanteIntimidire.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView77.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -317,14 +458,14 @@ class PersonaggioDndFragment : Fragment() {
                     //  pulsanteIntimidire.background.setTintList(null)
                     textView77.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
 
             valoreIntuizione.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIntuizione.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abIntuizione) {
+            /*when (it.statistiche?.abIntuizione) {
                 1 -> {
                     // pulsanteIntuizione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView51.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -337,14 +478,14 @@ class PersonaggioDndFragment : Fragment() {
                     //pulsanteIntuizione.background.setTintList(null)
                     textView51.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
 
             valoreIntrattenere.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIntrattenere.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abIntrattenere) {
+            /*when (it.statistiche?.abIntrattenere) {
                 1 -> {
                     // pulsanteIntrattenere.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView81.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -357,13 +498,13 @@ class PersonaggioDndFragment : Fragment() {
                     // pulsanteIntrattenere.background.setTintList(null)
                     textView81.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
             valoreMedicina.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abMedicina.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abMedicina) {
+            /*when (it.statistiche?.abMedicina) {
                 1 -> {
                     //pulsanteMedicina.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView55.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -376,13 +517,13 @@ class PersonaggioDndFragment : Fragment() {
                     //pulsanteMedicina.background.setTintList(null)
                     textView55.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
             valoreNatua.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abNatura.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abNatura) {
+            /*when (it.statistiche?.abNatura) {
                 1 -> {
                     //pulsanteNatura.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView59.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -395,13 +536,13 @@ class PersonaggioDndFragment : Fragment() {
                     //pulsanteNatura.background.setTintList(null)
                     textView59.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
             valorePercezione.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abPercezione.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abPercezione) {
+            /*when (it.statistiche?.abPercezione) {
                 1 -> {
                     //pulsantePercezione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView63.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -414,13 +555,13 @@ class PersonaggioDndFragment : Fragment() {
                     // pulsantePercezione.background.setTintList(null)
                     textView63.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
             valorePersuasione.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abPersuasione.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abPersuasione) {
+            /*when (it.statistiche?.abPersuasione) {
                 1 -> {
                     // pulsantePersuasione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView67.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -433,13 +574,13 @@ class PersonaggioDndFragment : Fragment() {
                     // pulsantePersuasione.background.setTintList(null)
                     textView67.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
             valoreRapiditaDiMano.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abRapiditMano.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abRapiditMano) {
+            /*when (it.statistiche?.abRapiditMano) {
                 1 -> {
                     // pulsanteRapiditaDiMano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView71.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -452,13 +593,13 @@ class PersonaggioDndFragment : Fragment() {
                     // pulsanteRapiditaDiMano.background.setTintList(null)
                     textView71.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
             valoreReligione.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abReligione.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abReligione) {
+            /*when (it.statistiche?.abReligione) {
                 1 -> {
                     // pulsanteReligione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView75.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -471,13 +612,13 @@ class PersonaggioDndFragment : Fragment() {
                     // pulsanteReligione.background.setTintList(null)
                     textView75.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
             valoreSopravvivenza.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abSoprav.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abSoprav) {
+            /*when (it.statistiche?.abSoprav) {
                 1 -> {
                     // pulsanteSopravvivenza.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView79.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -490,13 +631,13 @@ class PersonaggioDndFragment : Fragment() {
                     // pulsanteSopravvivenza.background.setTintList(null)
                     textView79.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
 
             valoreStoria.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abStoria.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
-            when (it.statistiche?.abStoria) {
+            /*when (it.statistiche?.abStoria) {
                 1 -> {
                     // pulsanteStoria.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
@@ -509,7 +650,7 @@ class PersonaggioDndFragment : Fragment() {
                     // pulsanteStoria.background.setTintList(null)
                     textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
-            }
+            }*/
 
         })
 

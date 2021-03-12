@@ -30,6 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@color/PrimaryLight65op"
+                android:layout_marginStart="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pfAttuali" />
@@ -361,452 +362,426 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/constraintLayoutStatistiche">
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="8dp"
-                android:background="@color/secondaryLight"
-                android:paddingHorizontal="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/gridLayout5"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="112dp"
-                android:background="@color/secondaryLight"
-                android:paddingHorizontal="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/gridLayout5" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/gridLayout4"
+                android:id="@+id/constraintLayoutCaratteristicheHead"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:layout_marginStart="16dp"
-
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/transparent"
+                android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/PrimaryLight65op"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"/>
 
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/caratteristiche"
-                    android:textColor="@color/schedaTestoLow"
+                    android:textColor="@color/guidaTestoMedium"
                     android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.333" />
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"/>
 
                 <ImageButton
                     android:id="@+id/editCaratteristiche"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
                     android:background="@android:color/transparent"
-                    android:padding="8dp"
                     android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_edit_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_baseline_edit_24" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView2"
+                    android:layout_marginEnd="16dp"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/gridLayout5"
-                android:layout_width="wrap_content"
+                android:id="@+id/constraintLayoutCaratteristicheBody"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.39"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gridLayout4">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutCaratteristicheHead">
 
 
                 <TextView
                     android:id="@+id/textView7"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
                     android:text="@string/str"
+                    android:textAlignment="center"
                     android:textColor="@color/schedaTestoLow"
                     app:layout_constraintEnd_toStartOf="@+id/textView6"
-                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
                     android:text="@string/dex"
+                    android:textAlignment="center"
                     android:textColor="@color/schedaTestoLow"
-                    app:layout_column="1"
                     app:layout_constraintEnd_toStartOf="@+id/textView5"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/textView7"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_row="0" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
                     android:text="@string/con"
+                    android:textAlignment="center"
                     android:textColor="@color/schedaTestoLow"
                     app:layout_constraintEnd_toStartOf="@+id/textView4"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/textView6"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
                     android:text="@string/intel"
+                    android:textAlignment="center"
                     android:textColor="@color/schedaTestoLow"
                     app:layout_constraintEnd_toStartOf="@+id/textView3"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/textView5"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
                     android:text="@string/wis"
+                    android:textAlignment="center"
                     android:textColor="@color/schedaTestoLow"
                     app:layout_constraintEnd_toStartOf="@+id/textView2"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/textView4"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
                     android:text="@string/cha"
+                    android:textAlignment="center"
                     android:textColor="@color/schedaTestoLow"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/textView3"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
                     android:id="@+id/pulsanteForza"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:background="@drawable/raggruppa_895"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/pulsanteDestrezza"
-                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
                 <ImageButton
                     android:id="@+id/pulsanteDestrezza"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:background="@drawable/raggruppa_895"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/pulsanteCostituzione"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/pulsanteForza"
                     app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
                 <ImageButton
                     android:id="@+id/pulsanteCostituzione"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:background="@drawable/raggruppa_895"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/pulsanteInt"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/pulsanteDestrezza"
                     app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
                 <ImageButton
                     android:id="@+id/pulsanteInt"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:background="@drawable/raggruppa_895"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/pulsanteSag"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/pulsanteCostituzione"
                     app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
                 <ImageButton
                     android:id="@+id/pulsanteSag"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:background="@drawable/raggruppa_895"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/pulsanteCha"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/pulsanteInt"
                     app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
                 <ImageButton
                     android:id="@+id/pulsanteCha"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:background="@drawable/raggruppa_895"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/pulsanteSag"
                     app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
                 <TextView
                     android:id="@+id/valoreForza"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:clickable="false"
                     android:gravity="center"
-                    android:maxWidth="@android:dimen/app_icon_size"
-                    android:maxHeight="@android:dimen/app_icon_size"
-                    android:text="+0"
+                    android:text="0"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="@+id/pulsanteForza"
-                    app:layout_constraintStart_toStartOf="@+id/pulsanteForza" />
+                    app:layout_constraintEnd_toEndOf="@id/pulsanteForza"
+                    app:layout_constraintStart_toStartOf="@+id/pulsanteForza"
+                    app:layout_constraintTop_toTopOf="@id/pulsanteForza" />
 
                 <TextView
                     android:id="@+id/valoreDestrezza"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:clickable="false"
                     android:gravity="center"
-                    android:maxWidth="@android:dimen/app_icon_size"
-                    android:maxHeight="@android:dimen/app_icon_size"
-                    android:text="+0"
+                    android:text="0"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="@+id/pulsanteDestrezza"
-                    app:layout_constraintStart_toStartOf="@+id/pulsanteDestrezza" />
+                    app:layout_constraintEnd_toEndOf="@id/pulsanteDestrezza"
+                    app:layout_constraintStart_toStartOf="@+id/pulsanteDestrezza"
+                    app:layout_constraintTop_toTopOf="@id/pulsanteDestrezza" />
 
                 <TextView
                     android:id="@+id/valoreCostituzione"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:clickable="false"
                     android:gravity="center"
-                    android:maxWidth="@android:dimen/app_icon_size"
-                    android:maxHeight="@android:dimen/app_icon_size"
-                    android:text="+0"
+                    android:text="0"
                     android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/pulsanteCostituzione"
                     app:layout_constraintEnd_toEndOf="@+id/pulsanteCostituzione"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                    app:layout_constraintStart_toStartOf="@id/pulsanteCostituzione"
+                    app:layout_constraintTop_toTopOf="@+id/pulsanteCostituzione" />
 
                 <TextView
                     android:id="@+id/valoreInt"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:clickable="false"
                     android:gravity="center"
-                    android:maxWidth="@android:dimen/app_icon_size"
-                    android:maxHeight="@android:dimen/app_icon_size"
-                    android:text="+0"
+                    android:text="0"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="@+id/pulsanteInt"
-                    app:layout_constraintEnd_toEndOf="@+id/pulsanteInt" />
+                    app:layout_constraintEnd_toEndOf="@+id/pulsanteInt"
+                    app:layout_constraintStart_toStartOf="@id/pulsanteInt"
+                    app:layout_constraintTop_toTopOf="@id/pulsanteInt" />
 
                 <TextView
                     android:id="@+id/valoreSag"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:clickable="false"
                     android:gravity="center"
-                    android:maxWidth="@android:dimen/app_icon_size"
-                    android:maxHeight="@android:dimen/app_icon_size"
-                    android:text="+0"
+                    android:text="0"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="@+id/pulsanteSag"
-                    app:layout_constraintEnd_toEndOf="@+id/pulsanteSag" />
+                    app:layout_constraintEnd_toEndOf="@+id/pulsanteSag"
+                    app:layout_constraintStart_toStartOf="@id/pulsanteSag"
+                    app:layout_constraintTop_toTopOf="@id/pulsanteSag" />
 
                 <TextView
                     android:id="@+id/valoreCha"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:clickable="false"
                     android:gravity="center"
-                    android:maxWidth="@android:dimen/app_icon_size"
-                    android:maxHeight="@android:dimen/app_icon_size"
-                    android:text="+0"
+                    android:text="0"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="@+id/pulsanteCha"
-                    app:layout_constraintEnd_toEndOf="@+id/pulsanteCha" />
+                    app:layout_constraintEnd_toEndOf="@+id/pulsanteCha"
+                    app:layout_constraintStart_toStartOf="@id/pulsanteCha"
+                    app:layout_constraintTop_toTopOf="@id/pulsanteCha" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@color/PrimaryLight65op"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
-                    android:paddingTop="16dp"
+                    android:layout_marginTop="8dp"
                     android:text="@string/ts"
-                    android:textColor="@color/schedaTestoLow"
-                    android:textSize="16sp"
+                    android:textColor="@color/guidaTestoMedium"
+                    android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/pulsanteForza" />
 
                 <CheckBox
                     android:id="@+id/tsForzaCheck"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="32dp"
+                    android:layout_height="44dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
                     android:buttonTint="@color/secondaryLight"
                     android:clickable="false"
                     android:gravity="center"
+                    android:textAlignment="gravity"
                     app:layout_constraintEnd_toStartOf="@+id/tsDestrezzaCheck"
-                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
                 <CheckBox
                     android:id="@+id/tsDestrezzaCheck"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="32dp"
+                    android:layout_height="44dp"
                     android:buttonTint="@color/secondaryLight"
                     android:clickable="false"
                     android:gravity="center"
+                    android:textAlignment="gravity"
                     app:layout_constraintEnd_toStartOf="@+id/tsCostituzioneCheck"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/tsForzaCheck"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
                 <CheckBox
                     android:id="@+id/tsCostituzioneCheck"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="32dp"
+                    android:layout_height="44dp"
                     android:buttonTint="@color/secondaryLight"
                     android:clickable="false"
                     android:gravity="center"
+                    android:textAlignment="gravity"
                     app:layout_constraintEnd_toStartOf="@+id/tsIntCheck"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/tsDestrezzaCheck"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
                 <CheckBox
                     android:id="@+id/tsIntCheck"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="9dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="32dp"
+                    android:layout_height="44dp"
                     android:buttonTint="@color/secondaryLight"
                     android:clickable="false"
                     android:gravity="center"
+                    android:textAlignment="gravity"
                     app:layout_constraintEnd_toStartOf="@+id/tsSaggCheck"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/tsCostituzioneCheck"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
                 <CheckBox
                     android:id="@+id/tsSaggCheck"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="32dp"
+                    android:layout_height="44dp"
                     android:buttonTint="@color/secondaryLight"
                     android:clickable="false"
                     android:gravity="center"
+                    android:textAlignment="gravity"
                     app:layout_constraintEnd_toStartOf="@+id/tsChaCheck"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/tsIntCheck"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
                 <CheckBox
                     android:id="@+id/tsChaCheck"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="32dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="16dp"
                     android:buttonTint="@color/secondaryLight"
                     android:clickable="false"
                     android:gravity="center"
+                    android:textAlignment="gravity"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/tsSaggCheck"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
                 <ImageButton
                     android:id="@+id/pulsanteTsForza"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:background="@drawable/raggruppa_895"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/pulsanteTsDex"
-                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tsForzaCheck" />
 
                 <ImageButton
                     android:id="@+id/pulsanteTsDex"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:background="@drawable/raggruppa_895"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/pulsanteTsCos"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/pulsanteTsForza"
                     app:layout_constraintTop_toBottomOf="@+id/tsDestrezzaCheck" />
 
                 <ImageButton
                     android:id="@+id/pulsanteTsCos"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:background="@drawable/raggruppa_895"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/pulsanteTsInt"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/pulsanteTsDex"
                     app:layout_constraintTop_toBottomOf="@+id/tsCostituzioneCheck" />
 
                 <ImageButton
                     android:id="@+id/pulsanteTsInt"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:background="@drawable/raggruppa_895"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/pulsanteTsWis"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/pulsanteTsCos"
                     app:layout_constraintTop_toBottomOf="@+id/tsIntCheck" />
 
                 <ImageButton
                     android:id="@+id/pulsanteTsWis"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:background="@drawable/raggruppa_895"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/pulsanteTsCha"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/pulsanteTsInt"
                     app:layout_constraintTop_toBottomOf="@+id/tsSaggCheck" />
 
                 <ImageButton
                     android:id="@+id/pulsanteTsCha"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:background="@drawable/raggruppa_895"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/pulsanteTsWis"
                     app:layout_constraintTop_toBottomOf="@+id/tsChaCheck" />
 
@@ -826,16 +801,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/constraintLayoutCaratteristiche">
 
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="38dp"
-                android:background="@color/secondaryLight"
-                android:paddingHorizontal="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/gridLayout6" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/gridLayout6"
@@ -856,21 +821,32 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:text="@string/abilità"
-                    android:textColor="@color/schedaTestoLow"
+                    android:textColor="@color/guidaTestoMedium"
                     android:textSize="24sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/PrimaryLight65op"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView48" />
 
                 <ImageButton
                     android:id="@+id/editAbilità"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_marginEnd="16dp"
                     android:background="@android:color/transparent"
                     android:src="@drawable/ic_baseline_edit_24"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView7"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout5"
@@ -1691,66 +1667,59 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="56dp"
             android:background="@drawable/card_template"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayoutCompetenzeELinguaggi"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/constraintLayoutAbilità">
 
-            <androidx.gridlayout.widget.GridLayout
-                android:id="@+id/gridLayout7"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:background="@android:color/transparent"
-                android:paddingHorizontal="16dp"
-                app:columnCount="3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:rowCount="1">
-
-
                 <TextView
+                    android:id="@+id/textViewPrivilegi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/privilegi"
-                    android:textColor="@color/schedaTestoLow"
+                    android:textColor="@color/guidaTestoMedium"
                     android:textSize="24sp"
-                    app:layout_column="0" />
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageButton
                     android:id="@+id/addPrivilegiETratti"
-                    android:layout_marginStart="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:padding="8dp"
-
-                    app:layout_column="1"
-                    app:srcCompat="@drawable/add_icon" />
+                    app:srcCompat="@drawable/add_icon"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView8"/>
 
                 <ImageButton
                     android:id="@+id/editPrivilegiETratti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:padding="8dp"
-                    app:layout_column="2"
-                    app:srcCompat="@drawable/ic_baseline_edit_24" />
-            </androidx.gridlayout.widget.GridLayout>
+                    app:srcCompat="@drawable/ic_baseline_edit_24"
+                    app:layout_constraintEnd_toStartOf="@id/addPrivilegiETratti"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView8"/>
+
 
             <ImageView
                 android:id="@+id/imageView8"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="32dp"
-                android:background="@color/secondaryLight"
-                android:paddingHorizontal="16dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/PrimaryLight65op"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/gridLayout7" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewPrivilegi" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/privilegiETrattiRecyclerView"
-
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="16dp"
@@ -1769,61 +1738,55 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/card_template"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/constraintLayoutPrivilegiETratti">
 
-            <androidx.gridlayout.widget.GridLayout
-                android:id="@+id/gridLayout8"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/transparent"
-                app:columnCount="3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:rowCount="1"
-                tools:layout_editor_absoluteY="8dp">
-
-
                 <TextView
+                    android:id="@+id/textViewCompetenze"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/competenze"
-                    android:textColor="@color/schedaTestoLow"
-                    android:textSize="24sp"
-                    app:layout_column="0" />
+                    android:textColor="@color/guidaTestoMedium"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"/>
 
                 <ImageButton
                     android:id="@+id/addCompetenzeELinguaggi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:padding="8dp"
-                    app:layout_column="1"
-                    app:srcCompat="@drawable/add_icon" />
+                    app:srcCompat="@drawable/add_icon"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView9"/>
 
                 <ImageButton
                     android:id="@+id/editCompetenzeELinguaggi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    app:layout_column="2"
-                    app:srcCompat="@drawable/ic_baseline_edit_24" />
+                    app:srcCompat="@drawable/ic_baseline_edit_24"
+                    app:layout_constraintEnd_toStartOf="@id/addCompetenzeELinguaggi"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView9" />
 
 
-            </androidx.gridlayout.widget.GridLayout>
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="32dp"
-            android:background="@color/secondaryLight"
-            android:paddingHorizontal="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/gridLayout8" />
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/PrimaryLight65op"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewCompetenze"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/competenzeELinguaggiRecyclerView"
