@@ -19,7 +19,9 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="136dp"
+            android:paddingBottom="136dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -32,9 +34,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="136dp"
+                android:layout_marginTop="4dp"
                 android:text="@string/informazione"
-                android:textColor="@color/schedaTestoLow"
+                android:textColor="@color/guidaTestoMedium"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -42,11 +44,10 @@
             <ImageView
                 android:id="@+id/imageView10"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="2dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/secondaryLight"
+                android:background="@color/PrimaryLight65op"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -55,11 +56,10 @@
                 android:id="@+id/classeHold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:textColorHint="@color/PrimaryLight65op"
-                app:boxStrokeColor="@color/PrimaryLight"
+                app:boxStrokeColor="@color/PrimaryLight65op"
                 app:hintTextColor="@color/PrimaryLight65op"
                 app:layout_constraintTop_toBottomOf="@+id/razza_Hold"
                 android:layout_marginStart="16dp"
@@ -68,10 +68,10 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/classe"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:clickable="false"
                     android:focusable="false"
-                    android:hint="Inserire la classe:"
+                    android:hint="Classe"
                     android:textSize="16sp"
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -82,14 +82,12 @@
                 android:id="@+id/razza_Hold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9"
                 android:textColorHint="@color/PrimaryLight65op"
-                app:boxStrokeColor="@color/PrimaryLight"
+                app:boxStrokeColor="@color/PrimaryLight65op"
                 app:hintTextColor="@color/PrimaryLight65op"
-
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp">
@@ -97,10 +95,10 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/razza_Et"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:clickable="false"
                     android:focusable="false"
-                    android:hint="Razza:"
+                    android:hint="Razza"
                     android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,24 +107,22 @@
                 android:id="@+id/BGHold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/classeHold"
                 android:textColorHint="@color/PrimaryLight65op"
-                app:boxStrokeColor="@color/PrimaryLight"
+                app:boxStrokeColor="@color/PrimaryLight65op"
                 app:hintTextColor="@color/PrimaryLight65op"
-
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/backGround"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:clickable="false"
                     android:focusable="false"
-                    android:hint="BackGround:"
+                    android:hint="BackGround"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -137,21 +133,19 @@
                 android:id="@+id/NomeGiocatoreHold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/BGHold"
                 android:textColorHint="@color/PrimaryLight65op"
-                app:boxStrokeColor="@color/PrimaryLight"
+                app:boxStrokeColor="@color/PrimaryLight65op"
                 app:hintTextColor="@color/PrimaryLight65op"
-
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/nomeGiocatore"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:clickable="false"
                     android:focusable="false"
                     android:hint="Nome Giocatore"
@@ -166,21 +160,19 @@
                 android:id="@+id/allineamentoHold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/NomeGiocatoreHold"
                 android:textColorHint="@color/PrimaryLight65op"
-                app:boxStrokeColor="@color/PrimaryLight"
+                app:boxStrokeColor="@color/PrimaryLight65op"
                 app:hintTextColor="@color/PrimaryLight65op"
-
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/allineamento"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:clickable="false"
                     android:focusable="false"
                     android:hint="Allineamento:"
@@ -194,26 +186,23 @@
                 android:id="@+id/puntiEsperienzaHold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/allineamentoHold"
                 android:textColorHint="@color/PrimaryLight65op"
-                app:boxStrokeColor="@color/PrimaryLight"
+                app:boxStrokeColor="@color/PrimaryLight65op"
                 app:hintTextColor="@color/PrimaryLight65op"
-
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/puntiEsperienza"
                     android:maxLength="9"
-
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:clickable="false"
                     android:focusable="false"
-                    android:hint="Punti Esperienza:"
+                    android:hint="Punti Esperienza"
                     android:inputType="number"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -225,14 +214,12 @@
                 android:id="@+id/puntiIspirazioneaHold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/puntiEsperienzaHold"
                 android:textColorHint="@color/PrimaryLight65op"
-                app:boxStrokeColor="@color/PrimaryLight"
+                app:boxStrokeColor="@color/PrimaryLight65op"
                 app:hintTextColor="@color/PrimaryLight65op"
-
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp">
@@ -240,10 +227,10 @@
                     android:id="@+id/puntiIspirazione"
                     android:maxLength="9"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:clickable="false"
                     android:focusable="false"
-                    android:hint="Punti Ispirazione:"
+                    android:hint="Punti Ispirazione"
                     android:inputType="number"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -255,8 +242,6 @@
                 android:id="@+id/editInformazioniBase"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="136dp"
                 android:layout_marginEnd="16dp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_baseline_edit_24"
@@ -264,44 +249,43 @@
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/textView9"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/imageView10"
                 android:visibility="visible"/>
             <ImageButton
                 android:id="@+id/editInformazioniBaseSALVA"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="136dp"
                 android:layout_marginEnd="16dp"
                 android:background="@android:color/transparent"
-                android:tint="@color/Secondary"
+                android:tint="@color/secondaryLight"
                 android:src="@drawable/ic_baseline_save_24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/textView9"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/imageView10"
                 android:visibility="gone"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="56dp"/>
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="96dp"
-                android:background="@drawable/card_template">
+                android:background="@drawable/card_template"
+                android:layout_marginTop="24dp"
+                android:paddingBottom="32dp">
 
                 <TextView
                     android:id="@+id/textView17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="4dp"
                     android:text="@string/altreInfo"
-                    android:textColor="@color/schedaTestoLow"
+                    android:textColor="@color/guidaTestoMedium"
                     android:textSize="24sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -310,28 +294,28 @@
                     android:id="@+id/editAltreInformazioni"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
                     android:background="@android:color/transparent"
                     android:src="@drawable/ic_baseline_edit_24"
                     android:visibility="visible"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.876"
                     app:layout_constraintStart_toEndOf="@+id/textView17"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView17"/>
 
                 <ImageButton
                     android:id="@+id/editAltreInformazioniSALVA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="114dp"
-                    android:layout_marginTop="32dp"
                     android:layout_marginEnd="16dp"
                     android:background="@android:color/transparent"
                     android:src="@drawable/ic_baseline_save_24"
-                    android:tint="@color/Secondary"
+                    android:tint="@color/secondaryLight"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.876"
                     app:layout_constraintStart_toEndOf="@+id/textView17"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView17"
                     android:visibility="gone"/>
 
                 <ImageView
@@ -340,8 +324,7 @@
                     android:layout_height="1dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="4dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@color/secondaryLight"
+                    android:background="@color/PrimaryLight65op"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView17" />
@@ -355,7 +338,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:hint="Aggiungi altre informazioni relative al tuo personaggio..."
+                    android:hint="Descrizione relativa al personaggio"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
