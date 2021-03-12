@@ -14,7 +14,7 @@ import dndData.TipoOggetto
                 childColumns = arrayOf("scheda_id")
                 )
         ),
-        indices = arrayOf(Index(name = "scheda_id_indexOggetti", value = ["scheda_id"], unique = true))
+        indices = arrayOf(Index(name = "scheda_id_indexOggetti", value = ["scheda_id"]))
 )
 data class Oggetti(
         @PrimaryKey(autoGenerate = true) val id: Int,

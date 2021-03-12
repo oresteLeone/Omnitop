@@ -18,5 +18,5 @@ data class Mappa(
     @PrimaryKey(autoGenerate = true) val id: Int,
     @ColumnInfo(name = "campagna_id") val Campagnaid: Int,
     var titolo: String,
-    //var img: Blob
+
 )

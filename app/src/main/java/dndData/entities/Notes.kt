@@ -14,7 +14,7 @@ import kotlinx.android.parcel.Parcelize
         childColumns = arrayOf("campagna_id")
         )
     ),
-    indices = arrayOf(Index(name = "campagna_id_indexNotes", value = ["campagna_id"], unique = true))
+    indices = arrayOf(Index(name = "campagna_id_indexNotes", value = ["campagna_id"]))
 )
 data class Notes(
     @PrimaryKey(autoGenerate = true) val id: Int,

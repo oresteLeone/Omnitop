@@ -10,7 +10,7 @@ import androidx.room.*
         childColumns = arrayOf("scheda_id")
     )
 ),
-    indices = arrayOf(Index(name = "scheda_id_indexPrivilegiETratti", value = ["scheda_id"], unique = true))
+    indices = arrayOf(Index(name = "scheda_id_indexPrivilegiETratti", value = ["scheda_id"]))
 )
 data class PrivilegiETratti (
 
