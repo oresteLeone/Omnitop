@@ -24,7 +24,7 @@ class UpdateCaratteristicheScheda : AppCompatActivity() {
 
     var idScheda = -1
     private lateinit var mSchedaViewModel : SchedaViewModel
-
+    var campagnaid =-1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +39,7 @@ class UpdateCaratteristicheScheda : AppCompatActivity() {
         /** Inizializzazione scheda*/
 
         idScheda = intent?.extras!!.getInt("idScheda")
-
+        campagnaid = intent?.extras!!.getInt("idCampagna")
         mSchedaViewModel = ViewModelProvider(this).get(SchedaViewModel::class.java)
         if (idScheda > -1) {
             mSchedaViewModel.getSchedaFromID(idScheda)
@@ -118,12 +118,12 @@ class UpdateCaratteristicheScheda : AppCompatActivity() {
 
 
         Toast.makeText(applicationContext, "Modifica avvenuta con successo!", Toast.LENGTH_SHORT).show()
-        onBackPressed()
+        onSupportNavigateUp()
 
     }
     override fun onSupportNavigateUp(): Boolean {
 
-        return navigateUpTo(Intent(this, DndSchedaActivity::class.java).putExtra("idScheda", idScheda))
+        return navigateUpTo(Intent(this, DndSchedaActivity::class.java).putExtra("idScheda", idScheda).putExtra("idCampagna", campagnaid))
     }
 
     fun attivaListener(){

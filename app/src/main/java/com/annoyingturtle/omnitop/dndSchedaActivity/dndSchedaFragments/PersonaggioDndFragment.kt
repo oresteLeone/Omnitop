@@ -25,27 +25,30 @@ class PersonaggioDndFragment : Fragment() {
     var idScheda = -1
     private lateinit var mSchedaViewModel : SchedaViewModel
     var modificaAbilita= false
-
+    var campagnaid =-1
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_personaggio, container, false)
+        var view = inflater.inflate(R.layout.fragment_personaggio, container, false)
+        /** Inizializzazione scheda*/
+
+        idScheda = activity?.intent?.extras!!.getInt("idScheda")
+        campagnaid = activity?.intent?.extras!!.getInt("idCampagna")
+        mSchedaViewModel = ViewModelProvider(this).get(SchedaViewModel::class.java)
+        if (idScheda > -1){
+            mSchedaViewModel.getSchedaFromID(idScheda)
+            showSchedaData()
+
+        }
+        return view
     }
 
     override fun onStart() {
         super.onStart()
 
-        /** Inizializzazione scheda*/
-
-        idScheda = activity?.intent?.extras!!.getInt("idScheda")
-
-        mSchedaViewModel = ViewModelProvider(this).get(SchedaViewModel::class.java)
-        if (idScheda > -1){
-            mSchedaViewModel.getSchedaFromID(idScheda)
-            showSchedaData()
 
             attivaListnerAbilità()
             attivaListnerCaratteristicheEts()
@@ -121,22 +124,18 @@ class PersonaggioDndFragment : Fragment() {
             }
 
             editCaratteristiche.setOnClickListener(){
-                startActivity(Intent(context, UpdateCaratteristicheScheda::class.java).putExtra("idScheda", idScheda))
+                startActivity(Intent(context, UpdateCaratteristicheScheda::class.java).putExtra("idScheda", idScheda).putExtra("idCampagna", campagnaid))
             }
 
             editAbilità.setOnClickListener(){
-                startActivity(Intent(context, UpdateAbilita::class.java).putExtra("idScheda", idScheda))
+                startActivity(Intent(context, UpdateAbilita::class.java).putExtra("idScheda", idScheda).putExtra("idCampagna", campagnaid))
             }
 
         }
 
 
-
-    }
-
-
     fun showSchedaData(){
-        mSchedaViewModel.getSingleLiveData().observe(this, Observer {
+        mSchedaViewModel.getSingleLiveData().observe(viewLifecycleOwner, Observer {
             pfAttuali.text= Editable.Factory.getInstance().newEditable(it.statistiche?.puntiFeritaAttuali.toString())
             pfTotali.text= Editable.Factory.getInstance().newEditable(it.statistiche?.puntiFeritaTotali.toString())
             classeArmatura.text= Editable.Factory.getInstance().newEditable(it.statistiche?.classeArmatura.toString())
@@ -170,16 +169,16 @@ class PersonaggioDndFragment : Fragment() {
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
             when (it.statistiche?.abAcrobazia) {
                 1 -> {
-                    pulsanteAcrobazia.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                //    pulsanteAcrobazia.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
                 }
                 2 -> {
-                    pulsanteAcrobazia.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    //    pulsanteAcrobazia.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                 }
                 0 -> {
                     textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
-                    pulsanteAcrobazia.background.setTintList(null)
+                    //pulsanteAcrobazia.background.setTintList(null)
                 }
             }
 
@@ -189,16 +188,16 @@ class PersonaggioDndFragment : Fragment() {
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
             when (it.statistiche?.abAddestrare) {
                 1 -> {
-                    pulsanteAddestrareAnim.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    //pulsanteAddestrareAnim.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView53.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
                 2 -> {
-                    pulsanteAddestrareAnim.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    //pulsanteAddestrareAnim.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView53.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                 }
                 0 -> {
                     textView53.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
-                    pulsanteAddestrareAnim.background.setTintList(null)
+                    //pulsanteAddestrareAnim.background.setTintList(null)
                 }
             }
 
@@ -208,16 +207,16 @@ class PersonaggioDndFragment : Fragment() {
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
             when (it.statistiche?.abArcano) {
                 1 -> {
-                    pulsanteArcano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                   // pulsanteArcano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView57.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
                 2 -> {
-                    pulsanteArcano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                   // pulsanteArcano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView57.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                 }
                 0 -> {
                     textView57.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-                    pulsanteArcano.background.setTintList(null)
+                   // pulsanteArcano.background.setTintList(null)
                 }
             }
 
@@ -227,15 +226,15 @@ class PersonaggioDndFragment : Fragment() {
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.STR.toString()).toString().toInt())).toString().toInt()).toString()
             when (it.statistiche?.abAtletica) {
                 1 -> {
-                    pulsanteAtletica.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                   // pulsanteAtletica.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView61.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
                 2 -> {
-                    pulsanteAtletica.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                   // pulsanteAtletica.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView61.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                 }
                 0 -> {
-                    pulsanteAtletica.background.setTintList(null)
+                    //pulsanteAtletica.background.setTintList(null)
                     textView61.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
             }
@@ -247,15 +246,15 @@ class PersonaggioDndFragment : Fragment() {
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
             when (it.statistiche?.abFurtivita) {
                 1 -> {
-                    pulsanteFurtività.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    //pulsanteFurtività.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView65.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
                 2 -> {
-                    pulsanteFurtività.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    //pulsanteFurtività.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView65.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                 }
                 0 -> {
-                    pulsanteFurtività.background.setTintList(null)
+                    //pulsanteFurtività.background.setTintList(null)
                     textView65.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
             }
@@ -267,15 +266,15 @@ class PersonaggioDndFragment : Fragment() {
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString())     //// DA QUA
             when (it.statistiche?.abIndagare) {
                 1 -> {
-                    pulsanteIndagare.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    //pulsanteIndagare.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView69.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
                 2 -> {
-                    pulsanteIndagare.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                  //  pulsanteIndagare.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView69.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                 }
                 0 -> {
-                    pulsanteIndagare.background.setTintList(null)
+                  //  pulsanteIndagare.background.setTintList(null)
                     textView69.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
             }
@@ -287,11 +286,11 @@ class PersonaggioDndFragment : Fragment() {
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
             when (it.statistiche?.abInganno) {
                 1 -> {
-                    pulsanteIngano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                   // pulsanteIngano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView73.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
                 }
                 2 -> {
-                    pulsanteIngano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                   // pulsanteIngano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                     textView73.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
                 }
                 0 -> {
