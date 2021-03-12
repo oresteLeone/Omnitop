@@ -15,7 +15,7 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
+            android:id="@+id/constraintLayoutPF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="128dp"
@@ -28,134 +28,111 @@
             <ImageView
                 android:id="@+id/imageView22"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="64dp"
-                android:background="@color/secondaryLight"
+                android:layout_height="2dp"
+                android:background="@color/PrimaryLight65op"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.gridlayout.widget.GridLayout
-                android:id="@+id/gridLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                app:columnCount="7"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.101"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                app:rowCount="1">
+                app:layout_constraintTop_toBottomOf="@id/pfAttuali" />
 
 
                 <EditText
                     android:id="@+id/pfAttuali"
                     android:layout_width="wrap_content"
-                    android:inputType="number"
-                    android:maxLength="3"
-
+                    android:layout_height="wrap_content"
                     android:clickable="false"
                     android:focusable="false"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:singleLine="true"
                     android:text="0"
                     android:textColor="@color/secondaryLight"
-                    android:textSize="36sp"
-                    android:singleLine="true"
-
-                    app:layout_column="0"
-                    app:layout_row="0" />
+                    android:textSize="24sp"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView22"
+                    />
 
                 <TextView
                     android:id="@+id/slash"
                     android:layout_width="wrap_content"
-
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="   /   "
-                    android:textColor="@color/testoCalcolatrice"
-                    android:textSize="24sp"
-
-                    app:layout_column="1"
-                    app:layout_row="0" />
+                    android:text="/"
+                    android:textColor="@color/schedaTestoLow"
+                    android:textSize="18sp"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toEndOf="@id/pfAttuali"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView22"/>
 
                 <EditText
                     android:id="@+id/pfTotali"
                     android:layout_width="wrap_content"
-                    android:maxLength="3"
-                    android:inputType="number"
+                    android:layout_height="wrap_content"
                     android:clickable="false"
                     android:focusable="false"
-
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="0"
-                    android:textSize="32sp"
-                    android:textColor="@color/testoCalcolatrice"
+                    android:inputType="number"
+                    android:maxLength="3"
                     android:singleLine="true"
-
-                    app:layout_column="2"
-                    app:layout_row="0" />
+                    android:text="0"
+                    android:textColor="@color/guidaTestoMedium"
+                    android:textSize="18sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@id/slash"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView22"/>
 
                 <TextView
                     android:id="@+id/pf"
                     android:layout_width="wrap_content"
-
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
                     android:text="@string/pf"
-                    android:textColor="@color/testoCalcolatrice"
-                    android:textSize="24sp"
-
-                    app:layout_column="3"
-                    app:layout_row="0" />
+                    android:textColor="@color/guidaTestoMedium"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@id/pfTotali"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView22"
+                    android:layout_marginStart="4dp"/>
 
                 <ImageButton
                     android:id="@+id/aumentaPf"
-                    android:layout_width="40dp"
-
-                    android:layout_height="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:padding="8dp"
-                    app:layout_column="4"
-                    app:layout_gravity="fill"
-                    app:layout_row="0"
-                    app:srcCompat="@drawable/ic_baseline_arrow_upward_24">
+                    app:srcCompat="@drawable/ic_baseline_arrow_upward_24"
+                    android:tint="@color/secondaryLight"
+                    app:layout_constraintStart_toEndOf="@id/pf"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView22"
+                    android:layout_marginStart="16dp">
 
                 </ImageButton>
 
                 <ImageButton
                     android:id="@+id/diminuisciPF"
-                    android:layout_width="40dp"
-
-                    android:layout_height="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:padding="8dp"
-                    app:layout_column="5"
-                    app:layout_gravity="fill"
-                    app:layout_row="0"
-                    app:srcCompat="@drawable/ic_baseline_arrow_downward_24">
+                    app:srcCompat="@drawable/ic_baseline_arrow_downward_24"
+                    android:tint="@color/secondaryLight"
+                    app:layout_constraintStart_toEndOf="@id/aumentaPf"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageView22"
+                    android:layout_marginStart="8dp">
 
                 </ImageButton>
 
-
-
-
-            </androidx.gridlayout.widget.GridLayout>
 
             <ImageButton
                 android:id="@+id/editStatisticheBase"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:padding="8dp"
                 android:visibility="visible"
                 app:layout_constraintBottom_toTopOf="@+id/imageView22"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.701"
-                app:layout_constraintStart_toEndOf="@+id/gridLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="16dp"
                 app:srcCompat="@drawable/ic_baseline_edit_24" />
 
             <ImageButton
@@ -163,237 +140,213 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:padding="8dp"
                 android:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@+id/imageView22"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.701"
-                app:layout_constraintStart_toEndOf="@+id/gridLayout"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.541"
+                android:layout_marginEnd="16dp"
                 app:srcCompat="@drawable/ic_baseline_save_24"
-                android:tint="@color/Secondary"/>
+                android:tint="@color/secondaryLight65op"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/constraintLayoutStatistiche"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutStatistiche"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/card_template"
-            android:paddingBottom="8dp"
+            android:paddingBottom="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/constraintLayout">
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutPF">
 
             <EditText
                 android:id="@+id/classeArmatura"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:maxLength="2"
-
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:clickable="false"
                 android:focusable="false"
                 android:inputType="number"
-                android:paddingHorizontal="48dp"
+                android:maxLength="2"
                 android:singleLine="true"
                 android:text="0"
-                android:textColor="@color/white"
-                android:textSize="32sp"
-                app:layout_constraintEnd_toStartOf="@+id/iniziativa"
-                app:layout_constraintHorizontal_bias="0.5"
+                android:textAlignment="center"
+                android:textColor="@color/guidaScritteHigh"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@id/iniziativa"
+                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/iniziativa"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:clickable="false"
-                android:maxLength="2"
-
                 android:focusable="false"
                 android:inputType="number"
-                android:paddingHorizontal="48dp"
+                android:maxLength="2"
                 android:singleLine="true"
                 android:text="0"
-                android:textColor="@color/white"
-                android:textSize="32sp"
-                app:layout_constraintEnd_toStartOf="@+id/velocità"
-                app:layout_constraintHorizontal_bias="0.5"
+                android:textAlignment="center"
+                android:textColor="@color/guidaScritteHigh"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@id/velocità"
                 app:layout_constraintStart_toEndOf="@+id/classeArmatura"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/velocità"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:maxLength="4"
-
                 android:clickable="false"
                 android:focusable="false"
                 android:inputType="numberDecimal"
-                android:paddingHorizontal="48dp"
+                android:maxLength="4"
                 android:singleLine="true"
                 android:text="0"
-                android:textColor="@color/white"
-                android:textSize="32sp"
+                android:textAlignment="center"
+                android:textColor="@color/guidaScritteHigh"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/iniziativa"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/CA"
-                android:layout_width="wrap_content"
-
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="@string/ca"
+                android:textAlignment="center"
                 android:textColor="@color/schedaTestoLow"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@+id/init"
-                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/classeArmatura" />
 
 
             <TextView
                 android:id="@+id/init"
-                android:layout_width="wrap_content"
-
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="28dp"
                 android:text="@string/iniziativa"
+                android:textAlignment="center"
                 android:textColor="@color/schedaTestoLow"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@+id/vel"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/CA"
                 app:layout_constraintTop_toBottomOf="@+id/iniziativa" />
 
             <TextView
                 android:id="@+id/vel"
-                android:layout_width="wrap_content"
-
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:paddingHorizontal="24dp"
                 android:text="@string/velocità"
+                android:textAlignment="center"
                 android:textColor="@color/schedaTestoLow"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/init"
                 app:layout_constraintTop_toBottomOf="@+id/velocità" />
 
             <TextView
                 android:id="@+id/percezionePassiva"
-                android:layout_width="wrap_content"
-
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:paddingHorizontal="48dp"
-                android:paddingTop="16dp"
                 android:text="0"
-                android:textColor="@color/white"
-                android:textSize="32sp"
+                android:textAlignment="center"
+                android:textColor="@color/guidaScritteHigh"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/pp"
                 app:layout_constraintEnd_toStartOf="@+id/profBonus"
-                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/CA" />
 
             <EditText
                 android:id="@+id/profBonus"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:focusable="false"
-                android:maxLength="1"
-
                 android:inputType="number"
-                android:paddingHorizontal="48dp"
-                android:paddingTop="16dp"
+                android:maxLength="1"
                 android:singleLine="true"
                 android:text="0"
-                android:textColor="@color/white"
-                android:textSize="32sp"
+                android:textAlignment="center"
+                android:textColor="@color/guidaScritteHigh"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toStartOf="@+id/dadiVita"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/percezionePassiva"
                 app:layout_constraintTop_toBottomOf="@+id/init" />
 
             <EditText
                 android:id="@+id/dadiVita"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:maxLength="2"
-
                 android:clickable="false"
                 android:focusable="false"
                 android:inputType="number"
-                android:paddingHorizontal="48dp"
-                android:paddingTop="16dp"
+                android:maxLength="2"
                 android:singleLine="true"
                 android:text="0"
-                android:textColor="@color/white"
-                android:textSize="32sp"
+                android:textAlignment="center"
+                android:textColor="@color/guidaScritteHigh"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/profBonus"
                 app:layout_constraintTop_toBottomOf="@+id/vel" />
 
             <TextView
                 android:id="@+id/pp"
-                android:layout_width="wrap_content"
-
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="8dp"
                 android:text="@string/passiveP"
+                android:textAlignment="center"
                 android:textColor="@color/schedaTestoLow"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@+id/pb"
-                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/percezionePassiva" />
+                app:layout_constraintTop_toBottomOf="@+id/profBonus" />
 
             <TextView
                 android:id="@+id/pb"
-                android:layout_width="wrap_content"
-
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="6dp"
                 android:text="@string/prof"
+                android:textAlignment="center"
                 android:textColor="@color/schedaTestoLow"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@+id/dv"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/pp"
                 app:layout_constraintTop_toBottomOf="@+id/profBonus" />
 
 
             <TextView
                 android:id="@+id/dv"
-                android:layout_width="wrap_content"
-
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:paddingHorizontal="24sp"
                 android:text="@string/dv"
                 android:textColor="@color/schedaTestoLow"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/pb"
-                app:layout_constraintTop_toBottomOf="@+id/dadiVita" />
+                app:layout_constraintTop_toBottomOf="@+id/dadiVita"
+                android:textAlignment="center" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

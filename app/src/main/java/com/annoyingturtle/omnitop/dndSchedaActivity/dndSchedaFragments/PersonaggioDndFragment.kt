@@ -66,6 +66,9 @@ class PersonaggioDndFragment : Fragment() {
                 iniziativa.isClickable = true
                 iniziativa.isFocusableInTouchMode = true
 
+                velocità.isClickable = true
+                velocità.isFocusableInTouchMode = true
+
                 profBonus.isClickable = true
                 profBonus.isFocusableInTouchMode = true
 
@@ -88,6 +91,9 @@ class PersonaggioDndFragment : Fragment() {
 
                 iniziativa.isClickable = false
                 iniziativa.isFocusableInTouchMode = false
+
+                velocità.isClickable = false
+                velocità.isFocusableInTouchMode = false
 
                 profBonus.isClickable = false
                 profBonus.isFocusableInTouchMode = false
@@ -162,60 +168,76 @@ class PersonaggioDndFragment : Fragment() {
             valoreAcrobazia.text =(Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abAcrobazia.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abAcrobazia == 1 ) {
-               pulsanteAcrobazia.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-               textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abAcrobazia == 2){
-                pulsanteAcrobazia.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
-                pulsanteAcrobazia.background.setTintList(null)
+            when (it.statistiche?.abAcrobazia) {
+                1 -> {
+                    pulsanteAcrobazia.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteAcrobazia.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    textView49.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
+                    pulsanteAcrobazia.background.setTintList(null)
+                }
             }
 
 
             valoreAddestrareAnim.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abAddestrare.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abAddestrare == 1 ) {
-                pulsanteAddestrareAnim.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abAddestrare == 2){
-                pulsanteAddestrareAnim.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView53.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                textView53.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
-                pulsanteAddestrareAnim.background.setTintList(null)
+            when (it.statistiche?.abAddestrare) {
+                1 -> {
+                    pulsanteAddestrareAnim.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView53.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteAddestrareAnim.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView53.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    textView53.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
+                    pulsanteAddestrareAnim.background.setTintList(null)
+                }
             }
 
 
             valoreArcano.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abArcano.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abArcano == 1 ) {
-                pulsanteArcano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abArcano == 2){
-                pulsanteArcano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView57.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                textView57.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-                pulsanteArcano.background.setTintList(null)
+            when (it.statistiche?.abArcano) {
+                1 -> {
+                    pulsanteArcano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView57.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteArcano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView57.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    textView57.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                    pulsanteArcano.background.setTintList(null)
+                }
             }
 
 
             valoreAtletica.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abAtletica.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.STR.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abAtletica == 1 ) {
-                pulsanteAtletica.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abAtletica == 2){
-                pulsanteAtletica.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView61.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                pulsanteAtletica.background.setTintList(null)
-                textView61.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abAtletica) {
+                1 -> {
+                    pulsanteAtletica.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView61.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteAtletica.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView61.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsanteAtletica.background.setTintList(null)
+                    textView61.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
@@ -223,15 +245,19 @@ class PersonaggioDndFragment : Fragment() {
             valoreFurtività.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abFurtivita.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abFurtivita == 1 ) {
-               pulsanteFurtività.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abFurtivita == 2){
-                pulsanteFurtività.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView65.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                pulsanteFurtività.background.setTintList(null)
-                textView65.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abFurtivita) {
+                1 -> {
+                    pulsanteFurtività.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView65.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteFurtività.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView65.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsanteFurtività.background.setTintList(null)
+                    textView65.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
@@ -239,15 +265,19 @@ class PersonaggioDndFragment : Fragment() {
             valoreIndagare.text = ((Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIndagare.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString())     //// DA QUA
-            if (it.statistiche?.abIndagare == 1 ) {
-                pulsanteIndagare.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abIndagare == 2){
-                pulsanteIndagare.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView69.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-              pulsanteIndagare.background.setTintList(null)
-                textView69.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abIndagare) {
+                1 -> {
+                    pulsanteIndagare.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView69.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteIndagare.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView69.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsanteIndagare.background.setTintList(null)
+                    textView69.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
@@ -255,30 +285,38 @@ class PersonaggioDndFragment : Fragment() {
             valoreInganno.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abInganno.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abInganno == 1 ) {
-                pulsanteIngano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abInganno == 2){
-                pulsanteIngano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView73.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                pulsanteIngano.background.setTintList(null)
-                textView73.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abInganno) {
+                1 -> {
+                    pulsanteIngano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView73.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteIngano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView73.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsanteIngano.background.setTintList(null)
+                    textView73.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
             valoreIntimidire.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIntimidire.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abIntimidire == 1 ) {
-                pulsanteIntimidire.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abIntimidire == 2){
-                pulsanteIntimidire.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView77.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                pulsanteIntimidire.background.setTintList(null)
-               textView77.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abIntimidire) {
+                1 -> {
+                    pulsanteIntimidire.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView77.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteIntimidire.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView77.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsanteIntimidire.background.setTintList(null)
+                    textView77.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
@@ -286,15 +324,19 @@ class PersonaggioDndFragment : Fragment() {
             valoreIntuizione.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIntuizione.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abIntuizione == 1 ) {
-                pulsanteIntuizione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abIntuizione == 2){
-                pulsanteIntuizione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView51.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                pulsanteIntuizione.background.setTintList(null)
-                textView51.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abIntuizione) {
+                1 -> {
+                    pulsanteIntuizione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView51.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteIntuizione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView51.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsanteIntuizione.background.setTintList(null)
+                    textView51.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
@@ -302,135 +344,171 @@ class PersonaggioDndFragment : Fragment() {
             valoreIntrattenere.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abIntrattenere.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abIntrattenere == 1 ) {
-                pulsanteIntrattenere.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abIntrattenere == 2){
-                pulsanteIntrattenere.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView81.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                pulsanteIntrattenere.background.setTintList(null)
-                textView81.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abIntrattenere) {
+                1 -> {
+                    pulsanteIntrattenere.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView81.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteIntrattenere.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView81.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsanteIntrattenere.background.setTintList(null)
+                    textView81.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
             valoreMedicina.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abMedicina.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abMedicina == 1 ) {
-                pulsanteMedicina.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abMedicina == 2){
-                pulsanteMedicina.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView55.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                pulsanteMedicina.background.setTintList(null)
-                textView55.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abMedicina) {
+                1 -> {
+                    pulsanteMedicina.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView55.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteMedicina.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView55.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsanteMedicina.background.setTintList(null)
+                    textView55.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
             valoreNatua.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abNatura.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abNatura == 1 ) {
-                pulsanteNatura.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abNatura == 2){
-                pulsanteNatura.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView59.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                pulsanteNatura.background.setTintList(null)
-                textView59.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abNatura) {
+                1 -> {
+                    pulsanteNatura.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView59.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteNatura.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView59.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsanteNatura.background.setTintList(null)
+                    textView59.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
             valorePercezione.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abPercezione.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abPercezione == 1 ) {
-                pulsantePercezione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abPercezione == 2){
-                pulsantePercezione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView63.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-              pulsantePercezione.background.setTintList(null)
-                textView63.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abPercezione) {
+                1 -> {
+                    pulsantePercezione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView63.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsantePercezione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView63.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsantePercezione.background.setTintList(null)
+                    textView63.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
             valorePersuasione.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abPersuasione.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.CHA.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abPersuasione == 1 ) {
-                pulsantePersuasione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abPersuasione == 2){
-                pulsantePersuasione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView67.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                pulsantePersuasione.background.setTintList(null)
-                textView67.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abPersuasione) {
+                1 -> {
+                    pulsantePersuasione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView67.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsantePersuasione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView67.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsantePersuasione.background.setTintList(null)
+                    textView67.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
             valoreRapiditaDiMano.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abRapiditMano.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.DEX.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abRapiditMano == 1 ) {
-                pulsanteRapiditaDiMano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abRapiditMano == 2){
-                pulsanteRapiditaDiMano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView71.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                pulsanteRapiditaDiMano.background.setTintList(null)
-                textView71.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abRapiditMano) {
+                1 -> {
+                    pulsanteRapiditaDiMano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView71.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteRapiditaDiMano.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView71.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsanteRapiditaDiMano.background.setTintList(null)
+                    textView71.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
             valoreReligione.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abReligione.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abReligione == 1 ) {
-                pulsanteReligione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abReligione == 2){
-                pulsanteReligione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView75.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                pulsanteReligione.background.setTintList(null)
-                textView75.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abReligione) {
+                1 -> {
+                    pulsanteReligione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView75.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteReligione.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView75.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsanteReligione.background.setTintList(null)
+                    textView75.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
             valoreSopravvivenza.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abSoprav.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.WIS.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abSoprav == 1 ) {
-                pulsanteSopravvivenza.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abSoprav == 2){
-                pulsanteSopravvivenza.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView79.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                pulsanteSopravvivenza.background.setTintList(null)
-                textView79.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abSoprav) {
+                1 -> {
+                    pulsanteSopravvivenza.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView79.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteSopravvivenza.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView79.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsanteSopravvivenza.background.setTintList(null)
+                    textView79.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
 
             valoreStoria.text = (Editable.Factory.getInstance().newEditable(it.statistiche?.bonusCompetenza.toString()).toString().toInt() *
                     Editable.Factory.getInstance().newEditable(it.statistiche?.abStoria.toString()).toString().toInt() +
                     (calcolaModificatore(Editable.Factory.getInstance().newEditable(it.statistiche?.INT.toString()).toString().toInt())).toString().toInt()).toString()
-            if (it.statistiche?.abStoria == 1 ) {
-                pulsanteStoria.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
-            }else if (it.statistiche?.abStoria == 2){
-                pulsanteStoria.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-                textView83.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
-            }else{
-                pulsanteStoria.background.setTintList(null)
-                textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+            when (it.statistiche?.abStoria) {
+                1 -> {
+                    pulsanteStoria.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
+                2 -> {
+                    pulsanteStoria.background.setTint(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                    textView83.setTextColor(ContextCompat.getColor(requireContext(),R.color.secondaryLight65op))
+                }
+                0 -> {
+                    pulsanteStoria.background.setTintList(null)
+                    textView83.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
+                }
             }
 
         })
