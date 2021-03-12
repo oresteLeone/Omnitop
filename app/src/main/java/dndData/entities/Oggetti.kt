@@ -2,6 +2,7 @@ package dndData.entities
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
+import androidx.room.Index
 import androidx.room.PrimaryKey
 import dndData.TipoOggetto
 
@@ -12,7 +13,8 @@ import dndData.TipoOggetto
                 parentColumns = arrayOf("id"),
                 childColumns = arrayOf("scheda_id")
                 )
-        )
+        ),
+        indices = arrayOf(Index(name = "scheda_id_indexOggetti", value = ["scheda_id"], unique = true))
 )
 data class Oggetti(
         @PrimaryKey(autoGenerate = true) val id: Int,

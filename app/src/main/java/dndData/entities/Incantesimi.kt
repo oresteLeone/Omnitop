@@ -2,6 +2,7 @@ package dndData.entities
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
+import androidx.room.Index
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "incantesimi_table",foreignKeys = arrayOf(
@@ -11,7 +12,8 @@ import androidx.room.PrimaryKey
                 parentColumns = arrayOf("id"),
                 childColumns = arrayOf("scheda_id")
             )
-    )
+    ),
+        indices = arrayOf(Index(name = "scheda_id_indexIncantesimi", value = ["scheda_id"], unique = true))
 )
 data class Incantesimi(
 

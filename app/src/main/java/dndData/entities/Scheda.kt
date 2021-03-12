@@ -14,7 +14,8 @@ foreignKeys = arrayOf(
         parentColumns = arrayOf("id"),
         childColumns = arrayOf("campagna_id")
         )
-    )
+    ),
+    indices = arrayOf(Index(name = "campagna_id_indexSchede", value = ["campagna_id"], unique = true))
 )
 data class Scheda(
         @PrimaryKey(autoGenerate = true)

@@ -1,10 +1,7 @@
 package dndData.entities
 
 import android.os.Parcelable
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.PrimaryKey
+import androidx.room.*
 import dndData.RuoloGiocatore
 import kotlinx.android.parcel.Parcelize
 
@@ -16,7 +13,8 @@ import kotlinx.android.parcel.Parcelize
         parentColumns = arrayOf("id"),
         childColumns = arrayOf("campagna_id")
         )
-    )
+    ),
+    indices = arrayOf(Index(name = "campagna_id_indexNotes", value = ["campagna_id"], unique = true))
 )
 data class Notes(
     @PrimaryKey(autoGenerate = true) val id: Int,
@@ -26,6 +24,6 @@ data class Notes(
     var corpoNota: String?,
     @ColumnInfo(defaultValue = "false" ) var preferito: Boolean,
     var ruoloNota: RuoloGiocatore,
-    //var copertina: blob?
+
 ): Parcelable
 
