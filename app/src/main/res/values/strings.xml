@@ -86,9 +86,9 @@
     <string name="storia">Storia</string>
     <string name="furtività">Furtività</string>
     <string name="persuasione">Persuasione</string>
-    <string name="caratteristicaInc">CARATTERISTICA\n INCANTATORE</string>
-    <string name="CDIncantesimi">CD TIRO SALVEZZA\n \t\tINCANTESIMI</string>
-    <string name="BAI">\t\t\t\t\t\tBONUS DI\n ATTACCO INCANTESIMI</string>
+    <string name="caratteristicaInc">CARATTERISTICA INCANTATORE</string>
+    <string name="CDIncantesimi">CD TIRO SALVEZZA INCANTESIMI</string>
+    <string name="BAI">BONUS DI ATTACCO INCANTESIMI</string>
 
     <!-- INCANTESIMI -->
 
