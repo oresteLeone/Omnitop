@@ -43,10 +43,7 @@ class PersonaggioDndFragment : Fragment() {
         mSchedaViewModel = ViewModelProvider(this).get(SchedaViewModel::class.java)
         if (idScheda > -1){
             mSchedaViewModel.getSchedaFromID(idScheda)
-
-
             showSchedaData()
-            //coloreDadi()
         }
         return view
     }
@@ -57,11 +54,11 @@ class PersonaggioDndFragment : Fragment() {
         when(abilita){
             0 -> {
                 pulsante.setBackgroundResource(R.drawable.raggruppa_895)
-                nome.setTextColor(ContextCompat.getColor(requireContext(), R.color.schedaTestoLow))
+                nome.setTextColor(ContextCompat.getColor(requireContext(), R.color.guidaScritteHigh))
             }
             1 -> {
                 pulsante.setBackgroundResource(R.drawable.raggruppa_rosso)
-                nome.setTextColor(ContextCompat.getColor(requireContext(),R.color.schedaTestoLow))
+                nome.setTextColor(ContextCompat.getColor(requireContext(),R.color.guidaScritteHigh))
             }
 
             2->{
