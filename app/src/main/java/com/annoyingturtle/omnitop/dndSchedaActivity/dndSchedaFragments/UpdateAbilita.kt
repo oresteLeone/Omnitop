@@ -302,7 +302,8 @@ class UpdateAbilita : AppCompatActivity() {
                     statisticheNuove,
                     mSchedaViewModel.getSingleLiveData().value!!.incantatore,
                     mSchedaViewModel.getSingleLiveData().value!!.dettagli,
-                    mSchedaViewModel.getSingleLiveData().value!!.moneteTotali
+                    mSchedaViewModel.getSingleLiveData().value!!.moneteTotali,
+                    mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap
                 )
             )
 

@@ -104,7 +104,7 @@ class DndSchedaActivity : AppCompatActivity(){
 
             R.id.idDelete -> {
                 mSchedaViewModel.getSingleLiveData().observe(this, Observer {
-                    schedaToDelete = Scheda(idScheda, it.Campagnaid, it.nomePG, it.tipoScheda, it.statistiche, it.incantatore, it.dettagli, it.moneteTotali)
+                    schedaToDelete = Scheda(idScheda, it.Campagnaid, it.nomePG, it.tipoScheda, it.statistiche, it.incantatore, it.dettagli, it.moneteTotali, it.imgSchedaBitmap)
 
                     eliminaScheda(schedaToDelete)
                 })

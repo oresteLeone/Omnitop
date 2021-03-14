@@ -169,7 +169,8 @@ class DndDettagliFragment : Fragment() {
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche,
                 mSchedaViewModel.getSingleLiveData().value!!.incantatore,
                 dettagliNuovi,
-                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali))
+                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali,
+                mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap))
 
         })
         Toast.makeText(context, "Modifica avvenuta con successo!", Toast.LENGTH_SHORT).show()
@@ -192,7 +193,8 @@ class DndDettagliFragment : Fragment() {
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche,
                 mSchedaViewModel.getSingleLiveData().value!!.incantatore,
                 dettagliNuovi,
-                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali))
+                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali,
+                mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap))
 
         })
 

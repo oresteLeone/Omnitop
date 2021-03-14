@@ -124,7 +124,8 @@ class EquipaggiamentoDnDFragment : Fragment() {
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche,
                 mSchedaViewModel.getSingleLiveData().value!!.incantatore,
                 mSchedaViewModel.getSingleLiveData().value!!.dettagli,
-                moneteNuove)
+                moneteNuove,
+                    mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap)
             )
         })
 

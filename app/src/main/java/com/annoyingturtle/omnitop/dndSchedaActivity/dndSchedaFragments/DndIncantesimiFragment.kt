@@ -428,7 +428,8 @@ class DndIncantesimiFragment : Fragment() {
                     mSchedaViewModel.getSingleLiveData().value!!.statistiche,
                     nuovoIncantatore,
                     mSchedaViewModel.getSingleLiveData().value!!.dettagli,
-                    mSchedaViewModel.getSingleLiveData().value!!.moneteTotali
+                    mSchedaViewModel.getSingleLiveData().value!!.moneteTotali,
+                    mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap
                     ))
             })
 
@@ -464,7 +465,8 @@ class DndIncantesimiFragment : Fragment() {
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche,
                 nuovoIncantatore,
                 mSchedaViewModel.getSingleLiveData().value!!.dettagli,
-                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali
+                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali,
+                mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap
             ))
         })
 
@@ -501,7 +503,8 @@ class DndIncantesimiFragment : Fragment() {
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche,
                 nuovoIncantatore,
                 mSchedaViewModel.getSingleLiveData().value!!.dettagli,
-                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali
+                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali,
+                mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap
             ))
         })
 
@@ -538,7 +541,8 @@ class DndIncantesimiFragment : Fragment() {
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche,
                 nuovoIncantatore,
                 mSchedaViewModel.getSingleLiveData().value!!.dettagli,
-                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali
+                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali,
+                mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap
             ))
         })
 
@@ -575,7 +579,8 @@ class DndIncantesimiFragment : Fragment() {
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche,
                 nuovoIncantatore,
                 mSchedaViewModel.getSingleLiveData().value!!.dettagli,
-                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali
+                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali,
+                mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap
             ))
         })
 
@@ -612,7 +617,8 @@ class DndIncantesimiFragment : Fragment() {
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche,
                 nuovoIncantatore,
                 mSchedaViewModel.getSingleLiveData().value!!.dettagli,
-                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali
+                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali,
+                mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap
             ))
         })
 
@@ -649,7 +655,8 @@ class DndIncantesimiFragment : Fragment() {
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche,
                 nuovoIncantatore,
                 mSchedaViewModel.getSingleLiveData().value!!.dettagli,
-                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali
+                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali,
+                mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap
             ))
         })
 
@@ -686,7 +693,8 @@ class DndIncantesimiFragment : Fragment() {
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche,
                 nuovoIncantatore,
                 mSchedaViewModel.getSingleLiveData().value!!.dettagli,
-                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali
+                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali,
+                mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap
             ))
         })
 
@@ -723,7 +731,8 @@ class DndIncantesimiFragment : Fragment() {
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche,
                 nuovoIncantatore,
                 mSchedaViewModel.getSingleLiveData().value!!.dettagli,
-                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali
+                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali,
+                mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap
             ))
         })
 
@@ -760,7 +769,8 @@ class DndIncantesimiFragment : Fragment() {
                 mSchedaViewModel.getSingleLiveData().value!!.statistiche,
                 nuovoIncantatore,
                 mSchedaViewModel.getSingleLiveData().value!!.dettagli,
-                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali
+                mSchedaViewModel.getSingleLiveData().value!!.moneteTotali,
+                mSchedaViewModel.getSingleLiveData().value!!.imgSchedaBitmap
             ))
         })
 
