@@ -16,6 +16,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import coil.load
 import com.annoyingturtle.omnitop.R
 import com.annoyingturtle.omnitop.dndCampagnaHomeActivity.DndCampagnaHome
 import com.annoyingturtle.omnitop.dndSchedaActivity.dndSchedaFragments.DndDettagliFragment
@@ -31,6 +32,9 @@ import kotlinx.android.synthetic.main.activity_home.gridBtn1
 import kotlinx.android.synthetic.main.activity_home.noteBtn1
 import fabPackage.AbsFab
 import fabPackage.GrigliaDIBattagliaActivity
+import kotlinx.android.synthetic.main.activity_dnd_campagna_home.myToolbar
+import kotlinx.android.synthetic.main.activity_dnd_campagna_home_alter.*
+import kotlinx.android.synthetic.main.activity_dnd_scheda.*
 import kotlinx.android.synthetic.main.fragment_dnd_dettagli.*
 import kotlinx.android.synthetic.main.fragment_dnd_dettagli.view.*
 
@@ -120,7 +124,10 @@ class DndSchedaActivity : AppCompatActivity(){
 
     fun showSchedaData() {
         mSchedaViewModel.getSingleLiveData().observe(this, Observer {
-            supportActionBar?.title = Editable.Factory.getInstance().newEditable(it.nomePG)
+            supportActionBar?.title = it.nomePG
+            if(it.imgSchedaBitmap!= null){
+                imageSchedaTopBar.load(it.imgSchedaBitmap)
+            }
         })
     }
 
