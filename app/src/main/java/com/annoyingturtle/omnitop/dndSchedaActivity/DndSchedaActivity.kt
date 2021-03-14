@@ -56,6 +56,7 @@ class DndSchedaActivity : AppCompatActivity(){
         /**Action Bar */
 
         setSupportActionBar(myToolbar)
+        supportActionBar?.title = ""
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
