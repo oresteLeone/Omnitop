@@ -28,9 +28,6 @@ class DndDettagliFragment : Fragment() {
     var idScheda = -1
     private lateinit var mSchedaViewModel : SchedaViewModel
 
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -48,10 +45,7 @@ class DndDettagliFragment : Fragment() {
 
         showSchedaData()
 
-
-
         return view
-
 
     }
 
@@ -200,10 +194,6 @@ class DndDettagliFragment : Fragment() {
 
         Toast.makeText(context, "Modifica avvenuta con successo!", Toast.LENGTH_SHORT).show()
 
-
     }
-
-
-
 
 }

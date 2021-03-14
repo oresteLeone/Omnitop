@@ -43,6 +43,40 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabNavScheda"
+        style="@style/Widget.MaterialComponents.TabLayout.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:tabIndicatorColor="@color/Secondary"
+        app:tabMode="scrollable"
+        app:tabContentStart="56dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="PERSONAGGIO" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="EQUIPAGGIAMENTO" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="INCANTESIMI" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="DETTAGLI" />
+
+    </com.google.android.material.tabs.TabLayout>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addBtn1"
         android:layout_width="wrap_content"
@@ -144,7 +178,7 @@
         app:tint="@null" />
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <!--<com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:layout_width="match_parent"
@@ -155,7 +189,7 @@
         app:labelVisibilityMode="labeled"
         app:menu="@menu/tab_scheda_navigation_menu">
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>-->
 
     <fragment
         android:id="@+id/schedafragment"
@@ -166,7 +200,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bottom_navigation"
+        app:layout_constraintTop_toBottomOf="@id/tabNavScheda"
         app:navGraph="@navigation/dnd_scheda_navigation"/>
 
 

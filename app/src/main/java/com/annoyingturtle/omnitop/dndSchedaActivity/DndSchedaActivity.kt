@@ -21,6 +21,7 @@ import com.annoyingturtle.omnitop.R
 import com.annoyingturtle.omnitop.dndCampagnaHomeActivity.DndCampagnaHome
 import com.annoyingturtle.omnitop.dndSchedaActivity.dndSchedaFragments.DndDettagliFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.tabs.TabLayout
 import dndData.entities.Scheda
 import dndData.utilData.Dettagli
 import dndData.viewModel.SchedaViewModel
@@ -45,6 +46,7 @@ class DndSchedaActivity : AppCompatActivity(){
     lateinit var schedaToDelete: Scheda
     lateinit var extras: Bundle
     var campagnaid =-1
+    lateinit var schedaTablayout: TabLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,10 +82,23 @@ class DndSchedaActivity : AppCompatActivity(){
         /** Schermate */
 
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-
         val navController = findNavController(R.id.schedafragment)
-        bottomNavigationView.setupWithNavController(navController)
+        schedaTablayout = tabNavScheda
+
+        schedaTablayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                when {
+                    tab?.text.toString() == "PERSONAGGIO" -> navController.navigate(R.id.personaggioDndFragment)
+                    tab?.text.toString() == "EQUIPAGGIAMENTO" -> navController.navigate(R.id.equipaggiamentoDnDFragment)
+                    tab?.text.toString() == "INCANTESIMI" -> navController.navigate(R.id.dndIncantesimiFragment)
+                    else -> navController.navigate(R.id.dndDettagliFragment)
+                }
+            }
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+            }
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+            }
+        })
 
 
     }
