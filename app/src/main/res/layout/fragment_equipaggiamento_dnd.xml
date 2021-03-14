@@ -61,7 +61,7 @@
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_baseline_save_24"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:tint="@color/Secondary"
+                android:tint="@color/secondaryLight"
                 android:visibility="gone"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/textView18"

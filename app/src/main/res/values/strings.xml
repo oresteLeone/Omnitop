@@ -286,7 +286,7 @@
     <string name="favorite">MOSTRA PREFERITI</string>
     <string name="creaNote">Nuova Nota</string>
     <string name="modificaNota">Modifica Nota</string>
-    <string name="modifica">MODIFICA</string>
+    <string name="modifica">SALVA MODIFICHE</string>
 
 
     <!-- DnD Guida -->

@@ -54,9 +54,7 @@
             android:id="@+id/titoloNota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:hint="Titolo Nota"
-            android:padding="24dp"
             android:textColorHint="@color/PrimaryLight" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,7 +63,6 @@
         android:id="@+id/DescrizioneHolder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_marginStart="24dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="24dp"
@@ -82,8 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:hint="Testo Nota"
-            android:padding="24dp" />
+            android:hint="Testo Nota" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
