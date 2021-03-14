@@ -6,11 +6,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/backGround"
     android:id="@+id/dndCampagnaCompendiumFragment"
-    tools:context=".dndHomeActivity.DndHome"
+    tools:context=".dndCampagnaHomeActivity.DndCampagnaHome"
     android:paddingBottom="186dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="128dp">
 

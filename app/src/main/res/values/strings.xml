@@ -298,7 +298,7 @@
 
     Se vi state chiedendo quali siano le varie Classi nel mondo di Dungeons and Dragons, non temete: Il Vostro Dungeon Master sarà lieto di aiutarvi, altrimenti fate riferimento a manuali cartacei o online.</string>
 
-    <string name="next">NEXT</string>
+    <string name="next">SUCCESSIVO</string>
 
     <string name="sceltaRazza">2: Scelta Della Razza</string>
     <string name="infoRazza">Il mondo di Dungeons and Dragons è popolato da diverse Razze e il vostro personaggio farà parte di una di queste. Questa scelta, oltre a determinare l’aspetto estetico del vostro avatar, vi darà accesso a delle abilità uniche. I tratti razziali possono infatti includere alcune caratteristiche molto importanti, come l’Aumento del punteggio di abilità, l’Età, l’Allineamento, le Dimensioni, la Velocità, le Lingue parlate e le eventuali Sottorazze.\n
@@ -420,7 +420,7 @@ Tutte le Abilità sono influenzate da una statistica:\n\n
         2) Neutrale: Un personaggio che tende a seguire le leggi, ma che non si fa problemi ad infrangerle ogni tanto se questo dovesse portargli benefici;\n
         3) Caotico: Un personaggio che spesso e volentieri ignora le regole ed agisce di sua spontanea volontà.
     </string>
-    <string name="nuovo_elemento_libreria">Nuovo Elemento Libreria</string>
+    <string name="nuovo_elemento_libreria">Nuovo Elemento Compendium</string>
     <string name="nuova_nota">Nuova Nota</string>
     <string name="nuova_scheda">Nuova Scheda</string>
     <string name="informazioni_campagna">Informazioni Campagna</string>
