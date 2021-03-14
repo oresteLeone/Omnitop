@@ -25,17 +25,23 @@
             app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed">
 
             <ImageView
-                android:id="@+id/imageCampaignTopBar"
+            android:id="@+id/imageCampaignTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/blurontopbarCampagna"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"/>
+                android:background="@color/backGround"
+                android:alpha="0.5"/>
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/myToolbarExtended"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0.5"
-            android:background="@color/backGround"
+            android:background="@android:color/transparent"
             android:theme="?attr/actionBarTheme"
             app:menu="@menu/menu_risorse_campagna"
             android:elevation="0dp"

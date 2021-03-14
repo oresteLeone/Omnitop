@@ -28,13 +28,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"/>
+            <ImageView
+                android:id="@+id/blurontopbarScheda"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backGround"
+                android:alpha="0.5"/>
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/myToolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0.5"
-            android:background="@color/backGround"
+            android:background="@android:color/transparent"
             android:theme="?attr/actionBarTheme"
             android:elevation="0dp"
             app:title="Nome Personaggio"
@@ -177,19 +182,6 @@
         app:srcCompat="@drawable/notes_icon__1"
         app:tint="@null" />
 
-
-    <!--<com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/tab_scheda_navigation_menu">
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>-->
 
     <fragment
         android:id="@+id/schedafragment"
