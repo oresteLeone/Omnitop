@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.annoyingturtle.omnitop.R
 import dndData.entities.Scheda
 import kotlinx.android.synthetic.main.lista_schede_campagna.view.*
@@ -33,6 +34,7 @@ class SchedeCampagnaAdapter(private val listener : onItemClickListner): Recycler
     override fun onBindViewHolder(holder: SchedeViewHolder, position: Int){
         val currentItem = SchedeList[position]
         holder.itemView.nomePgText.text = currentItem.nomePG
+        holder.itemView.pgImage.load(currentItem.imgSchedaBitmap)
     }
 
     fun setDataSchede(scheda: List<Scheda>){
