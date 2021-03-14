@@ -18,7 +18,7 @@
             android:id="@+id/constraintLayoutPF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="128dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/card_template"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
