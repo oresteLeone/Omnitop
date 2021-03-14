@@ -1,11 +1,20 @@
 package com.annoyingturtle.omnitop.dndCampagnaHomeActivity
 
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import coil.ImageLoader
+import coil.load
+import coil.request.ImageRequest
+import coil.request.SuccessResult
 import com.annoyingturtle.omnitop.R
 import dndData.LvlCompetenza
 import dndData.TipoScheda
@@ -16,6 +25,8 @@ import dndData.utilData.Money
 import dndData.utilData.Statistiche
 import dndData.viewModel.SchedaViewModel
 import kotlinx.android.synthetic.main.activity_dnd_campagna_nuova_scheda.*
+import kotlinx.android.synthetic.main.activity_dnd_home_nuova_campagna.*
+import kotlinx.coroutines.launch
 import java.lang.Exception
 
 class DndCampagnaNuovaScheda : AppCompatActivity() {
@@ -23,6 +34,7 @@ class DndCampagnaNuovaScheda : AppCompatActivity() {
     var idCampagna: Int = -1
     lateinit var mSchedaViewModel: SchedaViewModel
     var extras: Bundle? = null
+    var imgSchedaUri: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,54 +50,62 @@ class DndCampagnaNuovaScheda : AppCompatActivity() {
 
         mSchedaViewModel = ViewModelProvider(this).get(SchedaViewModel::class.java)
         ButtonInsertDataAddScheda.setOnClickListener(){
-            insertSchedaDataToDatabase()
+            val nomePersonaggio = NomePersonaggio_et.text.toString()
+            val tipoScheda: TipoScheda = if(checkBoxPNG.isChecked) TipoScheda.PNG
+            else
+                TipoScheda.PG
+            var imgScheda: Bitmap? = null
+
+            if(!inputCheck(nomePersonaggio)){
+
+                lifecycleScope.launch {
+                    /**Valore per le statistiche della scheda*/
+                    val statistiche = Statistiche(
+                        0, 0, 0, 0, 0.0, 2, 0, 0,
+                        0, 0, 0, 0, 0, false, false, false, false, false, false,
+                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        0, 0, 0, 0
+                    )
+
+                    /**Valore per Incantatore */
+                    var incantatore = Incantatore(
+                        "", "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+                    )
+
+                    /** Valore per dettagli*/
+
+                    val dettagli = Dettagli("", "", "", if(tipoScheda== TipoScheda.PNG) TipoScheda.PNG.toString() else "", "", 0, 0, "")
+
+                    /** Valore per le monete della scheda*/
+                    val moneteTotali = Money(0, 0, 0, 0, 0)
+
+                    if(imgSchedaUri!=null) imgScheda = getBitmapScheda(imgSchedaUri)
+                    else imgScheda = null
+
+                    val newScheda = Scheda(0, idCampagna, nomePersonaggio, tipoScheda, statistiche, incantatore, dettagli, moneteTotali, imgScheda)
+                    insertSchedaDataToDatabase(newScheda)
+                }
+            }
+            else
+                Toast.makeText(this, "Riempi i campi necessari!", Toast.LENGTH_SHORT).show()
+
+        }
+
+        addImageBtnNuovaScheda.setOnClickListener{
+            val intent = Intent(Intent.ACTION_GET_CONTENT)
+            intent.setType("image/*")
+            startActivityForResult(Intent.createChooser(intent, "Scegli Immagine Scheda"), 1)
 
         }
     }
 
-    private fun insertSchedaDataToDatabase() {
-        val nomePersonaggio = NomePersonaggio_et.text.toString()
-        val tipoScheda: TipoScheda = if(checkBoxPNG.isChecked) TipoScheda.PNG
-            else
-                TipoScheda.PG
+    private fun insertSchedaDataToDatabase(scheda: Scheda) {
 
-        if(!inputCheck(nomePersonaggio)){
-
-            /**Valore per le statistiche della scheda*/
-
-            val statistiche = Statistiche(0,0,0,0,0.0,2,0,0,
-                0,0,0,0,0,false,false,false,false,false,false,
-                0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-                0,0,0,0)
-
-            /**Valore per Incantatore */
-            var incantatore = Incantatore("","",0,0,0,0,0,0,0,0,0,0,
-                0,0,0,0,0,0,0,0,0,0)
-
-
-
-            /** Valore per dettagli*/
-
-            val dettagli = Dettagli("","","","","",0,0,"")
-
-
-
-            /** Valore per le monete della scheda*/
-            val moneteTotali = Money(0,0,0,0,0)
-
-
-            val scheda = Scheda(0,idCampagna,nomePersonaggio,tipoScheda, statistiche, incantatore, dettagli, moneteTotali)
-            try {
-                mSchedaViewModel.addScheda(scheda)
-            }catch (e: Exception){
-                Toast.makeText(this, "ERRORE: La scheda non è stata salvata correttamente", Toast.LENGTH_LONG).show()
-                return
-            }
+            mSchedaViewModel.addScheda(scheda)
             Toast.makeText(this, "La scheda è stata salvata con successo", Toast.LENGTH_SHORT).show()
             navigateUpTo(Intent(this, DndCampagnaHome::class.java).putExtra("idCampagna", idCampagna ))
-        }
-        else
-            Toast.makeText(this, "Riempi i campi necessari!", Toast.LENGTH_SHORT).show()
+
     }
 
     private fun inputCheck(nomePersonaggio: String?): Boolean {
@@ -96,6 +116,30 @@ class DndCampagnaNuovaScheda : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
 
        return navigateUpTo(Intent(this, DndCampagnaHome::class.java).putExtra("idCampagna", idCampagna ))
+    }
+
+
+    private suspend fun getBitmapScheda(imgSchedaUri: Uri?): Bitmap {
+
+        val loading: ImageLoader = ImageLoader(this)
+        val request: ImageRequest = ImageRequest.Builder(this)
+            .data(imgSchedaUri)
+            .build()
+
+        val result: Drawable = (loading.execute(request) as SuccessResult).drawable
+        return (result as BitmapDrawable).bitmap
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        var selectedImageUri : Uri? = null
+        if (resultCode== RESULT_OK && requestCode == 1){
+
+            selectedImageUri = data?.data
+            imageNuovaScheda.load(selectedImageUri)
+            imgSchedaUri = selectedImageUri
+
+        }
     }
 
 }

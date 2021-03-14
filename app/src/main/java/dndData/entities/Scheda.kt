@@ -1,5 +1,6 @@
 package dndData.entities
 
+import android.graphics.Bitmap
 import androidx.room.*
 import androidx.room.ForeignKey.CASCADE
 import dndData.TipoScheda
@@ -34,7 +35,9 @@ data class Scheda(
         var dettagli: Dettagli?,
 
         @Embedded
-        var moneteTotali: Money?
+        var moneteTotali: Money?,
+
+        var imgSchedaBitmap: Bitmap?
 
 )
 

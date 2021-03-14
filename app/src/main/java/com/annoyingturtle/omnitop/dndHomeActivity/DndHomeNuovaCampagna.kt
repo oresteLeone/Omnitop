@@ -92,19 +92,7 @@ class DndHomeNuovaCampagna : AppCompatActivity() {
             selectedImageUri = data?.data
             imageCampaign.load(selectedImageUri)
             copertinaCampagnaUri = selectedImageUri
-            /*try {
-                var inputStream: InputStream? = data?.data?.let {
-                    contentResolver.openInputStream(
-                        it
-                    )
-                }
 
-                copertinaCampagna= BitmapFactory.decodeStream(inputStream)
-                imageCampaign.setImageBitmap(copertinaCampagna)
-
-            }catch (e: FileNotFoundException){
-                e.printStackTrace()
-            }*/
 
         }
     }

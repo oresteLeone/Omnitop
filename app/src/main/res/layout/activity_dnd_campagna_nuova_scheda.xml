@@ -29,19 +29,42 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageNuovaScheda"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/card_template"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/addImageBtnNuovaScheda"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#26121212"
+        android:foreground="@drawable/ic_outline_add_photo_alternate_24_65op"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/imageNuovaScheda"
+        app:layout_constraintEnd_toEndOf="@id/imageNuovaScheda"
+        app:layout_constraintStart_toStartOf="@id/imageNuovaScheda"
+        app:layout_constraintTop_toTopOf="@id/imageNuovaScheda" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/NomePersonaggioHold"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:textColorHint="@color/PrimaryLight65op"
         app:boxStrokeColor="@color/PrimaryLight"
         app:hintTextColor="@color/PrimaryLight65op"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageNuovaScheda"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -58,9 +81,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
         android:text="@string/png"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NomePersonaggioHold" />
+        app:layout_constraintTop_toBottomOf="@+id/imageNuovaScheda" />
 
     <Button
         android:id="@+id/ButtonInsertDataAddScheda"
