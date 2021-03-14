@@ -40,7 +40,6 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
         /************ Hamburger *******/
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         /******* Nome Sull'actionBar *******/
 
         supportActionBar?.title = "OmniTop"
