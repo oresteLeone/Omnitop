@@ -5,7 +5,7 @@
     <item
         android:id="@+id/infoCampagna"
         android:title="@string/informazioni_campagna"
-        android:icon="@drawable/ic_guida"
+        android:icon="@drawable/ic_outline_info_24"
         android:iconTint="@color/white"
         app:showAsAction="ifRoom"/>
 
