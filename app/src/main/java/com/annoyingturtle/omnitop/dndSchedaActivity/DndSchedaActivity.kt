@@ -47,6 +47,7 @@ class DndSchedaActivity : AppCompatActivity(){
     lateinit var extras: Bundle
     var campagnaid =-1
     lateinit var schedaTablayout: TabLayout
+    var intento = Intent()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -136,6 +137,25 @@ class DndSchedaActivity : AppCompatActivity(){
 
 
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun getSupportParentActivityIntent(): Intent? {
+        super.getSupportParentActivityIntent()
+        return parentMetod()
+    }
+
+    override fun getParentActivityIntent(): Intent? {
+        super.getParentActivityIntent()
+        return parentMetod()
+    }
+
+    fun parentMetod(): Intent{
+        intento = Intent(this, DndCampagnaHome::class.java).putExtra("idCampagna", extras?.getInt("idCampagna"))
+
+        intento.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        intento.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+
+        return intento
     }
 
     fun showSchedaData() {
