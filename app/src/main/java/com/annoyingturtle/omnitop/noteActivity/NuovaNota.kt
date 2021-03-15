@@ -48,7 +48,7 @@ class NuovaNota() : AppCompatActivity() {
         else
             RuoloGiocatore.PG
 
-        if(inputCheck(titoloNota, testoNota)){
+        if(inputCheck(titoloNota)){
             val nota = Notes(0, null, titoloNota = titoloNota, corpoNota =  testoNota, preferito = preferito, ruoloNota = ruoloGiocatore )
             try {
                 mNotaViewModel.addNota(nota)
@@ -61,13 +61,13 @@ class NuovaNota() : AppCompatActivity() {
             navigateUpTo(parentMetod())
         }
         else
-            Toast.makeText(this, "Riempi i campi necessari!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Inserire un titolo per la nota!", Toast.LENGTH_SHORT).show()
 
     }
 
-    private fun inputCheck(titoloNota: String?, testoNota : String?): Boolean {
+    private fun inputCheck(titoloNota: String?): Boolean {
 
-        return !(TextUtils.isEmpty(titoloNota) && TextUtils.isEmpty(testoNota))
+        return !(TextUtils.isEmpty(titoloNota))
     }
 
     /** Funzioni per la navigazione all'attività precedente*/

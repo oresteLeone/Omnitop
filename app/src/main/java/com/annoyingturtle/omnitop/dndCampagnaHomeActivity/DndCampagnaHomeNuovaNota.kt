@@ -55,7 +55,7 @@ class DndCampagnaHomeNuovaNota : AppCompatActivity() {
         val testoNota = testoNota_et.text.toString()
         val preferito : Boolean = checkBoxPreferito.isChecked
 
-        if(inputCheck(titoloNota, testoNota)){
+        if(inputCheck(titoloNota)){
             val nota = Notes(0, idCampagna, titoloNota, testoNota, preferito, ruoloGiocatore )
             try {
                 mNoteViewModel.addNota(nota)
@@ -72,9 +72,9 @@ class DndCampagnaHomeNuovaNota : AppCompatActivity() {
 
     }
 
-    private fun inputCheck(titoloNota: String?, testoNota : String?): Boolean {
+    private fun inputCheck(titoloNota: String?): Boolean {
 
-        return !(TextUtils.isEmpty(titoloNota) && TextUtils.isEmpty(testoNota))
+        return !(TextUtils.isEmpty(titoloNota))
     }
 
     override fun onSupportNavigateUp(): Boolean {

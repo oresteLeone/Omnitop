@@ -86,7 +86,7 @@ class ModificaNota() : AppCompatActivity() {
             RuoloGiocatore.PG
 
 
-        if(imputCheck(titoloNota, testoNota)){
+        if(inputCheck(titoloNota)){
             val nota = Notes(idNota, campagnaid, titoloNota, testoNota, preferito, ruoloGiocatore)
             try {
                 mNotaViewModel.updateNota(nota)
@@ -103,9 +103,9 @@ class ModificaNota() : AppCompatActivity() {
 
     }
 
-    private fun imputCheck(titoloNota: String?, testoNota : String?): Boolean {
+    private fun inputCheck(titoloNota: String?): Boolean {
 
-        return !(TextUtils.isEmpty(titoloNota) && TextUtils.isEmpty(testoNota))
+        return !(TextUtils.isEmpty(titoloNota))
     }
 
     fun deleteSingleNota(notaToDelete: Notes){

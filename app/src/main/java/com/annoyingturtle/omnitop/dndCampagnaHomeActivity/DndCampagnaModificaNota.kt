@@ -76,7 +76,7 @@ class DndCampagnaModificaNota : AppCompatActivity() {
         val preferito : Boolean = checkBoxPreferito.isChecked
 
 
-        if(inputCheck(titoloNota, testoNota)){
+        if(inputCheck(titoloNota)){
             val nota = Notes(idNota, campagnaid, titoloNota, testoNota, preferito, ruoloGiocatore)
             try {
                 mNotaViewModel.updateNota(nota)
@@ -89,13 +89,13 @@ class DndCampagnaModificaNota : AppCompatActivity() {
             navigateUpTo(Intent(this, DndCampagnaHome::class.java).putExtra("idCampagna", campagnaid ))
         }
         else
-            Toast.makeText(this, "Riempi i campi necessari!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Inserire un titolo per la nota!", Toast.LENGTH_SHORT).show()
 
     }
 
-    private fun inputCheck(titoloNota: String?, testoNota : String?): Boolean {
+    private fun inputCheck(titoloNota: String?): Boolean {
 
-        return !(TextUtils.isEmpty(titoloNota) && TextUtils.isEmpty(testoNota))
+        return !(TextUtils.isEmpty(titoloNota))
     }
 
     fun deleteSingleNota(notaToDelete: Notes){
