@@ -31,7 +31,7 @@ class DndCampagnaHomeNuovaNota : AppCompatActivity() {
         setContentView(R.layout.activity_dnd_campagna_home_nuova_nota)
 
         /** Action bar */
-        setSupportActionBar(myToolbarNuovaScheda)
+        setSupportActionBar(myToolbarCampagnaNuovaNota)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
@@ -68,7 +68,7 @@ class DndCampagnaHomeNuovaNota : AppCompatActivity() {
             navigateUpTo(Intent(this, DndCampagnaHome::class.java).putExtra("idCampagna", idCampagna ))
         }
         else
-            Toast.makeText(this, "Riempi i campi necessari!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Inserisci un titolo per la nota!", Toast.LENGTH_SHORT).show()
 
     }
 
