@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dnd_campagna_navigation"
+    app:startDestination="@id/dndCampagnaSchedeFragment">
+
+    <fragment
+        android:id="@+id/dndCampagnaSchedeFragment"
+        android:name="com.annoyingturtle.omnitop.dndCampagnaHomeActivity.dndCampagnaFragments.DndCampagnaSchedeFragment"
+        android:label="Schede"
+        tools:layout="@layout/fragment_dnd_campagna_schede" >
+        <action
+            android:id="@+id/action_dndCampagnaSchedeFragment_to_dndCamapagnaNoteFragment"
+            app:destination="@id/dndCamapagnaNoteFragment" />
+        <action
+            android:id="@+id/action_dndCampagnaSchedeFragment_to_dndCampagnaCompendiumFragment"
+            app:destination="@id/dndCampagnaCompendiumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dndCamapagnaNoteFragment"
+        android:name="com.annoyingturtle.omnitop.dndCampagnaHomeActivity.dndCampagnaFragments.DndCamapagnaNoteFragment"
+        android:label="fragment_dnd_camapagna_note"
+        tools:layout="@layout/fragment_dnd_camapagna_note" >
+        <action
+            android:id="@+id/action_dndCamapagnaNoteFragment_to_dndCampagnaSchedeFragment"
+            app:destination="@id/dndCampagnaSchedeFragment" />
+        <action
+            android:id="@+id/action_dndCamapagnaNoteFragment_to_dndCampagnaCompendiumFragment"
+            app:destination="@id/dndCampagnaCompendiumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dndCampagnaCompendiumFragment"
+        android:name="com.annoyingturtle.omnitop.dndCampagnaHomeActivity.dndCampagnaFragments.DndCampagnaCompendiumFragment"
+        android:label="Compendium"
+        tools:layout="@layout/fragment_dnd_campagna_compendium" >
+        <action
+            android:id="@+id/action_dndCampagnaCompendiumFragment_to_dndCamapagnaNoteFragment"
+            app:destination="@id/dndCamapagnaNoteFragment" />
+        <action
+            android:id="@+id/action_dndCampagnaCompendiumFragment_to_dndCampagnaSchedeFragment"
+            app:destination="@id/dndCampagnaSchedeFragment" />
+    </fragment>
+</navigation>

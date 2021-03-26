@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dndCampagnaHomeActivity.DndCampagnaHome"
+    android:background="@color/backGround">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:expandedTitleMarginStart="72dp"
+            app:expandedTitleMarginBottom="28dp"
+            app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed">
+
+            <ImageView
+            android:id="@+id/imageCampaignTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/blurontopbarCampagna"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backGround"
+                android:alpha="0.5"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/myToolbarExtended"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:theme="?attr/actionBarTheme"
+            app:menu="@menu/menu_risorse_campagna"
+            android:elevation="0dp"
+            app:title="Nome Campagna"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabNav"
+        style="@style/Widget.MaterialComponents.TabLayout.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:tabIndicatorColor="@color/Secondary">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="SCHEDE" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="NOTE" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="COMPENDIUM" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/TODO"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:visibility="visible"
+        app:backgroundTint="@color/fabPadre"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="48dp"
+        app:srcCompat="@drawable/ic_more" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/diceBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/fabFiglio"
+        android:clickable="true"
+        android:contentDescription="@string/TODO"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:backgroundTint="@color/fabFiglio"
+        app:layout_constraintBottom_toTopOf="@+id/addBtn1"
+        app:layout_constraintEnd_toEndOf="@+id/addBtn1"
+        app:maxImageSize="48dp"
+        app:srcCompat="@drawable/dicebicon_1"
+        app:tint="@null" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/cardBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/fabFiglio"
+        android:clickable="true"
+        android:contentDescription="@string/TODO"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:backgroundTint="@color/fabFiglio"
+        app:layout_constraintBottom_toTopOf="@+id/diceBtn1"
+        app:layout_constraintEnd_toEndOf="@+id/diceBtn1"
+        app:maxImageSize="48dp"
+        app:srcCompat="@drawable/cards_icon_bonw_1"
+        app:tint="@null" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/gridBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/fabFiglio"
+        android:clickable="true"
+        android:contentDescription="@string/TODO"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:backgroundTint="@color/fabFiglio"
+        app:layout_constraintBottom_toTopOf="@+id/cardBtn1"
+        app:layout_constraintEnd_toEndOf="@+id/cardBtn1"
+        app:maxImageSize="48dp"
+        app:srcCompat="@drawable/battlegrid_icon__1"
+        app:tint="@null" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/noteBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/fabFiglio"
+        android:clickable="true"
+        android:contentDescription="@string/TODO"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:backgroundTint="@color/fabFiglio"
+        app:layout_constraintBottom_toTopOf="@+id/gridBtn1"
+        app:layout_constraintEnd_toEndOf="@+id/gridBtn1"
+        app:maxImageSize="48dp"
+        app:srcCompat="@drawable/notes_icon__1"
+        app:tint="@null" />
+
+
+
+    <fragment
+        android:id="@+id/campagnafragmenthost"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabNav"
+        app:layout_constraintVertical_bias="0.0"
+        app:navGraph="@navigation/dnd_campagna_navigation" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

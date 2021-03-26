@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id = "@+id/idImmagine"
+        android:title = "Mappa"
+        android:icon="@drawable/ic_baseline_image_24"
+        android:iconTint="@color/white"
+        app:showAsAction="always"/>
+
+    <item
+        android:id = "@+id/idPedine"
+        android:title = "Mappa"
+        android:icon="@drawable/ic_baseline_person_pin_circle_24"
+        android:iconTint="@color/white"
+        app:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dndhome_navigation"
+    app:startDestination="@id/dndRecenti">
+
+    <fragment
+        android:id="@+id/dndRecenti"
+        android:name="com.annoyingturtle.omnitop.dndHomeActivity.dndHomeFragments.dndRecenti.DndRecentiFragment"
+        android:label="Campagne DnD"
+        tools:layout="@layout/fragment_dnd_recenti" >
+        <action
+            android:id="@+id/action_dndRecenti_to_dndLibrary"
+            app:destination="@id/dndLibrary" />
+        <action
+            android:id="@+id/action_dndRecenti_to_dndGm"
+            app:destination="@id/dndGm" />
+        <action
+            android:id="@+id/action_dndRecenti_to_dndPg"
+            app:destination="@id/dndPg" />
+    </fragment>
+    <fragment
+        android:id="@+id/dndGm"
+        android:name="com.annoyingturtle.omnitop.dndHomeActivity.dndHomeFragments.dndDM.DndDMFragment"
+        android:label="Campagne DnD Master"
+        tools:layout="@layout/fragment_dnd_dm" >
+        <action
+            android:id="@+id/action_dndGm_to_dndRecenti"
+            app:destination="@id/dndRecenti" />
+        <action
+            android:id="@+id/action_dndGm_to_dndLibrary"
+            app:destination="@id/dndLibrary" />
+        <action
+            android:id="@+id/action_dndGm_to_dndPg"
+            app:destination="@id/dndPg" />
+    </fragment>
+    <fragment
+        android:id="@+id/dndPg"
+        android:name="com.annoyingturtle.omnitop.dndHomeActivity.dndHomeFragments.dndPG.DndPgFragment"
+        android:label="Campagne DnD Personaggio"
+        tools:layout="@layout/fragment_dnd_pg" >
+        <action
+            android:id="@+id/action_dndPg_to_dndRecenti"
+            app:destination="@id/dndRecenti" />
+        <action
+            android:id="@+id/action_dndPg_to_dndLibrary"
+            app:destination="@id/dndLibrary" />
+        <action
+            android:id="@+id/action_dndPg_to_dndGm"
+            app:destination="@id/dndGm" />
+    </fragment>
+    <fragment
+        android:id="@+id/dndLibrary"
+        android:name="com.annoyingturtle.omnitop.dndHomeActivity.dndHomeFragments.dndLibrary.DndLibraryFragment"
+        android:label="Libreria DnD"
+        tools:layout="@layout/fragment_dnd_library" >
+        <action
+            android:id="@+id/action_dndLibrary_to_dndRecenti"
+            app:destination="@id/dndRecenti" />
+        <action
+            android:id="@+id/action_dndLibrary_to_dndGm"
+            app:destination="@id/dndGm" />
+        <action
+            android:id="@+id/action_dndLibrary_to_dndPg"
+            app:destination="@id/dndPg" />
+    </fragment>
+</navigation>

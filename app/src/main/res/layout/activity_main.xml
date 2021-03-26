@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/backGround"
     android:layout_height="match_parent"
+    android:background="@color/backGround"
+    android:padding="32dp"
     tools:context=".MainActivity">
 
 
@@ -12,9 +13,9 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/annoyingturtle_1"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="212dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"/>
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/annoyingturtle_1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

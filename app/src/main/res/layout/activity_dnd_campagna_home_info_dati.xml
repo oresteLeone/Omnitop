@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".dndCampagnaHomeActivity.DndCampagnaHomeInfoDati"
+android:id="@+id/InfoDatiCampagna"
+android:background="@color/backGround">
+
+<com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/myToolbarCampagnaDati"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Informazioni Campagna"
+        app:titleTextColor="@color/white"
+        tools:layout_editor_absoluteY="30dp"
+        app:menu="@menu/menu_con_pulsante_cancella"/>
+
+</com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageCampaign"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/card_template"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/addImageBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#26121212"
+        android:foreground="@drawable/ic_outline_add_photo_alternate_24_65op"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/imageCampaign"
+        app:layout_constraintEnd_toEndOf="@id/imageCampaign"
+        app:layout_constraintStart_toStartOf="@id/imageCampaign"
+        app:layout_constraintTop_toTopOf="@id/imageCampaign" />
+
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/NomeCampagnaHold"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="24dp"
+    android:textColorHint="@color/PrimaryLight65op"
+    app:boxStrokeColor="@color/PrimaryLight"
+    app:hintTextColor="@color/PrimaryLight65op"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@id/imageCampaign"
+    app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/NomeCampagna_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Titolo Campagna"
+        android:textColorHint="@color/PrimaryLight65op" />
+
+</com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkBoxDM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Dungeon Master"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NomeCampagnaHold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/DescrizioneCampagnaHold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:textColorHint="@color/PrimaryLight65op"
+        app:boxStrokeColor="@color/PrimaryLight"
+        app:hintTextColor="@color/PrimaryLight65op"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxDM">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/DescrizioneCampagna_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descrizione Campagna"
+            android:textColorHint="@color/PrimaryLight65op" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/ButtonUpdateDataCampagna"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/Primary"
+        android:text="AGGIORNA"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DescrizioneCampagnaHold" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

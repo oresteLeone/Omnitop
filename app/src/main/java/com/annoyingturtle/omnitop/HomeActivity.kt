@@ -1,18 +1,23 @@
 package com.annoyingturtle.omnitop
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import utilPackage.AbsFab
-import utilPackage.AdapterRecyclerListaGiochi
-import utilPackage.ItemListaGiochi
 import android.content.Intent
-import android.view.Menu
-import android.view.MenuInflater
+import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.annoyingturtle.omnitop.dndHomeActivity.DndHome
 import kotlinx.android.synthetic.main.activity_home.*
+import fabPackage.AbsFab
+import fabPackage.AdapterRecyclerListaGiochi
+import fabPackage.GrigliaDIBattagliaActivity
+import fabPackage.ItemListaGiochi
+import kotlinx.android.synthetic.main.activity_home.addBtn1
+import kotlinx.android.synthetic.main.activity_home.cardBtn1
+import kotlinx.android.synthetic.main.activity_home.diceBtn1
+import kotlinx.android.synthetic.main.activity_home.gridBtn1
+import kotlinx.android.synthetic.main.activity_home.noteBtn1
 
 
 class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClickListnerInteface {
@@ -24,6 +29,8 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        setSupportActionBar(myToolbarHome)
+
         /************ Menu a scorrimento *********/
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.openDrawer, R.string.closeDrawer)
         drawerLayout.addDrawerListener(toggle)
@@ -33,7 +40,6 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
         /************ Hamburger *******/
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         /******* Nome Sull'actionBar *******/
 
         supportActionBar?.title = "OmniTop"
@@ -50,7 +56,7 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
 
 
         /********** FAB ***********/
-        val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this, supportFragmentManager)
+        val fab = AbsFab(addBtn1, cardBtn1, gridBtn1, noteBtn1, diceBtn1, this, supportFragmentManager, Intent(this, GrigliaDIBattagliaActivity::class.java))
         fab.startListener(this)
 
 
@@ -71,7 +77,7 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
         return super.onOptionsItemSelected(item)
     }
 
-    /***** Pulsante Ricerca *****/
+/*
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
@@ -82,6 +88,7 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
 
         return true
     }
+*/
 
 
 
@@ -109,4 +116,5 @@ class HomeActivity : AppCompatActivity(), AdapterRecyclerListaGiochi.OnItemClick
         else
         Toast.makeText(this, "Hai premuto l'oggetto ${position}", Toast.LENGTH_SHORT).show()
     }
+
 }

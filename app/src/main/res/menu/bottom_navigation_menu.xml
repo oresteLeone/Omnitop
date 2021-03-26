@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/dnd_recenti"
+        android:id="@+id/dndRecenti"
         android:enabled="true"
         android:icon="@drawable/ic_recenti"
-        android:title="Recenti"/>
+        android:title="@string/recenti"/>
     <item
-        android:id="@+id/dnd_dm"
+        android:id="@+id/dndGm"
         android:enabled="true"
         android:icon="@drawable/ic_dm"
-        android:title="DM"/>
+        android:title="@string/gm"/>
     <item
-        android:id="@+id/dnd_giocatore"
+        android:id="@+id/dndPg"
         android:enabled="true"
         android:icon="@drawable/ic_giocatore"
-        android:title="Avventuriero"/>
+        android:title="@string/pg"/>
     <item
-        android:id="@+id/dnd_library"
+        android:id="@+id/dndLibrary"
         android:enabled="true"
         android:icon="@drawable/ic_libreria"
-        android:title="Libreria"/>
+        android:title="@string/lib"/>
 </menu>

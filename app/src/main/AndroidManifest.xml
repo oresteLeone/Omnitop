@@ -2,33 +2,104 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.annoyingturtle.omnitop">
 
-    <supports-screens
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="30" />
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="30"/>
+
+    <supports-screens
+        android:anyDensity="true"
         android:largeScreens="true"
         android:normalScreens="true"
-        android:smallScreens="true"
-        android:xlargeScreens="true"
         android:resizeable="true"
-        android:anyDensity="true"
-        />
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_omnitoplauncher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_omnitoplauncher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Omnitop">
-        <activity android:name=".DndHome"></activity>
-        <activity android:name=".HomeActivity"/>
-        <activity android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+
+        <activity android:name="fabPackage.GrigliaDIBattagliaActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity android:name=".dndHomeActivity.DndHomeNuovaCampagna"
+            android:parentActivityName=".dndHomeActivity.DndHome"
+            android:screenOrientation="sensorPortrait"/>
+
+        <activity android:name=".dndSchedaActivity.dndSchedaFragments.UpdateAbilita"
+            android:parentActivityName=".dndSchedaActivity.DndSchedaActivity"
+            android:screenOrientation="sensorPortrait"/>
+
+        <activity
+            android:name=".dndSchedaActivity.dndSchedaFragments.UpdateCaratteristicheScheda"
+            android:parentActivityName=".dndSchedaActivity.DndSchedaActivity"
+            android:screenOrientation="sensorPortrait"/>
+
+        <activity android:name=".dndCampagnaHomeActivity.DndCampagnaModificaNota"
+            android:parentActivityName=".dndCampagnaHomeActivity.DndCampagnaHome"
+            android:screenOrientation="sensorPortrait"/>
+
+        <activity android:name=".dndCampagnaHomeActivity.DndCampagnaHomeNuovaNota"
+            android:screenOrientation="sensorPortrait"
+            android:parentActivityName=".dndCampagnaHomeActivity.DndCampagnaHome"/>
+
+        <activity android:name=".dndCampagnaHomeActivity.DndCampagnaHomeInfoDati"
+            android:screenOrientation="sensorPortrait"
+            android:parentActivityName=".dndCampagnaHomeActivity.DndCampagnaHome"/>
+
+        <activity
+            android:name=".dndCampagnaHomeActivity.DndCampagnaNuovaScheda"
+            android:parentActivityName=".dndCampagnaHomeActivity.DndCampagnaHome"
+            android:screenOrientation="sensorPortrait"/>
+
+        <activity
+            android:name=".dndSchedaActivity.GuidaSchedaDnDActivity"
+            android:parentActivityName=".dndSchedaActivity.DndSchedaActivity"
+            android:screenOrientation="sensorPortrait"/>
+
+        <activity android:name=".noteActivity.ModificaNota"
+            android:screenOrientation="sensorPortrait"/>
+
+        <activity android:name=".noteActivity.NuovaNota"
+            android:screenOrientation="sensorPortrait"/>
+
+        <activity
+            android:name=".dndSchedaActivity.DndSchedaActivity"
+            android:parentActivityName=".dndCampagnaHomeActivity.DndCampagnaHome"
+            android:screenOrientation="sensorPortrait"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.Omnitop"
+            android:screenOrientation="sensorPortrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/Theme.Omnitop"
+            android:screenOrientation="sensorPortrait"/>
+
+        <activity
+            android:name=".dndHomeActivity.DndHome"
+            android:label="@string/dnd"
+            android:parentActivityName=".HomeActivity"
+            android:screenOrientation="sensorPortrait"/>
+
+        <activity
+            android:name=".dndCampagnaHomeActivity.DndCampagnaHome"
+            android:parentActivityName=".dndHomeActivity.DndHome"
+            android:screenOrientation="sensorPortrait"/>
     </application>
 
 </manifest>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dndCampagnaHomeActivity.DndCampagnaNuovaScheda"
+    android:id="@+id/nuovaSchedaActivity"
+    android:background="@color/backGround">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/myToolbarNuovaScheda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:title="Nuova Scheda"
+                app:titleTextColor="@color/white"
+                tools:layout_editor_absoluteY="30dp" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageNuovaScheda"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/card_template"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/addImageBtnNuovaScheda"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#26121212"
+        android:foreground="@drawable/ic_outline_add_photo_alternate_24_65op"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/imageNuovaScheda"
+        app:layout_constraintEnd_toEndOf="@id/imageNuovaScheda"
+        app:layout_constraintStart_toStartOf="@id/imageNuovaScheda"
+        app:layout_constraintTop_toTopOf="@id/imageNuovaScheda" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/NomePersonaggioHold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:textColorHint="@color/PrimaryLight65op"
+        app:boxStrokeColor="@color/PrimaryLight"
+        app:hintTextColor="@color/PrimaryLight65op"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/imageNuovaScheda"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/NomePersonaggio_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nome_personaggio"
+            android:textColorHint="@color/PrimaryLight65op" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkBoxPNG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/png"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageNuovaScheda" />
+
+    <Button
+        android:id="@+id/ButtonInsertDataAddScheda"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/Primary"
+        android:text="AGGIUNGI"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxPNG" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

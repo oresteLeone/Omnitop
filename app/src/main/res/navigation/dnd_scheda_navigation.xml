@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dnd_scheda_navigation"
+    app:startDestination="@id/personaggioDndFragment">
+
+    <fragment
+        android:id="@+id/personaggioDndFragment"
+        android:name="com.annoyingturtle.omnitop.dndSchedaActivity.dndSchedaFragments.PersonaggioDndFragment"
+        android:label="fragment_personaggio"
+        tools:layout="@layout/fragment_personaggio">
+        <action
+            android:id="@+id/action_personaggioFragment_to_equipaggiamentoDnDFragment"
+            app:destination="@id/equipaggiamentoDnDFragment" />
+        <action
+            android:id="@+id/action_personaggioFragment_to_dndIncantesimiFragment"
+            app:destination="@id/dndIncantesimiFragment" />
+        <action
+            android:id="@+id/action_personaggioFragment_to_dndDettagliFragment"
+            app:destination="@id/dndDettagliFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipaggiamentoDnDFragment"
+        android:name="com.annoyingturtle.omnitop.dndSchedaActivity.dndSchedaFragments.EquipaggiamentoDnDFragment"
+        android:label="fragment_equipaggiamento_dn_d"
+        tools:layout="@layout/fragment_equipaggiamento_dnd" >
+        <action
+            android:id="@+id/action_equipaggiamentoDnDFragment_to_personaggioFragment"
+            app:destination="@id/personaggioDndFragment" />
+        <action
+            android:id="@+id/action_equipaggiamentoDnDFragment_to_dndIncantesimiFragment"
+            app:destination="@id/dndIncantesimiFragment" />
+        <action
+            android:id="@+id/action_equipaggiamentoDnDFragment_to_dndDettagliFragment"
+            app:destination="@id/dndDettagliFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dndIncantesimiFragment"
+        android:name="com.annoyingturtle.omnitop.dndSchedaActivity.dndSchedaFragments.DndIncantesimiFragment"
+        android:label="fragment_dnd_incantesimi"
+        tools:layout="@layout/fragment_dnd_incantesimi" >
+        <action
+            android:id="@+id/action_dndIncantesimiFragment_to_personaggioFragment"
+            app:destination="@id/personaggioDndFragment" />
+        <action
+            android:id="@+id/action_dndIncantesimiFragment_to_equipaggiamentoDnDFragment"
+            app:destination="@id/equipaggiamentoDnDFragment" />
+        <action
+            android:id="@+id/action_dndIncantesimiFragment_to_dndDettagliFragment"
+            app:destination="@id/dndDettagliFragment" />
+        <action
+            android:id="@+id/action_dndIncantesimiFragment_to_equipaggiamentoDnDFragment2"
+            app:destination="@id/equipaggiamentoDnDFragment" />
+        <action
+            android:id="@+id/action_dndIncantesimiFragment_to_personaggioFragment2"
+            app:destination="@id/personaggioDndFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dndDettagliFragment"
+        android:name="com.annoyingturtle.omnitop.dndSchedaActivity.dndSchedaFragments.DndDettagliFragment"
+        android:label="fragment_dnd_dettagli"
+        tools:layout="@layout/fragment_dnd_dettagli" >
+        <action
+            android:id="@+id/action_dndDettagliFragment_to_dndIncantesimiFragment"
+            app:destination="@id/dndIncantesimiFragment" />
+        <action
+            android:id="@+id/action_dndDettagliFragment_to_equipaggiamentoDnDFragment"
+            app:destination="@id/equipaggiamentoDnDFragment" />
+        <action
+            android:id="@+id/action_dndDettagliFragment_to_personaggioFragment"
+            app:destination="@id/personaggioDndFragment" />
+    </fragment>
+</navigation>
